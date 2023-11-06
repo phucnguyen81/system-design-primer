@@ -1,0 +1,15 @@
+version: '3'
+volumes:
+  vscode_server:
+services:
+  pages:
+    build: .
+    container_name: system-design-primer
+    ports:
+      - 4000:4000
+      - 35729:35729
+    volumes:
+      - .:/app
+      - vscode_server:/root/.vscode-server
+    working_dir: /app
+    command: bundle exec jekyll serve --force_polling --host 0.0.0.0 --incremental --livereload
