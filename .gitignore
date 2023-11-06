@@ -2,6 +2,7 @@
 *.epub
 __pycache__/
 *.py[cod]
+.sass-cache/
 
 # C extensions
 *.so
