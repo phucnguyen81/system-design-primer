@@ -6,4 +6,4 @@ docker run \
     --workdir /app \
     -e JEKYLL_ENV=production \
     system-design-primer \
-    bundle exec jekyll build -d ./docs
+    bundle exec jekyll build -d ./docs -b /system-design-primer
