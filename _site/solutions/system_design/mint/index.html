@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Design Mint.com | System Design Primer</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Design Mint.com" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://0.0.0.0:4000/solutions/system_design/mint/" />
+<meta property="og:url" content="http://0.0.0.0:4000/solutions/system_design/mint/" />
+<meta property="og:site_name" content="System Design Primer" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Design Mint.com" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"Design Mint.com","url":"http://0.0.0.0:4000/solutions/system_design/mint/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="System Design Primer" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">System Design Primer</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/solutions/system_design/pastebin/">Design Pastebin.com (or Bit.ly)</a><a class="page-link" href="/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/solutions/system_design/web_crawler/">Design a web crawler</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Design Mint.com</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="design-mintcom">Design Mint.com</h1>
+
+<p><em>Note: This document links directly to relevant areas found in the <a href="https://github.com/donnemartin/system-design-primer#index-of-system-design-topics">system design topics</a> to avoid duplication.  Refer to the linked content for general talking points, tradeoffs, and alternatives.</em></p>
+
+<h2 id="step-1-outline-use-cases-and-constraints">Step 1: Outline use cases and constraints</h2>
+
+<blockquote>
+  <p>Gather requirements and scope the problem.
+Ask questions to clarify use cases and constraints.
+Discuss assumptions.</p>
+</blockquote>
+
+<p>Without an interviewer to address clarifying questions, we’ll define some use cases and constraints.</p>
+
+<h3 id="use-cases">Use cases</h3>
+
+<h4 id="well-scope-the-problem-to-handle-only-the-following-use-cases">We’ll scope the problem to handle only the following use cases</h4>
+
+<ul>
+  <li><strong>User</strong> connects to a financial account</li>
+  <li><strong>Service</strong> extracts transactions from the account
+    <ul>
+      <li>Updates daily</li>
+      <li>Categorizes transactions
+        <ul>
+          <li>Allows manual category override by the user</li>
+          <li>No automatic re-categorization</li>
+        </ul>
+      </li>
+      <li>Analyzes monthly spending, by category</li>
+    </ul>
+  </li>
+  <li><strong>Service</strong> recommends a budget
+    <ul>
+      <li>Allows users to manually set a budget</li>
+      <li>Sends notifications when approaching or exceeding budget</li>
+    </ul>
+  </li>
+  <li><strong>Service</strong> has high availability</li>
+</ul>
+
+<h4 id="out-of-scope">Out of scope</h4>
+
+<ul>
+  <li><strong>Service</strong> performs additional logging and analytics</li>
+</ul>
+
+<h3 id="constraints-and-assumptions">Constraints and assumptions</h3>
+
+<h4 id="state-assumptions">State assumptions</h4>
+
+<ul>
+  <li>Traffic is not evenly distributed</li>
+  <li>Automatic daily update of accounts applies only to users active in the past 30 days</li>
+  <li>Adding or removing financial accounts is relatively rare</li>
+  <li>Budget notifications don’t need to be instant</li>
+  <li>10 million users
+    <ul>
+      <li>10 budget categories per user = 100 million budget items</li>
+      <li>Example categories:
+        <ul>
+          <li>Housing = $1,000</li>
+          <li>Food = $200</li>
+          <li>Gas = $100</li>
+        </ul>
+      </li>
+      <li>Sellers are used to determine transaction category
+        <ul>
+          <li>50,000 sellers</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>30 million financial accounts</li>
+  <li>5 billion transactions per month</li>
+  <li>500 million read requests per month</li>
+  <li>10:1 write to read ratio
+    <ul>
+      <li>Write-heavy, users make transactions daily, but few visit the site daily</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="calculate-usage">Calculate usage</h4>
+
+<p><strong>Clarify with your interviewer if you should run back-of-the-envelope usage calculations.</strong></p>
+
+<ul>
+  <li>Size per transaction:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">user_id</code> - 8 bytes</li>
+      <li><code class="language-plaintext highlighter-rouge">created_at</code> - 5 bytes</li>
+      <li><code class="language-plaintext highlighter-rouge">seller</code> - 32 bytes</li>
+      <li><code class="language-plaintext highlighter-rouge">amount</code> - 5 bytes</li>
+      <li>Total: ~50 bytes</li>
+    </ul>
+  </li>
+  <li>250 GB of new transaction content per month
+    <ul>
+      <li>50 bytes per transaction * 5 billion transactions per month</li>
+      <li>9 TB of new transaction content in 3 years</li>
+      <li>Assume most are new transactions instead of updates to existing ones</li>
+    </ul>
+  </li>
+  <li>2,000 transactions per second on average</li>
+  <li>200 read requests per second on average</li>
+</ul>
+
+<p>Handy conversion guide:</p>
+
+<ul>
+  <li>2.5 million seconds per month</li>
+  <li>1 request per second = 2.5 million requests per month</li>
+  <li>40 requests per second = 100 million requests per month</li>
+  <li>400 requests per second = 1 billion requests per month</li>
+</ul>
+
+<h2 id="step-2-create-a-high-level-design">Step 2: Create a high level design</h2>
+
+<blockquote>
+  <p>Outline a high level design with all important components.</p>
+</blockquote>
+
+<p><img src="http://i.imgur.com/E8klrBh.png" alt="Imgur" /></p>
+
+<h2 id="step-3-design-core-components">Step 3: Design core components</h2>
+
+<blockquote>
+  <p>Dive into details for each core component.</p>
+</blockquote>
+
+<h3 id="use-case-user-connects-to-a-financial-account">Use case: User connects to a financial account</h3>
+
+<p>We could store info on the 10 million users in a <a href="https://github.com/donnemartin/system-design-primer#relational-database-management-system-rdbms">relational database</a>.  We should discuss the <a href="https://github.com/donnemartin/system-design-primer#sql-or-nosql">use cases and tradeoffs between choosing SQL or NoSQL</a>.</p>
+
+<ul>
+  <li>The <strong>Client</strong> sends a request to the <strong>Web Server</strong>, running as a <a href="https://github.com/donnemartin/system-design-primer#reverse-proxy-web-server">reverse proxy</a></li>
+  <li>The <strong>Web Server</strong> forwards the request to the <strong>Accounts API</strong> server</li>
+  <li>The <strong>Accounts API</strong> server updates the <strong>SQL Database</strong> <code class="language-plaintext highlighter-rouge">accounts</code> table with the newly entered account info</li>
+</ul>
+
+<p><strong>Clarify with your interviewer how much code you are expected to write</strong>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">accounts</code> table could have the following structure:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>id int NOT NULL AUTO_INCREMENT
+created_at datetime NOT NULL
+last_update datetime NOT NULL
+account_url varchar(255) NOT NULL
+account_login varchar(32) NOT NULL
+account_password_hash char(64) NOT NULL
+user_id int NOT NULL
+PRIMARY KEY(id)
+FOREIGN KEY(user_id) REFERENCES users(id)
+</code></pre></div></div>
+
+<p>We’ll create an <a href="https://github.com/donnemartin/system-design-primer#use-good-indices">index</a> on <code class="language-plaintext highlighter-rouge">id</code>, <code class="language-plaintext highlighter-rouge">user_id </code>, and <code class="language-plaintext highlighter-rouge">created_at</code> to speed up lookups (log-time instead of scanning the entire table) and to keep the data in memory.  Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup>&lt;a href=https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know&gt;1&lt;/a&gt;</sup></p>
+
+<p>We’ll use a public <a href="https://github.com/donnemartin/system-design-primer#representational-state-transfer-rest"><strong>REST API</strong></a>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl -X POST --data '{ "user_id": "foo", "account_url": "bar", \
+    "account_login": "baz", "account_password": "qux" }' \
+    https://mint.com/api/v1/account
+</code></pre></div></div>
+
+<p>For internal communications, we could use <a href="https://github.com/donnemartin/system-design-primer#remote-procedure-call-rpc">Remote Procedure Calls</a>.</p>
+
+<p>Next, the service extracts transactions from the account.</p>
+
+<h3 id="use-case-service-extracts-transactions-from-the-account">Use case: Service extracts transactions from the account</h3>
+
+<p>We’ll want to extract information from an account in these cases:</p>
+
+<ul>
+  <li>The user first links the account</li>
+  <li>The user manually refreshes the account</li>
+  <li>Automatically each day for users who have been active in the past 30 days</li>
+</ul>
+
+<p>Data flow:</p>
+
+<ul>
+  <li>The <strong>Client</strong> sends a request to the <strong>Web Server</strong></li>
+  <li>The <strong>Web Server</strong> forwards the request to the <strong>Accounts API</strong> server</li>
+  <li>The <strong>Accounts API</strong> server places a job on a <strong>Queue</strong> such as <a href="https://aws.amazon.com/sqs/">Amazon SQS</a> or <a href="https://www.rabbitmq.com/">RabbitMQ</a>
+    <ul>
+      <li>Extracting transactions could take awhile, we’d probably want to do this <a href="https://github.com/donnemartin/system-design-primer#asynchronism">asynchronously with a queue</a>, although this introduces additional complexity</li>
+    </ul>
+  </li>
+  <li>The <strong>Transaction Extraction Service</strong> does the following:
+    <ul>
+      <li>Pulls from the <strong>Queue</strong> and extracts transactions for the given account from the financial institution, storing the results as raw log files in the <strong>Object Store</strong></li>
+      <li>Uses the <strong>Category Service</strong> to categorize each transaction</li>
+      <li>Uses the <strong>Budget Service</strong> to calculate aggregate monthly spending by category
+        <ul>
+          <li>The <strong>Budget Service</strong> uses the <strong>Notification Service</strong> to let users know if they are nearing or have exceeded their budget</li>
+        </ul>
+      </li>
+      <li>Updates the <strong>SQL Database</strong> <code class="language-plaintext highlighter-rouge">transactions</code> table with categorized transactions</li>
+      <li>Updates the <strong>SQL Database</strong> <code class="language-plaintext highlighter-rouge">monthly_spending</code> table with aggregate monthly spending by category</li>
+      <li>Notifies the user the transactions have completed through the <strong>Notification Service</strong>:
+        <ul>
+          <li>Uses a <strong>Queue</strong> (not pictured) to asynchronously send out notifications</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>The <code class="language-plaintext highlighter-rouge">transactions</code> table could have the following structure:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>id int NOT NULL AUTO_INCREMENT
+created_at datetime NOT NULL
+seller varchar(32) NOT NULL
+amount decimal NOT NULL
+user_id int NOT NULL
+PRIMARY KEY(id)
+FOREIGN KEY(user_id) REFERENCES users(id)
+</code></pre></div></div>
+
+<p>We’ll create an <a href="https://github.com/donnemartin/system-design-primer#use-good-indices">index</a> on <code class="language-plaintext highlighter-rouge">id</code>, <code class="language-plaintext highlighter-rouge">user_id </code>, and <code class="language-plaintext highlighter-rouge">created_at</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">monthly_spending</code> table could have the following structure:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>id int NOT NULL AUTO_INCREMENT
+month_year date NOT NULL
+category varchar(32)
+amount decimal NOT NULL
+user_id int NOT NULL
+PRIMARY KEY(id)
+FOREIGN KEY(user_id) REFERENCES users(id)
+</code></pre></div></div>
+
+<p>We’ll create an <a href="https://github.com/donnemartin/system-design-primer#use-good-indices">index</a> on <code class="language-plaintext highlighter-rouge">id</code> and <code class="language-plaintext highlighter-rouge">user_id </code>.</p>
+
+<h4 id="category-service">Category service</h4>
+
+<p>For the <strong>Category Service</strong>, we can seed a seller-to-category dictionary with the most popular sellers.  If we estimate 50,000 sellers and estimate each entry to take less than 255 bytes, the dictionary would only take about 12 MB of memory.</p>
+
+<p><strong>Clarify with your interviewer how much code you are expected to write</strong>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">DefaultCategories</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+
+    <span class="n">HOUSING</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">FOOD</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">GAS</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">SHOPPING</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="p">...</span>
+
+<span class="n">seller_category_map</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">seller_category_map</span><span class="p">[</span><span class="s">'Exxon'</span><span class="p">]</span> <span class="o">=</span> <span class="n">DefaultCategories</span><span class="p">.</span><span class="n">GAS</span>
+<span class="n">seller_category_map</span><span class="p">[</span><span class="s">'Target'</span><span class="p">]</span> <span class="o">=</span> <span class="n">DefaultCategories</span><span class="p">.</span><span class="n">SHOPPING</span>
+<span class="p">...</span>
+</code></pre></div></div>
+
+<p>For sellers not initially seeded in the map, we could use a crowdsourcing effort by evaluating the manual category overrides our users provide.  We could use a heap to quickly lookup the top manual override per seller in O(1) time.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Categorizer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seller_category_map</span><span class="p">,</span> <span class="n">seller_category_crowd_overrides_map</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">seller_category_map</span> <span class="o">=</span> <span class="n">seller_category_map</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">seller_category_crowd_overrides_map</span> <span class="o">=</span> \
+            <span class="n">seller_category_crowd_overrides_map</span>
+
+    <span class="k">def</span> <span class="nf">categorize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">transaction</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">transaction</span><span class="p">.</span><span class="n">seller</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">seller_category_map</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">seller_category_map</span><span class="p">[</span><span class="n">transaction</span><span class="p">.</span><span class="n">seller</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">transaction</span><span class="p">.</span><span class="n">seller</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">seller_category_crowd_overrides_map</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">seller_category_map</span><span class="p">[</span><span class="n">transaction</span><span class="p">.</span><span class="n">seller</span><span class="p">]</span> <span class="o">=</span> \
+                <span class="bp">self</span><span class="p">.</span><span class="n">seller_category_crowd_overrides_map</span><span class="p">[</span><span class="n">transaction</span><span class="p">.</span><span class="n">seller</span><span class="p">].</span><span class="n">peek_min</span><span class="p">()</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">seller_category_map</span><span class="p">[</span><span class="n">transaction</span><span class="p">.</span><span class="n">seller</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">None</span>
+</code></pre></div></div>
+
+<p>Transaction implementation:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Transaction</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">created_at</span><span class="p">,</span> <span class="n">seller</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">created_at</span> <span class="o">=</span> <span class="n">created_at</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">seller</span> <span class="o">=</span> <span class="n">seller</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">amount</span> <span class="o">=</span> <span class="n">amount</span>
+</code></pre></div></div>
+
+<h3 id="use-case-service-recommends-a-budget">Use case: Service recommends a budget</h3>
+
+<p>To start, we could use a generic budget template that allocates category amounts based on income tiers.  Using this approach, we would not have to store the 100 million budget items identified in the constraints, only those that the user overrides.  If a user overrides a budget category, which we could store the override in the <code class="language-plaintext highlighter-rouge">TABLE budget_overrides</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Budget</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">income</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">income</span> <span class="o">=</span> <span class="n">income</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">categories_to_budget_map</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">create_budget_template</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">create_budget_template</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="n">DefaultCategories</span><span class="p">.</span><span class="n">HOUSING</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">income</span> <span class="o">*</span> <span class="p">.</span><span class="mi">4</span><span class="p">,</span>
+            <span class="n">DefaultCategories</span><span class="p">.</span><span class="n">FOOD</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">income</span> <span class="o">*</span> <span class="p">.</span><span class="mi">2</span><span class="p">,</span>
+            <span class="n">DefaultCategories</span><span class="p">.</span><span class="n">GAS</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">income</span> <span class="o">*</span> <span class="p">.</span><span class="mi">1</span><span class="p">,</span>
+            <span class="n">DefaultCategories</span><span class="p">.</span><span class="n">SHOPPING</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">income</span> <span class="o">*</span> <span class="p">.</span><span class="mi">2</span><span class="p">,</span>
+            <span class="p">...</span>
+        <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">override_category_budget</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">category</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">categories_to_budget_map</span><span class="p">[</span><span class="n">category</span><span class="p">]</span> <span class="o">=</span> <span class="n">amount</span>
+</code></pre></div></div>
+
+<p>For the <strong>Budget Service</strong>, we can potentially run SQL queries on the <code class="language-plaintext highlighter-rouge">transactions</code> table to generate the <code class="language-plaintext highlighter-rouge">monthly_spending</code> aggregate table.  The <code class="language-plaintext highlighter-rouge">monthly_spending</code> table would likely have much fewer rows than the total 5 billion transactions, since users typically have many transactions per month.</p>
+
+<p>As an alternative, we can run <strong>MapReduce</strong> jobs on the raw transaction files to:</p>
+
+<ul>
+  <li>Categorize each transaction</li>
+  <li>Generate aggregate monthly spending by category</li>
+</ul>
+
+<p>Running analyses on the transaction files could significantly reduce the load on the database.</p>
+
+<p>We could call the <strong>Budget Service</strong> to re-run the analysis if the user updates a category.</p>
+
+<p><strong>Clarify with your interviewer how much code you are expected to write</strong>.</p>
+
+<p>Sample log file format, tab delimited:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>user_id   timestamp   seller  amount
+</code></pre></div></div>
+
+<p><strong>MapReduce</strong> implementation:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">SpendingByCategory</span><span class="p">(</span><span class="n">MRJob</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">categorizer</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">categorizer</span> <span class="o">=</span> <span class="n">categorizer</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">current_year_month</span> <span class="o">=</span> <span class="n">calc_current_year_month</span><span class="p">()</span>
+        <span class="p">...</span>
+
+    <span class="k">def</span> <span class="nf">calc_current_year_month</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">"""Return the current year and month."""</span>
+        <span class="p">...</span>
+
+    <span class="k">def</span> <span class="nf">extract_year_month</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timestamp</span><span class="p">):</span>
+        <span class="s">"""Return the year and month portions of the timestamp."""</span>
+        <span class="p">...</span>
+
+    <span class="k">def</span> <span class="nf">handle_budget_notifications</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">total</span><span class="p">):</span>
+        <span class="s">"""Call notification API if nearing or exceeded budget."""</span>
+        <span class="p">...</span>
+
+    <span class="k">def</span> <span class="nf">mapper</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
+        <span class="s">"""Parse each log line, extract and transform relevant lines.
+
+        Argument line will be of the form:
+
+        user_id   timestamp   seller  amount
+
+        Using the categorizer to convert seller to category,
+        emit key value pairs of the form:
+
+        (user_id, 2016-01, shopping), 25
+        (user_id, 2016-01, shopping), 100
+        (user_id, 2016-01, gas), 50
+        """</span>
+        <span class="n">user_id</span><span class="p">,</span> <span class="n">timestamp</span><span class="p">,</span> <span class="n">seller</span><span class="p">,</span> <span class="n">amount</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">'</span><span class="se">\t</span><span class="s">'</span><span class="p">)</span>
+        <span class="n">category</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">categorizer</span><span class="p">.</span><span class="n">categorize</span><span class="p">(</span><span class="n">seller</span><span class="p">)</span>
+        <span class="n">period</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">extract_year_month</span><span class="p">(</span><span class="n">timestamp</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">period</span> <span class="o">==</span> <span class="bp">self</span><span class="p">.</span><span class="n">current_year_month</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">period</span><span class="p">,</span> <span class="n">category</span><span class="p">),</span> <span class="n">amount</span>
+
+    <span class="k">def</span> <span class="nf">reducer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="s">"""Sum values for each key.
+
+        (user_id, 2016-01, shopping), 125
+        (user_id, 2016-01, gas), 50
+        """</span>
+        <span class="n">total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+        <span class="k">yield</span> <span class="n">key</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="step-4-scale-the-design">Step 4: Scale the design</h2>
+
+<blockquote>
+  <p>Identify and address bottlenecks, given the constraints.</p>
+</blockquote>
+
+<p><img src="http://i.imgur.com/V5q57vU.png" alt="Imgur" /></p>
+
+<p><strong>Important: Do not simply jump right into the final design from the initial design!</strong></p>
+
+<p>State you would 1) <strong>Benchmark/Load Test</strong>, 2) <strong>Profile</strong> for bottlenecks 3) address bottlenecks while evaluating alternatives and trade-offs, and 4) repeat.  See <a href="/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a> as a sample on how to iteratively scale the initial design.</p>
+
+<p>It’s important to discuss what bottlenecks you might encounter with the initial design and how you might address each of them.  For example, what issues are addressed by adding a <strong>Load Balancer</strong> with multiple <strong>Web Servers</strong>?  <strong>CDN</strong>?  <strong>Master-Slave Replicas</strong>?  What are the alternatives and <strong>Trade-Offs</strong> for each?</p>
+
+<p>We’ll introduce some components to complete the design and to address scalability issues.  Internal load balancers are not shown to reduce clutter.</p>
+
+<p><em>To avoid repeating discussions</em>, refer to the following <a href="https://github.com/donnemartin/system-design-primer#index-of-system-design-topics">system design topics</a> for main talking points, tradeoffs, and alternatives:</p>
+
+<ul>
+  <li><a href="https://github.com/donnemartin/system-design-primer#domain-name-system">DNS</a></li>
+  <li><a href="https://github.com/donnemartin/system-design-primer#content-delivery-network">CDN</a></li>
+  <li><a href="https://github.com/donnemartin/system-design-primer#load-balancer">Load balancer</a></li>
+  <li><a href="https://github.com/donnemartin/system-design-primer#horizontal-scaling">Horizontal scaling</a></li>
+  <li><a href="https://github.com/donnemartin/system-design-primer#reverse-proxy-web-server">Web server (reverse proxy)</a></li>
+  <li><a href="https://github.com/donnemartin/system-design-primer#application-layer">API server (application layer)</a></li>
+  <li><a href="https://github.com/donnemartin/system-design-primer#cache">Cache</a></li>
+  <li><a href="https://github.com/donnemartin/system-design-primer#relational-database-management-system-rdbms">Relational database management system (RDBMS)</a></li>
+  <li><a href="https://github.com/donnemartin/system-design-primer#fail-over">SQL write master-slave failover</a></li>
+  <li><a href="https://github.com/donnemartin/system-design-primer#master-slave-replication">Master-slave replication</a></li>
+  <li><a href="https://github.com/donnemartin/system-design-primer#asynchronism">Asynchronism</a></li>
+  <li><a href="https://github.com/donnemartin/system-design-primer#consistency-patterns">Consistency patterns</a></li>
+  <li><a href="https://github.com/donnemartin/system-design-primer#availability-patterns">Availability patterns</a></li>
+</ul>
+
+<p>We’ll add an additional use case: <strong>User</strong> accesses summaries and transactions.</p>
+
+<p>User sessions, aggregate stats by category, and recent transactions could be placed in a <strong>Memory Cache</strong> such as Redis or Memcached.</p>
+
+<ul>
+  <li>The <strong>Client</strong> sends a read request to the <strong>Web Server</strong></li>
+  <li>The <strong>Web Server</strong> forwards the request to the <strong>Read API</strong> server
+    <ul>
+      <li>Static content can be served from the <strong>Object Store</strong> such as S3, which is cached on the <strong>CDN</strong></li>
+    </ul>
+  </li>
+  <li>The <strong>Read API</strong> server does the following:
+    <ul>
+      <li>Checks the <strong>Memory Cache</strong> for the content
+        <ul>
+          <li>If the url is in the <strong>Memory Cache</strong>, returns the cached contents</li>
+          <li>Else
+            <ul>
+              <li>If the url is in the <strong>SQL Database</strong>, fetches the contents
+                <ul>
+                  <li>Updates the <strong>Memory Cache</strong> with the contents</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Refer to <a href="https://github.com/donnemartin/system-design-primer#when-to-update-the-cache">When to update the cache</a> for tradeoffs and alternatives.  The approach above describes <a href="https://github.com/donnemartin/system-design-primer#cache-aside">cache-aside</a>.</p>
+
+<p>Instead of keeping the <code class="language-plaintext highlighter-rouge">monthly_spending</code> aggregate table in the <strong>SQL Database</strong>, we could create a separate <strong>Analytics Database</strong> using a data warehousing solution such as Amazon Redshift or Google BigQuery.</p>
+
+<p>We might only want to store a month of <code class="language-plaintext highlighter-rouge">transactions</code> data in the database, while storing the rest in a data warehouse or in an <strong>Object Store</strong>.  An <strong>Object Store</strong> such as Amazon S3 can comfortably handle the constraint of 250 GB of new content per month.</p>
+
+<p>To address the 200 <em>average</em> read requests per second (higher at peak), traffic for popular content should be handled by the <strong>Memory Cache</strong> instead of the database.  The <strong>Memory Cache</strong> is also useful for handling the unevenly distributed traffic and traffic spikes.  The <strong>SQL Read Replicas</strong> should be able to handle the cache misses, as long as the replicas are not bogged down with replicating writes.</p>
+
+<p>2,000 <em>average</em> transaction writes per second (higher at peak) might be tough for a single <strong>SQL Write Master-Slave</strong>.  We might need to employ additional SQL scaling patterns:</p>
+
+<ul>
+  <li><a href="https://github.com/donnemartin/system-design-primer#federation">Federation</a></li>
+  <li><a href="https://github.com/donnemartin/system-design-primer#sharding">Sharding</a></li>
+  <li><a href="https://github.com/donnemartin/system-design-primer#denormalization">Denormalization</a></li>
+  <li><a href="https://github.com/donnemartin/system-design-primer#sql-tuning">SQL Tuning</a></li>
+</ul>
+
+<p>We should also consider moving some data to a <strong>NoSQL Database</strong>.</p>
+
+<h2 id="additional-talking-points">Additional talking points</h2>
+
+<blockquote>
+  <p>Additional topics to dive into, depending on the problem scope and time remaining.</p>
+</blockquote>
+
+<h4 id="nosql">NoSQL</h4>
+
+<ul>
+  <li><a href="https://github.com/donnemartin/system-design-primer#key-value-store">Key-value store</a></li>
+  <li><a href="https://github.com/donnemartin/system-design-primer#document-store">Document store</a></li>
+  <li><a href="https://github.com/donnemartin/system-design-primer#wide-column-store">Wide column store</a></li>
+  <li><a href="https://github.com/donnemartin/system-design-primer#graph-database">Graph database</a></li>
+  <li><a href="https://github.com/donnemartin/system-design-primer#sql-or-nosql">SQL vs NoSQL</a></li>
+</ul>
+
+<h3 id="caching">Caching</h3>
+
+<ul>
+  <li>Where to cache
+    <ul>
+      <li><a href="https://github.com/donnemartin/system-design-primer#client-caching">Client caching</a></li>
+      <li><a href="https://github.com/donnemartin/system-design-primer#cdn-caching">CDN caching</a></li>
+      <li><a href="https://github.com/donnemartin/system-design-primer#web-server-caching">Web server caching</a></li>
+      <li><a href="https://github.com/donnemartin/system-design-primer#database-caching">Database caching</a></li>
+      <li><a href="https://github.com/donnemartin/system-design-primer#application-caching">Application caching</a></li>
+    </ul>
+  </li>
+  <li>What to cache
+    <ul>
+      <li><a href="https://github.com/donnemartin/system-design-primer#caching-at-the-database-query-level">Caching at the database query level</a></li>
+      <li><a href="https://github.com/donnemartin/system-design-primer#caching-at-the-object-level">Caching at the object level</a></li>
+    </ul>
+  </li>
+  <li>When to update the cache
+    <ul>
+      <li><a href="https://github.com/donnemartin/system-design-primer#cache-aside">Cache-aside</a></li>
+      <li><a href="https://github.com/donnemartin/system-design-primer#write-through">Write-through</a></li>
+      <li><a href="https://github.com/donnemartin/system-design-primer#write-behind-write-back">Write-behind (write-back)</a></li>
+      <li><a href="https://github.com/donnemartin/system-design-primer#refresh-ahead">Refresh ahead</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="asynchronism-and-microservices">Asynchronism and microservices</h3>
+
+<ul>
+  <li><a href="https://github.com/donnemartin/system-design-primer#message-queues">Message queues</a></li>
+  <li><a href="https://github.com/donnemartin/system-design-primer#task-queues">Task queues</a></li>
+  <li><a href="https://github.com/donnemartin/system-design-primer#back-pressure">Back pressure</a></li>
+  <li><a href="https://github.com/donnemartin/system-design-primer#microservices">Microservices</a></li>
+</ul>
+
+<h3 id="communications">Communications</h3>
+
+<ul>
+  <li>Discuss tradeoffs:
+    <ul>
+      <li>External communication with clients - <a href="https://github.com/donnemartin/system-design-primer#representational-state-transfer-rest">HTTP APIs following REST</a></li>
+      <li>Internal communications - <a href="https://github.com/donnemartin/system-design-primer#remote-procedure-call-rpc">RPC</a></li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/donnemartin/system-design-primer#service-discovery">Service discovery</a></li>
+</ul>
+
+<h3 id="security">Security</h3>
+
+<p>Refer to the <a href="https://github.com/donnemartin/system-design-primer#security">security section</a>.</p>
+
+<h3 id="latency-numbers">Latency numbers</h3>
+
+<p>See <a href="https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know">Latency numbers every programmer should know</a>.</p>
+
+<h3 id="ongoing">Ongoing</h3>
+
+<ul>
+  <li>Continue benchmarking and monitoring your system to address bottlenecks as they come up</li>
+  <li>Scaling is an iterative process</li>
+</ul>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">System Design Primer</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">System Design Primer</li><li><a class="u-email" href="mailto:phucknguyen@gmail.com">phucknguyen@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/phucnguyen81"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">phucnguyen81</span></a></li><li><a href="https://www.twitter.com/phucknguyen"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">phucknguyen</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
