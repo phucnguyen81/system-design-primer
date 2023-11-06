@@ -58,5 +58,6 @@ exclude:
   - CONTRIBUTING.md
   - Dockerfile
   - generate-epub.sh
+  - jekyll-serve.sh
   - docker*
   - LICENSE.txt

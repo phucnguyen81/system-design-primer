@@ -12,4 +12,4 @@ services:
       - .:/app
       - vscode_server:/root/.vscode-server
     working_dir: /app
-    command: bundle exec jekyll serve --baseurl="" --force_polling --host 0.0.0.0 --incremental --livereload
+    command: ./jekyll-serve.sh
