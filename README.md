@@ -1,3 +1,10 @@
+# Develop with GitHub pages
+
+- Install docker and docker-compose
+- Run `doc-compose up` to start the service
+- Go to `localhost:4000` to see the website
+- Attach to the container: `./docker-exec-it.sh`
+
 # The System Design Primer
 
 <p align="center">
@@ -93,6 +100,7 @@ Review the [Contributing Guidelines](CONTRIBUTING.md).
   <br/>
 </p>
 
+- [Develop with GitHub pages](#develop-with-github-pages)
 - [The System Design Primer](#the-system-design-primer)
   - [Motivation](#motivation)
     - [Learn how to design large-scale systems](#learn-how-to-design-large-scale-systems)
