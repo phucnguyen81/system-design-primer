@@ -12,4 +12,4 @@ services:
       - .:/app
       - vscode_server:/root/.vscode-server
     working_dir: /app
-    command: ./jekyll-serve.sh
+    command: sleep infinity

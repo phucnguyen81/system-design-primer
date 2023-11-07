@@ -21,9 +21,8 @@
 title: System Design Primer
 email: phucknguyen@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Learn how to design large-scale systems.
+  Prep for the system design interview.
 domain: phucnguyen81.github.io # to force HTTPS, specify the domain without the http at the start, e.g. example.com
 url: https://phucnguyen81.github.io # the base hostname and protocol, e.g. http://example.com
 baseurl: "/system-design-primer" # the subpath of your site, e.g. /blog
@@ -58,6 +57,6 @@ exclude:
   - CONTRIBUTING.md
   - Dockerfile
   - generate-epub.sh
-  - jekyll-serve.sh
+  - script/
   - docker*
   - LICENSE.txt

@@ -15,4 +15,4 @@ EXPOSE 4000 35729
 
 ENTRYPOINT []
 
-CMD ["./jekyll-serve.sh"]
+CMD []
