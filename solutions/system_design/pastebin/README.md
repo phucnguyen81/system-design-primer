@@ -115,7 +115,7 @@ We could use a [relational database](/#relational-database-management-system-rdb
 
 Instead of managing a file server, we could use a managed **Object Store** such as Amazon S3 or a [NoSQL document store](/#document-store).
 
-An alternative to a relational database acting as a large hash table, we could use a [NoSQL key-value store](/#key-value-store).  We should discuss the [tradeoffs between choosing SQL or NoSQL](/#sql-or-nosql).  The following discussion uses the relational database approach.
+An alternative to a relational database acting as a large hash table, we could use a [NoSQL key-value store](/#key-value-store). We should discuss the [tradeoffs between choosing SQL or NoSQL](/pages/sql-or-nosql). The following discussion uses the relational database approach.
 
 * The **Client** sends a create paste request to the **Web Server**, running as a [reverse proxy](/#reverse-proxy-web-server)
 * The **Web Server** forwards the request to the **Write API** server
@@ -140,7 +140,7 @@ paste_path varchar(255) NOT NULL
 PRIMARY KEY(shortlink)
 ```
 
-Setting the primary key to be based on the `shortlink` column creates an [index](/#use-good-indices) that the database uses to enforce uniqueness. We'll create an additional index on `created_at` to speed up lookups (log-time instead of scanning the entire table) and to keep the data in memory.  Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup><a href=/#latency-numbers-every-programmer-should-know>1</a></sup>
+Setting the primary key to be based on the `shortlink` column creates an [index](/#use-good-indices) that the database uses to enforce uniqueness. We'll create an additional index on `created_at` to speed up lookups (log-time instead of scanning the entire table) and to keep the data in memory.  Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup><a href="/#latency-numbers-every-programmer-should-know">1</a></sup>
 
 To generate the unique url, we could:
 
@@ -309,7 +309,7 @@ We should also consider moving some data to a **NoSQL Database**.
 * [Document store](/#document-store)
 * [Wide column store](/#wide-column-store)
 * [Graph database](/#graph-database)
-* [SQL vs NoSQL](/#sql-or-nosql)
+* [SQL vs NoSQL](/pages/sql-or-nosql)
 
 ### Caching
 

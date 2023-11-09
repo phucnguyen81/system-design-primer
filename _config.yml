@@ -30,6 +30,7 @@ twitter_username: phucknguyen
 github_username:  phucnguyen81
 
 # Build settings
+encoding: utf-8
 theme: minima
 plugins:
   - jekyll-feed

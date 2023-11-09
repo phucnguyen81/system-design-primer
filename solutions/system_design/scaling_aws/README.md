@@ -105,7 +105,7 @@ The constraints assume there is a need for relational data.  We can start off us
 *Trade-offs, alternatives, and additional details:*
 
 * See the [Relational database management system (RDBMS)](https://github.com/donnemartin/system-design-primer#relational-database-management-system-rdbms) section
-* Discuss reasons to use [SQL or NoSQL](https://github.com/donnemartin/system-design-primer#sql-or-nosql)
+* Discuss reasons to use [SQL or NoSQL](/pages/sql-or-nosql)
 
 #### Assign a public static IP
 
@@ -356,7 +356,7 @@ We can further separate out our [**Application Servers**](https://github.com/don
 * [Document store](https://github.com/donnemartin/system-design-primer#document-store)
 * [Wide column store](https://github.com/donnemartin/system-design-primer#wide-column-store)
 * [Graph database](https://github.com/donnemartin/system-design-primer#graph-database)
-* [SQL vs NoSQL](https://github.com/donnemartin/system-design-primer#sql-or-nosql)
+* [SQL vs NoSQL](/pages/sql-or-nosql)
 
 ### Caching
 
