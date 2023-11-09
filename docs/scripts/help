@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-echo Available commands:
-echo help: Show this help message
-echo init: Start the development containers
-echo serve: Serve the site locally
-echo attach: Attach to the development container
-echo build-prod: Build the site to deploy to GitHub Pages

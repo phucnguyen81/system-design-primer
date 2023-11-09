@@ -56,9 +56,9 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - docs/
+  - docker*
+  - scripts/
   - CONTRIBUTING.md
   - Dockerfile
   - generate-epub.sh
-  - script/
-  - docker*
   - LICENSE.txt

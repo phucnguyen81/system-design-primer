@@ -105,7 +105,7 @@ The constraints assume there is a need for relational data.  We can start off us
 *Trade-offs, alternatives, and additional details:*
 
 * See the [Relational database management system (RDBMS)](https://github.com/donnemartin/system-design-primer#relational-database-management-system-rdbms) section
-* Discuss reasons to use [SQL or NoSQL](https://github.com/donnemartin/system-design-primer#sql-or-nosql)
+* Discuss reasons to use [SQL or NoSQL](/pages/sql-or-nosql)
 
 #### Assign a public static IP
 
@@ -237,7 +237,7 @@ Our **Benchmarks/Load Tests** and **Profiling** show that we are read-heavy (100
         * First, try to configure the **MySQL Database** cache to see if that is sufficient to relieve the bottleneck before implementing a **Memory Cache**
     * Session data from the **Web Servers**
         * The **Web Servers** become stateless, allowing for **Autoscaling**
-    * Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup><a href=https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know>1</a></sup>
+    * Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup><a href="https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know">1</a></sup>
 * Add [**MySQL Read Replicas**](https://github.com/donnemartin/system-design-primer#master-slave-replication) to reduce load on the write master
 * Add more **Web Servers** and **Application Servers** to improve responsiveness
 
@@ -356,7 +356,7 @@ We can further separate out our [**Application Servers**](https://github.com/don
 * [Document store](https://github.com/donnemartin/system-design-primer#document-store)
 * [Wide column store](https://github.com/donnemartin/system-design-primer#wide-column-store)
 * [Graph database](https://github.com/donnemartin/system-design-primer#graph-database)
-* [SQL vs NoSQL](https://github.com/donnemartin/system-design-primer#sql-or-nosql)
+* [SQL vs NoSQL](/pages/sql-or-nosql)
 
 ### Caching
 

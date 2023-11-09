@@ -1,38 +1,48 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Design a web crawler | System Design Primer</title>
-<meta name="generator" content="Jekyll v3.9.3" />
-<meta property="og:title" content="Design a web crawler" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Learn how to design large-scale systems. Prep for the system design interview." />
-<meta property="og:description" content="Learn how to design large-scale systems. Prep for the system design interview." />
-<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/solutions/system_design/web_crawler/" />
-<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/solutions/system_design/web_crawler/" />
-<meta property="og:site_name" content="System Design Primer" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Design a web crawler" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Design a web crawler | The System Design Primer</title>
+<meta name="generator" content="Jekyll v3.9.3">
+<meta property="og:title" content="Design a web crawler">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Learn how to design large-scale systems. Prep for the system design interview.">
+<meta property="og:description" content="Learn how to design large-scale systems. Prep for the system design interview.">
+<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/solutions/system_design/web_crawler/">
+<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/solutions/system_design/web_crawler/">
+<meta property="og:site_name" content="The System Design Primer">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Design a web crawler">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","description":"Learn how to design large-scale systems. Prep for the system design interview.","headline":"Design a web crawler","url":"https://phucnguyen81.github.io/system-design-primer/solutions/system_design/web_crawler/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/system-design-primer/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://phucnguyen81.github.io/system-design-primer/feed.xml" title="System Design Primer" /></head>
-<body><header class="site-header" role="banner">
+<link rel="stylesheet" href="/system-design-primer/assets/main.css">
+<link type="application/atom+xml" rel="alternate" href="https://phucnguyen81.github.io/system-design-primer/feed.xml" title="The System Design Primer">
+</head>
+<body>
+<header class="site-header" role="banner">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/system-design-primer/">System Design Primer</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <div class="wrapper">
+<a class="site-title" rel="author" href="/system-design-primer/">The System Design Primer</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
         <label for="nav-trigger">
           <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
             </svg>
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/system-design-primer/about/">About</a><a class="page-link" href="/system-design-primer/"></a><a class="page-link" href="/system-design-primer/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/pastebin/">Design Pastebin.com (or Bit.ly)</a><a class="page-link" href="/system-design-primer/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/system-design-primer/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/system-design-primer/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/system-design-primer/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/system-design-primer/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/system-design-primer/solutions/system_design/web_crawler/">Design a web crawler</a></div>
-      </nav></div>
+        <div class="trigger">
+<a class="page-link" href="/system-design-primer/about/">About</a><a class="page-link" href="/system-design-primer/">The System Design Primer</a><a class="page-link" href="/system-design-primer/pages/sql-or-nosql.html">SQL or NoSQL</a><a class="page-link" href="/system-design-primer/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/pastebin/">Design Pastebin.com (or Bit.ly)</a><a class="page-link" href="/system-design-primer/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/system-design-primer/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/system-design-primer/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/system-design-primer/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/system-design-primer/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/system-design-primer/solutions/system_design/web_crawler/">Design a web crawler</a>
+</div>
+      </nav>
+</div>
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -62,7 +72,8 @@ Discuss assumptions.</p>
 <h4 id="well-scope-the-problem-to-handle-only-the-following-use-cases">We’ll scope the problem to handle only the following use cases</h4>
 
 <ul>
-  <li><strong>Service</strong> crawls a list of urls:
+  <li>
+<strong>Service</strong> crawls a list of urls:
     <ul>
       <li>Generates reverse index of words to pages containing the search terms</li>
       <li>Generates titles and snippets for pages
@@ -72,12 +83,14 @@ Discuss assumptions.</p>
       </li>
     </ul>
   </li>
-  <li><strong>User</strong> inputs a search term and sees a list of relevant pages with titles and snippets  the crawler generated
+  <li>
+<strong>User</strong> inputs a search term and sees a list of relevant pages with titles and snippets  the crawler generated
     <ul>
       <li>Only sketch high level components and interactions for this use case, no need to go into depth</li>
     </ul>
   </li>
-  <li><strong>Service</strong> has high availability</li>
+  <li>
+<strong>Service</strong> has high availability</li>
 </ul>
 
 <h4 id="out-of-scope">Out of scope</h4>
@@ -155,7 +168,7 @@ Discuss assumptions.</p>
   <p>Outline a high level design with all important components.</p>
 </blockquote>
 
-<p><img src="http://i.imgur.com/xjdAAUv.png" alt="Imgur" /></p>
+<p><img src="http://i.imgur.com/xjdAAUv.png" alt="Imgur"></p>
 
 <h2 id="step-3-design-core-components">Step 3: Design core components</h2>
 
@@ -169,7 +182,7 @@ Discuss assumptions.</p>
 
 <p>We’ll use a table <code class="language-plaintext highlighter-rouge">crawled_links</code> to store processed links and their page signatures.</p>
 
-<p>We could store <code class="language-plaintext highlighter-rouge">links_to_crawl</code> and <code class="language-plaintext highlighter-rouge">crawled_links</code> in a key-value <strong>NoSQL Database</strong>.  For the ranked links in <code class="language-plaintext highlighter-rouge">links_to_crawl</code>, we could use <a href="https://redis.io/">Redis</a> with sorted sets to maintain a ranking of page links.  We should discuss the <a href="https://github.com/donnemartin/system-design-primer#sql-or-nosql">use cases and tradeoffs between choosing SQL or NoSQL</a>.</p>
+<p>We could store <code class="language-plaintext highlighter-rouge">links_to_crawl</code> and <code class="language-plaintext highlighter-rouge">crawled_links</code> in a key-value <strong>NoSQL Database</strong>.  For the ranked links in <code class="language-plaintext highlighter-rouge">links_to_crawl</code>, we could use <a href="https://redis.io/">Redis</a> with sorted sets to maintain a ranking of page links.  We should discuss the <a href="/pages/sql-or-nosql">use cases and tradeoffs between choosing SQL or NoSQL</a>.</p>
 
 <ul>
   <li>The <strong>Crawler Service</strong> processes each page link by doing the following in a loop:
@@ -186,11 +199,14 @@ Discuss assumptions.</p>
               </li>
               <li>Else, crawls the link
                 <ul>
-                  <li>Adds a job to the <strong>Reverse Index Service</strong> queue to generate a <a href="https://en.wikipedia.org/wiki/Search_engine_indexing">reverse index</a></li>
+                  <li>Adds a job to the <strong>Reverse Index Service</strong> queue to generate a <a href="https://en.wikipedia.org/wiki/Search_engine_indexing">reverse index</a>
+</li>
                   <li>Adds a job to the <strong>Document Service</strong> queue to generate a static title and snippet</li>
                   <li>Generates the page signature</li>
-                  <li>Removes the link from <code class="language-plaintext highlighter-rouge">links_to_crawl</code> in the <strong>NoSQL Database</strong></li>
-                  <li>Inserts the page link and signature to <code class="language-plaintext highlighter-rouge">crawled_links</code> in the <strong>NoSQL Database</strong></li>
+                  <li>Removes the link from <code class="language-plaintext highlighter-rouge">links_to_crawl</code> in the <strong>NoSQL Database</strong>
+</li>
+                  <li>Inserts the page link and signature to <code class="language-plaintext highlighter-rouge">crawled_links</code> in the <strong>NoSQL Database</strong>
+</li>
                 </ul>
               </li>
             </ul>
@@ -287,7 +303,8 @@ Discuss assumptions.</p>
 <p>We’ll want to remove duplicate urls:</p>
 
 <ul>
-  <li>For smaller lists we could use something like <code class="language-plaintext highlighter-rouge">sort | unique</code></li>
+  <li>For smaller lists we could use something like <code class="language-plaintext highlighter-rouge">sort | unique</code>
+</li>
   <li>With 1 billion links to crawl, we could use <strong>MapReduce</strong> to output only entries that have a frequency of 1</li>
 </ul>
 
@@ -315,7 +332,8 @@ Discuss assumptions.</p>
 <h3 id="use-case-user-inputs-a-search-term-and-sees-a-list-of-relevant-pages-with-titles-and-snippets">Use case: User inputs a search term and sees a list of relevant pages with titles and snippets</h3>
 
 <ul>
-  <li>The <strong>Client</strong> sends a request to the <strong>Web Server</strong>, running as a <a href="https://github.com/donnemartin/system-design-primer#reverse-proxy-web-server">reverse proxy</a></li>
+  <li>The <strong>Client</strong> sends a request to the <strong>Web Server</strong>, running as a <a href="https://github.com/donnemartin/system-design-primer#reverse-proxy-web-server">reverse proxy</a>
+</li>
   <li>The <strong>Web Server</strong> forwards the request to the <strong>Query API</strong> server</li>
   <li>The <strong>Query API</strong> server does the following:
     <ul>
@@ -370,7 +388,7 @@ Discuss assumptions.</p>
   <p>Identify and address bottlenecks, given the constraints.</p>
 </blockquote>
 
-<p><img src="http://i.imgur.com/bWxPtQA.png" alt="Imgur" /></p>
+<p><img src="http://i.imgur.com/bWxPtQA.png" alt="Imgur"></p>
 
 <p><strong>Important: Do not simply jump right into the final design from the initial design!</strong></p>
 
@@ -394,7 +412,7 @@ Discuss assumptions.</p>
   <li><a href="https://github.com/donnemartin/system-design-primer#availability-patterns">Availability patterns</a></li>
 </ul>
 
-<p>Some searches are very popular, while others are only executed once.  Popular queries can be served from a <strong>Memory Cache</strong> such as Redis or Memcached to reduce response times and to avoid overloading the <strong>Reverse Index Service</strong> and <strong>Document Service</strong>.  The <strong>Memory Cache</strong> is also useful for handling the unevenly distributed traffic and traffic spikes.  Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup>&lt;a href=https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know&gt;1&lt;/a&gt;</sup></p>
+<p>Some searches are very popular, while others are only executed once.  Popular queries can be served from a <strong>Memory Cache</strong> such as Redis or Memcached to reduce response times and to avoid overloading the <strong>Reverse Index Service</strong> and <strong>Document Service</strong>.  The <strong>Memory Cache</strong> is also useful for handling the unevenly distributed traffic and traffic spikes.  Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup><a href="https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know">1</a></sup></p>
 
 <p>Below are a few other optimizations to the <strong>Crawling Service</strong>:</p>
 
@@ -432,7 +450,7 @@ Discuss assumptions.</p>
   <li><a href="https://github.com/donnemartin/system-design-primer#document-store">Document store</a></li>
   <li><a href="https://github.com/donnemartin/system-design-primer#wide-column-store">Wide column store</a></li>
   <li><a href="https://github.com/donnemartin/system-design-primer#graph-database">Graph database</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#sql-or-nosql">SQL vs NoSQL</a></li>
+  <li><a href="/pages/sql-or-nosql">SQL vs NoSQL</a></li>
 </ul>
 
 <h3 id="caching">Caching</h3>
@@ -477,8 +495,10 @@ Discuss assumptions.</p>
 <ul>
   <li>Discuss tradeoffs:
     <ul>
-      <li>External communication with clients - <a href="https://github.com/donnemartin/system-design-primer#representational-state-transfer-rest">HTTP APIs following REST</a></li>
-      <li>Internal communications - <a href="https://github.com/donnemartin/system-design-primer#remote-procedure-call-rpc">RPC</a></li>
+      <li>External communication with clients - <a href="https://github.com/donnemartin/system-design-primer#representational-state-transfer-rest">HTTP APIs following REST</a>
+</li>
+      <li>Internal communications - <a href="https://github.com/donnemartin/system-design-primer#remote-procedure-call-rpc">RPC</a>
+</li>
     </ul>
   </li>
   <li><a href="https://github.com/donnemartin/system-design-primer#service-discovery">Service discovery</a></li>
@@ -509,15 +529,21 @@ Discuss assumptions.</p>
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">System Design Primer</h2>
+    <h2 class="footer-heading">The System Design Primer</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">System Design Primer</li><li><a class="u-email" href="mailto:phucknguyen@gmail.com">phucknguyen@gmail.com</a></li></ul>
+          <li class="p-name">The System Design Primer</li>
+<li><a class="u-email" href="mailto:phucknguyen@gmail.com">phucknguyen@gmail.com</a></li>
+</ul>
       </div>
 
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/phucnguyen81"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#github"></use></svg> <span class="username">phucnguyen81</span></a></li><li><a href="https://www.twitter.com/phucknguyen"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">phucknguyen</span></a></li></ul>
+      <div class="footer-col footer-col-2">
+<ul class="social-media-list">
+<li><a href="https://github.com/phucnguyen81"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#github"></use></svg> <span class="username">phucnguyen81</span></a></li>
+<li><a href="https://www.twitter.com/phucknguyen"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">phucknguyen</span></a></li>
+</ul>
 </div>
 
       <div class="footer-col footer-col-3">

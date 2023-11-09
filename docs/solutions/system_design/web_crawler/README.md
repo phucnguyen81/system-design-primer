@@ -81,7 +81,7 @@ We'll assume we have an initial list of `links_to_crawl` ranked initially based 
 
 We'll use a table `crawled_links` to store processed links and their page signatures.
 
-We could store `links_to_crawl` and `crawled_links` in a key-value **NoSQL Database**.  For the ranked links in `links_to_crawl`, we could use [Redis](https://redis.io/) with sorted sets to maintain a ranking of page links.  We should discuss the [use cases and tradeoffs between choosing SQL or NoSQL](https://github.com/donnemartin/system-design-primer#sql-or-nosql).
+We could store `links_to_crawl` and `crawled_links` in a key-value **NoSQL Database**.  For the ranked links in `links_to_crawl`, we could use [Redis](https://redis.io/) with sorted sets to maintain a ranking of page links.  We should discuss the [use cases and tradeoffs between choosing SQL or NoSQL](/pages/sql-or-nosql).
 
 * The **Crawler Service** processes each page link by doing the following in a loop:
     * Takes the top ranked page link to crawl
@@ -278,7 +278,7 @@ We'll introduce some components to complete the design and to address scalabilit
 * [Consistency patterns](https://github.com/donnemartin/system-design-primer#consistency-patterns)
 * [Availability patterns](https://github.com/donnemartin/system-design-primer#availability-patterns)
 
-Some searches are very popular, while others are only executed once.  Popular queries can be served from a **Memory Cache** such as Redis or Memcached to reduce response times and to avoid overloading the **Reverse Index Service** and **Document Service**.  The **Memory Cache** is also useful for handling the unevenly distributed traffic and traffic spikes.  Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup><a href=https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know>1</a></sup>
+Some searches are very popular, while others are only executed once.  Popular queries can be served from a **Memory Cache** such as Redis or Memcached to reduce response times and to avoid overloading the **Reverse Index Service** and **Document Service**.  The **Memory Cache** is also useful for handling the unevenly distributed traffic and traffic spikes.  Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup><a href="https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know">1</a></sup>
 
 Below are a few other optimizations to the **Crawling Service**:
 
@@ -306,7 +306,7 @@ Below are a few other optimizations to the **Crawling Service**:
 * [Document store](https://github.com/donnemartin/system-design-primer#document-store)
 * [Wide column store](https://github.com/donnemartin/system-design-primer#wide-column-store)
 * [Graph database](https://github.com/donnemartin/system-design-primer#graph-database)
-* [SQL vs NoSQL](https://github.com/donnemartin/system-design-primer#sql-or-nosql)
+* [SQL vs NoSQL](/pages/sql-or-nosql)
 
 ### Caching
 

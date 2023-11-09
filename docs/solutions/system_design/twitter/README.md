@@ -101,9 +101,9 @@ Handy conversion guide:
 
 ### Use case: User posts a tweet
 
-We could store the user's own tweets to populate the user timeline (activity from the user) in a [relational database](https://github.com/donnemartin/system-design-primer#relational-database-management-system-rdbms).  We should discuss the [use cases and tradeoffs between choosing SQL or NoSQL](https://github.com/donnemartin/system-design-primer#sql-or-nosql).
+We could store the user's own tweets to populate the user timeline (activity from the user) in a [relational database](https://github.com/donnemartin/system-design-primer#relational-database-management-system-rdbms).  We should discuss the [use cases and tradeoffs between choosing SQL or NoSQL](/pages/sql-or-nosql).
 
-Delivering tweets and building the home timeline (activity from people the user is following) is trickier.  Fanning out tweets to all followers (60 thousand tweets delivered on fanout per second) will overload a traditional [relational database](https://github.com/donnemartin/system-design-primer#relational-database-management-system-rdbms).  We'll probably want to choose a data store with fast writes such as a **NoSQL database** or **Memory Cache**.  Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup><a href=https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know>1</a></sup>
+Delivering tweets and building the home timeline (activity from people the user is following) is trickier.  Fanning out tweets to all followers (60 thousand tweets delivered on fanout per second) will overload a traditional [relational database](https://github.com/donnemartin/system-design-primer#relational-database-management-system-rdbms).  We'll probably want to choose a data store with fast writes such as a **NoSQL database** or **Memory Cache**.  Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup><a href="https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know">1</a></sup>
 
 We could store media such as photos or videos on an **Object Store**.
 
@@ -286,7 +286,7 @@ We should also consider moving some data to a **NoSQL Database**.
 * [Document store](https://github.com/donnemartin/system-design-primer#document-store)
 * [Wide column store](https://github.com/donnemartin/system-design-primer#wide-column-store)
 * [Graph database](https://github.com/donnemartin/system-design-primer#graph-database)
-* [SQL vs NoSQL](https://github.com/donnemartin/system-design-primer#sql-or-nosql)
+* [SQL vs NoSQL](/pages/sql-or-nosql)
 
 ### Caching
 

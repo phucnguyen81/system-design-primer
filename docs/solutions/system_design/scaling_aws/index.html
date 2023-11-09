@@ -1,38 +1,48 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Design a system that scales to millions of users on AWS | System Design Primer</title>
-<meta name="generator" content="Jekyll v3.9.3" />
-<meta property="og:title" content="Design a system that scales to millions of users on AWS" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Learn how to design large-scale systems. Prep for the system design interview." />
-<meta property="og:description" content="Learn how to design large-scale systems. Prep for the system design interview." />
-<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/solutions/system_design/scaling_aws/" />
-<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/solutions/system_design/scaling_aws/" />
-<meta property="og:site_name" content="System Design Primer" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Design a system that scales to millions of users on AWS" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Design a system that scales to millions of users on AWS | The System Design Primer</title>
+<meta name="generator" content="Jekyll v3.9.3">
+<meta property="og:title" content="Design a system that scales to millions of users on AWS">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Learn how to design large-scale systems. Prep for the system design interview.">
+<meta property="og:description" content="Learn how to design large-scale systems. Prep for the system design interview.">
+<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/solutions/system_design/scaling_aws/">
+<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/solutions/system_design/scaling_aws/">
+<meta property="og:site_name" content="The System Design Primer">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Design a system that scales to millions of users on AWS">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","description":"Learn how to design large-scale systems. Prep for the system design interview.","headline":"Design a system that scales to millions of users on AWS","url":"https://phucnguyen81.github.io/system-design-primer/solutions/system_design/scaling_aws/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/system-design-primer/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://phucnguyen81.github.io/system-design-primer/feed.xml" title="System Design Primer" /></head>
-<body><header class="site-header" role="banner">
+<link rel="stylesheet" href="/system-design-primer/assets/main.css">
+<link type="application/atom+xml" rel="alternate" href="https://phucnguyen81.github.io/system-design-primer/feed.xml" title="The System Design Primer">
+</head>
+<body>
+<header class="site-header" role="banner">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/system-design-primer/">System Design Primer</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <div class="wrapper">
+<a class="site-title" rel="author" href="/system-design-primer/">The System Design Primer</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
         <label for="nav-trigger">
           <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
             </svg>
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/system-design-primer/about/">About</a><a class="page-link" href="/system-design-primer/"></a><a class="page-link" href="/system-design-primer/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/pastebin/">Design Pastebin.com (or Bit.ly)</a><a class="page-link" href="/system-design-primer/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/system-design-primer/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/system-design-primer/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/system-design-primer/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/system-design-primer/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/system-design-primer/solutions/system_design/web_crawler/">Design a web crawler</a></div>
-      </nav></div>
+        <div class="trigger">
+<a class="page-link" href="/system-design-primer/about/">About</a><a class="page-link" href="/system-design-primer/">The System Design Primer</a><a class="page-link" href="/system-design-primer/pages/sql-or-nosql.html">SQL or NoSQL</a><a class="page-link" href="/system-design-primer/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/pastebin/">Design Pastebin.com (or Bit.ly)</a><a class="page-link" href="/system-design-primer/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/system-design-primer/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/system-design-primer/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/system-design-primer/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/system-design-primer/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/system-design-primer/solutions/system_design/web_crawler/">Design a web crawler</a>
+</div>
+      </nav>
+</div>
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -66,17 +76,21 @@ Discuss assumptions.</p>
 <h4 id="well-scope-the-problem-to-handle-only-the-following-use-cases">We’ll scope the problem to handle only the following use cases</h4>
 
 <ul>
-  <li><strong>User</strong> makes a read or write request
+  <li>
+<strong>User</strong> makes a read or write request
     <ul>
-      <li><strong>Service</strong> does processing, stores user data, then returns the results</li>
+      <li>
+<strong>Service</strong> does processing, stores user data, then returns the results</li>
     </ul>
   </li>
-  <li><strong>Service</strong> needs to evolve from serving a small amount of users to millions of users
+  <li>
+<strong>Service</strong> needs to evolve from serving a small amount of users to millions of users
     <ul>
       <li>Discuss general scaling patterns as we evolve an architecture to handle a large number of users and requests</li>
     </ul>
   </li>
-  <li><strong>Service</strong> has high availability</li>
+  <li>
+<strong>Service</strong> has high availability</li>
 </ul>
 
 <h3 id="constraints-and-assumptions">Constraints and assumptions</h3>
@@ -136,7 +150,7 @@ Discuss assumptions.</p>
   <p>Outline a high level design with all important components.</p>
 </blockquote>
 
-<p><img src="http://i.imgur.com/B8LDKD7.png" alt="Imgur" /></p>
+<p><img src="http://i.imgur.com/B8LDKD7.png" alt="Imgur"></p>
 
 <h2 id="step-3-design-core-components">Step 3: Design core components</h2>
 
@@ -161,7 +175,8 @@ Discuss assumptions.</p>
 <h4 id="start-with-a-single-box">Start with a single box</h4>
 
 <ul>
-  <li><strong>Web server</strong> on EC2
+  <li>
+<strong>Web server</strong> on EC2
     <ul>
       <li>Storage for user data</li>
       <li><a href="https://github.com/donnemartin/system-design-primer#relational-database-management-system-rdbms"><strong>MySQL Database</strong></a></li>
@@ -186,7 +201,8 @@ Discuss assumptions.</p>
 <p><em>Trade-offs, alternatives, and additional details:</em></p>
 
 <ul>
-  <li>The alternative to <strong>Vertical Scaling</strong> is <a href="https://github.com/donnemartin/system-design-primer#horizontal-scaling"><strong>Horizontal scaling</strong></a></li>
+  <li>The alternative to <strong>Vertical Scaling</strong> is <a href="https://github.com/donnemartin/system-design-primer#horizontal-scaling"><strong>Horizontal scaling</strong></a>
+</li>
 </ul>
 
 <h4 id="start-with-sql-consider-nosql">Start with SQL, consider NoSQL</h4>
@@ -197,7 +213,8 @@ Discuss assumptions.</p>
 
 <ul>
   <li>See the <a href="https://github.com/donnemartin/system-design-primer#relational-database-management-system-rdbms">Relational database management system (RDBMS)</a> section</li>
-  <li>Discuss reasons to use <a href="https://github.com/donnemartin/system-design-primer#sql-or-nosql">SQL or NoSQL</a></li>
+  <li>Discuss reasons to use <a href="/pages/sql-or-nosql">SQL or NoSQL</a>
+</li>
 </ul>
 
 <h4 id="assign-a-public-static-ip">Assign a public static IP</h4>
@@ -248,7 +265,7 @@ Discuss assumptions.</p>
 
 <h3 id="users">Users+</h3>
 
-<p><img src="http://i.imgur.com/rrfjMXB.png" alt="Imgur" /></p>
+<p><img src="http://i.imgur.com/rrfjMXB.png" alt="Imgur"></p>
 
 <h4 id="assumptions">Assumptions</h4>
 
@@ -261,13 +278,15 @@ Discuss assumptions.</p>
 <ul>
   <li>Lighten load on the single box and allow for independent scaling
     <ul>
-      <li>Store static content separately in an <strong>Object Store</strong></li>
+      <li>Store static content separately in an <strong>Object Store</strong>
+</li>
       <li>Move the <strong>MySQL Database</strong> to a separate box</li>
     </ul>
   </li>
   <li>Disadvantages
     <ul>
-      <li>These changes would increase complexity and would require changes to the <strong>Web Server</strong> to point to the <strong>Object Store</strong> and the <strong>MySQL Database</strong></li>
+      <li>These changes would increase complexity and would require changes to the <strong>Web Server</strong> to point to the <strong>Object Store</strong> and the <strong>MySQL Database</strong>
+</li>
       <li>Additional security measures must be taken to secure the new components</li>
       <li>AWS costs could also increase, but should be weighed with the costs of managing similar systems on your own</li>
     </ul>
@@ -328,7 +347,7 @@ Discuss assumptions.</p>
 
 <h3 id="users-1">Users++</h3>
 
-<p><img src="http://i.imgur.com/raoFTXM.png" alt="Imgur" /></p>
+<p><img src="http://i.imgur.com/raoFTXM.png" alt="Imgur"></p>
 
 <h4 id="assumptions-1">Assumptions</h4>
 
@@ -358,8 +377,11 @@ Discuss assumptions.</p>
   <li>Separate out the <strong>Web Servers</strong> from the <a href="https://github.com/donnemartin/system-design-primer#application-layer"><strong>Application Servers</strong></a>
     <ul>
       <li>Scale and configure both layers independently</li>
-      <li><strong>Web Servers</strong> can run as a <a href="https://github.com/donnemartin/system-design-primer#reverse-proxy-web-server"><strong>Reverse Proxy</strong></a></li>
-      <li>For example, you can add <strong>Application Servers</strong> handling <strong>Read APIs</strong> while others handle <strong>Write APIs</strong></li>
+      <li>
+<strong>Web Servers</strong> can run as a <a href="https://github.com/donnemartin/system-design-primer#reverse-proxy-web-server"><strong>Reverse Proxy</strong></a>
+</li>
+      <li>For example, you can add <strong>Application Servers</strong> handling <strong>Read APIs</strong> while others handle <strong>Write APIs</strong>
+</li>
     </ul>
   </li>
   <li>Move static (and some dynamic) content to a <a href="https://github.com/donnemartin/system-design-primer#content-delivery-network"><strong>Content Delivery Network (CDN)</strong></a> such as CloudFront to reduce load and latency</li>
@@ -373,7 +395,7 @@ Discuss assumptions.</p>
 
 <h3 id="users-2">Users+++</h3>
 
-<p><img src="http://i.imgur.com/OZCxJr0.png" alt="Imgur" /></p>
+<p><img src="http://i.imgur.com/OZCxJr0.png" alt="Imgur"></p>
 
 <p><strong>Note:</strong> <strong>Internal Load Balancers</strong> not shown to reduce clutter</p>
 
@@ -393,15 +415,18 @@ Discuss assumptions.</p>
     <ul>
       <li>Frequently accessed content from <strong>MySQL</strong>
         <ul>
-          <li>First, try to configure the <strong>MySQL Database</strong> cache to see if that is sufficient to relieve the bottleneck before implementing a <strong>Memory Cache</strong></li>
+          <li>First, try to configure the <strong>MySQL Database</strong> cache to see if that is sufficient to relieve the bottleneck before implementing a <strong>Memory Cache</strong>
+</li>
         </ul>
       </li>
       <li>Session data from the <strong>Web Servers</strong>
         <ul>
-          <li>The <strong>Web Servers</strong> become stateless, allowing for <strong>Autoscaling</strong></li>
+          <li>The <strong>Web Servers</strong> become stateless, allowing for <strong>Autoscaling</strong>
+</li>
         </ul>
       </li>
-      <li>Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup>&lt;a href=https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know&gt;1&lt;/a&gt;</sup></li>
+      <li>Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup><a href="https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know">1</a></sup>
+</li>
     </ul>
   </li>
   <li>Add <a href="https://github.com/donnemartin/system-design-primer#master-slave-replication"><strong>MySQL Read Replicas</strong></a> to reduce load on the write master</li>
@@ -417,7 +442,8 @@ Discuss assumptions.</p>
 <h4 id="add-mysql-read-replicas">Add MySQL read replicas</h4>
 
 <ul>
-  <li>In addition to adding and scaling a <strong>Memory Cache</strong>, <strong>MySQL Read Replicas</strong> can also help relieve load on the <strong>MySQL Write Master</strong></li>
+  <li>In addition to adding and scaling a <strong>Memory Cache</strong>, <strong>MySQL Read Replicas</strong> can also help relieve load on the <strong>MySQL Write Master</strong>
+</li>
   <li>Add logic to <strong>Web Server</strong> to separate out writes and reads</li>
   <li>Add <strong>Load Balancers</strong> in front of <strong>MySQL Read Replicas</strong> (not pictured to reduce clutter)</li>
   <li>Most services are read-heavy vs write-heavy</li>
@@ -431,7 +457,7 @@ Discuss assumptions.</p>
 
 <h3 id="users-3">Users++++</h3>
 
-<p><img src="http://i.imgur.com/3X8nmdL.png" alt="Imgur" /></p>
+<p><img src="http://i.imgur.com/3X8nmdL.png" alt="Imgur"></p>
 
 <h4 id="assumptions-3">Assumptions</h4>
 
@@ -453,12 +479,18 @@ Discuss assumptions.</p>
   </li>
   <li>Continue monitoring metrics to address bottlenecks
     <ul>
-      <li><strong>Host level</strong> - Review a single EC2 instance</li>
-      <li><strong>Aggregate level</strong> - Review load balancer stats</li>
-      <li><strong>Log analysis</strong> - CloudWatch, CloudTrail, Loggly, Splunk, Sumo</li>
-      <li><strong>External site performance</strong> - Pingdom or New Relic</li>
-      <li><strong>Handle notifications and incidents</strong> - PagerDuty</li>
-      <li><strong>Error Reporting</strong> - Sentry</li>
+      <li>
+<strong>Host level</strong> - Review a single EC2 instance</li>
+      <li>
+<strong>Aggregate level</strong> - Review load balancer stats</li>
+      <li>
+<strong>Log analysis</strong> - CloudWatch, CloudTrail, Loggly, Splunk, Sumo</li>
+      <li>
+<strong>External site performance</strong> - Pingdom or New Relic</li>
+      <li>
+<strong>Handle notifications and incidents</strong> - PagerDuty</li>
+      <li>
+<strong>Error Reporting</strong> - Sentry</li>
     </ul>
   </li>
 </ul>
@@ -495,7 +527,7 @@ Discuss assumptions.</p>
 
 <h3 id="users-4">Users+++++</h3>
 
-<p><img src="http://i.imgur.com/jj3A5N8.png" alt="Imgur" /></p>
+<p><img src="http://i.imgur.com/jj3A5N8.png" alt="Imgur"></p>
 
 <p><strong>Note:</strong> <strong>Autoscaling</strong> groups not shown to reduce clutter</p>
 
@@ -537,13 +569,17 @@ Discuss assumptions.</p>
 <ul>
   <li>For example, in a photo service, the photo upload and the thumbnail creation can be separated:
     <ul>
-      <li><strong>Client</strong> uploads photo</li>
-      <li><strong>Application Server</strong> puts a job in a <strong>Queue</strong> such as SQS</li>
+      <li>
+<strong>Client</strong> uploads photo</li>
+      <li>
+<strong>Application Server</strong> puts a job in a <strong>Queue</strong> such as SQS</li>
       <li>The <strong>Worker Service</strong> on EC2 or Lambda pulls work off the <strong>Queue</strong> then:
         <ul>
           <li>Creates a thumbnail</li>
-          <li>Updates a <strong>Database</strong></li>
-          <li>Stores the thumbnail in the <strong>Object Store</strong></li>
+          <li>Updates a <strong>Database</strong>
+</li>
+          <li>Stores the thumbnail in the <strong>Object Store</strong>
+</li>
         </ul>
       </li>
     </ul>
@@ -579,7 +615,7 @@ Discuss assumptions.</p>
   <li><a href="https://github.com/donnemartin/system-design-primer#document-store">Document store</a></li>
   <li><a href="https://github.com/donnemartin/system-design-primer#wide-column-store">Wide column store</a></li>
   <li><a href="https://github.com/donnemartin/system-design-primer#graph-database">Graph database</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#sql-or-nosql">SQL vs NoSQL</a></li>
+  <li><a href="/pages/sql-or-nosql">SQL vs NoSQL</a></li>
 </ul>
 
 <h3 id="caching">Caching</h3>
@@ -624,8 +660,10 @@ Discuss assumptions.</p>
 <ul>
   <li>Discuss tradeoffs:
     <ul>
-      <li>External communication with clients - <a href="https://github.com/donnemartin/system-design-primer#representational-state-transfer-rest">HTTP APIs following REST</a></li>
-      <li>Internal communications - <a href="https://github.com/donnemartin/system-design-primer#remote-procedure-call-rpc">RPC</a></li>
+      <li>External communication with clients - <a href="https://github.com/donnemartin/system-design-primer#representational-state-transfer-rest">HTTP APIs following REST</a>
+</li>
+      <li>Internal communications - <a href="https://github.com/donnemartin/system-design-primer#remote-procedure-call-rpc">RPC</a>
+</li>
     </ul>
   </li>
   <li><a href="https://github.com/donnemartin/system-design-primer#service-discovery">Service discovery</a></li>
@@ -656,15 +694,21 @@ Discuss assumptions.</p>
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">System Design Primer</h2>
+    <h2 class="footer-heading">The System Design Primer</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">System Design Primer</li><li><a class="u-email" href="mailto:phucknguyen@gmail.com">phucknguyen@gmail.com</a></li></ul>
+          <li class="p-name">The System Design Primer</li>
+<li><a class="u-email" href="mailto:phucknguyen@gmail.com">phucknguyen@gmail.com</a></li>
+</ul>
       </div>
 
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/phucnguyen81"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#github"></use></svg> <span class="username">phucnguyen81</span></a></li><li><a href="https://www.twitter.com/phucknguyen"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">phucknguyen</span></a></li></ul>
+      <div class="footer-col footer-col-2">
+<ul class="social-media-list">
+<li><a href="https://github.com/phucnguyen81"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#github"></use></svg> <span class="username">phucnguyen81</span></a></li>
+<li><a href="https://www.twitter.com/phucknguyen"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">phucknguyen</span></a></li>
+</ul>
 </div>
 
       <div class="footer-col footer-col-3">

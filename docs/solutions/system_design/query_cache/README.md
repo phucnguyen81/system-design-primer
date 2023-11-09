@@ -66,7 +66,7 @@ Handy conversion guide:
 
 ### Use case: User sends a request resulting in a cache hit
 
-Popular queries can be served from a **Memory Cache** such as Redis or Memcached to reduce read latency and to avoid overloading the **Reverse Index Service** and **Document Service**.  Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup><a href=https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know>1</a></sup>
+Popular queries can be served from a **Memory Cache** such as Redis or Memcached to reduce read latency and to avoid overloading the **Reverse Index Service** and **Document Service**.  Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup><a href="https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know">1</a></sup>
 
 Since the cache has limited capacity, we'll use a least recently used (LRU) approach to expire older entries.
 
@@ -259,7 +259,7 @@ To handle the heavy request load and the large amount of memory needed, we'll sc
 * [Document store](https://github.com/donnemartin/system-design-primer#document-store)
 * [Wide column store](https://github.com/donnemartin/system-design-primer#wide-column-store)
 * [Graph database](https://github.com/donnemartin/system-design-primer#graph-database)
-* [SQL vs NoSQL](https://github.com/donnemartin/system-design-primer#sql-or-nosql)
+* [SQL vs NoSQL](/pages/sql-or-nosql)
 
 ### Caching
 

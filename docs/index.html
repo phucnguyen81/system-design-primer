@@ -1,47 +1,455 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>System Design Primer | Learn how to design large-scale systems. Prep for the system design interview.</title>
-<meta name="generator" content="Jekyll v3.9.3" />
-<meta property="og:title" content="System Design Primer" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Learn how to design large-scale systems. Prep for the system design interview." />
-<meta property="og:description" content="Learn how to design large-scale systems. Prep for the system design interview." />
-<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/" />
-<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/" />
-<meta property="og:site_name" content="System Design Primer" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="System Design Primer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>The System Design Primer | Learn how to design large-scale systems. Prep for the system design interview.</title>
+<meta name="generator" content="Jekyll v3.9.3">
+<meta property="og:title" content="The System Design Primer">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Learn how to design large-scale systems. Prep for the system design interview.">
+<meta property="og:description" content="Learn how to design large-scale systems. Prep for the system design interview.">
+<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/">
+<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/">
+<meta property="og:site_name" content="The System Design Primer">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="The System Design Primer">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"Learn how to design large-scale systems. Prep for the system design interview.","headline":"System Design Primer","name":"System Design Primer","url":"https://phucnguyen81.github.io/system-design-primer/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","description":"Learn how to design large-scale systems. Prep for the system design interview.","headline":"The System Design Primer","name":"The System Design Primer","url":"https://phucnguyen81.github.io/system-design-primer/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/system-design-primer/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://phucnguyen81.github.io/system-design-primer/feed.xml" title="System Design Primer" /></head>
-<body><header class="site-header" role="banner">
+<link rel="stylesheet" href="/system-design-primer/assets/main.css">
+<link type="application/atom+xml" rel="alternate" href="https://phucnguyen81.github.io/system-design-primer/feed.xml" title="The System Design Primer">
+</head>
+<body>
+<header class="site-header" role="banner">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/system-design-primer/">System Design Primer</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <div class="wrapper">
+<a class="site-title" rel="author" href="/system-design-primer/">The System Design Primer</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
         <label for="nav-trigger">
           <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
             </svg>
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/system-design-primer/about/">About</a><a class="page-link" href="/system-design-primer/"></a><a class="page-link" href="/system-design-primer/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/pastebin/">Design Pastebin.com (or Bit.ly)</a><a class="page-link" href="/system-design-primer/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/system-design-primer/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/system-design-primer/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/system-design-primer/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/system-design-primer/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/system-design-primer/solutions/system_design/web_crawler/">Design a web crawler</a></div>
-      </nav></div>
+        <div class="trigger">
+<a class="page-link" href="/system-design-primer/about/">About</a><a class="page-link" href="/system-design-primer/">The System Design Primer</a><a class="page-link" href="/system-design-primer/pages/sql-or-nosql.html">SQL or NoSQL</a><a class="page-link" href="/system-design-primer/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/pastebin/">Design Pastebin.com (or Bit.ly)</a><a class="page-link" href="/system-design-primer/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/system-design-primer/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/system-design-primer/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/system-design-primer/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/system-design-primer/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/system-design-primer/solutions/system_design/web_crawler/">Design a web crawler</a>
+</div>
+      </nav>
+</div>
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><h1 class="page-heading"></h1><h1 id="the-system-design-primer">The System Design Primer</h1>
+        <div class="home">
+<h1 class="page-heading">The System Design Primer</h1>
+<p align="center">
+  <img src="images/jj3A5N8.png">
+  <br>
+</p>
+
+<h2 id="index-of-system-design-topics">Index of system design topics</h2>
+
+<blockquote>
+  <p>Summaries of various system design topics, including pros and cons.  <strong>Everything is a trade-off</strong>.</p>
+
+  <p>Each section contains links to more in-depth resources.</p>
+</blockquote>
 
 <p align="center">
-  <img src="images/jj3A5N8.png" />
-  <br />
+  <img src="images/jrUBAF7.png">
+  <br>
 </p>
+
+<ul>
+  <li><a href="#index-of-system-design-topics">Index of system design topics</a></li>
+  <li>
+<a href="#motivation">Motivation</a>
+    <ul>
+      <li><a href="#learn-how-to-design-large-scale-systems">Learn how to design large-scale systems</a></li>
+      <li><a href="#learn-from-the-open-source-community">Learn from the open source community</a></li>
+      <li><a href="#prep-for-the-system-design-interview">Prep for the system design interview</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#anki-flashcards">Anki flashcards</a>
+    <ul>
+      <li><a href="#coding-resource-interactive-coding-challenges">Coding Resource: Interactive Coding Challenges</a></li>
+    </ul>
+  </li>
+  <li><a href="#contributing">Contributing</a></li>
+  <li><a href="#study-guide">Study guide</a></li>
+  <li>
+<a href="#how-to-approach-a-system-design-interview-question">How to approach a system design interview question</a>
+    <ul>
+      <li><a href="#step-1-outline-use-cases-constraints-and-assumptions">Step 1: Outline use cases, constraints, and assumptions</a></li>
+      <li><a href="#step-2-create-a-high-level-design">Step 2: Create a high level design</a></li>
+      <li><a href="#step-3-design-core-components">Step 3: Design core components</a></li>
+      <li><a href="#step-4-scale-the-design">Step 4: Scale the design</a></li>
+      <li><a href="#back-of-the-envelope-calculations">Back-of-the-envelope calculations</a></li>
+      <li><a href="#sources-and-further-reading">Source(s) and further reading</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#system-design-interview-questions-with-solutions">System design interview questions with solutions</a>
+    <ul>
+      <li><a href="#design-pastebincom-or-bitly">Design Pastebin.com (or Bit.ly)</a></li>
+      <li><a href="#design-the-twitter-timeline-and-search-or-facebook-feed-and-search">Design the Twitter timeline and search (or Facebook feed and search)</a></li>
+      <li><a href="#design-a-web-crawler">Design a web crawler</a></li>
+      <li><a href="#design-mintcom">Design Mint.com</a></li>
+      <li><a href="#design-the-data-structures-for-a-social-network">Design the data structures for a social network</a></li>
+      <li><a href="#design-a-key-value-store-for-a-search-engine">Design a key-value store for a search engine</a></li>
+      <li><a href="#design-amazons-sales-ranking-by-category-feature">Design Amazon’s sales ranking by category feature</a></li>
+      <li><a href="#design-a-system-that-scales-to-millions-of-users-on-aws">Design a system that scales to millions of users on AWS</a></li>
+    </ul>
+  </li>
+  <li><a href="#object-oriented-design-interview-questions-with-solutions">Object-oriented design interview questions with solutions</a></li>
+  <li>
+<a href="#system-design-topics-start-here">System design topics: start here</a>
+    <ul>
+      <li><a href="#step-1-review-the-scalability-video-lecture">Step 1: Review the scalability video lecture</a></li>
+      <li><a href="#step-2-review-the-scalability-article">Step 2: Review the scalability article</a></li>
+      <li><a href="#next-steps">Next steps</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#performance-vs-scalability">Performance vs scalability</a>
+    <ul>
+      <li><a href="#sources-and-further-reading-1">Source(s) and further reading</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#latency-vs-throughput">Latency vs throughput</a>
+    <ul>
+      <li><a href="#sources-and-further-reading-2">Source(s) and further reading</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#availability-vs-consistency">Availability vs consistency</a>
+    <ul>
+      <li>
+<a href="#cap-theorem">CAP theorem</a>
+        <ul>
+          <li><a href="#cp---consistency-and-partition-tolerance">CP - consistency and partition tolerance</a></li>
+          <li><a href="#ap---availability-and-partition-tolerance">AP - availability and partition tolerance</a></li>
+        </ul>
+      </li>
+      <li><a href="#sources-and-further-reading-3">Source(s) and further reading</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#consistency-patterns">Consistency patterns</a>
+    <ul>
+      <li><a href="#weak-consistency">Weak consistency</a></li>
+      <li><a href="#eventual-consistency">Eventual consistency</a></li>
+      <li><a href="#strong-consistency">Strong consistency</a></li>
+      <li><a href="#sources-and-further-reading-4">Source(s) and further reading</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#availability-patterns">Availability patterns</a>
+    <ul>
+      <li>
+<a href="#fail-over">Fail-over</a>
+        <ul>
+          <li><a href="#active-passive">Active-passive</a></li>
+          <li><a href="#active-active">Active-active</a></li>
+        </ul>
+      </li>
+      <li><a href="#disadvantages-failover">Disadvantage(s): failover</a></li>
+      <li>
+<a href="#replication">Replication</a>
+        <ul>
+          <li><a href="#master-slave-and-master-master">Master-slave and master-master</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#availability-in-numbers">Availability in numbers</a>
+        <ul>
+          <li><a href="#999-availability---three-9s">99.9% availability - three 9s</a></li>
+          <li><a href="#9999-availability---four-9s">99.99% availability - four 9s</a></li>
+          <li>
+<a href="#availability-in-parallel-vs-in-sequence">Availability in parallel vs in sequence</a>
+            <ul>
+              <li><a href="#in-sequence">In sequence</a></li>
+              <li><a href="#in-parallel">In parallel</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="#domain-name-system">Domain name system</a>
+    <ul>
+      <li><a href="#disadvantages-dns">Disadvantage(s): DNS</a></li>
+      <li><a href="#sources-and-further-reading-5">Source(s) and further reading</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#content-delivery-network">Content delivery network</a>
+    <ul>
+      <li><a href="#push-cdns">Push CDNs</a></li>
+      <li><a href="#pull-cdns">Pull CDNs</a></li>
+      <li><a href="#disadvantages-cdn">Disadvantage(s): CDN</a></li>
+      <li><a href="#sources-and-further-reading-6">Source(s) and further reading</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#load-balancer">Load balancer</a>
+    <ul>
+      <li><a href="#layer-4-load-balancing">Layer 4 load balancing</a></li>
+      <li><a href="#layer-7-load-balancing">Layer 7 load balancing</a></li>
+      <li>
+<a href="#horizontal-scaling">Horizontal scaling</a>
+        <ul>
+          <li><a href="#disadvantages-horizontal-scaling">Disadvantage(s): horizontal scaling</a></li>
+        </ul>
+      </li>
+      <li><a href="#disadvantages-load-balancer">Disadvantage(s): load balancer</a></li>
+      <li><a href="#sources-and-further-reading-7">Source(s) and further reading</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#reverse-proxy-web-server">Reverse proxy (web server)</a>
+    <ul>
+      <li><a href="#load-balancer-vs-reverse-proxy">Load balancer vs reverse proxy</a></li>
+      <li><a href="#disadvantages-reverse-proxy">Disadvantage(s): reverse proxy</a></li>
+      <li><a href="#sources-and-further-reading-8">Source(s) and further reading</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#application-layer">Application layer</a>
+    <ul>
+      <li><a href="#microservices">Microservices</a></li>
+      <li><a href="#service-discovery">Service Discovery</a></li>
+      <li><a href="#disadvantages-application-layer">Disadvantage(s): application layer</a></li>
+      <li><a href="#sources-and-further-reading-9">Source(s) and further reading</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#database">Database</a>
+    <ul>
+      <li>
+<a href="#relational-database-management-system-rdbms">Relational database management system (RDBMS)</a>
+        <ul>
+          <li>
+<a href="#master-slave-replication">Master-slave replication</a>
+            <ul>
+              <li><a href="#disadvantages-master-slave-replication">Disadvantage(s): master-slave replication</a></li>
+            </ul>
+          </li>
+          <li>
+<a href="#master-master-replication">Master-master replication</a>
+            <ul>
+              <li><a href="#disadvantages-master-master-replication">Disadvantage(s): master-master replication</a></li>
+              <li><a href="#disadvantages-replication">Disadvantage(s): replication</a></li>
+              <li><a href="#sources-and-further-reading-replication">Source(s) and further reading: replication</a></li>
+            </ul>
+          </li>
+          <li>
+<a href="#federation">Federation</a>
+            <ul>
+              <li><a href="#disadvantages-federation">Disadvantage(s): federation</a></li>
+              <li><a href="#sources-and-further-reading-federation">Source(s) and further reading: federation</a></li>
+            </ul>
+          </li>
+          <li>
+<a href="#sharding">Sharding</a>
+            <ul>
+              <li><a href="#disadvantages-sharding">Disadvantage(s): sharding</a></li>
+              <li><a href="#sources-and-further-reading-sharding">Source(s) and further reading: sharding</a></li>
+            </ul>
+          </li>
+          <li>
+<a href="#denormalization">Denormalization</a>
+            <ul>
+              <li>
+<a href="#disadvantages-denormalization">Disadvantage(s): denormalization</a>
+                <ul>
+                  <li><a href="#sources-and-further-reading-denormalization">Source(s) and further reading: denormalization</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+<a href="#sql-tuning">SQL tuning</a>
+            <ul>
+              <li><a href="#tighten-up-the-schema">Tighten up the schema</a></li>
+              <li><a href="#use-good-indices">Use good indices</a></li>
+              <li><a href="#avoid-expensive-joins">Avoid expensive joins</a></li>
+              <li><a href="#partition-tables">Partition tables</a></li>
+              <li><a href="#tune-the-query-cache">Tune the query cache</a></li>
+              <li><a href="#sources-and-further-reading-sql-tuning">Source(s) and further reading: SQL tuning</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+<a href="#nosql">NoSQL</a>
+        <ul>
+          <li>
+<a href="#key-value-store">Key-value store</a>
+            <ul>
+              <li><a href="#sources-and-further-reading-key-value-store">Source(s) and further reading: key-value store</a></li>
+            </ul>
+          </li>
+          <li>
+<a href="#document-store">Document store</a>
+            <ul>
+              <li><a href="#sources-and-further-reading-document-store">Source(s) and further reading: document store</a></li>
+            </ul>
+          </li>
+          <li>
+<a href="#wide-column-store">Wide column store</a>
+            <ul>
+              <li><a href="#sources-and-further-reading-wide-column-store">Source(s) and further reading: wide column store</a></li>
+            </ul>
+          </li>
+          <li>
+<a href="#graph-database">Graph database</a>
+            <ul>
+              <li><a href="#sources-and-further-reading-graph">Source(s) and further reading: graph</a></li>
+            </ul>
+          </li>
+          <li><a href="#sources-and-further-reading-nosql">Source(s) and further reading: NoSQL</a></li>
+        </ul>
+      </li>
+      <li><a href="#sql-or-nosql">SQL or NoSQL</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#cache">Cache</a>
+    <ul>
+      <li><a href="#client-caching">Client caching</a></li>
+      <li><a href="#cdn-caching">CDN caching</a></li>
+      <li><a href="#web-server-caching">Web server caching</a></li>
+      <li><a href="#database-caching">Database caching</a></li>
+      <li><a href="#application-caching">Application caching</a></li>
+      <li><a href="#caching-at-the-database-query-level">Caching at the database query level</a></li>
+      <li><a href="#caching-at-the-object-level">Caching at the object level</a></li>
+      <li>
+<a href="#when-to-update-the-cache">When to update the cache</a>
+        <ul>
+          <li>
+<a href="#cache-aside">Cache-aside</a>
+            <ul>
+              <li><a href="#disadvantages-cache-aside">Disadvantage(s): cache-aside</a></li>
+            </ul>
+          </li>
+          <li>
+<a href="#write-through">Write-through</a>
+            <ul>
+              <li><a href="#disadvantages-write-through">Disadvantage(s): write through</a></li>
+            </ul>
+          </li>
+          <li>
+<a href="#write-behind-write-back">Write-behind (write-back)</a>
+            <ul>
+              <li><a href="#disadvantages-write-behind">Disadvantage(s): write-behind</a></li>
+            </ul>
+          </li>
+          <li>
+<a href="#refresh-ahead">Refresh-ahead</a>
+            <ul>
+              <li><a href="#disadvantages-refresh-ahead">Disadvantage(s): refresh-ahead</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#disadvantages-cache">Disadvantage(s): cache</a></li>
+      <li><a href="#sources-and-further-reading-10">Source(s) and further reading</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#asynchronism">Asynchronism</a>
+    <ul>
+      <li><a href="#message-queues">Message queues</a></li>
+      <li><a href="#task-queues">Task queues</a></li>
+      <li><a href="#back-pressure">Back pressure</a></li>
+      <li><a href="#disadvantages-asynchronism">Disadvantage(s): asynchronism</a></li>
+      <li><a href="#sources-and-further-reading-11">Source(s) and further reading</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#communication">Communication</a>
+    <ul>
+      <li>
+<a href="#hypertext-transfer-protocol-http">Hypertext transfer protocol (HTTP)</a>
+        <ul>
+          <li><a href="#sources-and-further-reading-http">Source(s) and further reading: HTTP</a></li>
+        </ul>
+      </li>
+      <li><a href="#transmission-control-protocol-tcp">Transmission control protocol (TCP)</a></li>
+      <li>
+<a href="#user-datagram-protocol-udp">User datagram protocol (UDP)</a>
+        <ul>
+          <li><a href="#sources-and-further-reading-tcp-and-udp">Source(s) and further reading: TCP and UDP</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#remote-procedure-call-rpc">Remote procedure call (RPC)</a>
+        <ul>
+          <li><a href="#disadvantages-rpc">Disadvantage(s): RPC</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#representational-state-transfer-rest">Representational state transfer (REST)</a>
+        <ul>
+          <li><a href="#disadvantages-rest">Disadvantage(s): REST</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#rpc-and-rest-calls-comparison">RPC and REST calls comparison</a>
+        <ul>
+          <li><a href="#sources-and-further-reading-rest-and-rpc">Source(s) and further reading: REST and RPC</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="#security">Security</a>
+    <ul>
+      <li><a href="#sources-and-further-reading-12">Source(s) and further reading</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#appendix">Appendix</a>
+    <ul>
+      <li>
+<a href="#powers-of-two-table">Powers of two table</a>
+        <ul>
+          <li><a href="#sources-and-further-reading-13">Source(s) and further reading</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#latency-numbers-every-programmer-should-know">Latency numbers every programmer should know</a>
+        <ul>
+          <li><a href="#latency-numbers-visualized">Latency numbers visualized</a></li>
+          <li><a href="#sources-and-further-reading-14">Source(s) and further reading</a></li>
+        </ul>
+      </li>
+      <li><a href="#additional-system-design-interview-questions">Additional system design interview questions</a></li>
+      <li><a href="#real-world-architectures">Real world architectures</a></li>
+      <li><a href="#company-architectures">Company architectures</a></li>
+      <li>
+<a href="#company-engineering-blogs">Company engineering blogs</a>
+        <ul>
+          <li><a href="#sources-and-further-reading-15">Source(s) and further reading</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#under-development">Under development</a></li>
+  <li><a href="#credits">Credits</a></li>
+  <li><a href="#contact-info">Contact info</a></li>
+  <li><a href="#license">License</a></li>
+</ul>
 
 <h2 id="motivation">Motivation</h2>
 
@@ -84,8 +492,8 @@
 <h2 id="anki-flashcards">Anki flashcards</h2>
 
 <p align="center">
-  <img src="images/zdCAkB3.png" />
-  <br />
+  <img src="images/zdCAkB3.png">
+  <br>
 </p>
 
 <p>The provided <a href="https://apps.ankiweb.net/">Anki flashcard decks</a> use spaced repetition to help you retain key system design concepts.</p>
@@ -103,8 +511,8 @@
 <p>Looking for resources to help you prep for the <a href="https://github.com/donnemartin/interactive-coding-challenges"><strong>Coding Interview</strong></a>?</p>
 
 <p align="center">
-  <img src="images/b4YtAEN.png" />
-  <br />
+  <img src="images/b4YtAEN.png">
+  <br>
 </p>
 
 <p>Check out the sister repo <a href="https://github.com/donnemartin/interactive-coding-challenges"><strong>Interactive Coding Challenges</strong></a>, which contains an additional Anki deck:</p>
@@ -132,366 +540,13 @@
 
 <p>Review the <a href="CONTRIBUTING.md">Contributing Guidelines</a>.</p>
 
-<h2 id="index-of-system-design-topics">Index of system design topics</h2>
-
-<blockquote>
-  <p>Summaries of various system design topics, including pros and cons.  <strong>Everything is a trade-off</strong>.</p>
-
-  <p>Each section contains links to more in-depth resources.</p>
-</blockquote>
-
-<p align="center">
-  <img src="images/jrUBAF7.png" />
-  <br />
-</p>
-
-<ul>
-  <li><a href="#the-system-design-primer">The System Design Primer</a>
-    <ul>
-      <li><a href="#motivation">Motivation</a>
-        <ul>
-          <li><a href="#learn-how-to-design-large-scale-systems">Learn how to design large-scale systems</a></li>
-          <li><a href="#learn-from-the-open-source-community">Learn from the open source community</a></li>
-          <li><a href="#prep-for-the-system-design-interview">Prep for the system design interview</a></li>
-        </ul>
-      </li>
-      <li><a href="#anki-flashcards">Anki flashcards</a>
-        <ul>
-          <li><a href="#coding-resource-interactive-coding-challenges">Coding Resource: Interactive Coding Challenges</a></li>
-        </ul>
-      </li>
-      <li><a href="#contributing">Contributing</a></li>
-      <li><a href="#index-of-system-design-topics">Index of system design topics</a></li>
-      <li><a href="#study-guide">Study guide</a></li>
-      <li><a href="#how-to-approach-a-system-design-interview-question">How to approach a system design interview question</a>
-        <ul>
-          <li><a href="#step-1-outline-use-cases-constraints-and-assumptions">Step 1: Outline use cases, constraints, and assumptions</a></li>
-          <li><a href="#step-2-create-a-high-level-design">Step 2: Create a high level design</a></li>
-          <li><a href="#step-3-design-core-components">Step 3: Design core components</a></li>
-          <li><a href="#step-4-scale-the-design">Step 4: Scale the design</a></li>
-          <li><a href="#back-of-the-envelope-calculations">Back-of-the-envelope calculations</a></li>
-          <li><a href="#sources-and-further-reading">Source(s) and further reading</a></li>
-        </ul>
-      </li>
-      <li><a href="#system-design-interview-questions-with-solutions">System design interview questions with solutions</a>
-        <ul>
-          <li><a href="#design-pastebincom-or-bitly">Design Pastebin.com (or Bit.ly)</a></li>
-          <li><a href="#design-the-twitter-timeline-and-search-or-facebook-feed-and-search">Design the Twitter timeline and search (or Facebook feed and search)</a></li>
-          <li><a href="#design-a-web-crawler">Design a web crawler</a></li>
-          <li><a href="#design-mintcom">Design Mint.com</a></li>
-          <li><a href="#design-the-data-structures-for-a-social-network">Design the data structures for a social network</a></li>
-          <li><a href="#design-a-key-value-store-for-a-search-engine">Design a key-value store for a search engine</a></li>
-          <li><a href="#design-amazons-sales-ranking-by-category-feature">Design Amazon’s sales ranking by category feature</a></li>
-          <li><a href="#design-a-system-that-scales-to-millions-of-users-on-aws">Design a system that scales to millions of users on AWS</a></li>
-        </ul>
-      </li>
-      <li><a href="#object-oriented-design-interview-questions-with-solutions">Object-oriented design interview questions with solutions</a></li>
-      <li><a href="#system-design-topics-start-here">System design topics: start here</a>
-        <ul>
-          <li><a href="#step-1-review-the-scalability-video-lecture">Step 1: Review the scalability video lecture</a></li>
-          <li><a href="#step-2-review-the-scalability-article">Step 2: Review the scalability article</a></li>
-          <li><a href="#next-steps">Next steps</a></li>
-        </ul>
-      </li>
-      <li><a href="#performance-vs-scalability">Performance vs scalability</a>
-        <ul>
-          <li><a href="#sources-and-further-reading-1">Source(s) and further reading</a></li>
-        </ul>
-      </li>
-      <li><a href="#latency-vs-throughput">Latency vs throughput</a>
-        <ul>
-          <li><a href="#sources-and-further-reading-2">Source(s) and further reading</a></li>
-        </ul>
-      </li>
-      <li><a href="#availability-vs-consistency">Availability vs consistency</a>
-        <ul>
-          <li><a href="#cap-theorem">CAP theorem</a>
-            <ul>
-              <li><a href="#cp---consistency-and-partition-tolerance">CP - consistency and partition tolerance</a></li>
-              <li><a href="#ap---availability-and-partition-tolerance">AP - availability and partition tolerance</a></li>
-            </ul>
-          </li>
-          <li><a href="#sources-and-further-reading-3">Source(s) and further reading</a></li>
-        </ul>
-      </li>
-      <li><a href="#consistency-patterns">Consistency patterns</a>
-        <ul>
-          <li><a href="#weak-consistency">Weak consistency</a></li>
-          <li><a href="#eventual-consistency">Eventual consistency</a></li>
-          <li><a href="#strong-consistency">Strong consistency</a></li>
-          <li><a href="#sources-and-further-reading-4">Source(s) and further reading</a></li>
-        </ul>
-      </li>
-      <li><a href="#availability-patterns">Availability patterns</a>
-        <ul>
-          <li><a href="#fail-over">Fail-over</a>
-            <ul>
-              <li><a href="#active-passive">Active-passive</a></li>
-              <li><a href="#active-active">Active-active</a></li>
-            </ul>
-          </li>
-          <li><a href="#disadvantages-failover">Disadvantage(s): failover</a></li>
-          <li><a href="#replication">Replication</a>
-            <ul>
-              <li><a href="#master-slave-and-master-master">Master-slave and master-master</a></li>
-            </ul>
-          </li>
-          <li><a href="#availability-in-numbers">Availability in numbers</a>
-            <ul>
-              <li><a href="#999-availability---three-9s">99.9% availability - three 9s</a></li>
-              <li><a href="#9999-availability---four-9s">99.99% availability - four 9s</a></li>
-              <li><a href="#availability-in-parallel-vs-in-sequence">Availability in parallel vs in sequence</a>
-                <ul>
-                  <li><a href="#in-sequence">In sequence</a></li>
-                  <li><a href="#in-parallel">In parallel</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li><a href="#domain-name-system">Domain name system</a>
-        <ul>
-          <li><a href="#disadvantages-dns">Disadvantage(s): DNS</a></li>
-          <li><a href="#sources-and-further-reading-5">Source(s) and further reading</a></li>
-        </ul>
-      </li>
-      <li><a href="#content-delivery-network">Content delivery network</a>
-        <ul>
-          <li><a href="#push-cdns">Push CDNs</a></li>
-          <li><a href="#pull-cdns">Pull CDNs</a></li>
-          <li><a href="#disadvantages-cdn">Disadvantage(s): CDN</a></li>
-          <li><a href="#sources-and-further-reading-6">Source(s) and further reading</a></li>
-        </ul>
-      </li>
-      <li><a href="#load-balancer">Load balancer</a>
-        <ul>
-          <li><a href="#layer-4-load-balancing">Layer 4 load balancing</a></li>
-          <li><a href="#layer-7-load-balancing">Layer 7 load balancing</a></li>
-          <li><a href="#horizontal-scaling">Horizontal scaling</a>
-            <ul>
-              <li><a href="#disadvantages-horizontal-scaling">Disadvantage(s): horizontal scaling</a></li>
-            </ul>
-          </li>
-          <li><a href="#disadvantages-load-balancer">Disadvantage(s): load balancer</a></li>
-          <li><a href="#sources-and-further-reading-7">Source(s) and further reading</a></li>
-        </ul>
-      </li>
-      <li><a href="#reverse-proxy-web-server">Reverse proxy (web server)</a>
-        <ul>
-          <li><a href="#load-balancer-vs-reverse-proxy">Load balancer vs reverse proxy</a></li>
-          <li><a href="#disadvantages-reverse-proxy">Disadvantage(s): reverse proxy</a></li>
-          <li><a href="#sources-and-further-reading-8">Source(s) and further reading</a></li>
-        </ul>
-      </li>
-      <li><a href="#application-layer">Application layer</a>
-        <ul>
-          <li><a href="#microservices">Microservices</a></li>
-          <li><a href="#service-discovery">Service Discovery</a></li>
-          <li><a href="#disadvantages-application-layer">Disadvantage(s): application layer</a></li>
-          <li><a href="#sources-and-further-reading-9">Source(s) and further reading</a></li>
-        </ul>
-      </li>
-      <li><a href="#database">Database</a>
-        <ul>
-          <li><a href="#relational-database-management-system-rdbms">Relational database management system (RDBMS)</a>
-            <ul>
-              <li><a href="#master-slave-replication">Master-slave replication</a>
-                <ul>
-                  <li><a href="#disadvantages-master-slave-replication">Disadvantage(s): master-slave replication</a></li>
-                </ul>
-              </li>
-              <li><a href="#master-master-replication">Master-master replication</a>
-                <ul>
-                  <li><a href="#disadvantages-master-master-replication">Disadvantage(s): master-master replication</a></li>
-                  <li><a href="#disadvantages-replication">Disadvantage(s): replication</a></li>
-                  <li><a href="#sources-and-further-reading-replication">Source(s) and further reading: replication</a></li>
-                </ul>
-              </li>
-              <li><a href="#federation">Federation</a>
-                <ul>
-                  <li><a href="#disadvantages-federation">Disadvantage(s): federation</a></li>
-                  <li><a href="#sources-and-further-reading-federation">Source(s) and further reading: federation</a></li>
-                </ul>
-              </li>
-              <li><a href="#sharding">Sharding</a>
-                <ul>
-                  <li><a href="#disadvantages-sharding">Disadvantage(s): sharding</a></li>
-                  <li><a href="#sources-and-further-reading-sharding">Source(s) and further reading: sharding</a></li>
-                </ul>
-              </li>
-              <li><a href="#denormalization">Denormalization</a>
-                <ul>
-                  <li><a href="#disadvantages-denormalization">Disadvantage(s): denormalization</a>
-                    <ul>
-                      <li><a href="#sources-and-further-reading-denormalization">Source(s) and further reading: denormalization</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li><a href="#sql-tuning">SQL tuning</a>
-                <ul>
-                  <li><a href="#tighten-up-the-schema">Tighten up the schema</a></li>
-                  <li><a href="#use-good-indices">Use good indices</a></li>
-                  <li><a href="#avoid-expensive-joins">Avoid expensive joins</a></li>
-                  <li><a href="#partition-tables">Partition tables</a></li>
-                  <li><a href="#tune-the-query-cache">Tune the query cache</a></li>
-                  <li><a href="#sources-and-further-reading-sql-tuning">Source(s) and further reading: SQL tuning</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a href="#nosql">NoSQL</a>
-            <ul>
-              <li><a href="#key-value-store">Key-value store</a>
-                <ul>
-                  <li><a href="#sources-and-further-reading-key-value-store">Source(s) and further reading: key-value store</a></li>
-                </ul>
-              </li>
-              <li><a href="#document-store">Document store</a>
-                <ul>
-                  <li><a href="#sources-and-further-reading-document-store">Source(s) and further reading: document store</a></li>
-                </ul>
-              </li>
-              <li><a href="#wide-column-store">Wide column store</a>
-                <ul>
-                  <li><a href="#sources-and-further-reading-wide-column-store">Source(s) and further reading: wide column store</a></li>
-                </ul>
-              </li>
-              <li><a href="#graph-database">Graph database</a>
-                <ul>
-                  <li><a href="#sources-and-further-reading-graph">Source(s) and further reading: graph</a></li>
-                </ul>
-              </li>
-              <li><a href="#sources-and-further-reading-nosql">Source(s) and further reading: NoSQL</a></li>
-            </ul>
-          </li>
-          <li><a href="#sql-or-nosql">SQL or NoSQL</a>
-            <ul>
-              <li><a href="#sources-and-further-reading-sql-or-nosql">Source(s) and further reading: SQL or NoSQL</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li><a href="#cache">Cache</a>
-        <ul>
-          <li><a href="#client-caching">Client caching</a></li>
-          <li><a href="#cdn-caching">CDN caching</a></li>
-          <li><a href="#web-server-caching">Web server caching</a></li>
-          <li><a href="#database-caching">Database caching</a></li>
-          <li><a href="#application-caching">Application caching</a></li>
-          <li><a href="#caching-at-the-database-query-level">Caching at the database query level</a></li>
-          <li><a href="#caching-at-the-object-level">Caching at the object level</a></li>
-          <li><a href="#when-to-update-the-cache">When to update the cache</a>
-            <ul>
-              <li><a href="#cache-aside">Cache-aside</a>
-                <ul>
-                  <li><a href="#disadvantages-cache-aside">Disadvantage(s): cache-aside</a></li>
-                </ul>
-              </li>
-              <li><a href="#write-through">Write-through</a>
-                <ul>
-                  <li><a href="#disadvantages-write-through">Disadvantage(s): write through</a></li>
-                </ul>
-              </li>
-              <li><a href="#write-behind-write-back">Write-behind (write-back)</a>
-                <ul>
-                  <li><a href="#disadvantages-write-behind">Disadvantage(s): write-behind</a></li>
-                </ul>
-              </li>
-              <li><a href="#refresh-ahead">Refresh-ahead</a>
-                <ul>
-                  <li><a href="#disadvantages-refresh-ahead">Disadvantage(s): refresh-ahead</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a href="#disadvantages-cache">Disadvantage(s): cache</a></li>
-          <li><a href="#sources-and-further-reading-10">Source(s) and further reading</a></li>
-        </ul>
-      </li>
-      <li><a href="#asynchronism">Asynchronism</a>
-        <ul>
-          <li><a href="#message-queues">Message queues</a></li>
-          <li><a href="#task-queues">Task queues</a></li>
-          <li><a href="#back-pressure">Back pressure</a></li>
-          <li><a href="#disadvantages-asynchronism">Disadvantage(s): asynchronism</a></li>
-          <li><a href="#sources-and-further-reading-11">Source(s) and further reading</a></li>
-        </ul>
-      </li>
-      <li><a href="#communication">Communication</a>
-        <ul>
-          <li><a href="#hypertext-transfer-protocol-http">Hypertext transfer protocol (HTTP)</a>
-            <ul>
-              <li><a href="#sources-and-further-reading-http">Source(s) and further reading: HTTP</a></li>
-            </ul>
-          </li>
-          <li><a href="#transmission-control-protocol-tcp">Transmission control protocol (TCP)</a></li>
-          <li><a href="#user-datagram-protocol-udp">User datagram protocol (UDP)</a>
-            <ul>
-              <li><a href="#sources-and-further-reading-tcp-and-udp">Source(s) and further reading: TCP and UDP</a></li>
-            </ul>
-          </li>
-          <li><a href="#remote-procedure-call-rpc">Remote procedure call (RPC)</a>
-            <ul>
-              <li><a href="#disadvantages-rpc">Disadvantage(s): RPC</a></li>
-            </ul>
-          </li>
-          <li><a href="#representational-state-transfer-rest">Representational state transfer (REST)</a>
-            <ul>
-              <li><a href="#disadvantages-rest">Disadvantage(s): REST</a></li>
-            </ul>
-          </li>
-          <li><a href="#rpc-and-rest-calls-comparison">RPC and REST calls comparison</a>
-            <ul>
-              <li><a href="#sources-and-further-reading-rest-and-rpc">Source(s) and further reading: REST and RPC</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li><a href="#security">Security</a>
-        <ul>
-          <li><a href="#sources-and-further-reading-12">Source(s) and further reading</a></li>
-        </ul>
-      </li>
-      <li><a href="#appendix">Appendix</a>
-        <ul>
-          <li><a href="#powers-of-two-table">Powers of two table</a>
-            <ul>
-              <li><a href="#sources-and-further-reading-13">Source(s) and further reading</a></li>
-            </ul>
-          </li>
-          <li><a href="#latency-numbers-every-programmer-should-know">Latency numbers every programmer should know</a>
-            <ul>
-              <li><a href="#latency-numbers-visualized">Latency numbers visualized</a></li>
-              <li><a href="#sources-and-further-reading-14">Source(s) and further reading</a></li>
-            </ul>
-          </li>
-          <li><a href="#additional-system-design-interview-questions">Additional system design interview questions</a></li>
-          <li><a href="#real-world-architectures">Real world architectures</a></li>
-          <li><a href="#company-architectures">Company architectures</a></li>
-          <li><a href="#company-engineering-blogs">Company engineering blogs</a>
-            <ul>
-              <li><a href="#sources-and-further-reading-15">Source(s) and further reading</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li><a href="#under-development">Under development</a></li>
-      <li><a href="#credits">Credits</a></li>
-      <li><a href="#contact-info">Contact info</a></li>
-      <li><a href="#license">License</a></li>
-    </ul>
-  </li>
-</ul>
-
 <h2 id="study-guide">Study guide</h2>
 
 <blockquote>
   <p>Suggested topics to review based on your interview timeline (short, medium, long).</p>
 </blockquote>
 
-<p><img src="/system-design-primer/images/OfVllex.png" alt="Imgur" /></p>
+<p><img src="/system-design-primer/images/OfVllex.png" alt="Imgur"></p>
 
 <p><strong>Q: For interviews, do I need to know everything here?</strong></p>
 
@@ -512,9 +567,12 @@
 <p>Start broad and go deeper in a few areas.  It helps to know a little about various key system design topics.  Adjust the following guide based on your timeline, experience, what positions you are interviewing for, and which companies you are interviewing with.</p>
 
 <ul>
-  <li><strong>Short timeline</strong> - Aim for <strong>breadth</strong> with system design topics.  Practice by solving <strong>some</strong> interview questions.</li>
-  <li><strong>Medium timeline</strong> - Aim for <strong>breadth</strong> and <strong>some depth</strong> with system design topics.  Practice by solving <strong>many</strong> interview questions.</li>
-  <li><strong>Long timeline</strong> - Aim for <strong>breadth</strong> and <strong>more depth</strong> with system design topics.  Practice by solving <strong>most</strong> interview questions.</li>
+  <li>
+<strong>Short timeline</strong> - Aim for <strong>breadth</strong> with system design topics.  Practice by solving <strong>some</strong> interview questions.</li>
+  <li>
+<strong>Medium timeline</strong> - Aim for <strong>breadth</strong> and <strong>some depth</strong> with system design topics.  Practice by solving <strong>many</strong> interview questions.</li>
+  <li>
+<strong>Long timeline</strong> - Aim for <strong>breadth</strong> and <strong>more depth</strong> with system design topics.  Practice by solving <strong>most</strong> interview questions.</li>
 </ul>
 
 <table>
@@ -529,42 +587,47 @@
   <tbody>
     <tr>
       <td>Read through the <a href="#index-of-system-design-topics">System design topics</a> to get a broad understanding of how systems work</td>
-      <td>:+1:</td>
-      <td>:+1:</td>
-      <td>:+1:</td>
+      <td style="text-align: center">+1</td>
+      <td style="text-align: center">+1</td>
+      <td style="text-align: center">+1</td>
     </tr>
     <tr>
       <td>Read through a few articles in the <a href="#company-engineering-blogs">Company engineering blogs</a> for the companies you are interviewing with</td>
-      <td>:+1:</td>
-      <td>:+1:</td>
-      <td>:+1:</td>
+      <td style="text-align: center">+1</td>
+      <td style="text-align: center">+1</td>
+      <td style="text-align: center">+1</td>
     </tr>
     <tr>
-      <td>Read through a few <a href="#real-world-architectures">Real world architectures</a></td>
-      <td>:+1:</td>
-      <td>:+1:</td>
-      <td>:+1:</td>
+      <td>Read through a few <a href="#real-world-architectures">Real world architectures</a>
+</td>
+      <td style="text-align: center">+1</td>
+      <td style="text-align: center">+1</td>
+      <td style="text-align: center">+1</td>
     </tr>
     <tr>
-      <td>Review <a href="#how-to-approach-a-system-design-interview-question">How to approach a system design interview question</a></td>
-      <td>:+1:</td>
-      <td>:+1:</td>
-      <td>:+1:</td>
+      <td>Review <a href="#how-to-approach-a-system-design-interview-question">How to approach a system design interview question</a>
+</td>
+      <td style="text-align: center">+1</td>
+      <td style="text-align: center">+1</td>
+      <td style="text-align: center">+1</td>
     </tr>
     <tr>
-      <td>Work through <a href="#system-design-interview-questions-with-solutions">System design interview questions with solutions</a></td>
+      <td>Work through <a href="#system-design-interview-questions-with-solutions">System design interview questions with solutions</a>
+</td>
       <td>Some</td>
       <td>Many</td>
       <td>Most</td>
     </tr>
     <tr>
-      <td>Work through <a href="#object-oriented-design-interview-questions-with-solutions">Object-oriented design interview questions with solutions</a></td>
+      <td>Work through <a href="#object-oriented-design-interview-questions-with-solutions">Object-oriented design interview questions with solutions</a>
+</td>
       <td>Some</td>
       <td>Many</td>
       <td>Most</td>
     </tr>
     <tr>
-      <td>Review <a href="#additional-system-design-interview-questions">Additional system design interview questions</a></td>
+      <td>Review <a href="#additional-system-design-interview-questions">Additional system design interview questions</a>
+</td>
       <td>Some</td>
       <td>Many</td>
       <td>Most</td>
@@ -613,7 +676,9 @@
 <ul>
   <li>Generating and storing a hash of the full url
     <ul>
-      <li><a href="/system-design-primer/solutions/system_design/pastebin/">MD5</a> and <a href="/system-design-primer/solutions/system_design/pastebin/">Base62</a></li>
+      <li>
+<a href="/system-design-primer/solutions/system_design/pastebin/">MD5</a> and <a href="/system-design-primer/solutions/system_design/pastebin/">Base62</a>
+</li>
       <li>Hash collisions</li>
       <li>SQL or NoSQL</li>
       <li>Database schema</li>
@@ -720,49 +785,49 @@
 
 <p><a href="/system-design-primer/solutions/system_design/pastebin/">View exercise and solution</a></p>
 
-<p><img src="/system-design-primer/images/4edXG0T.png" alt="Imgur" /></p>
+<p><img src="/system-design-primer/images/4edXG0T.png" alt="Imgur"></p>
 
 <h3 id="design-the-twitter-timeline-and-search-or-facebook-feed-and-search">Design the Twitter timeline and search (or Facebook feed and search)</h3>
 
 <p><a href="/system-design-primer/solutions/system_design/twitter/">View exercise and solution</a></p>
 
-<p><img src="/system-design-primer/images/jrUBAF7.png" alt="Imgur" /></p>
+<p><img src="/system-design-primer/images/jrUBAF7.png" alt="Imgur"></p>
 
 <h3 id="design-a-web-crawler">Design a web crawler</h3>
 
 <p><a href="/system-design-primer/solutions/system_design/web_crawler/">View exercise and solution</a></p>
 
-<p><img src="/system-design-primer/images/bWxPtQA.png" alt="Imgur" /></p>
+<p><img src="/system-design-primer/images/bWxPtQA.png" alt="Imgur"></p>
 
 <h3 id="design-mintcom">Design Mint.com</h3>
 
 <p><a href="/system-design-primer/solutions/system_design/mint/">View exercise and solution</a></p>
 
-<p><img src="/system-design-primer/images/V5q57vU.png" alt="Imgur" /></p>
+<p><img src="/system-design-primer/images/V5q57vU.png" alt="Imgur"></p>
 
 <h3 id="design-the-data-structures-for-a-social-network">Design the data structures for a social network</h3>
 
 <p><a href="/system-design-primer/solutions/system_design/social_graph/">View exercise and solution</a></p>
 
-<p><img src="/system-design-primer/images/cdCv5g7.png" alt="Imgur" /></p>
+<p><img src="/system-design-primer/images/cdCv5g7.png" alt="Imgur"></p>
 
 <h3 id="design-a-key-value-store-for-a-search-engine">Design a key-value store for a search engine</h3>
 
 <p><a href="/system-design-primer/solutions/system_design/query_cache/">View exercise and solution</a></p>
 
-<p><img src="/system-design-primer/images/4j99mhe.png" alt="Imgur" /></p>
+<p><img src="/system-design-primer/images/4j99mhe.png" alt="Imgur"></p>
 
 <h3 id="design-amazons-sales-ranking-by-category-feature">Design Amazon’s sales ranking by category feature</h3>
 
 <p><a href="/system-design-primer/solutions/system_design/sales_rank/">View exercise and solution</a></p>
 
-<p><img src="/system-design-primer/images/MzExP06.png" alt="Imgur" /></p>
+<p><img src="/system-design-primer/images/MzExP06.png" alt="Imgur"></p>
 
 <h3 id="design-a-system-that-scales-to-millions-of-users-on-aws">Design a system that scales to millions of users on AWS</h3>
 
 <p><a href="/system-design-primer/solutions/system_design/scaling_aws/">View exercise and solution</a></p>
 
-<p><img src="/system-design-primer/images/jj3A5N8.png" alt="Imgur" /></p>
+<p><img src="/system-design-primer/images/jj3A5N8.png" alt="Imgur"></p>
 
 <h2 id="object-oriented-design-interview-questions-with-solutions">Object-oriented design interview questions with solutions</h2>
 
@@ -862,9 +927,15 @@
 <p>Next, we’ll look at high-level trade-offs:</p>
 
 <ul>
-  <li><strong>Performance</strong> vs <strong>scalability</strong></li>
-  <li><strong>Latency</strong> vs <strong>throughput</strong></li>
-  <li><strong>Availability</strong> vs <strong>consistency</strong></li>
+  <li>
+<strong>Performance</strong> vs <strong>scalability</strong>
+</li>
+  <li>
+<strong>Latency</strong> vs <strong>throughput</strong>
+</li>
+  <li>
+<strong>Availability</strong> vs <strong>consistency</strong>
+</li>
 </ul>
 
 <p>Keep in mind that <strong>everything is a trade-off</strong>.</p>
@@ -873,7 +944,7 @@
 
 <h2 id="performance-vs-scalability">Performance vs scalability</h2>
 
-<p>A service is <strong>scalable</strong> if it results in increased <strong>performance</strong> in a manner proportional to resources added. Generally, increasing performance means serving more units of work, but it can also be to handle larger units of work, such as when datasets grow.<sup>&lt;a href=http://www.allthingsdistributed.com/2006/03/a_word_on_scalability.html&gt;1&lt;/a&gt;</sup></p>
+<p>A service is <strong>scalable</strong> if it results in increased <strong>performance</strong> in a manner proportional to resources added. Generally, increasing performance means serving more units of work, but it can also be to handle larger units of work, such as when datasets grow.<sup><a href="http://www.allthingsdistributed.com/2006/03/a_word_on_scalability.html">1</a></sup></p>
 
 <p>Another way to look at performance vs scalability:</p>
 
@@ -908,17 +979,20 @@
 <h3 id="cap-theorem">CAP theorem</h3>
 
 <p align="center">
-  <img src="images/bgLMI2u.png" />
-  <br />
-  <i>&lt;a href=http://robertgreiner.com/2014/08/cap-theorem-revisited&gt;Source: CAP theorem revisited&lt;/a&gt;</i>
+  <img src="images/bgLMI2u.png">
+  <br>
+  <i><a href="http://robertgreiner.com/2014/08/cap-theorem-revisited">Source: CAP theorem revisited</a></i>
 </p>
 
 <p>In a distributed computer system, you can only support two of the following guarantees:</p>
 
 <ul>
-  <li><strong>Consistency</strong> - Every read receives the most recent write or an error</li>
-  <li><strong>Availability</strong> - Every request receives a response, without guarantee that it contains the most recent version of the information</li>
-  <li><strong>Partition Tolerance</strong> - The system continues to operate despite arbitrary partitioning due to network failures</li>
+  <li>
+<strong>Consistency</strong> - Every read receives the most recent write or an error</li>
+  <li>
+<strong>Availability</strong> - Every request receives a response, without guarantee that it contains the most recent version of the information</li>
+  <li>
+<strong>Partition Tolerance</strong> - The system continues to operate despite arbitrary partitioning due to network failures</li>
 </ul>
 
 <p><em>Networks aren’t reliable, so you’ll need to support partition tolerance.  You’ll need to make a software tradeoff between consistency and availability.</em></p>
@@ -1097,9 +1171,9 @@
 <h2 id="domain-name-system">Domain name system</h2>
 
 <p align="center">
-  <img src="images/IOyLj4i.jpg" />
-  <br />
-  <i>&lt;a href=http://www.slideshare.net/srikrupa5/dns-security-presentation-issa&gt;Source: DNS security presentation&lt;/a&gt;</i>
+  <img src="images/IOyLj4i.jpg">
+  <br>
+  <i><a href="http://www.slideshare.net/srikrupa5/dns-security-presentation-issa">Source: DNS security presentation</a></i>
 </p>
 
 <p>A Domain Name System (DNS) translates a domain name such as www.example.com to an IP address.</p>
@@ -1107,16 +1181,21 @@
 <p>DNS is hierarchical, with a few authoritative servers at the top level.  Your router or ISP provides information about which DNS server(s) to contact when doing a lookup.  Lower level DNS servers cache mappings, which could become stale due to DNS propagation delays.  DNS results can also be cached by your browser or OS for a certain period of time, determined by the <a href="https://en.wikipedia.org/wiki/Time_to_live">time to live (TTL)</a>.</p>
 
 <ul>
-  <li><strong>NS record (name server)</strong> - Specifies the DNS servers for your domain/subdomain.</li>
-  <li><strong>MX record (mail exchange)</strong> - Specifies the mail servers for accepting messages.</li>
-  <li><strong>A record (address)</strong> - Points a name to an IP address.</li>
-  <li><strong>CNAME (canonical)</strong> - Points a name to another name or <code class="language-plaintext highlighter-rouge">CNAME</code> (example.com to www.example.com) or to an <code class="language-plaintext highlighter-rouge">A</code> record.</li>
+  <li>
+<strong>NS record (name server)</strong> - Specifies the DNS servers for your domain/subdomain.</li>
+  <li>
+<strong>MX record (mail exchange)</strong> - Specifies the mail servers for accepting messages.</li>
+  <li>
+<strong>A record (address)</strong> - Points a name to an IP address.</li>
+  <li>
+<strong>CNAME (canonical)</strong> - Points a name to another name or <code class="language-plaintext highlighter-rouge">CNAME</code> (example.com to www.example.com) or to an <code class="language-plaintext highlighter-rouge">A</code> record.</li>
 </ul>
 
 <p>Services such as <a href="https://www.cloudflare.com/dns/">CloudFlare</a> and <a href="https://aws.amazon.com/route53/">Route 53</a> provide managed DNS services.  Some DNS services can route traffic through various methods:</p>
 
 <ul>
-  <li><a href="https://www.jscape.com/blog/load-balancing-algorithms">Weighted round robin</a>
+  <li>
+<a href="https://www.jscape.com/blog/load-balancing-algorithms">Weighted round robin</a>
     <ul>
       <li>Prevent traffic from going to servers under maintenance</li>
       <li>Balance between varying cluster sizes</li>
@@ -1146,9 +1225,9 @@
 <h2 id="content-delivery-network">Content delivery network</h2>
 
 <p align="center">
-  <img src="images/h9TAuGI.jpg" />
-  <br />
-  <i>&lt;a href=https://www.creative-artworks.eu/why-use-a-content-delivery-network-cdn/&gt;Source: Why use a CDN&lt;/a&gt;</i>
+  <img src="images/h9TAuGI.jpg">
+  <br>
+  <i><a href="https://www.creative-artworks.eu/why-use-a-content-delivery-network-cdn/">Source: Why use a CDN</a></i>
 </p>
 
 <p>A content delivery network (CDN) is a globally distributed network of proxy servers, serving content from locations closer to the user.  Generally, static files such as HTML/CSS/JS, photos, and videos are served from CDN, although some CDNs such as Amazon’s CloudFront support dynamic content.  The site’s DNS resolution will tell clients which server to contact.</p>
@@ -1193,9 +1272,9 @@
 <h2 id="load-balancer">Load balancer</h2>
 
 <p align="center">
-  <img src="images/h81n9iK.png" />
-  <br />
-  <i>&lt;a href=http://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html&gt;Source: Scalable system design patterns&lt;/a&gt;</i>
+  <img src="images/h81n9iK.png">
+  <br>
+  <i><a href="http://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html">Source: Scalable system design patterns</a></i>
 </p>
 
 <p>Load balancers distribute incoming client requests to computing resources such as application servers and databases.  In each case, the load balancer returns the response from the computing resource to the appropriate client.  Load balancers are effective at:</p>
@@ -1211,12 +1290,14 @@
 <p>Additional benefits include:</p>
 
 <ul>
-  <li><strong>SSL termination</strong> - Decrypt incoming requests and encrypt server responses so backend servers do not have to perform these potentially expensive operations
+  <li>
+<strong>SSL termination</strong> - Decrypt incoming requests and encrypt server responses so backend servers do not have to perform these potentially expensive operations
     <ul>
       <li>Removes the need to install <a href="https://en.wikipedia.org/wiki/X.509">X.509 certificates</a> on each server</li>
     </ul>
   </li>
-  <li><strong>Session persistence</strong> - Issue cookies and route a specific client’s requests to same instance if the web apps do not keep track of sessions</li>
+  <li>
+<strong>Session persistence</strong> - Issue cookies and route a specific client’s requests to same instance if the web apps do not keep track of sessions</li>
 </ul>
 
 <p>To protect against failures, it’s common to set up multiple load balancers, either in <a href="#active-passive">active-passive</a> or <a href="#active-active">active-active</a> mode.</p>
@@ -1281,10 +1362,10 @@
 <h2 id="reverse-proxy-web-server">Reverse proxy (web server)</h2>
 
 <p align="center">
-  <img src="images/n41Azff.png" />
-  <br />
-  <i>&lt;a href=https://upload.wikimedia.org/wikipedia/commons/6/67/Reverse_proxy_h2g2bob.svg&gt;Source: Wikipedia&lt;/a&gt;</i>
-  <br />
+  <img src="images/n41Azff.png">
+  <br>
+  <i><a href="https://upload.wikimedia.org/wikipedia/commons/6/67/Reverse_proxy_h2g2bob.svg">Source: Wikipedia</a></i>
+  <br>
 </p>
 
 <p>A reverse proxy is a web server that centralizes internal services and provides unified interfaces to the public.  Requests from clients are forwarded to a server that can fulfill it before the reverse proxy returns the server’s response to the client.</p>
@@ -1292,16 +1373,22 @@
 <p>Additional benefits include:</p>
 
 <ul>
-  <li><strong>Increased security</strong> - Hide information about backend servers, blacklist IPs, limit number of connections per client</li>
-  <li><strong>Increased scalability and flexibility</strong> - Clients only see the reverse proxy’s IP, allowing you to scale servers or change their configuration</li>
-  <li><strong>SSL termination</strong> - Decrypt incoming requests and encrypt server responses so backend servers do not have to perform these potentially expensive operations
+  <li>
+<strong>Increased security</strong> - Hide information about backend servers, blacklist IPs, limit number of connections per client</li>
+  <li>
+<strong>Increased scalability and flexibility</strong> - Clients only see the reverse proxy’s IP, allowing you to scale servers or change their configuration</li>
+  <li>
+<strong>SSL termination</strong> - Decrypt incoming requests and encrypt server responses so backend servers do not have to perform these potentially expensive operations
     <ul>
       <li>Removes the need to install <a href="https://en.wikipedia.org/wiki/X.509">X.509 certificates</a> on each server</li>
     </ul>
   </li>
-  <li><strong>Compression</strong> - Compress server responses</li>
-  <li><strong>Caching</strong> - Return the response for cached requests</li>
-  <li><strong>Static content</strong> - Serve static content directly
+  <li>
+<strong>Compression</strong> - Compress server responses</li>
+  <li>
+<strong>Caching</strong> - Return the response for cached requests</li>
+  <li>
+<strong>Static content</strong> - Serve static content directly
     <ul>
       <li>HTML/CSS/JS</li>
       <li>Photos</li>
@@ -1338,9 +1425,9 @@
 <h2 id="application-layer">Application layer</h2>
 
 <p align="center">
-  <img src="images/yB5SYwm.png" />
-  <br />
-  <i>&lt;a href=http://lethain.com/introduction-to-architecting-systems-for-scale/#platform_layer&gt;Source: Intro to architecting systems for scale&lt;/a&gt;</i>
+  <img src="images/yB5SYwm.png">
+  <br>
+  <i><a href="http://lethain.com/introduction-to-architecting-systems-for-scale/#platform_layer">Source: Intro to architecting systems for scale</a></i>
 </p>
 
 <p>Separating out the web layer from the application layer (also known as platform layer) allows you to scale and configure both layers independently.  Adding a new API results in adding application servers without necessarily adding additional web servers.  The <strong>single responsibility principle</strong> advocates for small and autonomous services that work together.  Small teams with small services can plan more aggressively for rapid growth.</p>
@@ -1349,7 +1436,7 @@
 
 <h3 id="microservices">Microservices</h3>
 
-<p>Related to this discussion are <a href="https://en.wikipedia.org/wiki/Microservices">microservices</a>, which can be described as a suite of independently deployable, small, modular services.  Each service runs a unique process and communicates through a well-defined, lightweight mechanism to serve a business goal. <sup>&lt;a href=https://smartbear.com/learn/api-design/what-are-microservices&gt;1&lt;/a&gt;</sup></p>
+<p>Related to this discussion are <a href="https://en.wikipedia.org/wiki/Microservices">microservices</a>, which can be described as a suite of independently deployable, small, modular services.  Each service runs a unique process and communicates through a well-defined, lightweight mechanism to serve a business goal. <sup><a href="https://smartbear.com/learn/api-design/what-are-microservices">1</a></sup></p>
 
 <p>Pinterest, for example, could have the following microservices: user profile, follower, feed, search, photo upload, etc.</p>
 
@@ -1377,9 +1464,9 @@
 <h2 id="database">Database</h2>
 
 <p align="center">
-  <img src="images/Xkm5CXz.png" />
-  <br />
-  <i>&lt;a href=https://www.youtube.com/watch?v=kKjm4ehYiMs&gt;Source: Scaling up to your first 10 million users&lt;/a&gt;</i>
+  <img src="images/Xkm5CXz.png">
+  <br>
+  <i><a href="https://www.youtube.com/watch?v=kKjm4ehYiMs">Source: Scaling up to your first 10 million users</a></i>
 </p>
 
 <h3 id="relational-database-management-system-rdbms">Relational database management system (RDBMS)</h3>
@@ -1389,22 +1476,26 @@
 <p><strong>ACID</strong> is a set of properties of relational database <a href="https://en.wikipedia.org/wiki/Database_transaction">transactions</a>.</p>
 
 <ul>
-  <li><strong>Atomicity</strong> - Each transaction is all or nothing</li>
-  <li><strong>Consistency</strong> - Any transaction will bring the database from one valid state to another</li>
-  <li><strong>Isolation</strong> - Executing transactions concurrently has the same results as if the transactions were executed serially</li>
-  <li><strong>Durability</strong> - Once a transaction has been committed, it will remain so</li>
+  <li>
+<strong>Atomicity</strong> - Each transaction is all or nothing</li>
+  <li>
+<strong>Consistency</strong> - Any transaction will bring the database from one valid state to another</li>
+  <li>
+<strong>Isolation</strong> - Executing transactions concurrently has the same results as if the transactions were executed serially</li>
+  <li>
+<strong>Durability</strong> - Once a transaction has been committed, it will remain so</li>
 </ul>
 
 <p>There are many techniques to scale a relational database: <strong>master-slave replication</strong>, <strong>master-master replication</strong>, <strong>federation</strong>, <strong>sharding</strong>, <strong>denormalization</strong>, and <strong>SQL tuning</strong>.</p>
 
 <h4 id="master-slave-replication">Master-slave replication</h4>
 
-<p>The master serves reads and writes, replicating writes to one or more slaves, which serve only reads.  Slaves can also replicate to additional slaves in a tree-like fashion.  If the master goes offline, the system can continue to operate in read-only mode until a slave is promoted to a master or a new master is provisioned.</p>
+<p>The master serves reads and writes, replicating writes to one or more slaves, which serve only reads. Slaves can also replicate to additional slaves in a tree-like fashion. If the master goes offline, the system can continue to operate in read-only mode until a slave is promoted to a master or a new master is provisioned.</p>
 
 <p align="center">
-  <img src="images/C9ioGtn.png" />
-  <br />
-  <i>&lt;a href=http://www.slideshare.net/jboner/scalability-availability-stability-patterns/&gt;Source: Scalability, availability, stability, patterns&lt;/a&gt;</i>
+  <img src="images/C9ioGtn.png">
+  <br>
+  <a href="http://www.slideshare.net/jboner/scalability-availability-stability-patterns">Source: Scalability, availability, stability, patterns</a>
 </p>
 
 <h5 id="disadvantages-master-slave-replication">Disadvantage(s): master-slave replication</h5>
@@ -1419,9 +1510,9 @@
 <p>Both masters serve reads and writes and coordinate with each other on writes.  If either master goes down, the system can continue to operate with both reads and writes.</p>
 
 <p align="center">
-  <img src="images/krAHLGg.png" />
-  <br />
-  <i>&lt;a href=http://www.slideshare.net/jboner/scalability-availability-stability-patterns/&gt;Source: Scalability, availability, stability, patterns&lt;/a&gt;</i>
+  <img src="images/krAHLGg.png">
+  <br>
+  <i><a href="http://www.slideshare.net/jboner/scalability-availability-stability-patterns">Source: Scalability, availability, stability, patterns</a></i>
 </p>
 
 <h5 id="disadvantages-master-master-replication">Disadvantage(s): master-master replication</h5>
@@ -1453,9 +1544,9 @@
 <h4 id="federation">Federation</h4>
 
 <p align="center">
-  <img src="images/U3qV33e.png" />
-  <br />
-  <i>&lt;a href=https://www.youtube.com/watch?v=kKjm4ehYiMs&gt;Source: Scaling up to your first 10 million users&lt;/a&gt;</i>
+  <img src="images/U3qV33e.png">
+  <br>
+  <i><a href="https://www.youtube.com/watch?v=kKjm4ehYiMs">Source: Scaling up to your first 10 million users</a></i>
 </p>
 
 <p>Federation (or functional partitioning) splits up databases by function.  For example, instead of a single, monolithic database, you could have three databases: <strong>forums</strong>, <strong>users</strong>, and <strong>products</strong>, resulting in less read and write traffic to each database and therefore less replication lag.  Smaller databases result in more data that can fit in memory, which in turn results in more cache hits due to improved cache locality.  With no single central master serializing writes you can write in parallel, increasing throughput.</p>
@@ -1478,9 +1569,9 @@
 <h4 id="sharding">Sharding</h4>
 
 <p align="center">
-  <img src="images/wU8x5Id.png" />
-  <br />
-  <i>&lt;a href=http://www.slideshare.net/jboner/scalability-availability-stability-patterns/&gt;Source: Scalability, availability, stability, patterns&lt;/a&gt;</i>
+  <img src="images/wU8x5Id.png">
+  <br>
+  <i><a href="http://www.slideshare.net/jboner/scalability-availability-stability-patterns/">Source: Scalability, availability, stability, patterns</a></i>
 </p>
 
 <p>Sharding distributes data across different databases such that each database can only manage a subset of the data.  Taking a users database as an example, as the number of users increases, more shards are added to the cluster.</p>
@@ -1534,13 +1625,15 @@
 
 <h4 id="sql-tuning">SQL tuning</h4>
 
-<p>SQL tuning is a broad topic and many <a href="https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&amp;field-keywords=sql+tuning">books</a> have been written as reference.</p>
+<p>SQL tuning is a broad topic and many <a href="https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=sql+tuning">books</a> have been written as reference.</p>
 
 <p>It’s important to <strong>benchmark</strong> and <strong>profile</strong> to simulate and uncover bottlenecks.</p>
 
 <ul>
-  <li><strong>Benchmark</strong> - Simulate high-load situations with tools such as <a href="http://httpd.apache.org/docs/2.2/programs/ab.html">ab</a>.</li>
-  <li><strong>Profile</strong> - Enable tools such as the <a href="http://dev.mysql.com/doc/refman/5.7/en/slow-query-log.html">slow query log</a> to help track performance issues.</li>
+  <li>
+<strong>Benchmark</strong> - Simulate high-load situations with tools such as <a href="http://httpd.apache.org/docs/2.2/programs/ab.html">ab</a>.</li>
+  <li>
+<strong>Profile</strong> - Enable tools such as the <a href="http://dev.mysql.com/doc/refman/5.7/en/slow-query-log.html">slow query log</a> to help track performance issues.</li>
 </ul>
 
 <p>Benchmarking and profiling might point you to the following optimizations.</p>
@@ -1551,14 +1644,16 @@
   <li>MySQL dumps to disk in contiguous blocks for fast access.</li>
   <li>Use <code class="language-plaintext highlighter-rouge">CHAR</code> instead of <code class="language-plaintext highlighter-rouge">VARCHAR</code> for fixed-length fields.
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">CHAR</code> effectively allows for fast, random access, whereas with <code class="language-plaintext highlighter-rouge">VARCHAR</code>, you must find the end of a string before moving onto the next one.</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">CHAR</code> effectively allows for fast, random access, whereas with <code class="language-plaintext highlighter-rouge">VARCHAR</code>, you must find the end of a string before moving onto the next one.</li>
     </ul>
   </li>
   <li>Use <code class="language-plaintext highlighter-rouge">TEXT</code> for large blocks of text such as blog posts.  <code class="language-plaintext highlighter-rouge">TEXT</code> also allows for boolean searches.  Using a <code class="language-plaintext highlighter-rouge">TEXT</code> field results in storing a pointer on disk that is used to locate the text block.</li>
   <li>Use <code class="language-plaintext highlighter-rouge">INT</code> for larger numbers up to 2^32 or 4 billion.</li>
   <li>Use <code class="language-plaintext highlighter-rouge">DECIMAL</code> for currency to avoid floating point representation errors.</li>
   <li>Avoid storing large <code class="language-plaintext highlighter-rouge">BLOBS</code>, store the location of where to get the object instead.</li>
-  <li><code class="language-plaintext highlighter-rouge">VARCHAR(255)</code> is the largest number of characters that can be counted in an 8 bit number, often maximizing the use of a byte in some RDBMS.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">VARCHAR(255)</code> is the largest number of characters that can be counted in an 8 bit number, often maximizing the use of a byte in some RDBMS.</li>
   <li>Set the <code class="language-plaintext highlighter-rouge">NOT NULL</code> constraint where applicable to <a href="http://stackoverflow.com/questions/1017239/how-do-null-values-affect-performance-in-a-database-search">improve search performance</a>.</li>
 </ul>
 
@@ -1575,7 +1670,8 @@
 <h5 id="avoid-expensive-joins">Avoid expensive joins</h5>
 
 <ul>
-  <li><a href="#denormalization">Denormalize</a> where performance demands it.</li>
+  <li>
+<a href="#denormalization">Denormalize</a> where performance demands it.</li>
 </ul>
 
 <h5 id="partition-tables">Partition tables</h5>
@@ -1606,12 +1702,15 @@
 <p><strong>BASE</strong> is often used to describe the properties of NoSQL databases.  In comparison with the <a href="#cap-theorem">CAP Theorem</a>, BASE chooses availability over consistency.</p>
 
 <ul>
-  <li><strong>Basically available</strong> - the system guarantees availability.</li>
-  <li><strong>Soft state</strong> - the state of the system may change over time, even without input.</li>
-  <li><strong>Eventual consistency</strong> - the system will become consistent over a period of time, given that the system doesn’t receive input during that period.</li>
+  <li>
+<strong>Basically available</strong> - the system guarantees availability.</li>
+  <li>
+<strong>Soft state</strong> - the state of the system may change over time, even without input.</li>
+  <li>
+<strong>Eventual consistency</strong> - the system will become consistent over a period of time, given that the system doesn’t receive input during that period.</li>
 </ul>
 
-<p>In addition to choosing between <a href="#sql-or-nosql">SQL or NoSQL</a>, it is helpful to understand which type of NoSQL database best fits your use case(s).  We’ll review <strong>key-value stores</strong>, <strong>document stores</strong>, <strong>wide column stores</strong>, and <strong>graph databases</strong> in the next section.</p>
+<p>In addition to choosing between <a href="/pages/sql-or-nosql">SQL or NoSQL</a>, it is helpful to understand which type of NoSQL database best fits your use case(s).  We’ll review <strong>key-value stores</strong>, <strong>document stores</strong>, <strong>wide column stores</strong>, and <strong>graph databases</strong> in the next section.</p>
 
 <h4 id="key-value-store">Key-value store</h4>
 
@@ -1660,9 +1759,9 @@
 <h4 id="wide-column-store">Wide column store</h4>
 
 <p align="center">
-  <img src="images/n16iOGk.png" />
-  <br />
-  <i>&lt;a href=http://blog.grio.com/2015/11/sql-nosql-a-brief-history.html&gt;Source: SQL &amp; NoSQL, a brief history&lt;/a&gt;</i>
+  <img src="images/n16iOGk.png">
+  <br>
+  <i><a href="http://blog.grio.com/2015/11/sql-nosql-a-brief-history.html">Source: SQL &amp; NoSQL, a brief history</a></i>
 </p>
 
 <blockquote>
@@ -1687,9 +1786,9 @@
 <h4 id="graph-database">Graph database</h4>
 
 <p align="center">
-  <img src="images/fNcl65g.png" />
-  <br />
-  <i>&lt;a href=https://en.wikipedia.org/wiki/File:GraphDatabase_PropertyGraph.png&gt;Source: Graph database&lt;/a&gt;</i>
+  <img src="images/fNcl65g.png">
+  <br>
+  <i><a href="https://en.wikipedia.org/wiki/File:GraphDatabase_PropertyGraph.png">Source: Graph database</a></i>
 </p>
 
 <blockquote>
@@ -1718,62 +1817,14 @@
   <li><a href="http://horicky.blogspot.com/2009/11/nosql-patterns.html">NoSQL patterns</a></li>
 </ul>
 
-<h3 id="sql-or-nosql">SQL or NoSQL</h3>
-
-<p align="center">
-  <img src="images/wXGqG5f.png" />
-  <br />
-  <i>&lt;a href=https://www.infoq.com/articles/Transition-RDBMS-NoSQL/&gt;Source: Transitioning from RDBMS to NoSQL&lt;/a&gt;</i>
-</p>
-
-<p>Reasons for <strong>SQL</strong>:</p>
-
-<ul>
-  <li>Structured data</li>
-  <li>Strict schema</li>
-  <li>Relational data</li>
-  <li>Need for complex joins</li>
-  <li>Transactions</li>
-  <li>Clear patterns for scaling</li>
-  <li>More established: developers, community, code, tools, etc</li>
-  <li>Lookups by index are very fast</li>
-</ul>
-
-<p>Reasons for <strong>NoSQL</strong>:</p>
-
-<ul>
-  <li>Semi-structured data</li>
-  <li>Dynamic or flexible schema</li>
-  <li>Non-relational data</li>
-  <li>No need for complex joins</li>
-  <li>Store many TB (or PB) of data</li>
-  <li>Very data intensive workload</li>
-  <li>Very high throughput for IOPS</li>
-</ul>
-
-<p>Sample data well-suited for NoSQL:</p>
-
-<ul>
-  <li>Rapid ingest of clickstream and log data</li>
-  <li>Leaderboard or scoring data</li>
-  <li>Temporary data, such as a shopping cart</li>
-  <li>Frequently accessed (‘hot’) tables</li>
-  <li>Metadata/lookup tables</li>
-</ul>
-
-<h5 id="sources-and-further-reading-sql-or-nosql">Source(s) and further reading: SQL or NoSQL</h5>
-
-<ul>
-  <li><a href="https://www.youtube.com/watch?v=kKjm4ehYiMs">Scaling up to your first 10 million users</a></li>
-  <li><a href="https://www.sitepoint.com/sql-vs-nosql-differences/">SQL vs NoSQL differences</a></li>
-</ul>
+<h3 id="sql-or-nosql"><a href="/pages/sql-or-nosql">SQL or NoSQL</a></h3>
 
 <h2 id="cache">Cache</h2>
 
 <p align="center">
-  <img src="images/Q6z24La.png" />
-  <br />
-  <i>&lt;a href=http://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html&gt;Source: Scalable system design patterns&lt;/a&gt;</i>
+  <img src="images/Q6z24La.png">
+  <br>
+  <i><a href="http://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html">Source: Scalable system design patterns</a></i>
 </p>
 
 <p>Caching improves page load times and can reduce the load on your servers and databases.  In this model, the dispatcher will first lookup if the request has been made before and try to find the previous result to return, in order to save the actual execution.</p>
@@ -1852,9 +1903,9 @@
 <h4 id="cache-aside">Cache-aside</h4>
 
 <p align="center">
-  <img src="images/ONjORqk.png" />
-  <br />
-  <i>&lt;a href=http://www.slideshare.net/tmatyashovsky/from-cache-to-in-memory-data-grid-introduction-to-hazelcast&gt;Source: From cache to in-memory data grid&lt;/a&gt;</i>
+  <img src="images/ONjORqk.png">
+  <br>
+  <i><a href="http://www.slideshare.net/tmatyashovsky/from-cache-to-in-memory-data-grid-introduction-to-hazelcast">Source: From cache to in-memory data grid</a></i>
 </p>
 
 <p>The application is responsible for reading and writing from storage.  The cache does not interact with storage directly.  The application does the following:</p>
@@ -1891,9 +1942,9 @@
 <h4 id="write-through">Write-through</h4>
 
 <p align="center">
-  <img src="images/0vBc0hN.png" />
-  <br />
-  <i>&lt;a href=http://www.slideshare.net/jboner/scalability-availability-stability-patterns/&gt;Source: Scalability, availability, stability, patterns&lt;/a&gt;</i>
+  <img src="images/0vBc0hN.png">
+  <br>
+  <i><a href="http://www.slideshare.net/jboner/scalability-availability-stability-patterns/">Source: Scalability, availability, stability, patterns</a></i>
 </p>
 
 <p>The application uses the cache as the main data store, reading and writing data to it, while the cache is responsible for reading and writing to the database:</p>
@@ -1928,9 +1979,9 @@
 <h4 id="write-behind-write-back">Write-behind (write-back)</h4>
 
 <p align="center">
-  <img src="images/rgSrvjG.png" />
-  <br />
-  <i>&lt;a href=http://www.slideshare.net/jboner/scalability-availability-stability-patterns/&gt;Source: Scalability, availability, stability, patterns&lt;/a&gt;</i>
+  <img src="images/rgSrvjG.png">
+  <br>
+  <i><a href="http://www.slideshare.net/jboner/scalability-availability-stability-patterns/">Source: Scalability, availability, stability, patterns</a></i>
 </p>
 
 <p>In write-behind, the application does the following:</p>
@@ -1950,9 +2001,9 @@
 <h4 id="refresh-ahead">Refresh-ahead</h4>
 
 <p align="center">
-  <img src="images/kxtjqgE.png" />
-  <br />
-  <i>&lt;a href=http://www.slideshare.net/tmatyashovsky/from-cache-to-in-memory-data-grid-introduction-to-hazelcast&gt;Source: From cache to in-memory data grid&lt;/a&gt;</i>
+  <img src="images/kxtjqgE.png">
+  <br>
+  <i><a href="http://www.slideshare.net/tmatyashovsky/from-cache-to-in-memory-data-grid-introduction-to-hazelcast">Source: From cache to in-memory data grid</a></i>
 </p>
 
 <p>You can configure the cache to automatically refresh any recently accessed cache entry prior to its expiration.</p>
@@ -1988,9 +2039,9 @@
 <h2 id="asynchronism">Asynchronism</h2>
 
 <p align="center">
-  <img src="images/54GYsSx.png" />
-  <br />
-  <i>&lt;a href=http://lethain.com/introduction-to-architecting-systems-for-scale/#platform_layer&gt;Source: Intro to architecting systems for scale&lt;/a&gt;</i>
+  <img src="images/54GYsSx.png">
+  <br>
+  <i><a href="http://lethain.com/introduction-to-architecting-systems-for-scale/#platform_layer">Source: Intro to architecting systems for scale</a></i>
 </p>
 
 <p>Asynchronous workflows help reduce request times for expensive operations that would otherwise be performed in-line.  They can also help by doing time-consuming work in advance, such as periodic aggregation of data.</p>
@@ -2040,9 +2091,9 @@
 <h2 id="communication">Communication</h2>
 
 <p align="center">
-  <img src="images/5KeocQs.jpg" />
-  <br />
-  <i>&lt;a href=http://www.escotal.com/osilayer.html&gt;Source: OSI 7 layer model&lt;/a&gt;</i>
+  <img src="images/5KeocQs.jpg">
+  <br>
+  <i><a href="http://www.escotal.com/osilayer.html">Source: OSI 7 layer model</a></i>
 </p>
 
 <h3 id="hypertext-transfer-protocol-http">Hypertext transfer protocol (HTTP)</h3>
@@ -2115,16 +2166,17 @@
 <h3 id="transmission-control-protocol-tcp">Transmission control protocol (TCP)</h3>
 
 <p align="center">
-  <img src="images/JdAsdvG.jpg" />
-  <br />
-  <i>&lt;a href=http://www.wildbunny.co.uk/blog/2012/10/09/how-to-make-a-multi-player-game-part-1/&gt;Source: How to make a multiplayer game&lt;/a&gt;</i>
+  <img src="images/JdAsdvG.jpg">
+  <br>
+  <i><a href="http://www.wildbunny.co.uk/blog/2012/10/09/how-to-make-a-multi-player-game-part-1/">Source: How to make a multiplayer game</a></i>
 </p>
 
 <p>TCP is a connection-oriented protocol over an <a href="https://en.wikipedia.org/wiki/Internet_Protocol">IP network</a>.  Connection is established and terminated using a <a href="https://en.wikipedia.org/wiki/Handshaking">handshake</a>.  All packets sent are guaranteed to reach the destination in the original order and without corruption through:</p>
 
 <ul>
   <li>Sequence numbers and <a href="https://en.wikipedia.org/wiki/Transmission_Control_Protocol#Checksum_computation">checksum fields</a> for each packet</li>
-  <li><a href="https://en.wikipedia.org/wiki/Acknowledgement_(data_networks)">Acknowledgement</a> packets and automatic retransmission</li>
+  <li>
+<a href="https://en.wikipedia.org/wiki/Acknowledgement_(data_networks)">Acknowledgement</a> packets and automatic retransmission</li>
 </ul>
 
 <p>If the sender does not receive a correct response, it will resend the packets.  If there are multiple timeouts, the connection is dropped.  TCP also implements <a href="https://en.wikipedia.org/wiki/Flow_control_(data)">flow control</a> and <a href="https://en.wikipedia.org/wiki/Network_congestion#Congestion_control">congestion control</a>.  These guarantees cause delays and generally result in less efficient transmission than UDP.</p>
@@ -2143,9 +2195,9 @@
 <h3 id="user-datagram-protocol-udp">User datagram protocol (UDP)</h3>
 
 <p align="center">
-  <img src="images/yzDrJtA.jpg" />
-  <br />
-  <i>&lt;a href=http://www.wildbunny.co.uk/blog/2012/10/09/how-to-make-a-multi-player-game-part-1/&gt;Source: How to make a multiplayer game&lt;/a&gt;</i>
+  <img src="images/yzDrJtA.jpg">
+  <br>
+  <i><a href="http://www.wildbunny.co.uk/blog/2012/10/09/how-to-make-a-multi-player-game-part-1/">Source: How to make a multiplayer game</a></i>
 </p>
 
 <p>UDP is connectionless.  Datagrams (analogous to packets) are guaranteed only at the datagram level.  Datagrams might reach their destination out of order or not at all.  UDP does not support congestion control.  Without the guarantees that TCP support, UDP is generally more efficient.</p>
@@ -2176,9 +2228,9 @@
 <h3 id="remote-procedure-call-rpc">Remote procedure call (RPC)</h3>
 
 <p align="center">
-  <img src="images/iF4Mkb5.png" />
-  <br />
-  <i>&lt;a href=http://www.puncsky.com/blog/2016-02-13-crack-the-system-design-interview&gt;Source: Crack the system design interview&lt;/a&gt;</i>
+  <img src="images/iF4Mkb5.png">
+  <br>
+  <i><a href="http://www.puncsky.com/blog/2016-02-13-crack-the-system-design-interview">Source: Crack the system design interview</a></i>
 </p>
 
 <p>In an RPC, a client causes a procedure to execute on a different address space, usually a remote server.  The procedure is coded as if it were a local procedure call, abstracting away the details of how to communicate with the server from the client program.  Remote calls are usually slower and less reliable than local calls so it is helpful to distinguish RPC calls from local calls.  Popular RPC frameworks include <a href="https://developers.google.com/protocol-buffers/">Protobuf</a>, <a href="https://thrift.apache.org/">Thrift</a>, and <a href="https://avro.apache.org/docs/current/">Avro</a>.</p>
@@ -2186,11 +2238,16 @@
 <p>RPC is a request-response protocol:</p>
 
 <ul>
-  <li><strong>Client program</strong> - Calls the client stub procedure.  The parameters are pushed onto the stack like a local procedure call.</li>
-  <li><strong>Client stub procedure</strong> - Marshals (packs) procedure id and arguments into a request message.</li>
-  <li><strong>Client communication module</strong> - OS sends the message from the client to the server.</li>
-  <li><strong>Server communication module</strong> - OS passes the incoming packets to the server stub procedure.</li>
-  <li><strong>Server stub procedure</strong> -  Unmarshalls the results, calls the server procedure matching the procedure id and passes the given arguments.</li>
+  <li>
+<strong>Client program</strong> - Calls the client stub procedure.  The parameters are pushed onto the stack like a local procedure call.</li>
+  <li>
+<strong>Client stub procedure</strong> - Marshals (packs) procedure id and arguments into a request message.</li>
+  <li>
+<strong>Client communication module</strong> - OS sends the message from the client to the server.</li>
+  <li>
+<strong>Server communication module</strong> - OS passes the incoming packets to the server stub procedure.</li>
+  <li>
+<strong>Server stub procedure</strong> -  Unmarshalls the results, calls the server procedure matching the procedure id and passes the given arguments.</li>
   <li>The server response repeats the steps above in reverse order.</li>
 </ul>
 
@@ -2234,10 +2291,14 @@ POST /anotheroperation
 <p>There are four qualities of a RESTful interface:</p>
 
 <ul>
-  <li><strong>Identify resources (URI in HTTP)</strong> - use the same URI regardless of any operation.</li>
-  <li><strong>Change with representations (Verbs in HTTP)</strong> - use verbs, headers, and body.</li>
-  <li><strong>Self-descriptive error message (status response in HTTP)</strong> - Use status codes, don’t reinvent the wheel.</li>
-  <li><strong><a href="http://restcookbook.com/Basics/hateoas/">HATEOAS</a> (HTML interface for HTTP)</strong> - your web service should be fully accessible in a browser.</li>
+  <li>
+<strong>Identify resources (URI in HTTP)</strong> - use the same URI regardless of any operation.</li>
+  <li>
+<strong>Change with representations (Verbs in HTTP)</strong> - use verbs, headers, and body.</li>
+  <li>
+<strong>Self-descriptive error message (status response in HTTP)</strong> - Use status codes, don’t reinvent the wheel.</li>
+  <li>
+<strong><a href="http://restcookbook.com/Basics/hateoas/">HATEOAS</a> (HTML interface for HTTP)</strong> - your web service should be fully accessible in a browser.</li>
 </ul>
 
 <p>Sample REST calls:</p>
@@ -2272,44 +2333,58 @@ PUT /someresources/anId
   <tbody>
     <tr>
       <td>Signup</td>
-      <td><strong>POST</strong> /signup</td>
-      <td><strong>POST</strong> /persons</td>
+      <td>
+<strong>POST</strong> /signup</td>
+      <td>
+<strong>POST</strong> /persons</td>
     </tr>
     <tr>
       <td>Resign</td>
-      <td><strong>POST</strong> /resign<br />{<br />“personid”: “1234”<br />}</td>
-      <td><strong>DELETE</strong> /persons/1234</td>
+      <td>
+<strong>POST</strong> /resign<br>{<br>“personid”: “1234”<br>}</td>
+      <td>
+<strong>DELETE</strong> /persons/1234</td>
     </tr>
     <tr>
       <td>Read a person</td>
-      <td><strong>GET</strong> /readPerson?personid=1234</td>
-      <td><strong>GET</strong> /persons/1234</td>
+      <td>
+<strong>GET</strong> /readPerson?personid=1234</td>
+      <td>
+<strong>GET</strong> /persons/1234</td>
     </tr>
     <tr>
       <td>Read a person’s items list</td>
-      <td><strong>GET</strong> /readUsersItemsList?personid=1234</td>
-      <td><strong>GET</strong> /persons/1234/items</td>
+      <td>
+<strong>GET</strong> /readUsersItemsList?personid=1234</td>
+      <td>
+<strong>GET</strong> /persons/1234/items</td>
     </tr>
     <tr>
       <td>Add an item to a person’s items</td>
-      <td><strong>POST</strong> /addItemToUsersItemsList<br />{<br />“personid”: “1234”;<br />“itemid”: “456”<br />}</td>
-      <td><strong>POST</strong> /persons/1234/items<br />{<br />“itemid”: “456”<br />}</td>
+      <td>
+<strong>POST</strong> /addItemToUsersItemsList<br>{<br>“personid”: “1234”;<br>“itemid”: “456”<br>}</td>
+      <td>
+<strong>POST</strong> /persons/1234/items<br>{<br>“itemid”: “456”<br>}</td>
     </tr>
     <tr>
       <td>Update an item</td>
-      <td><strong>POST</strong> /modifyItem<br />{<br />“itemid”: “456”;<br />“key”: “value”<br />}</td>
-      <td><strong>PUT</strong> /items/456<br />{<br />“key”: “value”<br />}</td>
+      <td>
+<strong>POST</strong> /modifyItem<br>{<br>“itemid”: “456”;<br>“key”: “value”<br>}</td>
+      <td>
+<strong>PUT</strong> /items/456<br>{<br>“key”: “value”<br>}</td>
     </tr>
     <tr>
       <td>Delete an item</td>
-      <td><strong>POST</strong> /removeItem<br />{<br />“itemid”: “456”<br />}</td>
-      <td><strong>DELETE</strong> /items/456</td>
+      <td>
+<strong>POST</strong> /removeItem<br>{<br>“itemid”: “456”<br>}</td>
+      <td>
+<strong>DELETE</strong> /items/456</td>
     </tr>
   </tbody>
 </table>
 
 <p align="center">
-  <i>&lt;a href=https://apihandyman.io/do-you-really-know-why-you-prefer-rest-over-rpc/&gt;Source: Do you really know why you prefer REST over RPC&lt;/a&gt;</i>
+  <i><a href="https://apihandyman.io/do-you-really-know-why-you-prefer-rest-over-rpc/">Source: Do you really know why you prefer REST over RPC</a></i>
 </p>
 
 <h4 id="sources-and-further-reading-rest-and-rpc">Source(s) and further reading: REST and RPC</h4>
@@ -2372,7 +2447,7 @@ PUT /someresources/anId
 
 <h3 id="latency-numbers-every-programmer-should-know">Latency numbers every programmer should know</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Latency Comparison Numbers
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Latency Comparison Numbers
 --------------------------
 L1 cache reference                           0.5 ns
 Branch mispredict                            5   ns
@@ -2410,7 +2485,7 @@ Notes
 
 <h4 id="latency-numbers-visualized">Latency numbers visualized</h4>
 
-<p><img src="https://camo.githubusercontent.com/77f72259e1eb58596b564d1ad823af1853bc60a3/687474703a2f2f692e696d6775722e636f6d2f6b307431652e706e67" alt="" /></p>
+<p><img src="https://camo.githubusercontent.com/77f72259e1eb58596b564d1ad823af1853bc60a3/687474703a2f2f692e696d6775722e636f6d2f6b307431652e706e67" alt=""></p>
 
 <h4 id="sources-and-further-reading-14">Source(s) and further reading</h4>
 
@@ -2441,7 +2516,9 @@ Notes
     </tr>
     <tr>
       <td>Design a search engine like Google</td>
-      <td><a href="http://queue.acm.org/detail.cfm?id=988407">queue.acm.org</a><br /><a href="http://programmers.stackexchange.com/questions/38324/interview-question-how-would-you-implement-google-search">stackexchange.com</a><br /><a href="http://www.ardendertat.com/2012/01/11/implementing-search-engines/">ardendertat.com</a><br /><a href="http://infolab.stanford.edu/~backrub/google.html">stanford.edu</a></td>
+      <td>
+<a href="http://queue.acm.org/detail.cfm?id=988407">queue.acm.org</a><br><a href="http://programmers.stackexchange.com/questions/38324/interview-question-how-would-you-implement-google-search">stackexchange.com</a><br><a href="http://www.ardendertat.com/2012/01/11/implementing-search-engines/">ardendertat.com</a><br><a href="http://infolab.stanford.edu/~backrub/google.html">stanford.edu</a>
+</td>
     </tr>
     <tr>
       <td>Design a scalable web crawler like Google</td>
@@ -2449,7 +2526,9 @@ Notes
     </tr>
     <tr>
       <td>Design Google docs</td>
-      <td><a href="https://code.google.com/p/google-mobwrite/">code.google.com</a><br /><a href="https://neil.fraser.name/writing/sync/">neil.fraser.name</a></td>
+      <td>
+<a href="https://code.google.com/p/google-mobwrite/">code.google.com</a><br><a href="https://neil.fraser.name/writing/sync/">neil.fraser.name</a>
+</td>
     </tr>
     <tr>
       <td>Design a key-value store like Redis</td>
@@ -2461,7 +2540,9 @@ Notes
     </tr>
     <tr>
       <td>Design a recommendation system like Amazon’s</td>
-      <td><a href="https://web.archive.org/web/20170406065247/http://tech.hulu.com/blog/2011/09/19/recommendation-system.html">hulu.com</a><br /><a href="http://ijcai13.org/files/tutorial_slides/td3.pdf">ijcai13.org</a></td>
+      <td>
+<a href="https://web.archive.org/web/20170406065247/http://tech.hulu.com/blog/2011/09/19/recommendation-system.html">hulu.com</a><br><a href="http://ijcai13.org/files/tutorial_slides/td3.pdf">ijcai13.org</a>
+</td>
     </tr>
     <tr>
       <td>Design a tinyurl system like Bitly</td>
@@ -2473,23 +2554,33 @@ Notes
     </tr>
     <tr>
       <td>Design a picture sharing system like Instagram</td>
-      <td><a href="http://highscalability.com/flickr-architecture">highscalability.com</a><br /><a href="http://highscalability.com/blog/2011/12/6/instagram-architecture-14-million-users-terabytes-of-photos.html">highscalability.com</a></td>
+      <td>
+<a href="http://highscalability.com/flickr-architecture">highscalability.com</a><br><a href="http://highscalability.com/blog/2011/12/6/instagram-architecture-14-million-users-terabytes-of-photos.html">highscalability.com</a>
+</td>
     </tr>
     <tr>
       <td>Design the Facebook news feed function</td>
-      <td><a href="http://www.quora.com/What-are-best-practices-for-building-something-like-a-News-Feed">quora.com</a><br /><a href="http://www.quora.com/Activity-Streams/What-are-the-scaling-issues-to-keep-in-mind-while-developing-a-social-network-feed">quora.com</a><br /><a href="http://www.slideshare.net/danmckinley/etsy-activity-feeds-architecture">slideshare.net</a></td>
+      <td>
+<a href="http://www.quora.com/What-are-best-practices-for-building-something-like-a-News-Feed">quora.com</a><br><a href="http://www.quora.com/Activity-Streams/What-are-the-scaling-issues-to-keep-in-mind-while-developing-a-social-network-feed">quora.com</a><br><a href="http://www.slideshare.net/danmckinley/etsy-activity-feeds-architecture">slideshare.net</a>
+</td>
     </tr>
     <tr>
       <td>Design the Facebook timeline function</td>
-      <td><a href="https://www.facebook.com/note.php?note_id=10150468255628920">facebook.com</a><br /><a href="http://highscalability.com/blog/2012/1/23/facebook-timeline-brought-to-you-by-the-power-of-denormaliza.html">highscalability.com</a></td>
+      <td>
+<a href="https://www.facebook.com/note.php?note_id=10150468255628920">facebook.com</a><br><a href="http://highscalability.com/blog/2012/1/23/facebook-timeline-brought-to-you-by-the-power-of-denormaliza.html">highscalability.com</a>
+</td>
     </tr>
     <tr>
       <td>Design the Facebook chat function</td>
-      <td><a href="http://www.erlang-factory.com/upload/presentations/31/EugeneLetuchy-ErlangatFacebook.pdf">erlang-factory.com</a><br /><a href="https://www.facebook.com/note.php?note_id=14218138919&amp;id=9445547199&amp;index=0">facebook.com</a></td>
+      <td>
+<a href="http://www.erlang-factory.com/upload/presentations/31/EugeneLetuchy-ErlangatFacebook.pdf">erlang-factory.com</a><br><a href="https://www.facebook.com/note.php?note_id=14218138919&id=9445547199&index=0">facebook.com</a>
+</td>
     </tr>
     <tr>
       <td>Design a graph search function like Facebook’s</td>
-      <td><a href="https://www.facebook.com/notes/facebook-engineering/under-the-hood-building-out-the-infrastructure-for-graph-search/10151347573598920">facebook.com</a><br /><a href="https://www.facebook.com/notes/facebook-engineering/under-the-hood-indexing-and-ranking-in-graph-search/10151361720763920">facebook.com</a><br /><a href="https://www.facebook.com/notes/facebook-engineering/under-the-hood-the-natural-language-interface-of-graph-search/10151432733048920">facebook.com</a></td>
+      <td>
+<a href="https://www.facebook.com/notes/facebook-engineering/under-the-hood-building-out-the-infrastructure-for-graph-search/10151347573598920">facebook.com</a><br><a href="https://www.facebook.com/notes/facebook-engineering/under-the-hood-indexing-and-ranking-in-graph-search/10151361720763920">facebook.com</a><br><a href="https://www.facebook.com/notes/facebook-engineering/under-the-hood-the-natural-language-interface-of-graph-search/10151432733048920">facebook.com</a>
+</td>
     </tr>
     <tr>
       <td>Design a content delivery network like CloudFlare</td>
@@ -2497,15 +2588,21 @@ Notes
     </tr>
     <tr>
       <td>Design a trending topic system like Twitter’s</td>
-      <td><a href="http://www.michael-noll.com/blog/2013/01/18/implementing-real-time-trending-topics-in-storm/">michael-noll.com</a><br /><a href="http://snikolov.wordpress.com/2012/11/14/early-detection-of-twitter-trends/">snikolov .wordpress.com</a></td>
+      <td>
+<a href="http://www.michael-noll.com/blog/2013/01/18/implementing-real-time-trending-topics-in-storm/">michael-noll.com</a><br><a href="http://snikolov.wordpress.com/2012/11/14/early-detection-of-twitter-trends/">snikolov .wordpress.com</a>
+</td>
     </tr>
     <tr>
       <td>Design a random ID generation system</td>
-      <td><a href="https://blog.twitter.com/2010/announcing-snowflake">blog.twitter.com</a><br /><a href="https://github.com/twitter/snowflake/">github.com</a></td>
+      <td>
+<a href="https://blog.twitter.com/2010/announcing-snowflake">blog.twitter.com</a><br><a href="https://github.com/twitter/snowflake/">github.com</a>
+</td>
     </tr>
     <tr>
       <td>Return the top k requests during a time interval</td>
-      <td><a href="https://www.cs.ucsb.edu/sites/default/files/documents/2005-23.pdf">cs.ucsb.edu</a><br /><a href="http://davis.wpi.edu/xmdv/docs/EDBT11-diyang.pdf">wpi.edu</a></td>
+      <td>
+<a href="https://www.cs.ucsb.edu/sites/default/files/documents/2005-23.pdf">cs.ucsb.edu</a><br><a href="http://davis.wpi.edu/xmdv/docs/EDBT11-diyang.pdf">wpi.edu</a>
+</td>
     </tr>
     <tr>
       <td>Design a system that serves data from multiple data centers</td>
@@ -2513,11 +2610,15 @@ Notes
     </tr>
     <tr>
       <td>Design an online multiplayer card game</td>
-      <td><a href="https://web.archive.org/web/20180929181117/http://www.indieflashblog.com/how-to-create-an-asynchronous-multiplayer-game.html">indieflashblog.com</a><br /><a href="http://buildnewgames.com/real-time-multiplayer/">buildnewgames.com</a></td>
+      <td>
+<a href="https://web.archive.org/web/20180929181117/http://www.indieflashblog.com/how-to-create-an-asynchronous-multiplayer-game.html">indieflashblog.com</a><br><a href="http://buildnewgames.com/real-time-multiplayer/">buildnewgames.com</a>
+</td>
     </tr>
     <tr>
       <td>Design a garbage collection system</td>
-      <td><a href="http://journal.stuffwithstuff.com/2013/12/08/babys-first-garbage-collector/">stuffwithstuff.com</a><br /><a href="http://courses.cs.washington.edu/courses/csep521/07wi/prj/rick.pdf">washington.edu</a></td>
+      <td>
+<a href="http://journal.stuffwithstuff.com/2013/12/08/babys-first-garbage-collector/">stuffwithstuff.com</a><br><a href="http://courses.cs.washington.edu/courses/csep521/07wi/prj/rick.pdf">washington.edu</a>
+</td>
     </tr>
     <tr>
       <td>Design an API rate limiter</td>
@@ -2525,7 +2626,9 @@ Notes
     </tr>
     <tr>
       <td>Design a Stock Exchange (like NASDAQ or Binance)</td>
-      <td><a href="https://youtu.be/b1e4t2k2KJY">Jane Street</a><br /><a href="https://around25.com/blog/building-a-trading-engine-for-a-crypto-exchange/">Golang Implementation</a><br /><a href="http://bhomnick.net/building-a-simple-limit-order-in-go/">Go Implementation</a></td>
+      <td>
+<a href="https://youtu.be/b1e4t2k2KJY">Jane Street</a><br><a href="https://around25.com/blog/building-a-trading-engine-for-a-crypto-exchange/">Golang Implementation</a><br><a href="http://bhomnick.net/building-a-simple-limit-order-in-go/">Go Implementation</a>
+</td>
     </tr>
     <tr>
       <td>Add a system design question</td>
@@ -2541,9 +2644,9 @@ Notes
 </blockquote>
 
 <p align="center">
-  <img src="images/TcUo2fw.png" />
-  <br />
-  <i>&lt;a href=https://www.infoq.com/presentations/Twitter-Timeline-Scalability&gt;Source: Twitter timelines at scale&lt;/a&gt;</i>
+  <img src="images/TcUo2fw.png">
+  <br>
+  <i><a href="https://www.infoq.com/presentations/Twitter-Timeline-Scalability">Source: Twitter timelines at scale</a></i>
 </p>
 
 <p><strong>Don’t focus on nitty gritty details for the following articles, instead:</strong></p>
@@ -2565,17 +2668,20 @@ Notes
   <tbody>
     <tr>
       <td>Data processing</td>
-      <td><strong>MapReduce</strong> - Distributed data processing from Google</td>
+      <td>
+<strong>MapReduce</strong> - Distributed data processing from Google</td>
       <td><a href="http://static.googleusercontent.com/media/research.google.com/zh-CN/us/archive/mapreduce-osdi04.pdf">research.google.com</a></td>
     </tr>
     <tr>
       <td>Data processing</td>
-      <td><strong>Spark</strong> - Distributed data processing from Databricks</td>
+      <td>
+<strong>Spark</strong> - Distributed data processing from Databricks</td>
       <td><a href="http://www.slideshare.net/AGrishchenko/apache-spark-architecture">slideshare.net</a></td>
     </tr>
     <tr>
       <td>Data processing</td>
-      <td><strong>Storm</strong> - Distributed data processing from Twitter</td>
+      <td>
+<strong>Storm</strong> - Distributed data processing from Twitter</td>
       <td><a href="http://www.slideshare.net/previa/storm-16094009">slideshare.net</a></td>
     </tr>
     <tr>
@@ -2585,42 +2691,50 @@ Notes
     </tr>
     <tr>
       <td>Data store</td>
-      <td><strong>Bigtable</strong> - Distributed column-oriented database from Google</td>
+      <td>
+<strong>Bigtable</strong> - Distributed column-oriented database from Google</td>
       <td><a href="http://www.read.seas.harvard.edu/~kohler/class/cs239-w08/chang06bigtable.pdf">harvard.edu</a></td>
     </tr>
     <tr>
       <td>Data store</td>
-      <td><strong>HBase</strong> - Open source implementation of Bigtable</td>
+      <td>
+<strong>HBase</strong> - Open source implementation of Bigtable</td>
       <td><a href="http://www.slideshare.net/alexbaranau/intro-to-hbase">slideshare.net</a></td>
     </tr>
     <tr>
       <td>Data store</td>
-      <td><strong>Cassandra</strong> - Distributed column-oriented database from Facebook</td>
+      <td>
+<strong>Cassandra</strong> - Distributed column-oriented database from Facebook</td>
       <td><a href="http://www.slideshare.net/planetcassandra/cassandra-introduction-features-30103666">slideshare.net</a></td>
     </tr>
     <tr>
       <td>Data store</td>
-      <td><strong>DynamoDB</strong> - Document-oriented database from Amazon</td>
+      <td>
+<strong>DynamoDB</strong> - Document-oriented database from Amazon</td>
       <td><a href="http://www.read.seas.harvard.edu/~kohler/class/cs239-w08/decandia07dynamo.pdf">harvard.edu</a></td>
     </tr>
     <tr>
       <td>Data store</td>
-      <td><strong>MongoDB</strong> - Document-oriented database</td>
+      <td>
+<strong>MongoDB</strong> - Document-oriented database</td>
       <td><a href="http://www.slideshare.net/mdirolf/introduction-to-mongodb">slideshare.net</a></td>
     </tr>
     <tr>
       <td>Data store</td>
-      <td><strong>Spanner</strong> - Globally-distributed database from Google</td>
+      <td>
+<strong>Spanner</strong> - Globally-distributed database from Google</td>
       <td><a href="http://research.google.com/archive/spanner-osdi2012.pdf">research.google.com</a></td>
     </tr>
     <tr>
       <td>Data store</td>
-      <td><strong>Memcached</strong> - Distributed memory caching system</td>
+      <td>
+<strong>Memcached</strong> - Distributed memory caching system</td>
       <td><a href="http://www.slideshare.net/oemebamo/introduction-to-memcached">slideshare.net</a></td>
     </tr>
     <tr>
       <td>Data store</td>
-      <td><strong>Redis</strong> - Distributed memory caching system with persistence and value types</td>
+      <td>
+<strong>Redis</strong> - Distributed memory caching system with persistence and value types</td>
       <td><a href="http://www.slideshare.net/dvirsky/introduction-to-redis">slideshare.net</a></td>
     </tr>
     <tr>
@@ -2630,12 +2744,14 @@ Notes
     </tr>
     <tr>
       <td>File system</td>
-      <td><strong>Google File System (GFS)</strong> - Distributed file system</td>
+      <td>
+<strong>Google File System (GFS)</strong> - Distributed file system</td>
       <td><a href="http://static.googleusercontent.com/media/research.google.com/zh-CN/us/archive/gfs-sosp2003.pdf">research.google.com</a></td>
     </tr>
     <tr>
       <td>File system</td>
-      <td><strong>Hadoop File System (HDFS)</strong> - Open source implementation of GFS</td>
+      <td>
+<strong>Hadoop File System (HDFS)</strong> - Open source implementation of GFS</td>
       <td><a href="http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html">apache.org</a></td>
     </tr>
     <tr>
@@ -2645,22 +2761,26 @@ Notes
     </tr>
     <tr>
       <td>Misc</td>
-      <td><strong>Chubby</strong> - Lock service for loosely-coupled distributed systems from Google</td>
+      <td>
+<strong>Chubby</strong> - Lock service for loosely-coupled distributed systems from Google</td>
       <td><a href="http://static.googleusercontent.com/external_content/untrusted_dlcp/research.google.com/en/us/archive/chubby-osdi06.pdf">research.google.com</a></td>
     </tr>
     <tr>
       <td>Misc</td>
-      <td><strong>Dapper</strong> - Distributed systems tracing infrastructure</td>
+      <td>
+<strong>Dapper</strong> - Distributed systems tracing infrastructure</td>
       <td><a href="http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36356.pdf">research.google.com</a></td>
     </tr>
     <tr>
       <td>Misc</td>
-      <td><strong>Kafka</strong> - Pub/sub message queue from LinkedIn</td>
+      <td>
+<strong>Kafka</strong> - Pub/sub message queue from LinkedIn</td>
       <td><a href="http://www.slideshare.net/mumrah/kafka-talk-tri-hug">slideshare.net</a></td>
     </tr>
     <tr>
       <td>Misc</td>
-      <td><strong>Zookeeper</strong> - Centralized infrastructure and services enabling synchronization</td>
+      <td>
+<strong>Zookeeper</strong> - Centralized infrastructure and services enabling synchronization</td>
       <td><a href="http://www.slideshare.net/sauravhaloi/introduction-to-apache-zookeeper">slideshare.net</a></td>
     </tr>
     <tr>
@@ -2707,7 +2827,9 @@ Notes
     </tr>
     <tr>
       <td>Instagram</td>
-      <td><a href="http://highscalability.com/blog/2011/12/6/instagram-architecture-14-million-users-terabytes-of-photos.html">14 million users, terabytes of photos</a><br /><a href="http://instagram-engineering.tumblr.com/post/13649370142/what-powers-instagram-hundreds-of-instances">What powers Instagram</a></td>
+      <td>
+<a href="http://highscalability.com/blog/2011/12/6/instagram-architecture-14-million-users-terabytes-of-photos.html">14 million users, terabytes of photos</a><br><a href="http://instagram-engineering.tumblr.com/post/13649370142/what-powers-instagram-hundreds-of-instances">What powers Instagram</a>
+</td>
     </tr>
     <tr>
       <td>Justin.tv</td>
@@ -2715,7 +2837,9 @@ Notes
     </tr>
     <tr>
       <td>Facebook</td>
-      <td><a href="https://cs.uwaterloo.ca/~brecht/courses/854-Emerging-2014/readings/key-value/fb-memcached-nsdi-2013.pdf">Scaling memcached at Facebook</a><br /><a href="https://cs.uwaterloo.ca/~brecht/courses/854-Emerging-2014/readings/data-store/tao-facebook-distributed-datastore-atc-2013.pdf">TAO: Facebook’s distributed data store for the social graph</a><br /><a href="https://www.usenix.org/legacy/event/osdi10/tech/full_papers/Beaver.pdf">Facebook’s photo storage</a><br /><a href="http://highscalability.com/blog/2016/6/27/how-facebook-live-streams-to-800000-simultaneous-viewers.html">How Facebook Live Streams To 800,000 Simultaneous Viewers</a></td>
+      <td>
+<a href="https://cs.uwaterloo.ca/~brecht/courses/854-Emerging-2014/readings/key-value/fb-memcached-nsdi-2013.pdf">Scaling memcached at Facebook</a><br><a href="https://cs.uwaterloo.ca/~brecht/courses/854-Emerging-2014/readings/data-store/tao-facebook-distributed-datastore-atc-2013.pdf">TAO: Facebook’s distributed data store for the social graph</a><br><a href="https://www.usenix.org/legacy/event/osdi10/tech/full_papers/Beaver.pdf">Facebook’s photo storage</a><br><a href="http://highscalability.com/blog/2016/6/27/how-facebook-live-streams-to-800000-simultaneous-viewers.html">How Facebook Live Streams To 800,000 Simultaneous Viewers</a>
+</td>
     </tr>
     <tr>
       <td>Flickr</td>
@@ -2727,11 +2851,15 @@ Notes
     </tr>
     <tr>
       <td>Netflix</td>
-      <td><a href="http://highscalability.com/blog/2015/11/9/a-360-degree-view-of-the-entire-netflix-stack.html">A 360 Degree View Of The Entire Netflix Stack</a><br /><a href="http://highscalability.com/blog/2017/12/11/netflix-what-happens-when-you-press-play.html">Netflix: What Happens When You Press Play?</a></td>
+      <td>
+<a href="http://highscalability.com/blog/2015/11/9/a-360-degree-view-of-the-entire-netflix-stack.html">A 360 Degree View Of The Entire Netflix Stack</a><br><a href="http://highscalability.com/blog/2017/12/11/netflix-what-happens-when-you-press-play.html">Netflix: What Happens When You Press Play?</a>
+</td>
     </tr>
     <tr>
       <td>Pinterest</td>
-      <td><a href="http://highscalability.com/blog/2013/4/15/scaling-pinterest-from-0-to-10s-of-billions-of-page-views-a.html">From 0 To 10s of billions of page views a month</a><br /><a href="http://highscalability.com/blog/2012/5/21/pinterest-architecture-update-18-million-visitors-10x-growth.html">18 million visitors, 10x growth, 12 employees</a></td>
+      <td>
+<a href="http://highscalability.com/blog/2013/4/15/scaling-pinterest-from-0-to-10s-of-billions-of-page-views-a.html">From 0 To 10s of billions of page views a month</a><br><a href="http://highscalability.com/blog/2012/5/21/pinterest-architecture-update-18-million-visitors-10x-growth.html">18 million visitors, 10x growth, 12 employees</a>
+</td>
     </tr>
     <tr>
       <td>Playfish</td>
@@ -2759,11 +2887,15 @@ Notes
     </tr>
     <tr>
       <td>Twitter</td>
-      <td><a href="http://highscalability.com/scaling-twitter-making-twitter-10000-percent-faster">Making Twitter 10000 percent faster</a><br /><a href="http://highscalability.com/blog/2011/12/19/how-twitter-stores-250-million-tweets-a-day-using-mysql.html">Storing 250 million tweets a day using MySQL</a><br /><a href="http://highscalability.com/blog/2013/7/8/the-architecture-twitter-uses-to-deal-with-150m-active-users.html">150M active users, 300K QPS, a 22 MB/S firehose</a><br /><a href="https://www.infoq.com/presentations/Twitter-Timeline-Scalability">Timelines at scale</a><br /><a href="https://www.youtube.com/watch?v=5cKTP36HVgI">Big and small data at Twitter</a><br /><a href="https://www.youtube.com/watch?v=z8LU0Cj6BOU">Operations at Twitter: scaling beyond 100 million users</a><br /><a href="http://highscalability.com/blog/2016/4/20/how-twitter-handles-3000-images-per-second.html">How Twitter Handles 3,000 Images Per Second</a></td>
+      <td>
+<a href="http://highscalability.com/scaling-twitter-making-twitter-10000-percent-faster">Making Twitter 10000 percent faster</a><br><a href="http://highscalability.com/blog/2011/12/19/how-twitter-stores-250-million-tweets-a-day-using-mysql.html">Storing 250 million tweets a day using MySQL</a><br><a href="http://highscalability.com/blog/2013/7/8/the-architecture-twitter-uses-to-deal-with-150m-active-users.html">150M active users, 300K QPS, a 22 MB/S firehose</a><br><a href="https://www.infoq.com/presentations/Twitter-Timeline-Scalability">Timelines at scale</a><br><a href="https://www.youtube.com/watch?v=5cKTP36HVgI">Big and small data at Twitter</a><br><a href="https://www.youtube.com/watch?v=z8LU0Cj6BOU">Operations at Twitter: scaling beyond 100 million users</a><br><a href="http://highscalability.com/blog/2016/4/20/how-twitter-handles-3000-images-per-second.html">How Twitter Handles 3,000 Images Per Second</a>
+</td>
     </tr>
     <tr>
       <td>Uber</td>
-      <td><a href="http://highscalability.com/blog/2015/9/14/how-uber-scales-their-real-time-market-platform.html">How Uber scales their real-time market platform</a><br /><a href="http://highscalability.com/blog/2016/10/12/lessons-learned-from-scaling-uber-to-2000-engineers-1000-ser.html">Lessons Learned From Scaling Uber To 2000 Engineers, 1000 Services, And 8000 Git Repositories</a></td>
+      <td>
+<a href="http://highscalability.com/blog/2015/9/14/how-uber-scales-their-real-time-market-platform.html">How Uber scales their real-time market platform</a><br><a href="http://highscalability.com/blog/2016/10/12/lessons-learned-from-scaling-uber-to-2000-engineers-1000-ser.html">Lessons Learned From Scaling Uber To 2000 Engineers, 1000 Services, And 8000 Git Repositories</a>
+</td>
     </tr>
     <tr>
       <td>WhatsApp</td>
@@ -2771,7 +2903,9 @@ Notes
     </tr>
     <tr>
       <td>YouTube</td>
-      <td><a href="https://www.youtube.com/watch?v=w5WVu624fY8">YouTube scalability</a><br /><a href="http://highscalability.com/youtube-architecture">YouTube architecture</a></td>
+      <td>
+<a href="https://www.youtube.com/watch?v=w5WVu624fY8">YouTube scalability</a><br><a href="http://highscalability.com/youtube-architecture">YouTube architecture</a>
+</td>
     </tr>
   </tbody>
 </table>
@@ -2880,14 +3014,27 @@ Creative Commons Attribution 4.0 International License (CC BY 4.0)
 http://creativecommons.org/licenses/by/4.0/
 </code></pre></div></div>
 <h2 class="post-list-heading">Posts</h2>
-    <ul class="post-list"><li><span class="post-meta">Nov 6, 2023</span>
+    <ul class="post-list">
+<li>
+<span class="post-meta">Nov 9, 2023</span>
+        <h3>
+          <a class="post-link" href="/system-design-primer/jekyll/mermaid/2023/11/09/jekyll-mermaid.html">
+            Jekyll Mermaid
+          </a>
+        </h3>
+</li>
+<li>
+<span class="post-meta">Nov 6, 2023</span>
         <h3>
           <a class="post-link" href="/system-design-primer/jekyll/update/2023/11/06/welcome-to-jekyll.html">
             Welcome to Jekyll!
           </a>
-        </h3></li></ul>
+        </h3>
+</li>
+</ul>
 
-    <p class="rss-subscribe">subscribe <a href="/system-design-primer/feed.xml">via RSS</a></p></div>
+    <p class="rss-subscribe">subscribe <a href="/system-design-primer/feed.xml">via RSS</a></p>
+</div>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -2895,15 +3042,21 @@ http://creativecommons.org/licenses/by/4.0/
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">System Design Primer</h2>
+    <h2 class="footer-heading">The System Design Primer</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">System Design Primer</li><li><a class="u-email" href="mailto:phucknguyen@gmail.com">phucknguyen@gmail.com</a></li></ul>
+          <li class="p-name">The System Design Primer</li>
+<li><a class="u-email" href="mailto:phucknguyen@gmail.com">phucknguyen@gmail.com</a></li>
+</ul>
       </div>
 
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/phucnguyen81"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#github"></use></svg> <span class="username">phucnguyen81</span></a></li><li><a href="https://www.twitter.com/phucknguyen"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">phucknguyen</span></a></li></ul>
+      <div class="footer-col footer-col-2">
+<ul class="social-media-list">
+<li><a href="https://github.com/phucnguyen81"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#github"></use></svg> <span class="username">phucnguyen81</span></a></li>
+<li><a href="https://www.twitter.com/phucknguyen"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">phucknguyen</span></a></li>
+</ul>
 </div>
 
       <div class="footer-col footer-col-3">

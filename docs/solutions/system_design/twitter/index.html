@@ -1,38 +1,48 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Design the Twitter timeline and search | System Design Primer</title>
-<meta name="generator" content="Jekyll v3.9.3" />
-<meta property="og:title" content="Design the Twitter timeline and search" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Learn how to design large-scale systems. Prep for the system design interview." />
-<meta property="og:description" content="Learn how to design large-scale systems. Prep for the system design interview." />
-<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/solutions/system_design/twitter/" />
-<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/solutions/system_design/twitter/" />
-<meta property="og:site_name" content="System Design Primer" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Design the Twitter timeline and search" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Design the Twitter timeline and search | The System Design Primer</title>
+<meta name="generator" content="Jekyll v3.9.3">
+<meta property="og:title" content="Design the Twitter timeline and search">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Learn how to design large-scale systems. Prep for the system design interview.">
+<meta property="og:description" content="Learn how to design large-scale systems. Prep for the system design interview.">
+<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/solutions/system_design/twitter/">
+<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/solutions/system_design/twitter/">
+<meta property="og:site_name" content="The System Design Primer">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Design the Twitter timeline and search">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","description":"Learn how to design large-scale systems. Prep for the system design interview.","headline":"Design the Twitter timeline and search","url":"https://phucnguyen81.github.io/system-design-primer/solutions/system_design/twitter/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/system-design-primer/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://phucnguyen81.github.io/system-design-primer/feed.xml" title="System Design Primer" /></head>
-<body><header class="site-header" role="banner">
+<link rel="stylesheet" href="/system-design-primer/assets/main.css">
+<link type="application/atom+xml" rel="alternate" href="https://phucnguyen81.github.io/system-design-primer/feed.xml" title="The System Design Primer">
+</head>
+<body>
+<header class="site-header" role="banner">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/system-design-primer/">System Design Primer</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <div class="wrapper">
+<a class="site-title" rel="author" href="/system-design-primer/">The System Design Primer</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
         <label for="nav-trigger">
           <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
             </svg>
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/system-design-primer/about/">About</a><a class="page-link" href="/system-design-primer/"></a><a class="page-link" href="/system-design-primer/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/pastebin/">Design Pastebin.com (or Bit.ly)</a><a class="page-link" href="/system-design-primer/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/system-design-primer/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/system-design-primer/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/system-design-primer/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/system-design-primer/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/system-design-primer/solutions/system_design/web_crawler/">Design a web crawler</a></div>
-      </nav></div>
+        <div class="trigger">
+<a class="page-link" href="/system-design-primer/about/">About</a><a class="page-link" href="/system-design-primer/">The System Design Primer</a><a class="page-link" href="/system-design-primer/pages/sql-or-nosql.html">SQL or NoSQL</a><a class="page-link" href="/system-design-primer/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/pastebin/">Design Pastebin.com (or Bit.ly)</a><a class="page-link" href="/system-design-primer/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/system-design-primer/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/system-design-primer/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/system-design-primer/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/system-design-primer/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/system-design-primer/solutions/system_design/web_crawler/">Design a web crawler</a>
+</div>
+      </nav>
+</div>
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -64,22 +74,30 @@ Discuss assumptions.</p>
 <h4 id="well-scope-the-problem-to-handle-only-the-following-use-cases">We’ll scope the problem to handle only the following use cases</h4>
 
 <ul>
-  <li><strong>User</strong> posts a tweet
+  <li>
+<strong>User</strong> posts a tweet
     <ul>
-      <li><strong>Service</strong> pushes tweets to followers, sending push notifications and emails</li>
+      <li>
+<strong>Service</strong> pushes tweets to followers, sending push notifications and emails</li>
     </ul>
   </li>
-  <li><strong>User</strong> views the user timeline (activity from the user)</li>
-  <li><strong>User</strong> views the home timeline (activity from people the user is following)</li>
-  <li><strong>User</strong> searches keywords</li>
-  <li><strong>Service</strong> has high availability</li>
+  <li>
+<strong>User</strong> views the user timeline (activity from the user)</li>
+  <li>
+<strong>User</strong> views the home timeline (activity from people the user is following)</li>
+  <li>
+<strong>User</strong> searches keywords</li>
+  <li>
+<strong>Service</strong> has high availability</li>
 </ul>
 
 <h4 id="out-of-scope">Out of scope</h4>
 
 <ul>
-  <li><strong>Service</strong> pushes tweets to the Twitter Firehose and other streams</li>
-  <li><strong>Service</strong> strips out tweets based on users’ visibility settings
+  <li>
+<strong>Service</strong> pushes tweets to the Twitter Firehose and other streams</li>
+  <li>
+<strong>Service</strong> strips out tweets based on users’ visibility settings
     <ul>
       <li>Hide @reply if the user is not also following the person being replied to</li>
       <li>Respect ‘hide retweets’ setting</li>
@@ -139,10 +157,14 @@ Discuss assumptions.</p>
 <ul>
   <li>Size per tweet:
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">tweet_id</code> - 8 bytes</li>
-      <li><code class="language-plaintext highlighter-rouge">user_id</code> - 32 bytes</li>
-      <li><code class="language-plaintext highlighter-rouge">text</code> - 140 bytes</li>
-      <li><code class="language-plaintext highlighter-rouge">media</code> - 10 KB average</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">tweet_id</code> - 8 bytes</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">user_id</code> - 32 bytes</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">text</code> - 140 bytes</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">media</code> - 10 KB average</li>
       <li>Total: ~10 KB</li>
     </ul>
   </li>
@@ -189,7 +211,7 @@ Discuss assumptions.</p>
   <p>Outline a high level design with all important components.</p>
 </blockquote>
 
-<p><img src="http://i.imgur.com/48tEA2j.png" alt="Imgur" /></p>
+<p><img src="http://i.imgur.com/48tEA2j.png" alt="Imgur"></p>
 
 <h2 id="step-3-design-core-components">Step 3: Design core components</h2>
 
@@ -199,26 +221,30 @@ Discuss assumptions.</p>
 
 <h3 id="use-case-user-posts-a-tweet">Use case: User posts a tweet</h3>
 
-<p>We could store the user’s own tweets to populate the user timeline (activity from the user) in a <a href="https://github.com/donnemartin/system-design-primer#relational-database-management-system-rdbms">relational database</a>.  We should discuss the <a href="https://github.com/donnemartin/system-design-primer#sql-or-nosql">use cases and tradeoffs between choosing SQL or NoSQL</a>.</p>
+<p>We could store the user’s own tweets to populate the user timeline (activity from the user) in a <a href="https://github.com/donnemartin/system-design-primer#relational-database-management-system-rdbms">relational database</a>.  We should discuss the <a href="/pages/sql-or-nosql">use cases and tradeoffs between choosing SQL or NoSQL</a>.</p>
 
-<p>Delivering tweets and building the home timeline (activity from people the user is following) is trickier.  Fanning out tweets to all followers (60 thousand tweets delivered on fanout per second) will overload a traditional <a href="https://github.com/donnemartin/system-design-primer#relational-database-management-system-rdbms">relational database</a>.  We’ll probably want to choose a data store with fast writes such as a <strong>NoSQL database</strong> or <strong>Memory Cache</strong>.  Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup>&lt;a href=https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know&gt;1&lt;/a&gt;</sup></p>
+<p>Delivering tweets and building the home timeline (activity from people the user is following) is trickier.  Fanning out tweets to all followers (60 thousand tweets delivered on fanout per second) will overload a traditional <a href="https://github.com/donnemartin/system-design-primer#relational-database-management-system-rdbms">relational database</a>.  We’ll probably want to choose a data store with fast writes such as a <strong>NoSQL database</strong> or <strong>Memory Cache</strong>.  Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup><a href="https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know">1</a></sup></p>
 
 <p>We could store media such as photos or videos on an <strong>Object Store</strong>.</p>
 
 <ul>
-  <li>The <strong>Client</strong> posts a tweet to the <strong>Web Server</strong>, running as a <a href="https://github.com/donnemartin/system-design-primer#reverse-proxy-web-server">reverse proxy</a></li>
+  <li>The <strong>Client</strong> posts a tweet to the <strong>Web Server</strong>, running as a <a href="https://github.com/donnemartin/system-design-primer#reverse-proxy-web-server">reverse proxy</a>
+</li>
   <li>The <strong>Web Server</strong> forwards the request to the <strong>Write API</strong> server</li>
-  <li>The <strong>Write API</strong> stores the tweet in the user’s timeline on a <strong>SQL database</strong></li>
+  <li>The <strong>Write API</strong> stores the tweet in the user’s timeline on a <strong>SQL database</strong>
+</li>
   <li>The <strong>Write API</strong> contacts the <strong>Fan Out Service</strong>, which does the following:
     <ul>
-      <li>Queries the <strong>User Graph Service</strong> to find the user’s followers stored in the <strong>Memory Cache</strong></li>
+      <li>Queries the <strong>User Graph Service</strong> to find the user’s followers stored in the <strong>Memory Cache</strong>
+</li>
       <li>Stores the tweet in the <em>home timeline of the user’s followers</em> in a <strong>Memory Cache</strong>
         <ul>
           <li>O(n) operation:  1,000 followers = 1,000 lookups and inserts</li>
         </ul>
       </li>
       <li>Stores the tweet in the <strong>Search Index Service</strong> to enable fast searching</li>
-      <li>Stores media in the <strong>Object Store</strong></li>
+      <li>Stores media in the <strong>Object Store</strong>
+</li>
       <li>Uses the <strong>Notification Service</strong> to send out push notifications to followers:
         <ul>
           <li>Uses a <strong>Queue</strong> (not pictured) to asynchronously send out notifications</li>
@@ -262,7 +288,8 @@ Discuss assumptions.</p>
 <h3 id="use-case-user-views-the-home-timeline">Use case: User views the home timeline</h3>
 
 <ul>
-  <li>The <strong>Client</strong> posts a home timeline request to the <strong>Web Server</strong></li>
+  <li>The <strong>Client</strong> posts a home timeline request to the <strong>Web Server</strong>
+</li>
   <li>The <strong>Web Server</strong> forwards the request to the <strong>Read API</strong> server</li>
   <li>The <strong>Read API</strong> server contacts the <strong>Timeline Service</strong>, which does the following:
     <ul>
@@ -300,9 +327,11 @@ Discuss assumptions.</p>
 <h3 id="use-case-user-views-the-user-timeline">Use case: User views the user timeline</h3>
 
 <ul>
-  <li>The <strong>Client</strong> posts a user timeline request to the <strong>Web Server</strong></li>
+  <li>The <strong>Client</strong> posts a user timeline request to the <strong>Web Server</strong>
+</li>
   <li>The <strong>Web Server</strong> forwards the request to the <strong>Read API</strong> server</li>
-  <li>The <strong>Read API</strong> retrieves the user timeline from the <strong>SQL Database</strong></li>
+  <li>The <strong>Read API</strong> retrieves the user timeline from the <strong>SQL Database</strong>
+</li>
 </ul>
 
 <p>The REST API would be similar to the home timeline, except all tweets would come from the user as opposed to the people the user is following.</p>
@@ -310,7 +339,8 @@ Discuss assumptions.</p>
 <h3 id="use-case-user-searches-keywords">Use case: User searches keywords</h3>
 
 <ul>
-  <li>The <strong>Client</strong> sends a search request to the <strong>Web Server</strong></li>
+  <li>The <strong>Client</strong> sends a search request to the <strong>Web Server</strong>
+</li>
   <li>The <strong>Web Server</strong> forwards the request to the <strong>Search API</strong> server</li>
   <li>The <strong>Search API</strong> contacts the <strong>Search Service</strong>, which does the following:
     <ul>
@@ -325,7 +355,8 @@ Discuss assumptions.</p>
       </li>
       <li>Queries the <strong>Search Cluster</strong> (ie <a href="https://lucene.apache.org/">Lucene</a>) for the results:
         <ul>
-          <li><a href="https://github.com/donnemartin/system-design-primer#under-development">Scatter gathers</a> each server in the cluster to determine if there are any results for the query</li>
+          <li>
+<a href="https://github.com/donnemartin/system-design-primer#under-development">Scatter gathers</a> each server in the cluster to determine if there are any results for the query</li>
           <li>Merges, ranks, sorts, and returns the results</li>
         </ul>
       </li>
@@ -346,7 +377,7 @@ Discuss assumptions.</p>
   <p>Identify and address bottlenecks, given the constraints.</p>
 </blockquote>
 
-<p><img src="http://i.imgur.com/jrUBAF7.png" alt="Imgur" /></p>
+<p><img src="http://i.imgur.com/jrUBAF7.png" alt="Imgur"></p>
 
 <p><strong>Important: Do not simply jump right into the final design from the initial design!</strong></p>
 
@@ -380,19 +411,23 @@ Discuss assumptions.</p>
 <p>Additional optimizations include:</p>
 
 <ul>
-  <li>Keep only several hundred tweets for each home timeline in the <strong>Memory Cache</strong></li>
+  <li>Keep only several hundred tweets for each home timeline in the <strong>Memory Cache</strong>
+</li>
   <li>Keep only active users’ home timeline info in the <strong>Memory Cache</strong>
     <ul>
       <li>If a user was not previously active in the past 30 days, we could rebuild the timeline from the <strong>SQL Database</strong>
         <ul>
           <li>Query the <strong>User Graph Service</strong> to determine who the user is following</li>
-          <li>Get the tweets from the <strong>SQL Database</strong> and add them to the <strong>Memory Cache</strong></li>
+          <li>Get the tweets from the <strong>SQL Database</strong> and add them to the <strong>Memory Cache</strong>
+</li>
         </ul>
       </li>
     </ul>
   </li>
-  <li>Store only a month of tweets in the <strong>Tweet Info Service</strong></li>
-  <li>Store only active users in the <strong>User Info Service</strong></li>
+  <li>Store only a month of tweets in the <strong>Tweet Info Service</strong>
+</li>
+  <li>Store only active users in the <strong>User Info Service</strong>
+</li>
   <li>The <strong>Search Cluster</strong> would likely need to keep the tweets in memory to keep latency low</li>
 </ul>
 
@@ -424,7 +459,7 @@ Discuss assumptions.</p>
   <li><a href="https://github.com/donnemartin/system-design-primer#document-store">Document store</a></li>
   <li><a href="https://github.com/donnemartin/system-design-primer#wide-column-store">Wide column store</a></li>
   <li><a href="https://github.com/donnemartin/system-design-primer#graph-database">Graph database</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#sql-or-nosql">SQL vs NoSQL</a></li>
+  <li><a href="/pages/sql-or-nosql">SQL vs NoSQL</a></li>
 </ul>
 
 <h3 id="caching">Caching</h3>
@@ -469,8 +504,10 @@ Discuss assumptions.</p>
 <ul>
   <li>Discuss tradeoffs:
     <ul>
-      <li>External communication with clients - <a href="https://github.com/donnemartin/system-design-primer#representational-state-transfer-rest">HTTP APIs following REST</a></li>
-      <li>Internal communications - <a href="https://github.com/donnemartin/system-design-primer#remote-procedure-call-rpc">RPC</a></li>
+      <li>External communication with clients - <a href="https://github.com/donnemartin/system-design-primer#representational-state-transfer-rest">HTTP APIs following REST</a>
+</li>
+      <li>Internal communications - <a href="https://github.com/donnemartin/system-design-primer#remote-procedure-call-rpc">RPC</a>
+</li>
     </ul>
   </li>
   <li><a href="https://github.com/donnemartin/system-design-primer#service-discovery">Service discovery</a></li>
@@ -501,15 +538,21 @@ Discuss assumptions.</p>
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">System Design Primer</h2>
+    <h2 class="footer-heading">The System Design Primer</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">System Design Primer</li><li><a class="u-email" href="mailto:phucknguyen@gmail.com">phucknguyen@gmail.com</a></li></ul>
+          <li class="p-name">The System Design Primer</li>
+<li><a class="u-email" href="mailto:phucknguyen@gmail.com">phucknguyen@gmail.com</a></li>
+</ul>
       </div>
 
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/phucnguyen81"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#github"></use></svg> <span class="username">phucnguyen81</span></a></li><li><a href="https://www.twitter.com/phucknguyen"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">phucknguyen</span></a></li></ul>
+      <div class="footer-col footer-col-2">
+<ul class="social-media-list">
+<li><a href="https://github.com/phucnguyen81"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#github"></use></svg> <span class="username">phucnguyen81</span></a></li>
+<li><a href="https://www.twitter.com/phucknguyen"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">phucknguyen</span></a></li>
+</ul>
 </div>
 
       <div class="footer-col footer-col-3">

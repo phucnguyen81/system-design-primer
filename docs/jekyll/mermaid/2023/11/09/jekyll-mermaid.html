@@ -6,20 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>The System Design Primer | Learn how to design large-scale systems. Prep for the system design interview.</title>
+<title>Jekyll Mermaid | The System Design Primer</title>
 <meta name="generator" content="Jekyll v3.9.3">
-<meta property="og:title" content="The System Design Primer">
+<meta property="og:title" content="Jekyll Mermaid">
 <meta property="og:locale" content="en_US">
-<meta name="description" content="Learn how to design large-scale systems. Prep for the system design interview.">
-<meta property="og:description" content="Learn how to design large-scale systems. Prep for the system design interview.">
-<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/404.html">
-<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/404.html">
+<meta name="description" content="Use Mermaid diagrams">
+<meta property="og:description" content="Use Mermaid diagrams">
+<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/jekyll/mermaid/2023/11/09/jekyll-mermaid.html">
+<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/jekyll/mermaid/2023/11/09/jekyll-mermaid.html">
 <meta property="og:site_name" content="The System Design Primer">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2023-11-09T08:00:00+07:00">
 <meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="The System Design Primer">
+<meta property="twitter:title" content="Jekyll Mermaid">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Learn how to design large-scale systems. Prep for the system design interview.","headline":"The System Design Primer","url":"https://phucnguyen81.github.io/system-design-primer/404.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-11-09T08:00:00+07:00","datePublished":"2023-11-09T08:00:00+07:00","description":"Use Mermaid diagrams","headline":"Jekyll Mermaid","mainEntityOfPage":{"@type":"WebPage","@id":"https://phucnguyen81.github.io/system-design-primer/jekyll/mermaid/2023/11/09/jekyll-mermaid.html"},"url":"https://phucnguyen81.github.io/system-design-primer/jekyll/mermaid/2023/11/09/jekyll-mermaid.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/system-design-primer/assets/main.css">
 <link type="application/atom+xml" rel="alternate" href="https://phucnguyen81.github.io/system-design-primer/feed.xml" title="The System Design Primer">
@@ -46,26 +47,46 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-<div class="container">
-  <h1>404</h1>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Jekyll Mermaid</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-11-09T08:00:00+07:00" itemprop="datePublished">Nov 9, 2023
+      </time></p>
+  </header>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="use-mermaid-diagrams">Use Mermaid diagrams</h2>
+
+<p>Install the <a href="https://github.com/jeffreytse/jekyll-spaceship">jekyll-spaceship</a>,
+plugin, which enables not just mermaid but also math, table, uml,…</p>
+
+<p>Add the plugin to <code class="language-plaintext highlighter-rouge">Gemfile</code>:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">group</span> <span class="ss">:jekyll_plugins</span> <span class="k">do</span>
+  <span class="n">gem</span> <span class="s2">"jekyll-spaceship"</span><span class="p">,</span> <span class="s2">"~&gt; 0.10.2"</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Add the plugin to <code class="language-plaintext highlighter-rouge">_config.yml</code>:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-spaceship</span>  
+</code></pre></div></div>
+
+<h2 id="examples-of-mermaid-diagrams">Examples of Mermaid diagrams</h2>
+
+<h3 id="mermaid-piechart-diagram">Mermaid piechart diagram</h3>
+
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoicGllIHRpdGxlIFBldHMgYWRvcHRlZCBieSB2b2x1bnRlZXJzXG5cIkRvZ3NcIiA6IDM4NlxuXCJDYXRzXCIgOiA4NVxuXCJSYXRzXCIgOiAzNSIsIm1lcm1haWQiOm51bGx9"></p>
+
+<h3 id="mermaid-flowchart-diagram">Mermaid flowchart diagram</h3>
+
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggVEQ7XG5BLS0-QjtcbkEtLT5DO1xuQi0tPkQ7XG5DLS0-RDsiLCJtZXJtYWlkIjpudWxsfQ"></p>
+
+
+  </div>
+<a class="u-url" href="/system-design-primer/jekyll/mermaid/2023/11/09/jekyll-mermaid.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">

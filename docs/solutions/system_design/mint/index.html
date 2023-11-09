@@ -1,38 +1,48 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Design Mint.com | System Design Primer</title>
-<meta name="generator" content="Jekyll v3.9.3" />
-<meta property="og:title" content="Design Mint.com" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Learn how to design large-scale systems. Prep for the system design interview." />
-<meta property="og:description" content="Learn how to design large-scale systems. Prep for the system design interview." />
-<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/solutions/system_design/mint/" />
-<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/solutions/system_design/mint/" />
-<meta property="og:site_name" content="System Design Primer" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Design Mint.com" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Design Mint.com | The System Design Primer</title>
+<meta name="generator" content="Jekyll v3.9.3">
+<meta property="og:title" content="Design Mint.com">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Learn how to design large-scale systems. Prep for the system design interview.">
+<meta property="og:description" content="Learn how to design large-scale systems. Prep for the system design interview.">
+<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/solutions/system_design/mint/">
+<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/solutions/system_design/mint/">
+<meta property="og:site_name" content="The System Design Primer">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Design Mint.com">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","description":"Learn how to design large-scale systems. Prep for the system design interview.","headline":"Design Mint.com","url":"https://phucnguyen81.github.io/system-design-primer/solutions/system_design/mint/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/system-design-primer/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://phucnguyen81.github.io/system-design-primer/feed.xml" title="System Design Primer" /></head>
-<body><header class="site-header" role="banner">
+<link rel="stylesheet" href="/system-design-primer/assets/main.css">
+<link type="application/atom+xml" rel="alternate" href="https://phucnguyen81.github.io/system-design-primer/feed.xml" title="The System Design Primer">
+</head>
+<body>
+<header class="site-header" role="banner">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/system-design-primer/">System Design Primer</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <div class="wrapper">
+<a class="site-title" rel="author" href="/system-design-primer/">The System Design Primer</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
         <label for="nav-trigger">
           <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
             </svg>
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/system-design-primer/about/">About</a><a class="page-link" href="/system-design-primer/"></a><a class="page-link" href="/system-design-primer/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/pastebin/">Design Pastebin.com (or Bit.ly)</a><a class="page-link" href="/system-design-primer/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/system-design-primer/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/system-design-primer/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/system-design-primer/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/system-design-primer/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/system-design-primer/solutions/system_design/web_crawler/">Design a web crawler</a></div>
-      </nav></div>
+        <div class="trigger">
+<a class="page-link" href="/system-design-primer/about/">About</a><a class="page-link" href="/system-design-primer/">The System Design Primer</a><a class="page-link" href="/system-design-primer/pages/sql-or-nosql.html">SQL or NoSQL</a><a class="page-link" href="/system-design-primer/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/pastebin/">Design Pastebin.com (or Bit.ly)</a><a class="page-link" href="/system-design-primer/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/system-design-primer/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/system-design-primer/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/system-design-primer/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/system-design-primer/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/system-design-primer/solutions/system_design/web_crawler/">Design a web crawler</a>
+</div>
+      </nav>
+</div>
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -62,8 +72,10 @@ Discuss assumptions.</p>
 <h4 id="well-scope-the-problem-to-handle-only-the-following-use-cases">We’ll scope the problem to handle only the following use cases</h4>
 
 <ul>
-  <li><strong>User</strong> connects to a financial account</li>
-  <li><strong>Service</strong> extracts transactions from the account
+  <li>
+<strong>User</strong> connects to a financial account</li>
+  <li>
+<strong>Service</strong> extracts transactions from the account
     <ul>
       <li>Updates daily</li>
       <li>Categorizes transactions
@@ -75,19 +87,22 @@ Discuss assumptions.</p>
       <li>Analyzes monthly spending, by category</li>
     </ul>
   </li>
-  <li><strong>Service</strong> recommends a budget
+  <li>
+<strong>Service</strong> recommends a budget
     <ul>
       <li>Allows users to manually set a budget</li>
       <li>Sends notifications when approaching or exceeding budget</li>
     </ul>
   </li>
-  <li><strong>Service</strong> has high availability</li>
+  <li>
+<strong>Service</strong> has high availability</li>
 </ul>
 
 <h4 id="out-of-scope">Out of scope</h4>
 
 <ul>
-  <li><strong>Service</strong> performs additional logging and analytics</li>
+  <li>
+<strong>Service</strong> performs additional logging and analytics</li>
 </ul>
 
 <h3 id="constraints-and-assumptions">Constraints and assumptions</h3>
@@ -133,10 +148,14 @@ Discuss assumptions.</p>
 <ul>
   <li>Size per transaction:
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">user_id</code> - 8 bytes</li>
-      <li><code class="language-plaintext highlighter-rouge">created_at</code> - 5 bytes</li>
-      <li><code class="language-plaintext highlighter-rouge">seller</code> - 32 bytes</li>
-      <li><code class="language-plaintext highlighter-rouge">amount</code> - 5 bytes</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">user_id</code> - 8 bytes</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">created_at</code> - 5 bytes</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">seller</code> - 32 bytes</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">amount</code> - 5 bytes</li>
       <li>Total: ~50 bytes</li>
     </ul>
   </li>
@@ -166,7 +185,7 @@ Discuss assumptions.</p>
   <p>Outline a high level design with all important components.</p>
 </blockquote>
 
-<p><img src="http://i.imgur.com/E8klrBh.png" alt="Imgur" /></p>
+<p><img src="http://i.imgur.com/E8klrBh.png" alt="Imgur"></p>
 
 <h2 id="step-3-design-core-components">Step 3: Design core components</h2>
 
@@ -176,10 +195,11 @@ Discuss assumptions.</p>
 
 <h3 id="use-case-user-connects-to-a-financial-account">Use case: User connects to a financial account</h3>
 
-<p>We could store info on the 10 million users in a <a href="https://github.com/donnemartin/system-design-primer#relational-database-management-system-rdbms">relational database</a>.  We should discuss the <a href="https://github.com/donnemartin/system-design-primer#sql-or-nosql">use cases and tradeoffs between choosing SQL or NoSQL</a>.</p>
+<p>We could store info on the 10 million users in a <a href="https://github.com/donnemartin/system-design-primer#relational-database-management-system-rdbms">relational database</a>.  We should discuss the <a href="/pages/sql-or-nosql">use cases and tradeoffs between choosing SQL or NoSQL</a>.</p>
 
 <ul>
-  <li>The <strong>Client</strong> sends a request to the <strong>Web Server</strong>, running as a <a href="https://github.com/donnemartin/system-design-primer#reverse-proxy-web-server">reverse proxy</a></li>
+  <li>The <strong>Client</strong> sends a request to the <strong>Web Server</strong>, running as a <a href="https://github.com/donnemartin/system-design-primer#reverse-proxy-web-server">reverse proxy</a>
+</li>
   <li>The <strong>Web Server</strong> forwards the request to the <strong>Accounts API</strong> server</li>
   <li>The <strong>Accounts API</strong> server updates the <strong>SQL Database</strong> <code class="language-plaintext highlighter-rouge">accounts</code> table with the newly entered account info</li>
 </ul>
@@ -199,7 +219,7 @@ PRIMARY KEY(id)
 FOREIGN KEY(user_id) REFERENCES users(id)
 </code></pre></div></div>
 
-<p>We’ll create an <a href="https://github.com/donnemartin/system-design-primer#use-good-indices">index</a> on <code class="language-plaintext highlighter-rouge">id</code>, <code class="language-plaintext highlighter-rouge">user_id </code>, and <code class="language-plaintext highlighter-rouge">created_at</code> to speed up lookups (log-time instead of scanning the entire table) and to keep the data in memory.  Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup>&lt;a href=https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know&gt;1&lt;/a&gt;</sup></p>
+<p>We’ll create an <a href="https://github.com/donnemartin/system-design-primer#use-good-indices">index</a> on <code class="language-plaintext highlighter-rouge">id</code>, <code class="language-plaintext highlighter-rouge">user_id </code>, and <code class="language-plaintext highlighter-rouge">created_at</code> to speed up lookups (log-time instead of scanning the entire table) and to keep the data in memory.  Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup><a href="https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know">1</a></sup></p>
 
 <p>We’ll use a public <a href="https://github.com/donnemartin/system-design-primer#representational-state-transfer-rest"><strong>REST API</strong></a>:</p>
 
@@ -225,7 +245,8 @@ FOREIGN KEY(user_id) REFERENCES users(id)
 <p>Data flow:</p>
 
 <ul>
-  <li>The <strong>Client</strong> sends a request to the <strong>Web Server</strong></li>
+  <li>The <strong>Client</strong> sends a request to the <strong>Web Server</strong>
+</li>
   <li>The <strong>Web Server</strong> forwards the request to the <strong>Accounts API</strong> server</li>
   <li>The <strong>Accounts API</strong> server places a job on a <strong>Queue</strong> such as <a href="https://aws.amazon.com/sqs/">Amazon SQS</a> or <a href="https://www.rabbitmq.com/">RabbitMQ</a>
     <ul>
@@ -234,7 +255,8 @@ FOREIGN KEY(user_id) REFERENCES users(id)
   </li>
   <li>The <strong>Transaction Extraction Service</strong> does the following:
     <ul>
-      <li>Pulls from the <strong>Queue</strong> and extracts transactions for the given account from the financial institution, storing the results as raw log files in the <strong>Object Store</strong></li>
+      <li>Pulls from the <strong>Queue</strong> and extracts transactions for the given account from the financial institution, storing the results as raw log files in the <strong>Object Store</strong>
+</li>
       <li>Uses the <strong>Category Service</strong> to categorize each transaction</li>
       <li>Uses the <strong>Budget Service</strong> to calculate aggregate monthly spending by category
         <ul>
@@ -427,7 +449,7 @@ FOREIGN KEY(user_id) REFERENCES users(id)
   <p>Identify and address bottlenecks, given the constraints.</p>
 </blockquote>
 
-<p><img src="http://i.imgur.com/V5q57vU.png" alt="Imgur" /></p>
+<p><img src="http://i.imgur.com/V5q57vU.png" alt="Imgur"></p>
 
 <p><strong>Important: Do not simply jump right into the final design from the initial design!</strong></p>
 
@@ -460,10 +482,12 @@ FOREIGN KEY(user_id) REFERENCES users(id)
 <p>User sessions, aggregate stats by category, and recent transactions could be placed in a <strong>Memory Cache</strong> such as Redis or Memcached.</p>
 
 <ul>
-  <li>The <strong>Client</strong> sends a read request to the <strong>Web Server</strong></li>
+  <li>The <strong>Client</strong> sends a read request to the <strong>Web Server</strong>
+</li>
   <li>The <strong>Web Server</strong> forwards the request to the <strong>Read API</strong> server
     <ul>
-      <li>Static content can be served from the <strong>Object Store</strong> such as S3, which is cached on the <strong>CDN</strong></li>
+      <li>Static content can be served from the <strong>Object Store</strong> such as S3, which is cached on the <strong>CDN</strong>
+</li>
     </ul>
   </li>
   <li>The <strong>Read API</strong> server does the following:
@@ -518,7 +542,7 @@ FOREIGN KEY(user_id) REFERENCES users(id)
   <li><a href="https://github.com/donnemartin/system-design-primer#document-store">Document store</a></li>
   <li><a href="https://github.com/donnemartin/system-design-primer#wide-column-store">Wide column store</a></li>
   <li><a href="https://github.com/donnemartin/system-design-primer#graph-database">Graph database</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#sql-or-nosql">SQL vs NoSQL</a></li>
+  <li><a href="/pages/sql-or-nosql">SQL vs NoSQL</a></li>
 </ul>
 
 <h3 id="caching">Caching</h3>
@@ -563,8 +587,10 @@ FOREIGN KEY(user_id) REFERENCES users(id)
 <ul>
   <li>Discuss tradeoffs:
     <ul>
-      <li>External communication with clients - <a href="https://github.com/donnemartin/system-design-primer#representational-state-transfer-rest">HTTP APIs following REST</a></li>
-      <li>Internal communications - <a href="https://github.com/donnemartin/system-design-primer#remote-procedure-call-rpc">RPC</a></li>
+      <li>External communication with clients - <a href="https://github.com/donnemartin/system-design-primer#representational-state-transfer-rest">HTTP APIs following REST</a>
+</li>
+      <li>Internal communications - <a href="https://github.com/donnemartin/system-design-primer#remote-procedure-call-rpc">RPC</a>
+</li>
     </ul>
   </li>
   <li><a href="https://github.com/donnemartin/system-design-primer#service-discovery">Service discovery</a></li>
@@ -595,15 +621,21 @@ FOREIGN KEY(user_id) REFERENCES users(id)
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">System Design Primer</h2>
+    <h2 class="footer-heading">The System Design Primer</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">System Design Primer</li><li><a class="u-email" href="mailto:phucknguyen@gmail.com">phucknguyen@gmail.com</a></li></ul>
+          <li class="p-name">The System Design Primer</li>
+<li><a class="u-email" href="mailto:phucknguyen@gmail.com">phucknguyen@gmail.com</a></li>
+</ul>
       </div>
 
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/phucnguyen81"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#github"></use></svg> <span class="username">phucnguyen81</span></a></li><li><a href="https://www.twitter.com/phucknguyen"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">phucknguyen</span></a></li></ul>
+      <div class="footer-col footer-col-2">
+<ul class="social-media-list">
+<li><a href="https://github.com/phucnguyen81"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#github"></use></svg> <span class="username">phucnguyen81</span></a></li>
+<li><a href="https://www.twitter.com/phucknguyen"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">phucknguyen</span></a></li>
+</ul>
 </div>
 
       <div class="footer-col footer-col-3">

@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# Create and start the containers for development
-docker-compose up "$@"

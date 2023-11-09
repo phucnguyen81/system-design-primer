@@ -95,7 +95,7 @@ t5          product4    category1      1        5.00         5            6
 ...
 ```
 
-The **Sales Rank Service** could use **MapReduce**, using the **Sales API** server log files as input and writing the results to an aggregate table `sales_rank` in a **SQL Database**.  We should discuss the [use cases and tradeoffs between choosing SQL or NoSQL](https://github.com/donnemartin/system-design-primer#sql-or-nosql).
+The **Sales Rank Service** could use **MapReduce**, using the **Sales API** server log files as input and writing the results to an aggregate table `sales_rank` in a **SQL Database**.  We should discuss the [use cases and tradeoffs between choosing SQL or NoSQL](/pages/sql-or-nosql).
 
 We'll use a multi-step **MapReduce**:
 
@@ -196,7 +196,7 @@ FOREIGN KEY(category_id) REFERENCES Categories(id)
 FOREIGN KEY(product_id) REFERENCES Products(id)
 ```
 
-We'll create an [index](https://github.com/donnemartin/system-design-primer#use-good-indices) on `id `, `category_id`, and `product_id` to speed up lookups (log-time instead of scanning the entire table) and to keep the data in memory.  Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup><a href=https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know>1</a></sup>
+We'll create an [index](https://github.com/donnemartin/system-design-primer#use-good-indices) on `id `, `category_id`, and `product_id` to speed up lookups (log-time instead of scanning the entire table) and to keep the data in memory.  Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup><a href="https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know">1</a></sup>
 
 ### Use case: User views the past week's most popular products by category
 
@@ -291,7 +291,7 @@ We should also consider moving some data to a **NoSQL Database**.
 * [Document store](https://github.com/donnemartin/system-design-primer#document-store)
 * [Wide column store](https://github.com/donnemartin/system-design-primer#wide-column-store)
 * [Graph database](https://github.com/donnemartin/system-design-primer#graph-database)
-* [SQL vs NoSQL](https://github.com/donnemartin/system-design-primer#sql-or-nosql)
+* [SQL vs NoSQL](/pages/sql-or-nosql)
 
 ### Caching
 
