@@ -81,15 +81,21 @@ Handy conversion guide:
 
 ```mermaid!
 graph TD
-    Client --> WebServer[Web Server]
-    WebServer --> WriteAPI[Write API]
-    WebServer --> ReadAPI[Read API]
+    WebServer[Web Server]
+    WriteAPI[Write API]
+    ReadAPI[Read API]
+    ObjectStore[Object Store]
+
+    Client --> WebServer
+    WebServer --> WriteAPI
+    WebServer --> ReadAPI
     ReadAPI --> SQL
-    ReadAPI --> ObjectStore[Object Store]
+    ReadAPI --> ObjectStore
     WriteAPI --> SQL
     WriteAPI --> ObjectStore
     Analytics --> ObjectStore
     Analytics --> SQL
+    
     style Client fill:LawnGreen 
     style WebServer fill:Khaki
     style ReadAPI fill:Khaki

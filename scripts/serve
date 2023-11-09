@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 # Serve the site locally
+
+# NOTE: We are not using --incremental flag for incremental build since
+# it does not automatically add new posts under `_posts` to the home page.
 docker exec -it system-design-primer \
     bundle exec jekyll serve \
         --baseurl="" \
