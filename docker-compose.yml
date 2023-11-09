@@ -2,9 +2,12 @@ version: '3'
 volumes:
   vscode_server:
 services:
-  pages:
+  server:
     build: .
     container_name: system-design-primer
+    env_file:
+      - .env
+      - .env.local
     ports:
       - 4000:4000
       - 35729:35729
@@ -12,4 +15,4 @@ services:
       - .:/app
       - vscode_server:/root/.vscode-server
     working_dir: /app
-    command: sleep infinity
+    command: ./docker-compose.server.command

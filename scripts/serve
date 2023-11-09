@@ -6,5 +6,4 @@ docker exec -it system-design-primer \
         --force_polling \
         --host 0.0.0.0 \
         --port 4000 \
-        --incremental \
         --livereload

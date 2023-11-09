@@ -79,7 +79,25 @@ Handy conversion guide:
 
 > Outline a high level design with all important components.
 
-![Imgur](http://i.imgur.com/BKsBnmG.png)
+```mermaid!
+graph TD
+    Client --> WebServer[Web Server]
+    WebServer --> WriteAPI[Write API]
+    WebServer --> ReadAPI[Read API]
+    ReadAPI --> SQL
+    ReadAPI --> ObjectStore[Object Store]
+    WriteAPI --> SQL
+    WriteAPI --> ObjectStore
+    Analytics --> ObjectStore
+    Analytics --> SQL
+    style Client fill:LawnGreen 
+    style WebServer fill:Khaki
+    style ReadAPI fill:Khaki
+    style WriteAPI fill:Khaki
+    style Analytics fill:Khaki
+    style SQL fill:Yellow
+    style ObjectStore fill:Yellow
+```
 
 ## Step 3: Design core components
 

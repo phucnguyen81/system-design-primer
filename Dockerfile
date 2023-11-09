@@ -5,7 +5,7 @@ RUN apt update && apt install -y vim \
 
 WORKDIR /app
 
-COPY Gemfile* .
+COPY Gemfile Gemfile.lock ./
 
 RUN bundle install
 
