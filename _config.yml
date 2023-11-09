@@ -18,14 +18,14 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: System Design Primer
-email: phucknguyen@gmail.com
+title: The System Design Primer
 description: >- # this means to ignore newlines until "baseurl:"
   Learn how to design large-scale systems.
   Prep for the system design interview.
 domain: phucnguyen81.github.io # to force HTTPS, specify the domain without the http at the start, e.g. example.com
 url: https://phucnguyen81.github.io # the base hostname and protocol, e.g. http://example.com
 baseurl: "/system-design-primer" # the subpath of your site, e.g. /blog
+email: phucknguyen@gmail.com
 twitter_username: phucknguyen
 github_username:  phucnguyen81
 

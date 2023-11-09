@@ -13,83 +13,6 @@ title: ""
   <br/>
 </p>
 
-## Motivation
-
-> Learn how to design large-scale systems.
->
-> Prep for the system design interview.
-
-### Learn how to design large-scale systems
-
-Learning how to design scalable systems will help you become a better engineer.
-
-System design is a broad topic.  There is a **vast amount of resources scattered throughout the web** on system design principles.
-
-This repo is an **organized collection** of resources to help you learn how to build systems at scale.
-
-### Learn from the open source community
-
-This is a continually updated, open source project.
-
-[Contributions](#contributing) are welcome!
-
-### Prep for the system design interview
-
-In addition to coding interviews, system design is a **required component** of the **technical interview process** at many tech companies.
-
-**Practice common system design interview questions** and **compare** your results with **sample solutions**: discussions, code, and diagrams.
-
-Additional topics for interview prep:
-
-* [Study guide](#study-guide)
-* [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question)
-* [System design interview questions, **with solutions**](#system-design-interview-questions-with-solutions)
-* [Object-oriented design interview questions, **with solutions**](#object-oriented-design-interview-questions-with-solutions)
-* [Additional system design interview questions](#additional-system-design-interview-questions)
-
-## Anki flashcards
-
-<p align="center">
-  <img src="images/zdCAkB3.png">
-  <br/>
-</p>
-
-The provided [Anki flashcard decks](https://apps.ankiweb.net/) use spaced repetition to help you retain key system design concepts.
-
-* [System design deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/System%20Design.apkg)
-* [System design exercises deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/System%20Design%20Exercises.apkg)
-* [Object oriented design exercises deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/OO%20Design.apkg)
-
-Great for use while on-the-go.
-
-### Coding Resource: Interactive Coding Challenges
-
-Looking for resources to help you prep for the [**Coding Interview**](https://github.com/donnemartin/interactive-coding-challenges)?
-
-<p align="center">
-  <img src="images/b4YtAEN.png">
-  <br/>
-</p>
-
-Check out the sister repo [**Interactive Coding Challenges**](https://github.com/donnemartin/interactive-coding-challenges), which contains an additional Anki deck:
-
-* [Coding deck](https://github.com/donnemartin/interactive-coding-challenges/tree/master/anki_cards/Coding.apkg)
-
-## Contributing
-
-> Learn from the community.
-
-Feel free to submit pull requests to help:
-
-* Fix errors
-* Improve sections
-* Add new sections
-* [Translate](https://github.com/donnemartin/system-design-primer/issues/28)
-
-Content that needs some polishing is placed [under development](#under-development).
-
-Review the [Contributing Guidelines](CONTRIBUTING.md).
-
 ## Index of system design topics
 
 > Summaries of various system design topics, including pros and cons.  **Everything is a trade-off**.
@@ -102,6 +25,7 @@ Review the [Contributing Guidelines](CONTRIBUTING.md).
 </p>
 
 - [The System Design Primer](#the-system-design-primer)
+  - [Index of system design topics](#index-of-system-design-topics)
   - [Motivation](#motivation)
     - [Learn how to design large-scale systems](#learn-how-to-design-large-scale-systems)
     - [Learn from the open source community](#learn-from-the-open-source-community)
@@ -109,7 +33,6 @@ Review the [Contributing Guidelines](CONTRIBUTING.md).
   - [Anki flashcards](#anki-flashcards)
     - [Coding Resource: Interactive Coding Challenges](#coding-resource-interactive-coding-challenges)
   - [Contributing](#contributing)
-  - [Index of system design topics](#index-of-system-design-topics)
   - [Study guide](#study-guide)
   - [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question)
     - [Step 1: Outline use cases, constraints, and assumptions](#step-1-outline-use-cases-constraints-and-assumptions)
@@ -186,7 +109,7 @@ Review the [Contributing Guidelines](CONTRIBUTING.md).
   - [Database](#database)
     - [Relational database management system (RDBMS)](#relational-database-management-system-rdbms)
       - [Master-slave replication](#master-slave-replication)
-        - [Disadvantage(s): master-slave replication](#disadvantages-master-slave-replication)
+        - [Disadvantage(s): master-slave replicatio](#disadvantages-master-slave-replicatio)
       - [Master-master replication](#master-master-replication)
         - [Disadvantage(s): master-master replication](#disadvantages-master-master-replication)
         - [Disadvantage(s): replication](#disadvantages-replication)
@@ -273,6 +196,83 @@ Review the [Contributing Guidelines](CONTRIBUTING.md).
   - [Credits](#credits)
   - [Contact info](#contact-info)
   - [License](#license)
+
+## Motivation
+
+> Learn how to design large-scale systems.
+>
+> Prep for the system design interview.
+
+### Learn how to design large-scale systems
+
+Learning how to design scalable systems will help you become a better engineer.
+
+System design is a broad topic.  There is a **vast amount of resources scattered throughout the web** on system design principles.
+
+This repo is an **organized collection** of resources to help you learn how to build systems at scale.
+
+### Learn from the open source community
+
+This is a continually updated, open source project.
+
+[Contributions](#contributing) are welcome!
+
+### Prep for the system design interview
+
+In addition to coding interviews, system design is a **required component** of the **technical interview process** at many tech companies.
+
+**Practice common system design interview questions** and **compare** your results with **sample solutions**: discussions, code, and diagrams.
+
+Additional topics for interview prep:
+
+* [Study guide](#study-guide)
+* [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question)
+* [System design interview questions, **with solutions**](#system-design-interview-questions-with-solutions)
+* [Object-oriented design interview questions, **with solutions**](#object-oriented-design-interview-questions-with-solutions)
+* [Additional system design interview questions](#additional-system-design-interview-questions)
+
+## Anki flashcards
+
+<p align="center">
+  <img src="images/zdCAkB3.png">
+  <br/>
+</p>
+
+The provided [Anki flashcard decks](https://apps.ankiweb.net/) use spaced repetition to help you retain key system design concepts.
+
+* [System design deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/System%20Design.apkg)
+* [System design exercises deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/System%20Design%20Exercises.apkg)
+* [Object oriented design exercises deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/OO%20Design.apkg)
+
+Great for use while on-the-go.
+
+### Coding Resource: Interactive Coding Challenges
+
+Looking for resources to help you prep for the [**Coding Interview**](https://github.com/donnemartin/interactive-coding-challenges)?
+
+<p align="center">
+  <img src="images/b4YtAEN.png">
+  <br/>
+</p>
+
+Check out the sister repo [**Interactive Coding Challenges**](https://github.com/donnemartin/interactive-coding-challenges), which contains an additional Anki deck:
+
+* [Coding deck](https://github.com/donnemartin/interactive-coding-challenges/tree/master/anki_cards/Coding.apkg)
+
+## Contributing
+
+> Learn from the community.
+
+Feel free to submit pull requests to help:
+
+* Fix errors
+* Improve sections
+* Add new sections
+* [Translate](https://github.com/donnemartin/system-design-primer/issues/28)
+
+Content that needs some polishing is placed [under development](#under-development).
+
+Review the [Contributing Guidelines](CONTRIBUTING.md).
 
 ## Study guide
 
@@ -923,12 +923,12 @@ There are many techniques to scale a relational database: **master-slave replica
 
 #### Master-slave replication
 
-The master serves reads and writes, replicating writes to one or more slaves, which serve only reads.  Slaves can also replicate to additional slaves in a tree-like fashion.  If the master goes offline, the system can continue to operate in read-only mode until a slave is promoted to a master or a new master is provisioned.
+The master serves reads and writes, replicating writes to one or more slaves, which serve only reads. Slaves can also replicate to additional slaves in a tree-like fashion. If the master goes offline, the system can continue to operate in read-only mode until a slave is promoted to a master or a new master is provisioned.
 
 <p align="center">
   <img src="images/C9ioGtn.png">
   <br/>
-  <i><a href=http://www.slideshare.net/jboner/scalability-availability-stability-patterns/>Source: Scalability, availability, stability, patterns</a></i>
+  <a href="http://www.slideshare.net/jboner/scalability-availability-stability-patterns">Source: Scalability, availability, stability, patterns</a>
 </p>
 
 ##### Disadvantage(s): master-slave replication
@@ -943,7 +943,7 @@ Both masters serve reads and writes and coordinate with each other on writes.  I
 <p align="center">
   <img src="images/krAHLGg.png">
   <br/>
-  <i><a href=http://www.slideshare.net/jboner/scalability-availability-stability-patterns/>Source: Scalability, availability, stability, patterns</a></i>
+  <i><a href="http://www.slideshare.net/jboner/scalability-availability-stability-patterns">Source: Scalability, availability, stability, patterns</a></i>
 </p>
 
 ##### Disadvantage(s): master-master replication

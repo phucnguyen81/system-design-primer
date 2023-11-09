@@ -1,5 +1,9 @@
 {
+    "files.exclude": {
+        "_site": true,
+        "docs": true
+    },
     "[python]": {
-        "editor.defaultFormatter": "ms-python.pylint"
-    }
+        "editor.defaultFormatter": null
+    },
 }

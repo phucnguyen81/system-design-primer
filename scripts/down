@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Stop and remove what was created by docker-compose up (with some exceptions)
+docker-compose down "$@"
