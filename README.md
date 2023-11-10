@@ -1,6 +1,7 @@
-# Develop with GitHub pages
+# Development
 
 - Install docker and docker-compose
-- Run `doc-compose up` to start the service
-- Go to `localhost:4000` to see the website
-- Attach to the container: `./docker-exec-it.sh`
+- Run `./dev up` to run the service
+- Run `./dev serve` to start the jekyll server
+- Run `./dev attach` to attach to the service container
+- Go to `localhost:4000` to see the generated site

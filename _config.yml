@@ -22,6 +22,8 @@ title: The System Design Primer
 description: >- # this means to ignore newlines until "baseurl:"
   Learn how to design large-scale systems.
   Prep for the system design interview.
+encoding: utf-8
+
 domain: phucnguyen81.github.io # to force HTTPS, specify the domain without the http at the start, e.g. example.com
 url: https://phucnguyen81.github.io # the base hostname and protocol, e.g. http://example.com
 baseurl: "/system-design-primer" # the subpath of your site, e.g. /blog
@@ -30,7 +32,6 @@ twitter_username: phucknguyen
 github_username:  phucnguyen81
 
 # Build settings
-encoding: utf-8
 theme: minima
 plugins:
   - jekyll-feed

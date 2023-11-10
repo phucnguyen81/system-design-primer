@@ -129,7 +129,6 @@ title: "The System Design Primer"
       - [Source(s) and further reading: SQL tuning](#sources-and-further-reading-sql-tuning)
   - [NoSQL](#nosql)
     - [Key-value store](#key-value-store)
-      - [Source(s) and further reading: key-value store](#sources-and-further-reading-key-value-store)
     - [Document store](#document-store)
       - [Source(s) and further reading: document store](#sources-and-further-reading-document-store)
     - [Wide column store](#wide-column-store)
@@ -881,7 +880,7 @@ Pinterest, for example, could have the following microservices: user profile, fo
 
 ### Service Discovery
 
-Systems such as [Consul](https://www.consul.io/docs/index.html), [Etcd](https://coreos.com/etcd/docs/latest), and [Zookeeper](http://www.slideshare.net/sauravhaloi/introduction-to-apache-zookeeper) can help services find each other by keeping track of registered names, addresses, and ports.  [Health checks](https://www.consul.io/intro/getting-started/checks.html) help verify service integrity and are often done using an [HTTP](#hypertext-transfer-protocol-http) endpoint.  Both Consul and Etcd have a built in [key-value store](#key-value-store) that can be useful for storing config values and other shared data.
+Systems such as [Consul](https://www.consul.io/docs/index.html), [Etcd](https://coreos.com/etcd/docs/latest), and [Zookeeper](http://www.slideshare.net/sauravhaloi/introduction-to-apache-zookeeper) can help services find each other by keeping track of registered names, addresses, and ports.  [Health checks](https://www.consul.io/intro/getting-started/checks.html) help verify service integrity and are often done using an [HTTP](#hypertext-transfer-protocol-http) endpoint.  Both Consul and Etcd have a built in [key-value store](/pages/key-value-store) that can be useful for storing config values and other shared data.
 
 ### Disadvantage(s): application layer
 
@@ -1091,22 +1090,7 @@ NoSQL is a collection of data items represented in a **key-value store**, **docu
 
 In addition to choosing between [SQL or NoSQL](/pages/sql-or-nosql), it is helpful to understand which type of NoSQL database best fits your use case(s).  We'll review **key-value stores**, **document stores**, **wide column stores**, and **graph databases** in the next section.
 
-#### Key-value store
-
-> Abstraction: hash table
-
-A key-value store generally allows for O(1) reads and writes and is often backed by memory or SSD.  Data stores can maintain keys in [lexicographic order](https://en.wikipedia.org/wiki/Lexicographical_order), allowing efficient retrieval of key ranges.  Key-value stores can allow for storing of metadata with a value.
-
-Key-value stores provide high performance and are often used for simple data models or for rapidly-changing data, such as an in-memory cache layer.  Since they offer only a limited set of operations, complexity is shifted to the application layer if additional operations are needed.
-
-A key-value store is the basis for more complex systems such as a document store, and in some cases, a graph database.
-
-##### Source(s) and further reading: key-value store
-
-* [Key-value database](https://en.wikipedia.org/wiki/Key-value_database)
-* [Disadvantages of key-value stores](http://stackoverflow.com/questions/4056093/what-are-the-disadvantages-of-using-a-key-value-table-over-nullable-columns-or)
-* [Redis architecture](http://qnimate.com/overview-of-redis-architecture/)
-* [Memcached architecture](https://adayinthelifeof.nl/2011/02/06/memcache-internals/)
+#### [Key-value store](/pages/key-value-store)
 
 #### Document store
 
