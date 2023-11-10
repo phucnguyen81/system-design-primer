@@ -3,7 +3,7 @@ title: SQL or NoSQL
 ---
 
 <p align="center">
-  <img src="/images/wXGqG5f.png">
+  <img src="{{ site.baseurl }}/images/wXGqG5f.png">
   <br/>
   <i><a href="https://www.infoq.com/articles/Transition-RDBMS-NoSQL/">Source: Transitioning from RDBMS to NoSQL</a></i>
 </p>
