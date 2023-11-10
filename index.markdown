@@ -18,7 +18,7 @@ title: "The System Design Primer"
 > Each section contains links to more in-depth resources.
 
 <p align="center">
-  <img src="/images/jrUBAF7.png">
+  <img src="{{ site.baseurl }}/images/jrUBAF7.png">
   <br/>
 </p>
 
