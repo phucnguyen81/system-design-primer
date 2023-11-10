@@ -6,20 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>SQL or NoSQL | The System Design Primer</title>
+<title>Reverse Proxy (web server) | The System Design Primer</title>
 <meta name="generator" content="Jekyll v3.9.3">
-<meta property="og:title" content="SQL or NoSQL">
+<meta property="og:title" content="Reverse Proxy (web server)">
 <meta property="og:locale" content="en_US">
 <meta name="description" content="Learn how to design large-scale systems. Prep for the system design interview.">
 <meta property="og:description" content="Learn how to design large-scale systems. Prep for the system design interview.">
-<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/pages/sql-or-nosql.html">
-<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/pages/sql-or-nosql.html">
+<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/pages/reverse-proxy-web-server.html">
+<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/pages/reverse-proxy-web-server.html">
 <meta property="og:site_name" content="The System Design Primer">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="SQL or NoSQL">
+<meta property="twitter:title" content="Reverse Proxy (web server)">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Learn how to design large-scale systems. Prep for the system design interview.","headline":"SQL or NoSQL","url":"https://phucnguyen81.github.io/system-design-primer/pages/sql-or-nosql.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Learn how to design large-scale systems. Prep for the system design interview.","headline":"Reverse Proxy (web server)","url":"https://phucnguyen81.github.io/system-design-primer/pages/reverse-proxy-web-server.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/system-design-primer/assets/main.css">
 <link type="application/atom+xml" rel="alternate" href="https://phucnguyen81.github.io/system-design-primer/feed.xml" title="The System Design Primer">
@@ -49,57 +49,71 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">SQL or NoSQL</h1>
+    <h1 class="post-title">Reverse Proxy (web server)</h1>
   </header>
 
   <div class="post-content">
     <p align="center">
-  <img src="/images/wXGqG5f.png">
+  <img src="/images/n41Azff.png">
   <br>
-  <i><a href="https://www.infoq.com/articles/Transition-RDBMS-NoSQL/">Source: Transitioning from RDBMS to NoSQL</a></i>
+  <i><a href="https://upload.wikimedia.org/wikipedia/commons/6/67/Reverse_proxy_h2g2bob.svg">Source: Wikipedia</a></i>
+  <br>
 </p>
 
-<p>Reasons for <strong>SQL</strong>:</p>
+<p>A reverse proxy is a web server that centralizes internal services and provides unified interfaces to the public.  Requests from clients are forwarded to a server that can fulfill it before the reverse proxy returns the server’s response to the client.</p>
+
+<p>Additional benefits include:</p>
 
 <ul>
-  <li>Structured data</li>
-  <li>Strict schema</li>
-  <li>Relational data</li>
-  <li>Need for complex joins</li>
-  <li>Transactions</li>
-  <li>Clear patterns for scaling</li>
-  <li>More established: developers, community, code, tools, etc</li>
-  <li>Lookups by index are very fast</li>
+  <li>
+<strong>Increased security</strong> - Hide information about backend servers, blacklist IPs, limit number of connections per client</li>
+  <li>
+<strong>Increased scalability and flexibility</strong> - Clients only see the reverse proxy’s IP, allowing you to scale servers or change their configuration</li>
+  <li>
+<strong>SSL termination</strong> - Decrypt incoming requests and encrypt server responses so backend servers do not have to perform these potentially expensive operations
+    <ul>
+      <li>Removes the need to install <a href="https://en.wikipedia.org/wiki/X.509">X.509 certificates</a> on each server</li>
+    </ul>
+  </li>
+  <li>
+<strong>Compression</strong> - Compress server responses</li>
+  <li>
+<strong>Caching</strong> - Return the response for cached requests</li>
+  <li>
+<strong>Static content</strong> - Serve static content directly
+    <ul>
+      <li>HTML/CSS/JS</li>
+      <li>Photos</li>
+      <li>Videos</li>
+      <li>Etc</li>
+    </ul>
+  </li>
 </ul>
 
-<p>Reasons for <strong>NoSQL</strong>:</p>
+<h2 id="load-balancer-vs-reverse-proxy">Load balancer vs reverse proxy</h2>
 
 <ul>
-  <li>Semi-structured data</li>
-  <li>Dynamic or flexible schema</li>
-  <li>Non-relational data</li>
-  <li>No need for complex joins</li>
-  <li>Store many TB (or PB) of data</li>
-  <li>Very data intensive workload</li>
-  <li>Very high throughput for IOPS</li>
+  <li>Deploying a load balancer is useful when you have multiple servers.  Often, load balancers  route traffic to a set of servers serving the same function.</li>
+  <li>Reverse proxies can be useful even with just one web server or application server, opening up the benefits described in the previous section.</li>
+  <li>Solutions such as NGINX and HAProxy can support both layer 7 reverse proxying and load balancing.</li>
 </ul>
 
-<p>Sample data well-suited for NoSQL:</p>
+<h2 id="disadvantages-reverse-proxy">Disadvantage(s): reverse proxy</h2>
 
 <ul>
-  <li>Rapid ingest of clickstream and log data</li>
-  <li>Leaderboard or scoring data</li>
-  <li>Temporary data, such as a shopping cart</li>
-  <li>Frequently accessed (‘hot’) tables</li>
-  <li>Metadata/lookup tables</li>
+  <li>Introducing a reverse proxy results in increased complexity.</li>
+  <li>A single reverse proxy is a single point of failure, configuring multiple reverse proxies (ie a <a href="https://en.wikipedia.org/wiki/Failover">failover</a>) further increases complexity.</li>
 </ul>
 
-<h2 id="sources-and-further-reading-sql-or-nosql">Source(s) and further reading: SQL or NoSQL</h2>
+<h2 id="sources-and-further-reading">Source(s) and further reading</h2>
 
 <ul>
-  <li><a href="https://www.youtube.com/watch?v=kKjm4ehYiMs">Scaling up to your first 10 million users</a></li>
-  <li><a href="https://www.sitepoint.com/sql-vs-nosql-differences/">SQL vs NoSQL differences</a></li>
+  <li><a href="https://www.nginx.com/resources/glossary/reverse-proxy-vs-load-balancer/">Reverse proxy vs load balancer</a></li>
+  <li><a href="https://www.nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/">NGINX architecture</a></li>
+  <li><a href="http://www.haproxy.org/download/1.2/doc/architecture.txt">HAProxy architecture guide</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Reverse_proxy">Wikipedia</a></li>
 </ul>
+
 
   </div>
 

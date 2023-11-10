@@ -210,7 +210,7 @@ Our **Benchmarks/Load Tests** and **Profiling** show that our single **Web Serve
     * Use multiple **MySQL** instances in [**Master-Slave Failover**](https://github.com/donnemartin/system-design-primer#master-slave-replication) mode across multiple availability zones to improve redundancy
 * Separate out the **Web Servers** from the [**Application Servers**](https://github.com/donnemartin/system-design-primer#application-layer)
     * Scale and configure both layers independently
-    * **Web Servers** can run as a [**Reverse Proxy**](https://github.com/donnemartin/system-design-primer#reverse-proxy-web-server)
+    * **Web Servers** can run as a [**Reverse Proxy**](/pages/reverse-proxy-web-server)
     * For example, you can add **Application Servers** handling **Read APIs** while others handle **Write APIs**
 * Move static (and some dynamic) content to a [**Content Delivery Network (CDN)**](https://github.com/donnemartin/system-design-primer#content-delivery-network) such as CloudFront to reduce load and latency
 
@@ -352,7 +352,7 @@ We can further separate out our [**Application Servers**](https://github.com/don
 
 #### NoSQL
 
-* [Key-value store](https://github.com/donnemartin/system-design-primer#key-value-store)
+* [Key-value store](/pages/key-value-store)
 * [Document store](https://github.com/donnemartin/system-design-primer#document-store)
 * [Wide column store](https://github.com/donnemartin/system-design-primer#wide-column-store)
 * [Graph database](https://github.com/donnemartin/system-design-primer#graph-database)

@@ -39,7 +39,7 @@
         </label>
 
         <div class="trigger">
-<a class="page-link" href="/system-design-primer/about/">About</a><a class="page-link" href="/system-design-primer/">The System Design Primer</a><a class="page-link" href="/system-design-primer/pages/sql-or-nosql.html">SQL or NoSQL</a><a class="page-link" href="/system-design-primer/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/pastebin/">Design Pastebin.com (or Bit.ly)</a><a class="page-link" href="/system-design-primer/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/system-design-primer/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/system-design-primer/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/system-design-primer/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/system-design-primer/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/system-design-primer/solutions/system_design/web_crawler/">Design a web crawler</a>
+<a class="page-link" href="/system-design-primer/about/">About</a><a class="page-link" href="/system-design-primer/">The System Design Primer</a><a class="page-link" href="/system-design-primer/pages/key-value-store.html">Key value store</a><a class="page-link" href="/system-design-primer/pages/reverse-proxy-web-server.html">Reverse Proxy (web server)</a><a class="page-link" href="/system-design-primer/pages/sql-or-nosql.html">SQL or NoSQL</a><a class="page-link" href="/system-design-primer/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/pastebin/">Design Pastebin.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/system-design-primer/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/system-design-primer/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/system-design-primer/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/system-design-primer/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/system-design-primer/solutions/system_design/web_crawler/">Design a web crawler</a>
 </div>
       </nav>
 </div>
@@ -378,7 +378,7 @@ Discuss assumptions.</p>
     <ul>
       <li>Scale and configure both layers independently</li>
       <li>
-<strong>Web Servers</strong> can run as a <a href="https://github.com/donnemartin/system-design-primer#reverse-proxy-web-server"><strong>Reverse Proxy</strong></a>
+<strong>Web Servers</strong> can run as a <a href="/pages/reverse-proxy-web-server"><strong>Reverse Proxy</strong></a>
 </li>
       <li>For example, you can add <strong>Application Servers</strong> handling <strong>Read APIs</strong> while others handle <strong>Write APIs</strong>
 </li>
@@ -611,7 +611,7 @@ Discuss assumptions.</p>
 <h4 id="nosql">NoSQL</h4>
 
 <ul>
-  <li><a href="https://github.com/donnemartin/system-design-primer#key-value-store">Key-value store</a></li>
+  <li><a href="/pages/key-value-store">Key-value store</a></li>
   <li><a href="https://github.com/donnemartin/system-design-primer#document-store">Document store</a></li>
   <li><a href="https://github.com/donnemartin/system-design-primer#wide-column-store">Wide column store</a></li>
   <li><a href="https://github.com/donnemartin/system-design-primer#graph-database">Graph database</a></li>

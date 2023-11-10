@@ -6,20 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>SQL or NoSQL | The System Design Primer</title>
+<title>Key value store | The System Design Primer</title>
 <meta name="generator" content="Jekyll v3.9.3">
-<meta property="og:title" content="SQL or NoSQL">
+<meta property="og:title" content="Key value store">
 <meta property="og:locale" content="en_US">
 <meta name="description" content="Learn how to design large-scale systems. Prep for the system design interview.">
 <meta property="og:description" content="Learn how to design large-scale systems. Prep for the system design interview.">
-<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/pages/sql-or-nosql.html">
-<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/pages/sql-or-nosql.html">
+<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/pages/key-value-store.html">
+<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/pages/key-value-store.html">
 <meta property="og:site_name" content="The System Design Primer">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="SQL or NoSQL">
+<meta property="twitter:title" content="Key value store">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Learn how to design large-scale systems. Prep for the system design interview.","headline":"SQL or NoSQL","url":"https://phucnguyen81.github.io/system-design-primer/pages/sql-or-nosql.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Learn how to design large-scale systems. Prep for the system design interview.","headline":"Key value store","url":"https://phucnguyen81.github.io/system-design-primer/pages/key-value-store.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/system-design-primer/assets/main.css">
 <link type="application/atom+xml" rel="alternate" href="https://phucnguyen81.github.io/system-design-primer/feed.xml" title="The System Design Primer">
@@ -49,56 +49,28 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">SQL or NoSQL</h1>
+    <h1 class="post-title">Key value store</h1>
   </header>
 
   <div class="post-content">
-    <p align="center">
-  <img src="/images/wXGqG5f.png">
-  <br>
-  <i><a href="https://www.infoq.com/articles/Transition-RDBMS-NoSQL/">Source: Transitioning from RDBMS to NoSQL</a></i>
-</p>
+    <blockquote>
+  <p>Abstraction: hash table</p>
+</blockquote>
 
-<p>Reasons for <strong>SQL</strong>:</p>
+<p>A key-value store generally allows for O(1) reads and writes and is often backed by memory or SSD.  Data stores can maintain keys in <a href="https://en.wikipedia.org/wiki/Lexicographical_order">lexicographic order</a>, allowing efficient retrieval of key ranges.  Key-value stores can allow for storing of metadata with a value.</p>
 
-<ul>
-  <li>Structured data</li>
-  <li>Strict schema</li>
-  <li>Relational data</li>
-  <li>Need for complex joins</li>
-  <li>Transactions</li>
-  <li>Clear patterns for scaling</li>
-  <li>More established: developers, community, code, tools, etc</li>
-  <li>Lookups by index are very fast</li>
-</ul>
+<p>Key-value stores provide high performance and are often used for simple data models or for rapidly-changing data, such as an in-memory cache layer.  Since they offer only a limited set of operations, complexity is shifted to the application layer if additional operations are needed.</p>
 
-<p>Reasons for <strong>NoSQL</strong>:</p>
+<p>A key-value store is the basis for more complex systems such as a document store, and in some cases, a graph database.</p>
+
+<h2 id="sources-and-further-reading-key-value-store">Source(s) and further reading: key-value store</h2>
 
 <ul>
-  <li>Semi-structured data</li>
-  <li>Dynamic or flexible schema</li>
-  <li>Non-relational data</li>
-  <li>No need for complex joins</li>
-  <li>Store many TB (or PB) of data</li>
-  <li>Very data intensive workload</li>
-  <li>Very high throughput for IOPS</li>
-</ul>
-
-<p>Sample data well-suited for NoSQL:</p>
-
-<ul>
-  <li>Rapid ingest of clickstream and log data</li>
-  <li>Leaderboard or scoring data</li>
-  <li>Temporary data, such as a shopping cart</li>
-  <li>Frequently accessed (‘hot’) tables</li>
-  <li>Metadata/lookup tables</li>
-</ul>
-
-<h2 id="sources-and-further-reading-sql-or-nosql">Source(s) and further reading: SQL or NoSQL</h2>
-
-<ul>
-  <li><a href="https://www.youtube.com/watch?v=kKjm4ehYiMs">Scaling up to your first 10 million users</a></li>
-  <li><a href="https://www.sitepoint.com/sql-vs-nosql-differences/">SQL vs NoSQL differences</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Key-value_database">Key-value database</a></li>
+  <li><a href="http://stackoverflow.com/questions/4056093/what-are-the-disadvantages-of-using-a-key-value-table-over-nullable-columns-or">Disadvantages of key-value stores</a></li>
+  <li><a href="https://web.archive.org/web/20221205014519/http://qnimate.com/overview-of-redis-architecture/">Redis architecture</a></li>
+  <li><a href="https://try.redis.io">Interactive Redis Console</a></li>
+  <li><a href="https://adayinthelifeof.nl/2011/02/06/memcache-internals/">Memcached architecture</a></li>
 </ul>
 
   </div>

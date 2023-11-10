@@ -70,7 +70,7 @@ Popular queries can be served from a **Memory Cache** such as Redis or Memcached
 
 Since the cache has limited capacity, we'll use a least recently used (LRU) approach to expire older entries.
 
-* The **Client** sends a request to the **Web Server**, running as a [reverse proxy](https://github.com/donnemartin/system-design-primer#reverse-proxy-web-server)
+* The **Client** sends a request to the **Web Server**, running as a [reverse proxy](/pages/reverse-proxy-web-server)
 * The **Web Server** forwards the request to the **Query API** server
 * The **Query API** server does the following:
     * Parses the query
@@ -227,7 +227,7 @@ We'll introduce some components to complete the design and to address scalabilit
 * [DNS](https://github.com/donnemartin/system-design-primer#domain-name-system)
 * [Load balancer](https://github.com/donnemartin/system-design-primer#load-balancer)
 * [Horizontal scaling](https://github.com/donnemartin/system-design-primer#horizontal-scaling)
-* [Web server (reverse proxy)](https://github.com/donnemartin/system-design-primer#reverse-proxy-web-server)
+* [Web server (reverse proxy)](/pages/reverse-proxy-web-server)
 * [API server (application layer)](https://github.com/donnemartin/system-design-primer#application-layer)
 * [Cache](https://github.com/donnemartin/system-design-primer#cache)
 * [Consistency patterns](https://github.com/donnemartin/system-design-primer#consistency-patterns)
@@ -255,7 +255,7 @@ To handle the heavy request load and the large amount of memory needed, we'll sc
 
 #### NoSQL
 
-* [Key-value store](https://github.com/donnemartin/system-design-primer#key-value-store)
+* [Key-value store](/pages/key-value-store)
 * [Document store](https://github.com/donnemartin/system-design-primer#document-store)
 * [Wide column store](https://github.com/donnemartin/system-design-primer#wide-column-store)
 * [Graph database](https://github.com/donnemartin/system-design-primer#graph-database)

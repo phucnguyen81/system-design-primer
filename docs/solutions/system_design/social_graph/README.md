@@ -101,7 +101,7 @@ class Graph(Graph):
 
 We won't be able to fit all users on the same machine, we'll need to [shard](https://github.com/donnemartin/system-design-primer#sharding) users across **Person Servers** and access them with a **Lookup Service**.
 
-* The **Client** sends a request to the **Web Server**, running as a [reverse proxy](https://github.com/donnemartin/system-design-primer#reverse-proxy-web-server)
+* The **Client** sends a request to the **Web Server**, running as a [reverse proxy](/pages/reverse-proxy-web-server)
 * The **Web Server** forwards the request to the **Search API** server
 * The **Search API** server forwards the request to the **User Graph Service**
 * The **User Graph Service** does the following:
@@ -265,7 +265,7 @@ We'll introduce some components to complete the design and to address scalabilit
 * [DNS](https://github.com/donnemartin/system-design-primer#domain-name-system)
 * [Load balancer](https://github.com/donnemartin/system-design-primer#load-balancer)
 * [Horizontal scaling](https://github.com/donnemartin/system-design-primer#horizontal-scaling)
-* [Web server (reverse proxy)](https://github.com/donnemartin/system-design-primer#reverse-proxy-web-server)
+* [Web server (reverse proxy)](/pages/reverse-proxy-web-server)
 * [API server (application layer)](https://github.com/donnemartin/system-design-primer#application-layer)
 * [Cache](https://github.com/donnemartin/system-design-primer#cache)
 * [Consistency patterns](https://github.com/donnemartin/system-design-primer#consistency-patterns)
@@ -298,7 +298,7 @@ Below are further optimizations:
 
 #### NoSQL
 
-* [Key-value store](https://github.com/donnemartin/system-design-primer#key-value-store)
+* [Key-value store](/pages/key-value-store)
 * [Document store](https://github.com/donnemartin/system-design-primer#document-store)
 * [Wide column store](https://github.com/donnemartin/system-design-primer#wide-column-store)
 * [Graph database](https://github.com/donnemartin/system-design-primer#graph-database)

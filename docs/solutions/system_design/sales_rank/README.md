@@ -200,7 +200,7 @@ We'll create an [index](https://github.com/donnemartin/system-design-primer#use-
 
 ### Use case: User views the past week's most popular products by category
 
-* The **Client** sends a request to the **Web Server**, running as a [reverse proxy](https://github.com/donnemartin/system-design-primer#reverse-proxy-web-server)
+* The **Client** sends a request to the **Web Server**, running as a [reverse proxy](/pages/reverse-proxy-web-server)
 * The **Web Server** forwards the request to the **Read API** server
 * The **Read API** server reads from the **SQL Database** `sales_rank` table
 
@@ -255,7 +255,7 @@ We'll introduce some components to complete the design and to address scalabilit
 * [CDN](https://github.com/donnemartin/system-design-primer#content-delivery-network)
 * [Load balancer](https://github.com/donnemartin/system-design-primer#load-balancer)
 * [Horizontal scaling](https://github.com/donnemartin/system-design-primer#horizontal-scaling)
-* [Web server (reverse proxy)](https://github.com/donnemartin/system-design-primer#reverse-proxy-web-server)
+* [Web server (reverse proxy)](/pages/reverse-proxy-web-server)
 * [API server (application layer)](https://github.com/donnemartin/system-design-primer#application-layer)
 * [Cache](https://github.com/donnemartin/system-design-primer#cache)
 * [Relational database management system (RDBMS)](https://github.com/donnemartin/system-design-primer#relational-database-management-system-rdbms)
@@ -287,7 +287,7 @@ We should also consider moving some data to a **NoSQL Database**.
 
 #### NoSQL
 
-* [Key-value store](https://github.com/donnemartin/system-design-primer#key-value-store)
+* [Key-value store](/pages/key-value-store)
 * [Document store](https://github.com/donnemartin/system-design-primer#document-store)
 * [Wide column store](https://github.com/donnemartin/system-design-primer#wide-column-store)
 * [Graph database](https://github.com/donnemartin/system-design-primer#graph-database)
