@@ -5,7 +5,7 @@ This is a static site version of
 built with Jekyll and
 [hosted on GitHub Pages](https://phucnguyen81.github.io/system-design-primer/).
 
-# Development
+## Development
 
 - Install docker and docker-compose
 - Run `./dev up` to run the service
@@ -13,7 +13,13 @@ built with Jekyll and
 - Run `./dev attach` to attach to the service container (or use VS Code's Remote Container)
 - Go to `localhost:4000` to see the generated site
 
-# TODO
+## Deploy to GitHub Pages
+
+- Run `./dev up` to run the service
+- Run `./dev build` to build the site into `docs/` folder
+- Commit the `docs/` folder and push to GitHub
+
+## TODO
 
 - [Learn Jekyll](https://jekyllrb.com/docs/)
 - [Learn Jekyll theme from minimal-mistakes repo](https://github.com/mmistakes/minimal-mistakes)
