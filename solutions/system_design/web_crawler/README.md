@@ -211,7 +211,7 @@ We might also choose to support a `Robots.txt` file that gives webmasters contro
 
 ### Use case: User inputs a search term and sees a list of relevant pages with titles and snippets
 
-* The **Client** sends a request to the **Web Server**, running as a [reverse proxy](https://github.com/donnemartin/system-design-primer#reverse-proxy-web-server)
+* The **Client** sends a request to the **Web Server**, running as a [reverse proxy](/pages/reverse-proxy-web-server)
 * The **Web Server** forwards the request to the **Query API** server
 * The **Query API** server does the following:
     * Parses the query
@@ -271,7 +271,7 @@ We'll introduce some components to complete the design and to address scalabilit
 * [DNS](https://github.com/donnemartin/system-design-primer#domain-name-system)
 * [Load balancer](https://github.com/donnemartin/system-design-primer#load-balancer)
 * [Horizontal scaling](https://github.com/donnemartin/system-design-primer#horizontal-scaling)
-* [Web server (reverse proxy)](https://github.com/donnemartin/system-design-primer#reverse-proxy-web-server)
+* [Web server (reverse proxy)](/pages/reverse-proxy-web-server)
 * [API server (application layer)](https://github.com/donnemartin/system-design-primer#application-layer)
 * [Cache](https://github.com/donnemartin/system-design-primer#cache)
 * [NoSQL](https://github.com/donnemartin/system-design-primer#nosql)
