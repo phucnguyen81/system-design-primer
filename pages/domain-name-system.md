@@ -14,24 +14,24 @@ for a more detailed explanation.
 ```mermaid!
 graph TD
 
-ClientDevice[Client Device]
-LocalDNSCache[Local DNS Cache]
-ISPDNSResolver[ISP DNS Resolver]
-RootDNSServer[Root DNS Server]
-TLDDNSServer[TLD DNS Server]
-AuthoritativeDNSServer[Authoritative DNS Server]
+Client[Client Device]
+DNSCache[Local DNS Cache]
+DNSResolver[ISP DNS Resolver]
+RootServer[. DNS Root Server]
+TLDServer[.com TLD Name Server]
+AuthoritativeDNSServer[google.com Authoritative Name Server]
 
-ClientDevice -->|where is google.com.?| ISPDNSResolver
-ISPDNSResolver -->|is it in cache?| LocalDNSCache
-LocalDNSCache -->|not in cache, please ask root server| ISPDNSResolver
+Client -->|ask for www.google.com| DNSResolver
+DNSResolver -->|is it in cache?| DNSCache
+DNSCache -->|not in cache, ask root server| DNSResolver
 
-ISPDNSResolver --> |google.com. is at 142.251.220.46|ClientDevice
-ISPDNSResolver -->|where is .?| RootDNSServer
-RootDNSServer -->|where is com?| TLDDNSServer
-TLDDNSServer -->|where is google?| AuthoritativeDNSServer
-AuthoritativeDNSServer -->|142.251.220.46| TLDDNSServer
-TLDDNSServer -->|142.251.220.46| RootDNSServer
-RootDNSServer -->|142.251.220.46| ISPDNSResolver
+DNSResolver --> |www.google.com. is at 142.251.220.46|Client
+DNSResolver -->|ask for .com| RootServer
+RootServer -->|ask for google.com?| TLDServer
+TLDServer -->|ask for www?| AuthoritativeDNSServer
+AuthoritativeDNSServer -->|142.251.220.46| TLDServer
+TLDServer -->|142.251.220.46| RootServer
+RootServer -->|142.251.220.46| DNSResolver
 ```
 
   <figcaption style="text-align: center; border: 1px dotted blue;">How does DNS work?</figcaption>
