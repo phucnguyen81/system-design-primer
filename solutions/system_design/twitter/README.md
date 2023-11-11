@@ -235,7 +235,7 @@ We'll introduce some components to complete the design and to address scalabilit
 
 *To avoid repeating discussions*, refer to the following [system design topics](/#index-of-system-design-topics) for main talking points, tradeoffs, and alternatives:
 
-* [DNS](/domain-name-system)
+* [DNS](/pages/domain-name-system)
 * [CDN](/#content-delivery-network)
 * [Load balancer](/#load-balancer)
 * [Horizontal scaling](/pages/load-balancer#horizontal-scaling)

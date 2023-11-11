@@ -19,6 +19,12 @@ built with Jekyll and
 - Run `./dev build` to build the site into `docs/` folder
 - Commit the `docs/` folder and push to GitHub
 
+## Customize the site's theme
+
+The site uses
+[minima theme 2.5.1](https://github.com/jekyll/minima/tree/v2.5.1).
+Take a look at the source code to know which files to override.
+
 ## TODO
 
 - [Learn Jekyll](https://jekyllrb.com/docs/)
