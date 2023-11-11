@@ -129,7 +129,7 @@ Add a **DNS** such as Route 53 to map the domain to the instance's public IP.
 
 _Trade-offs, alternatives, and additional details:_
 
-- See the [Domain name system](/pages/domain-name-system) section
+- See the [Domain name system](/domain-name-system) section
 
 #### Secure the web server
 

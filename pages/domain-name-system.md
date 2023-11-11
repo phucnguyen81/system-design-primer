@@ -1,5 +1,6 @@
 ---
 title: Domain name system
+permalink: /domain-name-system/
 ---
 
 The original image is [How does DNS work?](/images/IOyLj4i.jpg)

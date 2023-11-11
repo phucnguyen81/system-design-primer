@@ -657,7 +657,7 @@ Availability (Total) = 1 - (1 - Availability (Foo)) * (1 - Availability (Bar))
 
 If both `Foo` and `Bar` each had 99.9% availability, their total availability in parallel would be 99.9999%.
 
-## [Domain name system](/pages/domain-name-system)
+## [Domain name system](/domain-name-system)
 
 ## Content delivery network
 
