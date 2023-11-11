@@ -9,7 +9,7 @@ Also see
 [DNS resolution explained](https://dev.to/blake/dns-explained-resolution-a2i)
 for a more detailed explanation.
 
-<figure>
+<figure style="border: 1px dotted gray;">
 
 ```mermaid!
 graph TD
@@ -34,14 +34,14 @@ TLDDNSServer -->|142.251.220.46| RootDNSServer
 RootDNSServer -->|142.251.220.46| ISPDNSResolver
 ```
 
-  <figcaption style="text-align: center;">How does DNS work?</figcaption>
+  <figcaption style="text-align: center; border: 1px dotted blue;">How does DNS work?</figcaption>
 </figure>
 
 A Domain Name System (DNS) translates a domain name such as www.example.com to an IP address.
 
 DNS is hierarchical, with a few authoritative servers at the top level. Your router or ISP provides information about which DNS server(s) to contact when doing a lookup. Lower level DNS servers cache mappings, which could become stale due to DNS propagation delays. DNS results can also be cached by your browser or OS for a certain period of time, determined by the [time to live (TTL)](https://en.wikipedia.org/wiki/Time_to_live).
 
-<figure>
+<figure style="border: 1px dotted gray;">
 
 ```mermaid!
 graph TD
@@ -74,7 +74,7 @@ google --> www
 google --> mail
 ```
 
-  <figcaption style="text-align: center;">DNS Hierarchy</figcaption>
+  <figcaption style="text-align: center; border: 1px dotted blue;">DNS Hierarchy</figcaption>
 </figure>
 
 - **NS record (name server)** - Specifies the DNS servers for your domain/subdomain.
