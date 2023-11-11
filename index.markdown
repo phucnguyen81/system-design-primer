@@ -80,20 +80,18 @@ title: "The System Design Primer"
         - [In sequence](#in-sequence)
         - [In parallel](#in-parallel)
 - [Domain name system](#domain-name-system)
-  - [Disadvantage(s): DNS](#disadvantages-dns)
-  - [Source(s) and further reading](#sources-and-further-reading-5)
 - [Content delivery network](#content-delivery-network)
   - [Push CDNs](#push-cdns)
   - [Pull CDNs](#pull-cdns)
   - [Disadvantage(s): CDN](#disadvantages-cdn)
-  - [Source(s) and further reading](#sources-and-further-reading-6)
+  - [Source(s) and further reading](#sources-and-further-reading-5)
 - [Load balancer](#load-balancer)
 - [Reverse proxy (web server)](#reverse-proxy-web-server)
 - [Application layer](#application-layer)
   - [Microservices](#microservices)
   - [Service Discovery](#service-discovery)
   - [Disadvantage(s): application layer](#disadvantages-application-layer)
-  - [Source(s) and further reading](#sources-and-further-reading-7)
+  - [Source(s) and further reading](#sources-and-further-reading-6)
 - [Database](#database)
   - [Relational database management system (RDBMS)](#relational-database-management-system-rdbms)
     - [Master-slave replication](#master-slave-replication)
@@ -146,13 +144,13 @@ title: "The System Design Primer"
     - [Refresh-ahead](#refresh-ahead)
       - [Disadvantage(s): refresh-ahead](#disadvantages-refresh-ahead)
   - [Disadvantage(s): cache](#disadvantages-cache)
-  - [Source(s) and further reading](#sources-and-further-reading-8)
+  - [Source(s) and further reading](#sources-and-further-reading-7)
 - [Asynchronism](#asynchronism)
   - [Message queues](#message-queues)
   - [Task queues](#task-queues)
   - [Back pressure](#back-pressure)
   - [Disadvantage(s): asynchronism](#disadvantages-asynchronism)
-  - [Source(s) and further reading](#sources-and-further-reading-9)
+  - [Source(s) and further reading](#sources-and-further-reading-8)
 - [Communication](#communication)
   - [Hypertext transfer protocol (HTTP)](#hypertext-transfer-protocol-http)
     - [Source(s) and further reading: HTTP](#sources-and-further-reading-http)
@@ -166,18 +164,18 @@ title: "The System Design Primer"
   - [RPC and REST calls comparison](#rpc-and-rest-calls-comparison)
     - [Source(s) and further reading: REST and RPC](#sources-and-further-reading-rest-and-rpc)
 - [Security](#security)
-  - [Source(s) and further reading](#sources-and-further-reading-10)
+  - [Source(s) and further reading](#sources-and-further-reading-9)
 - [Appendix](#appendix)
   - [Powers of two table](#powers-of-two-table)
-    - [Source(s) and further reading](#sources-and-further-reading-11)
+    - [Source(s) and further reading](#sources-and-further-reading-10)
   - [Latency numbers every programmer should know](#latency-numbers-every-programmer-should-know)
     - [Latency numbers visualized](#latency-numbers-visualized)
-    - [Source(s) and further reading](#sources-and-further-reading-12)
+    - [Source(s) and further reading](#sources-and-further-reading-11)
   - [Additional system design interview questions](#additional-system-design-interview-questions)
   - [Real world architectures](#real-world-architectures)
   - [Company architectures](#company-architectures)
   - [Company engineering blogs](#company-engineering-blogs)
-    - [Source(s) and further reading](#sources-and-further-reading-13)
+    - [Source(s) and further reading](#sources-and-further-reading-12)
 - [Under development](#under-development)
 - [Credits](#credits)
 - [Contact info](#contact-info)
@@ -226,9 +224,9 @@ Additional topics for interview prep:
 
 The provided [Anki flashcard decks](https://apps.ankiweb.net/) use spaced repetition to help you retain key system design concepts.
 
-* [System design deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/System%20Design.apkg)
-* [System design exercises deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/System%20Design%20Exercises.apkg)
-* [Object oriented design exercises deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/OO%20Design.apkg)
+* [System design deck](/tree/master/resources/flash_cards/System%20Design.apkg)
+* [System design exercises deck](/tree/master/resources/flash_cards/System%20Design%20Exercises.apkg)
+* [Object oriented design exercises deck](/tree/master/resources/flash_cards/OO%20Design.apkg)
 
 Great for use while on-the-go.
 
@@ -254,7 +252,7 @@ Feel free to submit pull requests to help:
 * Fix errors
 * Improve sections
 * Add new sections
-* [Translate](https://github.com/donnemartin/system-design-primer/issues/28)
+* [Translate](/issues/28)
 
 Content that needs some polishing is placed [under development](#under-development).
 
@@ -659,43 +657,7 @@ Availability (Total) = 1 - (1 - Availability (Foo)) * (1 - Availability (Bar))
 
 If both `Foo` and `Bar` each had 99.9% availability, their total availability in parallel would be 99.9999%.
 
-## Domain name system
-
-<p align="center">
-  <img src="{{ site.baseurl }}/images/IOyLj4i.jpg">
-  <br/>
-  <i><a href="http://www.slideshare.net/srikrupa5/dns-security-presentation-issa">Source: DNS security presentation</a></i>
-</p>
-
-A Domain Name System (DNS) translates a domain name such as www.example.com to an IP address.
-
-DNS is hierarchical, with a few authoritative servers at the top level.  Your router or ISP provides information about which DNS server(s) to contact when doing a lookup.  Lower level DNS servers cache mappings, which could become stale due to DNS propagation delays.  DNS results can also be cached by your browser or OS for a certain period of time, determined by the [time to live (TTL)](https://en.wikipedia.org/wiki/Time_to_live).
-
-* **NS record (name server)** - Specifies the DNS servers for your domain/subdomain.
-* **MX record (mail exchange)** - Specifies the mail servers for accepting messages.
-* **A record (address)** - Points a name to an IP address.
-* **CNAME (canonical)** - Points a name to another name or `CNAME` (example.com to www.example.com) or to an `A` record.
-
-Services such as [CloudFlare](https://www.cloudflare.com/dns/) and [Route 53](https://aws.amazon.com/route53/) provide managed DNS services.  Some DNS services can route traffic through various methods:
-
-* [Weighted round robin](https://www.jscape.com/blog/load-balancing-algorithms)
-    * Prevent traffic from going to servers under maintenance
-    * Balance between varying cluster sizes
-    * A/B testing
-* [Latency-based](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency)
-* [Geolocation-based](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-geo)
-
-### Disadvantage(s): DNS
-
-* Accessing a DNS server introduces a slight delay, although mitigated by caching described above.
-* DNS server management could be complex and is generally managed by [governments, ISPs, and large companies](http://superuser.com/questions/472695/who-controls-the-dns-servers/472729).
-* DNS services have recently come under [DDoS attack](http://dyn.com/blog/dyn-analysis-summary-of-friday-october-21-attack/), preventing users from accessing websites such as Twitter without knowing Twitter's IP address(es).
-
-### Source(s) and further reading
-
-* [DNS architecture](https://technet.microsoft.com/en-us/library/dd197427(v=ws.10).aspx)
-* [Wikipedia](https://en.wikipedia.org/wiki/Domain_Name_System)
-* [DNS articles](https://support.dnsimple.com/categories/dns/)
+## [Domain name system](/pages/domain-name-system)
 
 ## Content delivery network
 

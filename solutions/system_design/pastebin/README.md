@@ -95,8 +95,8 @@ graph TD
     WriteAPI --> ObjectStore
     Analytics --> ObjectStore
     Analytics --> SQL
-    
-    style Client fill:LawnGreen 
+
+    style Client fill:LawnGreen
     style WebServer fill:Khaki
     style ReadAPI fill:Khaki
     style WriteAPI fill:Khaki
@@ -259,7 +259,35 @@ To delete expired pastes, we could just scan the **SQL Database** for all entrie
 
 > Identify and address bottlenecks, given the constraints.
 
-![Imgur](http://i.imgur.com/4edXG0T.png)
+See the [original PasteBin design image](https://i.imgur.com/4edXG0T.png).
+
+```mermaid!
+ graph TD
+  Client-->DNS
+  Client-->CDN-->ObjectStore[Object Store]
+  Client-->LoadBalancer[Load Balancer]
+  LoadBalancer-->WebServer[Web Server]
+  WebServer-->WriteAPI[Write API]
+  WebServer-->ReadAPI[Read API]
+  WriteAPI-->SQLWriteMasterSlave[SQL Write Master-Slave]
+  WriteAPI-->ObjectStore
+  ReadAPI-->SQLReadReplicas[SQL Read Replicas]
+  ReadAPI-->MemoryCache[Memory Cache]
+  ReadAPI-->ObjectStore
+  Analytics-->ObjectStore
+  Analytics-->SQLAnalytics[SQL Analytics]
+  SQLWriteMasterSlave-.-SQLReadReplicas
+  style LoadBalancer fill:LightGreen
+  style WebServer fill:Orange
+  style WriteAPI fill:Orange
+  style ReadAPI fill:Orange
+  style Analytics fill:Orange
+  style ObjectStore fill:Yellow
+  style SQLWriteMasterSlave fill:Yellow
+  style SQLReadReplicas fill:Yellow
+  style SQLAnalytics fill:Yellow
+  style MemoryCache fill:GoldenRod
+```
 
 **Important: Do not simply jump right into the final design from the initial design!**
 
@@ -271,10 +299,10 @@ We'll introduce some components to complete the design and to address scalabilit
 
 *To avoid repeating discussions*, refer to the following [system design topics](/#index-of-system-design-topics) for main talking points, tradeoffs, and alternatives:
 
-* [DNS](/#domain-name-system)
+* [DNS](/pages/domain-name-system)
 * [CDN](/#content-delivery-network)
 * [Load balancer](/#load-balancer)
-* [Horizontal scaling](/#horizontal-scaling)
+* [Horizontal scaling](/pages/load-balancer#horizontal-scaling)
 * [Web server (reverse proxy)](/#reverse-proxy-web-server)
 * [API server (application layer)](/#application-layer)
 * [Cache](/#cache)

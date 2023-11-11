@@ -7,7 +7,7 @@ Contributions are welcome!
 
 ## Bug Reports
 
-For bug reports or requests [submit an issue](https://github.com/donnemartin/system-design-primer/issues).
+For bug reports or requests [submit an issue](/issues).
 
 ## Pull Requests
 

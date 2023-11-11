@@ -9,9 +9,9 @@ and the original blog on
 ```mermaid!
 graph LR
   Client <--> Dispatcher
-  Dispatcher <--> Worker1
-  Dispatcher <--> Worker2
-  Dispatcher <--> Worker3
+  Dispatcher <--> Server1[Server 1]
+  Dispatcher <--> Server2[Server 2]
+  Dispatcher <--> Server3[Server 3]
   style Client fill:LawnGreen
   style Dispatcher fill:Khaki
   style Worker1 fill:LightBlue
