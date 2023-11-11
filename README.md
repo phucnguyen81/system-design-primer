@@ -22,4 +22,5 @@ built with Jekyll and
 ## TODO
 
 - [Learn Jekyll](https://jekyllrb.com/docs/)
-- [Learn Jekyll theme from minimal-mistakes repo](https://github.com/mmistakes/minimal-mistakes)
+- [Learn from mademistakes.com](https://mademistakes.com/mastering-jekyll/)
+- [Learn Jekyll themes from minimal-mistakes repo](https://github.com/mmistakes/minimal-mistakes)
