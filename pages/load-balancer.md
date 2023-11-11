@@ -2,6 +2,10 @@
 title: Load balancer
 ---
 
+See [the original load balancer diagram](/images/h81n9iK.png)
+and the original blog on
+[Scalable system design patterns](http://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html).
+
 ```mermaid!
 graph LR
   Client <--> Dispatcher
@@ -25,10 +29,6 @@ flowchart LR
   1 -->|By request parameters| 2
   2 --> 3[Dispatcher forwards the response to Client]
 ```
-
-See [the original load balancer diagram](/images/h81n9iK.png)
-and the original blog on
-[Scalable system design patterns](http://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html).
 
 Load balancers distribute incoming client requests to computing resources such as application servers and databases. In each case, the load balancer returns the response from the computing resource to the appropriate client. Load balancers are effective at:
 
@@ -73,7 +73,7 @@ Load balancers can also help with horizontal scaling, improving performance and 
 
 - Scaling horizontally introduces complexity and involves cloning servers
   - Servers should be stateless: they should not contain any user-related data like sessions or profile pictures
-  - Sessions can be stored in a centralized data store such as a [database](#database) (SQL, NoSQL) or a persistent [cache](#cache) (Redis, Memcached)
+  - Sessions can be stored in a centralized data store such as a [database](/#database) (SQL, NoSQL) or a persistent [cache](/#cache) (Redis, Memcached)
 - Downstream servers such as caches and databases need to handle more simultaneous connections as upstream servers scale out
 
 ## Disadvantage(s): load balancer
