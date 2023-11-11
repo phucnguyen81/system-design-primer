@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Domain name system | The System Design Primer</title>
+<meta name="generator" content="Jekyll v3.9.3">
+<meta property="og:title" content="Domain name system">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Learn how to design large-scale systems. Prep for the system design interview.">
+<meta property="og:description" content="Learn how to design large-scale systems. Prep for the system design interview.">
+<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/domain-name-system/">
+<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/domain-name-system/">
+<meta property="og:site_name" content="The System Design Primer">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Domain name system">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Learn how to design large-scale systems. Prep for the system design interview.","headline":"Domain name system","url":"https://phucnguyen81.github.io/system-design-primer/domain-name-system/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/system-design-primer/assets/main.css">
+<link type="application/atom+xml" rel="alternate" href="https://phucnguyen81.github.io/system-design-primer/feed.xml" title="The System Design Primer">
+<link rel="shortcut icon" type="image/x-icon" href="/system-design-primer/images/favicon.ico">
+</head>
+<body>
+<header class="site-header" role="banner">
+
+  <div class="wrapper">
+<a class="site-title" rel="author" href="/system-design-primer/">The System Design Primer</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+<a class="page-link" href="/system-design-primer/about/">About</a><a class="page-link" href="/system-design-primer/domain-name-system/">Domain name system</a><a class="page-link" href="/system-design-primer/">The System Design Primer</a><a class="page-link" href="/system-design-primer/images/">Original Images</a><a class="page-link" href="/system-design-primer/pages/key-value-store.html">Key value store</a><a class="page-link" href="/system-design-primer/pages/load-balancer.html">Load balancer</a><a class="page-link" href="/system-design-primer/pages/reverse-proxy-web-server.html">Reverse Proxy (web server)</a><a class="page-link" href="/system-design-primer/pages/sql-or-nosql.html">SQL or NoSQL</a><a class="page-link" href="/system-design-primer/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/pastebin/">Design Pastebin.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/system-design-primer/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/system-design-primer/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/system-design-primer/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/system-design-primer/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/system-design-primer/solutions/system_design/web_crawler/">Design a web crawler</a>
+</div>
+      </nav>
+</div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Domain name system</h1>
+  </header>
+
+  <div class="post-content">
+    <p>The original image is <a href="/images/IOyLj4i.jpg">How does DNS work?</a>
+taken from the slides
+<a href="http://www.slideshare.net/srikrupa5/dns-security-presentation-issa">DNS security presentation</a>.
+Also see
+<a href="https://dev.to/blake/dns-explained-resolution-a2i">DNS resolution explained</a>
+for a more detailed explanation.</p>
+
+<figure style="border: 1px dotted gray;">
+
+<img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggVERcbiUlLVxuQ2xpZW50W0NsaWVudCBEZXZpY2VdXG5ETlNDYWNoZVtMb2NhbCBETlMgQ2FjaGVdXG5ETlNSZXNvbHZlcltJU1AgRE5TIFJlc29sdmVyXVxuUm9vdFNlcnZlclsuIEROUyBSb290IFNlcnZlcl1cblRMRFNlcnZlclsuY29tIFRMRCBOYW1lIFNlcnZlcl1cbkF1dGhvcml0YXRpdmVETlNTZXJ2ZXJbZ29vZ2xlLmNvbSBBdXRob3JpdGF0aXZlIE5hbWUgU2VydmVyXVxuJSUtXG5DbGllbnQgLS0-fGFzayBmb3Igd3d3Lmdvb2dsZS5jb218IEROU1Jlc29sdmVyXG5ETlNSZXNvbHZlciAtLT58aXMgaXQgaW4gY2FjaGU_fCBETlNDYWNoZVxuRE5TQ2FjaGUgLS0-fG5vdCBpbiBjYWNoZSwgYXNrIHJvb3Qgc2VydmVyfCBETlNSZXNvbHZlclxuJSUtXG5ETlNSZXNvbHZlciAtLT4gfHd3dy5nb29nbGUuY29tLiBpcyBhdCAxNDIuMjUxLjIyMC40NnxDbGllbnRcbkROU1Jlc29sdmVyIC0tPnxhc2sgZm9yIC5jb218IFJvb3RTZXJ2ZXJcblJvb3RTZXJ2ZXIgLS0-fGFzayBmb3IgZ29vZ2xlLmNvbT98IFRMRFNlcnZlclxuVExEU2VydmVyIC0tPnxhc2sgZm9yIHd3dz98IEF1dGhvcml0YXRpdmVETlNTZXJ2ZXJcbkF1dGhvcml0YXRpdmVETlNTZXJ2ZXIgLS0-fDE0Mi4yNTEuMjIwLjQ2fCBUTERTZXJ2ZXJcblRMRFNlcnZlciAtLT58MTQyLjI1MS4yMjAuNDZ8IFJvb3RTZXJ2ZXJcblJvb3RTZXJ2ZXIgLS0-fDE0Mi4yNTEuMjIwLjQ2fCBETlNSZXNvbHZlciIsIm1lcm1haWQiOm51bGx9">
+
+  <figcaption style="text-align: center; border: 1px dotted blue;">How does DNS work?</figcaption>
+</figure>
+
+<p>A Domain Name System (DNS) translates a domain name such as www.example.com to an IP address.</p>
+
+<p>DNS is hierarchical, with a few authoritative servers at the top level. Your router or ISP provides information about which DNS server(s) to contact when doing a lookup. Lower level DNS servers cache mappings, which could become stale due to DNS propagation delays. DNS results can also be cached by your browser or OS for a certain period of time, determined by the <a href="https://en.wikipedia.org/wiki/Time_to_live">time to live (TTL)</a>.</p>
+
+<figure style="border: 1px dotted gray;">
+
+<img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggVERcbnN1YmdyYXBoIFJvb3RcbnJvb3RbUm9vdCBzZXJ2ZXJzXVxuZW5kXG4lJS1cbnN1YmdyYXBoIFRvcExldmVsW1RvcCBMZXZlbCBEb21haW5zIFRMRF1cbmRvdGNvbVsuY29tXVxuZG90b3JnWy5vcmddXG5kb3RuZXRbLm5ldF1cbmVuZFxuJSUtXG5zdWJncmFwaCBTZWNvbmRMZXZlbFtTZWNvbmQgTGV2ZWwgRG9tYWluc11cbmdvb2dsZVtnb29nbGUgbWFuYWdlZCBieSBHb29nbGVdXG5hcHBsZVthcHBsZSBtYW5hZ2VkIGJ5IEFwcGxlXVxuZW5kXG4lJS1cbnN1YmdyYXBoIFRoaXJkTGV2ZWxbVGhpcmQgTGV2ZWwgRG9tYWluc11cbnd3d1t3d3ddXG5tYWlsW21haWxdXG5lbmRcbiUlLVxucm9vdCAtLT4gZG90Y29tXG5yb290IC0tPiBkb3RvcmdcbnJvb3QgLS0-IGRvdG5ldFxuZG90Y29tIC0tPiBnb29nbGVcbmRvdGNvbSAtLT4gYXBwbGVcbmdvb2dsZSAtLT4gd3d3XG5nb29nbGUgLS0-IG1haWwiLCJtZXJtYWlkIjpudWxsfQ">
+
+  <figcaption style="text-align: center; border: 1px dotted blue;">DNS Hierarchy</figcaption>
+</figure>
+
+<ul>
+  <li>
+<strong>NS record (name server)</strong> - Specifies the DNS servers for your domain/subdomain.</li>
+  <li>
+<strong>MX record (mail exchange)</strong> - Specifies the mail servers for accepting messages.</li>
+  <li>
+<strong>A record (address)</strong> - Points a name to an IP address.</li>
+  <li>
+<strong>CNAME (canonical)</strong> - Points a name to another name or <code class="language-plaintext highlighter-rouge">CNAME</code> (example.com to www.example.com) or to an <code class="language-plaintext highlighter-rouge">A</code> record.</li>
+</ul>
+
+<p>Services such as <a href="https://www.cloudflare.com/dns/">CloudFlare</a> and <a href="https://aws.amazon.com/route53/">Route 53</a> provide managed DNS services. Some DNS services can route traffic through various methods:</p>
+
+<ul>
+  <li>
+<a href="https://www.jscape.com/blog/load-balancing-algorithms">Weighted round robin</a>
+    <ul>
+      <li>Prevent traffic from going to servers under maintenance</li>
+      <li>Balance between varying cluster sizes</li>
+      <li>A/B testing</li>
+    </ul>
+  </li>
+  <li><a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency">Latency-based</a></li>
+  <li><a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-geo">Geolocation-based</a></li>
+</ul>
+
+<h2 id="disadvantages-dns">Disadvantage(s): DNS</h2>
+
+<ul>
+  <li>Accessing a DNS server introduces a slight delay, although mitigated by caching described above.</li>
+  <li>DNS server management could be complex and is generally managed by <a href="http://superuser.com/questions/472695/who-controls-the-dns-servers/472729">governments, ISPs, and large companies</a>.</li>
+  <li>DNS services have recently come under <a href="http://dyn.com/blog/dyn-analysis-summary-of-friday-october-21-attack/">DDoS attack</a>, preventing users from accessing websites such as Twitter without knowing Twitter’s IP address(es).</li>
+</ul>
+
+<h2 id="sources-and-further-reading">Source(s) and further reading</h2>
+
+<ul>
+  <li><a href="https://technet.microsoft.com/en-us/library/dd197427(v=ws.10).aspx">DNS architecture</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Domain_Name_System">Wikipedia</a></li>
+  <li><a href="https://support.dnsimple.com/categories/dns/">DNS articles</a></li>
+  <li><a href="https://dev.to/blake/dns-explained-resolution-a2i">DNS resolution explained</a></li>
+</ul>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/system-design-primer/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The System Design Primer</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The System Design Primer</li>
+<li><a class="u-email" href="mailto:phucknguyen@gmail.com">phucknguyen@gmail.com</a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+<ul class="social-media-list">
+<li><a href="https://github.com/phucnguyen81"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#github"></use></svg> <span class="username">phucnguyen81</span></a></li>
+<li><a href="https://www.twitter.com/phucknguyen"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">phucknguyen</span></a></li>
+</ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Learn how to design large-scale systems. Prep for the system design interview.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

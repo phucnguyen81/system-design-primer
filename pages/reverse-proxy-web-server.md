@@ -3,7 +3,7 @@ title: Reverse Proxy (web server)
 ---
 
 <p align="center">
-  <img src="{{ site.baseurl }}/images/n41Azff.png">
+  <img src="{{ "/images/n41Azff.png" | relative_url }}">
   <br/>
   <i><a href="https://upload.wikimedia.org/wikipedia/commons/6/67/Reverse_proxy_h2g2bob.svg">Source: Wikipedia</a></i>
   <br/>

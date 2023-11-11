@@ -58,6 +58,7 @@ exclude:
   - vendor/ruby/
   - docs/
   - docker*
+  - run
   - scripts/
   - CONTRIBUTING.md
   - Dockerfile

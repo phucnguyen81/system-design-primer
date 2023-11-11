@@ -23,6 +23,7 @@
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/system-design-primer/assets/main.css">
 <link type="application/atom+xml" rel="alternate" href="https://phucnguyen81.github.io/system-design-primer/feed.xml" title="The System Design Primer">
+<link rel="shortcut icon" type="image/x-icon" href="/system-design-primer/images/favicon.ico">
 </head>
 <body>
 <header class="site-header" role="banner">
@@ -39,7 +40,7 @@
         </label>
 
         <div class="trigger">
-<a class="page-link" href="/system-design-primer/about/">About</a><a class="page-link" href="/system-design-primer/">The System Design Primer</a><a class="page-link" href="/system-design-primer/pages/key-value-store.html">Key value store</a><a class="page-link" href="/system-design-primer/pages/reverse-proxy-web-server.html">Reverse Proxy (web server)</a><a class="page-link" href="/system-design-primer/pages/sql-or-nosql.html">SQL or NoSQL</a><a class="page-link" href="/system-design-primer/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/pastebin/">Design Pastebin.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/system-design-primer/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/system-design-primer/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/system-design-primer/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/system-design-primer/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/system-design-primer/solutions/system_design/web_crawler/">Design a web crawler</a>
+<a class="page-link" href="/system-design-primer/about/">About</a><a class="page-link" href="/system-design-primer/domain-name-system/">Domain name system</a><a class="page-link" href="/system-design-primer/">The System Design Primer</a><a class="page-link" href="/system-design-primer/images/">Original Images</a><a class="page-link" href="/system-design-primer/pages/key-value-store.html">Key value store</a><a class="page-link" href="/system-design-primer/pages/load-balancer.html">Load balancer</a><a class="page-link" href="/system-design-primer/pages/reverse-proxy-web-server.html">Reverse Proxy (web server)</a><a class="page-link" href="/system-design-primer/pages/sql-or-nosql.html">SQL or NoSQL</a><a class="page-link" href="/system-design-primer/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/pastebin/">Design Pastebin.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/system-design-primer/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/system-design-primer/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/system-design-primer/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/system-design-primer/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/system-design-primer/solutions/system_design/web_crawler/">Design a web crawler</a>
 </div>
       </nav>
 </div>
@@ -184,37 +185,17 @@
       </li>
     </ul>
   </li>
-  <li>
-<a href="#domain-name-system">Domain name system</a>
-    <ul>
-      <li><a href="#disadvantages-dns">Disadvantage(s): DNS</a></li>
-      <li><a href="#sources-and-further-reading-5">Source(s) and further reading</a></li>
-    </ul>
-  </li>
+  <li><a href="#domain-name-system">Domain name system</a></li>
   <li>
 <a href="#content-delivery-network">Content delivery network</a>
     <ul>
       <li><a href="#push-cdns">Push CDNs</a></li>
       <li><a href="#pull-cdns">Pull CDNs</a></li>
       <li><a href="#disadvantages-cdn">Disadvantage(s): CDN</a></li>
-      <li><a href="#sources-and-further-reading-6">Source(s) and further reading</a></li>
+      <li><a href="#sources-and-further-reading-5">Source(s) and further reading</a></li>
     </ul>
   </li>
-  <li>
-<a href="#load-balancer">Load balancer</a>
-    <ul>
-      <li><a href="#layer-4-load-balancing">Layer 4 load balancing</a></li>
-      <li><a href="#layer-7-load-balancing">Layer 7 load balancing</a></li>
-      <li>
-<a href="#horizontal-scaling">Horizontal scaling</a>
-        <ul>
-          <li><a href="#disadvantages-horizontal-scaling">Disadvantage(s): horizontal scaling</a></li>
-        </ul>
-      </li>
-      <li><a href="#disadvantages-load-balancer">Disadvantage(s): load balancer</a></li>
-      <li><a href="#sources-and-further-reading-7">Source(s) and further reading</a></li>
-    </ul>
-  </li>
+  <li><a href="#load-balancer">Load balancer</a></li>
   <li><a href="#reverse-proxy-web-server">Reverse proxy (web server)</a></li>
   <li>
 <a href="#application-layer">Application layer</a>
@@ -222,7 +203,7 @@
       <li><a href="#microservices">Microservices</a></li>
       <li><a href="#service-discovery">Service Discovery</a></li>
       <li><a href="#disadvantages-application-layer">Disadvantage(s): application layer</a></li>
-      <li><a href="#sources-and-further-reading-8">Source(s) and further reading</a></li>
+      <li><a href="#sources-and-further-reading-6">Source(s) and further reading</a></li>
     </ul>
   </li>
   <li>
@@ -351,7 +332,7 @@
         </ul>
       </li>
       <li><a href="#disadvantages-cache">Disadvantage(s): cache</a></li>
-      <li><a href="#sources-and-further-reading-9">Source(s) and further reading</a></li>
+      <li><a href="#sources-and-further-reading-7">Source(s) and further reading</a></li>
     </ul>
   </li>
   <li>
@@ -361,7 +342,7 @@
       <li><a href="#task-queues">Task queues</a></li>
       <li><a href="#back-pressure">Back pressure</a></li>
       <li><a href="#disadvantages-asynchronism">Disadvantage(s): asynchronism</a></li>
-      <li><a href="#sources-and-further-reading-10">Source(s) and further reading</a></li>
+      <li><a href="#sources-and-further-reading-8">Source(s) and further reading</a></li>
     </ul>
   </li>
   <li>
@@ -403,7 +384,7 @@
   <li>
 <a href="#security">Security</a>
     <ul>
-      <li><a href="#sources-and-further-reading-11">Source(s) and further reading</a></li>
+      <li><a href="#sources-and-further-reading-9">Source(s) and further reading</a></li>
     </ul>
   </li>
   <li>
@@ -412,14 +393,14 @@
       <li>
 <a href="#powers-of-two-table">Powers of two table</a>
         <ul>
-          <li><a href="#sources-and-further-reading-12">Source(s) and further reading</a></li>
+          <li><a href="#sources-and-further-reading-10">Source(s) and further reading</a></li>
         </ul>
       </li>
       <li>
 <a href="#latency-numbers-every-programmer-should-know">Latency numbers every programmer should know</a>
         <ul>
           <li><a href="#latency-numbers-visualized">Latency numbers visualized</a></li>
-          <li><a href="#sources-and-further-reading-13">Source(s) and further reading</a></li>
+          <li><a href="#sources-and-further-reading-11">Source(s) and further reading</a></li>
         </ul>
       </li>
       <li><a href="#additional-system-design-interview-questions">Additional system design interview questions</a></li>
@@ -428,7 +409,7 @@
       <li>
 <a href="#company-engineering-blogs">Company engineering blogs</a>
         <ul>
-          <li><a href="#sources-and-further-reading-14">Source(s) and further reading</a></li>
+          <li><a href="#sources-and-further-reading-12">Source(s) and further reading</a></li>
         </ul>
       </li>
     </ul>
@@ -487,9 +468,9 @@
 <p>The provided <a href="https://apps.ankiweb.net/">Anki flashcard decks</a> use spaced repetition to help you retain key system design concepts.</p>
 
 <ul>
-  <li><a href="https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/System%20Design.apkg">System design deck</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/System%20Design%20Exercises.apkg">System design exercises deck</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/OO%20Design.apkg">Object oriented design exercises deck</a></li>
+  <li><a href="/tree/master/resources/flash_cards/System%20Design.apkg">System design deck</a></li>
+  <li><a href="/tree/master/resources/flash_cards/System%20Design%20Exercises.apkg">System design exercises deck</a></li>
+  <li><a href="/tree/master/resources/flash_cards/OO%20Design.apkg">Object oriented design exercises deck</a></li>
 </ul>
 
 <p>Great for use while on-the-go.</p>
@@ -521,7 +502,7 @@
   <li>Fix errors</li>
   <li>Improve sections</li>
   <li>Add new sections</li>
-  <li><a href="https://github.com/donnemartin/system-design-primer/issues/28">Translate</a></li>
+  <li><a href="/issues/28">Translate</a></li>
 </ul>
 
 <p>Content that needs some polishing is placed <a href="#under-development">under development</a>.</p>
@@ -1156,59 +1137,7 @@
 
 <p>If both <code class="language-plaintext highlighter-rouge">Foo</code> and <code class="language-plaintext highlighter-rouge">Bar</code> each had 99.9% availability, their total availability in parallel would be 99.9999%.</p>
 
-<h2 id="domain-name-system">Domain name system</h2>
-
-<p align="center">
-  <img src="/system-design-primer/images/IOyLj4i.jpg">
-  <br>
-  <i><a href="http://www.slideshare.net/srikrupa5/dns-security-presentation-issa">Source: DNS security presentation</a></i>
-</p>
-
-<p>A Domain Name System (DNS) translates a domain name such as www.example.com to an IP address.</p>
-
-<p>DNS is hierarchical, with a few authoritative servers at the top level.  Your router or ISP provides information about which DNS server(s) to contact when doing a lookup.  Lower level DNS servers cache mappings, which could become stale due to DNS propagation delays.  DNS results can also be cached by your browser or OS for a certain period of time, determined by the <a href="https://en.wikipedia.org/wiki/Time_to_live">time to live (TTL)</a>.</p>
-
-<ul>
-  <li>
-<strong>NS record (name server)</strong> - Specifies the DNS servers for your domain/subdomain.</li>
-  <li>
-<strong>MX record (mail exchange)</strong> - Specifies the mail servers for accepting messages.</li>
-  <li>
-<strong>A record (address)</strong> - Points a name to an IP address.</li>
-  <li>
-<strong>CNAME (canonical)</strong> - Points a name to another name or <code class="language-plaintext highlighter-rouge">CNAME</code> (example.com to www.example.com) or to an <code class="language-plaintext highlighter-rouge">A</code> record.</li>
-</ul>
-
-<p>Services such as <a href="https://www.cloudflare.com/dns/">CloudFlare</a> and <a href="https://aws.amazon.com/route53/">Route 53</a> provide managed DNS services.  Some DNS services can route traffic through various methods:</p>
-
-<ul>
-  <li>
-<a href="https://www.jscape.com/blog/load-balancing-algorithms">Weighted round robin</a>
-    <ul>
-      <li>Prevent traffic from going to servers under maintenance</li>
-      <li>Balance between varying cluster sizes</li>
-      <li>A/B testing</li>
-    </ul>
-  </li>
-  <li><a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency">Latency-based</a></li>
-  <li><a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-geo">Geolocation-based</a></li>
-</ul>
-
-<h3 id="disadvantages-dns">Disadvantage(s): DNS</h3>
-
-<ul>
-  <li>Accessing a DNS server introduces a slight delay, although mitigated by caching described above.</li>
-  <li>DNS server management could be complex and is generally managed by <a href="http://superuser.com/questions/472695/who-controls-the-dns-servers/472729">governments, ISPs, and large companies</a>.</li>
-  <li>DNS services have recently come under <a href="http://dyn.com/blog/dyn-analysis-summary-of-friday-october-21-attack/">DDoS attack</a>, preventing users from accessing websites such as Twitter without knowing Twitter’s IP address(es).</li>
-</ul>
-
-<h3 id="sources-and-further-reading-5">Source(s) and further reading</h3>
-
-<ul>
-  <li><a href="https://technet.microsoft.com/en-us/library/dd197427(v=ws.10).aspx">DNS architecture</a></li>
-  <li><a href="https://en.wikipedia.org/wiki/Domain_Name_System">Wikipedia</a></li>
-  <li><a href="https://support.dnsimple.com/categories/dns/">DNS articles</a></li>
-</ul>
+<h2 id="domain-name-system"><a href="/domain-name-system">Domain name system</a></h2>
 
 <h2 id="content-delivery-network">Content delivery network</h2>
 
@@ -1249,7 +1178,7 @@
   <li>CDNs require changing URLs for static content to point to the CDN.</li>
 </ul>
 
-<h3 id="sources-and-further-reading-6">Source(s) and further reading</h3>
+<h3 id="sources-and-further-reading-5">Source(s) and further reading</h3>
 
 <ul>
   <li><a href="https://figshare.com/articles/Globally_distributed_content_delivery/6605972">Globally distributed content delivery</a></li>
@@ -1257,95 +1186,7 @@
   <li><a href="https://en.wikipedia.org/wiki/Content_delivery_network">Wikipedia</a></li>
 </ul>
 
-<h2 id="load-balancer">Load balancer</h2>
-
-<p align="center">
-  <img src="/system-design-primer/images/h81n9iK.png">
-  <br>
-  <i><a href="http://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html">Source: Scalable system design patterns</a></i>
-</p>
-
-<p>Load balancers distribute incoming client requests to computing resources such as application servers and databases.  In each case, the load balancer returns the response from the computing resource to the appropriate client.  Load balancers are effective at:</p>
-
-<ul>
-  <li>Preventing requests from going to unhealthy servers</li>
-  <li>Preventing overloading resources</li>
-  <li>Helping to eliminate a single point of failure</li>
-</ul>
-
-<p>Load balancers can be implemented with hardware (expensive) or with software such as HAProxy.</p>
-
-<p>Additional benefits include:</p>
-
-<ul>
-  <li>
-<strong>SSL termination</strong> - Decrypt incoming requests and encrypt server responses so backend servers do not have to perform these potentially expensive operations
-    <ul>
-      <li>Removes the need to install <a href="https://en.wikipedia.org/wiki/X.509">X.509 certificates</a> on each server</li>
-    </ul>
-  </li>
-  <li>
-<strong>Session persistence</strong> - Issue cookies and route a specific client’s requests to same instance if the web apps do not keep track of sessions</li>
-</ul>
-
-<p>To protect against failures, it’s common to set up multiple load balancers, either in <a href="#active-passive">active-passive</a> or <a href="#active-active">active-active</a> mode.</p>
-
-<p>Load balancers can route traffic based on various metrics, including:</p>
-
-<ul>
-  <li>Random</li>
-  <li>Least loaded</li>
-  <li>Session/cookies</li>
-  <li><a href="https://www.g33kinfo.com/info/round-robin-vs-weighted-round-robin-lb">Round robin or weighted round robin</a></li>
-  <li><a href="#layer-4-load-balancing">Layer 4</a></li>
-  <li><a href="#layer-7-load-balancing">Layer 7</a></li>
-</ul>
-
-<h3 id="layer-4-load-balancing">Layer 4 load balancing</h3>
-
-<p>Layer 4 load balancers look at info at the <a href="#communication">transport layer</a> to decide how to distribute requests.  Generally, this involves the source, destination IP addresses, and ports in the header, but not the contents of the packet.  Layer 4 load balancers forward network packets to and from the upstream server, performing <a href="https://www.nginx.com/resources/glossary/layer-4-load-balancing/">Network Address Translation (NAT)</a>.</p>
-
-<h3 id="layer-7-load-balancing">Layer 7 load balancing</h3>
-
-<p>Layer 7 load balancers look at the <a href="#communication">application layer</a> to decide how to distribute requests.  This can involve contents of the header, message, and cookies.  Layer 7 load balancers terminate network traffic, reads the message, makes a load-balancing decision, then opens a connection to the selected server.  For example, a layer 7 load balancer can direct video traffic to servers that host videos while directing more sensitive user billing traffic to security-hardened servers.</p>
-
-<p>At the cost of flexibility, layer 4 load balancing requires less time and computing resources than Layer 7, although the performance impact can be minimal on modern commodity hardware.</p>
-
-<h3 id="horizontal-scaling">Horizontal scaling</h3>
-
-<p>Load balancers can also help with horizontal scaling, improving performance and availability.  Scaling out using commodity machines is more cost efficient and results in higher availability than scaling up a single server on more expensive hardware, called <strong>Vertical Scaling</strong>.  It is also easier to hire for talent working on commodity hardware than it is for specialized enterprise systems.</p>
-
-<h4 id="disadvantages-horizontal-scaling">Disadvantage(s): horizontal scaling</h4>
-
-<ul>
-  <li>Scaling horizontally introduces complexity and involves cloning servers
-    <ul>
-      <li>Servers should be stateless: they should not contain any user-related data like sessions or profile pictures</li>
-      <li>Sessions can be stored in a centralized data store such as a <a href="#database">database</a> (SQL, NoSQL) or a persistent <a href="#cache">cache</a> (Redis, Memcached)</li>
-    </ul>
-  </li>
-  <li>Downstream servers such as caches and databases need to handle more simultaneous connections as upstream servers scale out</li>
-</ul>
-
-<h3 id="disadvantages-load-balancer">Disadvantage(s): load balancer</h3>
-
-<ul>
-  <li>The load balancer can become a performance bottleneck if it does not have enough resources or if it is not configured properly.</li>
-  <li>Introducing a load balancer to help eliminate a single point of failure results in increased complexity.</li>
-  <li>A single load balancer is a single point of failure, configuring multiple load balancers further increases complexity.</li>
-</ul>
-
-<h3 id="sources-and-further-reading-7">Source(s) and further reading</h3>
-
-<ul>
-  <li><a href="https://www.nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/">NGINX architecture</a></li>
-  <li><a href="http://www.haproxy.org/download/1.2/doc/architecture.txt">HAProxy architecture guide</a></li>
-  <li><a href="http://www.lecloud.net/post/7295452622/scalability-for-dummies-part-1-clones">Scalability</a></li>
-  <li><a href="https://en.wikipedia.org/wiki/Load_balancing_(computing)">Wikipedia</a></li>
-  <li><a href="https://www.nginx.com/resources/glossary/layer-4-load-balancing/">Layer 4 load balancing</a></li>
-  <li><a href="https://www.nginx.com/resources/glossary/layer-7-load-balancing/">Layer 7 load balancing</a></li>
-  <li><a href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-listener-config.html">ELB listener config</a></li>
-</ul>
+<h2 id="load-balancer"><a href="/pages/load-balancer">Load balancer</a></h2>
 
 <h2 id="reverse-proxy-web-server"><a href="/pages/reverse-proxy-web-server">Reverse proxy (web server)</a></h2>
 
@@ -1378,7 +1219,7 @@
   <li>Microservices can add complexity in terms of deployments and operations.</li>
 </ul>
 
-<h3 id="sources-and-further-reading-8">Source(s) and further reading</h3>
+<h3 id="sources-and-further-reading-6">Source(s) and further reading</h3>
 
 <ul>
   <li><a href="http://lethain.com/introduction-to-architecting-systems-for-scale">Intro to architecting systems for scale</a></li>
@@ -1932,7 +1773,7 @@
   <li>Need to make application changes such as adding Redis or memcached.</li>
 </ul>
 
-<h3 id="sources-and-further-reading-9">Source(s) and further reading</h3>
+<h3 id="sources-and-further-reading-7">Source(s) and further reading</h3>
 
 <ul>
   <li><a href="http://www.slideshare.net/tmatyashovsky/from-cache-to-in-memory-data-grid-introduction-to-hazelcast">From cache to in-memory data grid</a></li>
@@ -1987,7 +1828,7 @@
   <li>Use cases such as inexpensive calculations and realtime workflows might be better suited for synchronous operations, as introducing queues can add delays and complexity.</li>
 </ul>
 
-<h3 id="sources-and-further-reading-10">Source(s) and further reading</h3>
+<h3 id="sources-and-further-reading-8">Source(s) and further reading</h3>
 
 <ul>
   <li><a href="https://www.youtube.com/watch?v=1KRYH75wgy4">It’s all a numbers game</a></li>
@@ -2321,7 +2162,7 @@ PUT /someresources/anId
   <li>Use the principle of <a href="https://en.wikipedia.org/wiki/Principle_of_least_privilege">least privilege</a>.</li>
 </ul>
 
-<h3 id="sources-and-further-reading-11">Source(s) and further reading</h3>
+<h3 id="sources-and-further-reading-9">Source(s) and further reading</h3>
 
 <ul>
   <li><a href="https://github.com/shieldfy/API-Security-Checklist">API security checklist</a></li>
@@ -2347,7 +2188,7 @@ PUT /someresources/anId
 40              1,099,511,627,776   1 trillion           1 TB
 </code></pre></div></div>
 
-<h4 id="sources-and-further-reading-12">Source(s) and further reading</h4>
+<h4 id="sources-and-further-reading-10">Source(s) and further reading</h4>
 
 <ul>
   <li><a href="https://en.wikipedia.org/wiki/Power_of_two">Powers of two</a></li>
@@ -2395,7 +2236,7 @@ Notes
 
 <p><img src="https://camo.githubusercontent.com/77f72259e1eb58596b564d1ad823af1853bc60a3/687474703a2f2f692e696d6775722e636f6d2f6b307431652e706e67" alt=""></p>
 
-<h4 id="sources-and-further-reading-13">Source(s) and further reading</h4>
+<h4 id="sources-and-further-reading-11">Source(s) and further reading</h4>
 
 <ul>
   <li><a href="https://gist.github.com/jboner/2841832">Latency numbers every programmer should know - 1</a></li>
@@ -2868,7 +2709,7 @@ Notes
   <li><a href="https://www.zynga.com/blogs/engineering">Zynga Engineering Blog</a></li>
 </ul>
 
-<h4 id="sources-and-further-reading-14">Source(s) and further reading</h4>
+<h4 id="sources-and-further-reading-12">Source(s) and further reading</h4>
 
 <p>Looking to add a blog?  To avoid duplicating work, consider adding your company blog to the following repo:</p>
 

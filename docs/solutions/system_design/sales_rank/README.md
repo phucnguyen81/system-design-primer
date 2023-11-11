@@ -1,6 +1,6 @@
 # Design Amazon's sales rank by category feature
 
-*Note: This document links directly to relevant areas found in the [system design topics](https://github.com/donnemartin/system-design-primer#index-of-system-design-topics) to avoid duplication.  Refer to the linked content for general talking points, tradeoffs, and alternatives.*
+*Note: This document links directly to relevant areas found in the [system design topics](/#index-of-system-design-topics) to avoid duplication.  Refer to the linked content for general talking points, tradeoffs, and alternatives.*
 
 ## Step 1: Outline use cases and constraints
 
@@ -196,7 +196,7 @@ FOREIGN KEY(category_id) REFERENCES Categories(id)
 FOREIGN KEY(product_id) REFERENCES Products(id)
 ```
 
-We'll create an [index](https://github.com/donnemartin/system-design-primer#use-good-indices) on `id `, `category_id`, and `product_id` to speed up lookups (log-time instead of scanning the entire table) and to keep the data in memory.  Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup><a href="https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know">1</a></sup>
+We'll create an [index](/#use-good-indices) on `id `, `category_id`, and `product_id` to speed up lookups (log-time instead of scanning the entire table) and to keep the data in memory.  Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup><a href="/#latency-numbers-every-programmer-should-know">1</a></sup>
 
 ### Use case: User views the past week's most popular products by category
 
@@ -204,7 +204,7 @@ We'll create an [index](https://github.com/donnemartin/system-design-primer#use-
 * The **Web Server** forwards the request to the **Read API** server
 * The **Read API** server reads from the **SQL Database** `sales_rank` table
 
-We'll use a public [**REST API**](https://github.com/donnemartin/system-design-primer#representational-state-transfer-rest):
+We'll use a public [**REST API**](/#representational-state-transfer-rest):
 
 ```
 $ curl https://amazon.com/api/v1/popular?category_id=1234
@@ -233,7 +233,7 @@ Response:
 },
 ```
 
-For internal communications, we could use [Remote Procedure Calls](https://github.com/donnemartin/system-design-primer#remote-procedure-call-rpc).
+For internal communications, we could use [Remote Procedure Calls](/#remote-procedure-call-rpc).
 
 ## Step 4: Scale the design
 
@@ -249,20 +249,20 @@ It's important to discuss what bottlenecks you might encounter with the initial 
 
 We'll introduce some components to complete the design and to address scalability issues.  Internal load balancers are not shown to reduce clutter.
 
-*To avoid repeating discussions*, refer to the following [system design topics](https://github.com/donnemartin/system-design-primer#index-of-system-design-topics) for main talking points, tradeoffs, and alternatives:
+*To avoid repeating discussions*, refer to the following [system design topics](/#index-of-system-design-topics) for main talking points, tradeoffs, and alternatives:
 
-* [DNS](https://github.com/donnemartin/system-design-primer#domain-name-system)
-* [CDN](https://github.com/donnemartin/system-design-primer#content-delivery-network)
-* [Load balancer](https://github.com/donnemartin/system-design-primer#load-balancer)
-* [Horizontal scaling](https://github.com/donnemartin/system-design-primer#horizontal-scaling)
+* [DNS](/domain-name-system)
+* [CDN](/#content-delivery-network)
+* [Load balancer](/#load-balancer)
+* [Horizontal scaling](/pages/load-balancer#horizontal-scaling)
 * [Web server (reverse proxy)](/pages/reverse-proxy-web-server)
-* [API server (application layer)](https://github.com/donnemartin/system-design-primer#application-layer)
-* [Cache](https://github.com/donnemartin/system-design-primer#cache)
-* [Relational database management system (RDBMS)](https://github.com/donnemartin/system-design-primer#relational-database-management-system-rdbms)
-* [SQL write master-slave failover](https://github.com/donnemartin/system-design-primer#fail-over)
-* [Master-slave replication](https://github.com/donnemartin/system-design-primer#master-slave-replication)
-* [Consistency patterns](https://github.com/donnemartin/system-design-primer#consistency-patterns)
-* [Availability patterns](https://github.com/donnemartin/system-design-primer#availability-patterns)
+* [API server (application layer)](/#application-layer)
+* [Cache](/#cache)
+* [Relational database management system (RDBMS)](/#relational-database-management-system-rdbms)
+* [SQL write master-slave failover](/#fail-over)
+* [Master-slave replication](/#master-slave-replication)
+* [Consistency patterns](/#consistency-patterns)
+* [Availability patterns](/#availability-patterns)
 
 The **Analytics Database** could use a data warehousing solution such as Amazon Redshift or Google BigQuery.
 
@@ -274,10 +274,10 @@ To address the 40,000 *average* read requests per second (higher at peak), traff
 
 SQL scaling patterns include:
 
-* [Federation](https://github.com/donnemartin/system-design-primer#federation)
-* [Sharding](https://github.com/donnemartin/system-design-primer#sharding)
-* [Denormalization](https://github.com/donnemartin/system-design-primer#denormalization)
-* [SQL Tuning](https://github.com/donnemartin/system-design-primer#sql-tuning)
+* [Federation](/#federation)
+* [Sharding](/#sharding)
+* [Denormalization](/#denormalization)
+* [SQL Tuning](/#sql-tuning)
 
 We should also consider moving some data to a **NoSQL Database**.
 
@@ -288,49 +288,49 @@ We should also consider moving some data to a **NoSQL Database**.
 #### NoSQL
 
 * [Key-value store](/pages/key-value-store)
-* [Document store](https://github.com/donnemartin/system-design-primer#document-store)
-* [Wide column store](https://github.com/donnemartin/system-design-primer#wide-column-store)
-* [Graph database](https://github.com/donnemartin/system-design-primer#graph-database)
+* [Document store](/#document-store)
+* [Wide column store](/#wide-column-store)
+* [Graph database](/#graph-database)
 * [SQL vs NoSQL](/pages/sql-or-nosql)
 
 ### Caching
 
 * Where to cache
-    * [Client caching](https://github.com/donnemartin/system-design-primer#client-caching)
-    * [CDN caching](https://github.com/donnemartin/system-design-primer#cdn-caching)
-    * [Web server caching](https://github.com/donnemartin/system-design-primer#web-server-caching)
-    * [Database caching](https://github.com/donnemartin/system-design-primer#database-caching)
-    * [Application caching](https://github.com/donnemartin/system-design-primer#application-caching)
+    * [Client caching](/#client-caching)
+    * [CDN caching](/#cdn-caching)
+    * [Web server caching](/#web-server-caching)
+    * [Database caching](/#database-caching)
+    * [Application caching](/#application-caching)
 * What to cache
-    * [Caching at the database query level](https://github.com/donnemartin/system-design-primer#caching-at-the-database-query-level)
-    * [Caching at the object level](https://github.com/donnemartin/system-design-primer#caching-at-the-object-level)
+    * [Caching at the database query level](/#caching-at-the-database-query-level)
+    * [Caching at the object level](/#caching-at-the-object-level)
 * When to update the cache
-    * [Cache-aside](https://github.com/donnemartin/system-design-primer#cache-aside)
-    * [Write-through](https://github.com/donnemartin/system-design-primer#write-through)
-    * [Write-behind (write-back)](https://github.com/donnemartin/system-design-primer#write-behind-write-back)
-    * [Refresh ahead](https://github.com/donnemartin/system-design-primer#refresh-ahead)
+    * [Cache-aside](/#cache-aside)
+    * [Write-through](/#write-through)
+    * [Write-behind (write-back)](/#write-behind-write-back)
+    * [Refresh ahead](/#refresh-ahead)
 
 ### Asynchronism and microservices
 
-* [Message queues](https://github.com/donnemartin/system-design-primer#message-queues)
-* [Task queues](https://github.com/donnemartin/system-design-primer#task-queues)
-* [Back pressure](https://github.com/donnemartin/system-design-primer#back-pressure)
-* [Microservices](https://github.com/donnemartin/system-design-primer#microservices)
+* [Message queues](/#message-queues)
+* [Task queues](/#task-queues)
+* [Back pressure](/#back-pressure)
+* [Microservices](/#microservices)
 
 ### Communications
 
 * Discuss tradeoffs:
-    * External communication with clients - [HTTP APIs following REST](https://github.com/donnemartin/system-design-primer#representational-state-transfer-rest)
-    * Internal communications - [RPC](https://github.com/donnemartin/system-design-primer#remote-procedure-call-rpc)
-* [Service discovery](https://github.com/donnemartin/system-design-primer#service-discovery)
+    * External communication with clients - [HTTP APIs following REST](/#representational-state-transfer-rest)
+    * Internal communications - [RPC](/#remote-procedure-call-rpc)
+* [Service discovery](/#service-discovery)
 
 ### Security
 
-Refer to the [security section](https://github.com/donnemartin/system-design-primer#security).
+Refer to the [security section](/#security).
 
 ### Latency numbers
 
-See [Latency numbers every programmer should know](https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know).
+See [Latency numbers every programmer should know](/#latency-numbers-every-programmer-should-know).
 
 ### Ongoing
 

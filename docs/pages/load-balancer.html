@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Load balancer | The System Design Primer</title>
+<meta name="generator" content="Jekyll v3.9.3">
+<meta property="og:title" content="Load balancer">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Learn how to design large-scale systems. Prep for the system design interview.">
+<meta property="og:description" content="Learn how to design large-scale systems. Prep for the system design interview.">
+<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/pages/load-balancer.html">
+<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/pages/load-balancer.html">
+<meta property="og:site_name" content="The System Design Primer">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Load balancer">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Learn how to design large-scale systems. Prep for the system design interview.","headline":"Load balancer","url":"https://phucnguyen81.github.io/system-design-primer/pages/load-balancer.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/system-design-primer/assets/main.css">
+<link type="application/atom+xml" rel="alternate" href="https://phucnguyen81.github.io/system-design-primer/feed.xml" title="The System Design Primer">
+<link rel="shortcut icon" type="image/x-icon" href="/system-design-primer/images/favicon.ico">
+</head>
+<body>
+<header class="site-header" role="banner">
+
+  <div class="wrapper">
+<a class="site-title" rel="author" href="/system-design-primer/">The System Design Primer</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+<a class="page-link" href="/system-design-primer/about/">About</a><a class="page-link" href="/system-design-primer/domain-name-system/">Domain name system</a><a class="page-link" href="/system-design-primer/">The System Design Primer</a><a class="page-link" href="/system-design-primer/images/">Original Images</a><a class="page-link" href="/system-design-primer/pages/key-value-store.html">Key value store</a><a class="page-link" href="/system-design-primer/pages/load-balancer.html">Load balancer</a><a class="page-link" href="/system-design-primer/pages/reverse-proxy-web-server.html">Reverse Proxy (web server)</a><a class="page-link" href="/system-design-primer/pages/sql-or-nosql.html">SQL or NoSQL</a><a class="page-link" href="/system-design-primer/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/pastebin/">Design Pastebin.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/system-design-primer/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/system-design-primer/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/system-design-primer/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/system-design-primer/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/system-design-primer/solutions/system_design/web_crawler/">Design a web crawler</a>
+</div>
+      </nav>
+</div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Load balancer</h1>
+  </header>
+
+  <div class="post-content">
+    <p>See <a href="/images/h81n9iK.png">the original load balancer diagram</a>
+and the original blog on
+<a href="http://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html">Scalable system design patterns</a>.</p>
+
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggTFJcbkNsaWVudCA8LS0-IERpc3BhdGNoZXJcbkRpc3BhdGNoZXIgPC0tPiBTZXJ2ZXIxW1NlcnZlciAxXVxuRGlzcGF0Y2hlciA8LS0-IFNlcnZlcjJbU2VydmVyIDJdXG5EaXNwYXRjaGVyIDwtLT4gU2VydmVyM1tTZXJ2ZXIgM11cbnN0eWxlIENsaWVudCBmaWxsOkxhd25HcmVlblxuc3R5bGUgRGlzcGF0Y2hlciBmaWxsOktoYWtpXG5zdHlsZSBXb3JrZXIxIGZpbGw6TGlnaHRCbHVlXG5zdHlsZSBXb3JrZXIyIGZpbGw6TGlnaHRCbHVlXG5zdHlsZSBXb3JrZXIzIGZpbGw6TGlnaHRCbHVlIiwibWVybWFpZCI6bnVsbH0"></p>
+
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IExSXG4xW0Rpc3BhdGNoZXIgcGlja3MgYSBXb3JrZXJdXG4xIC0tPnxSYW5kb218IDJbRGlzcGF0Y2hlciB3YWl0cyBmb3IgdGhlIHJlc3BvbnNlXVxuMSAtLT58Um91bmQgcm9iaW58IDJcbjEgLS0-fExlYXN0IGJ1c3l8IDJcbjEgLS0-fFN0aWNreSBzZXNzaW9uIC8gY29va2llc3wgMlxuMSAtLT58QnkgcmVxdWVzdCBwYXJhbWV0ZXJzfCAyXG4yIC0tPiAzW0Rpc3BhdGNoZXIgZm9yd2FyZHMgdGhlIHJlc3BvbnNlIHRvIENsaWVudF0iLCJtZXJtYWlkIjpudWxsfQ"></p>
+
+<p>Load balancers distribute incoming client requests to computing resources such as application servers and databases. In each case, the load balancer returns the response from the computing resource to the appropriate client. Load balancers are effective at:</p>
+
+<ul>
+  <li>Preventing requests from going to unhealthy servers</li>
+  <li>Preventing overloading resources</li>
+  <li>Helping to eliminate a single point of failure</li>
+</ul>
+
+<p>Load balancers can be implemented with hardware (expensive) or with software such as HAProxy.</p>
+
+<p>Additional benefits include:</p>
+
+<ul>
+  <li>
+<strong>SSL termination</strong> - Decrypt incoming requests and encrypt server responses so backend servers do not have to perform these potentially expensive operations
+    <ul>
+      <li>Removes the need to install <a href="https://en.wikipedia.org/wiki/X.509">X.509 certificates</a> on each server</li>
+    </ul>
+  </li>
+  <li>
+<strong>Session persistence</strong> - Issue cookies and route a specific client’s requests to same instance if the web apps do not keep track of sessions</li>
+</ul>
+
+<p>To protect against failures, it’s common to set up multiple load balancers, either in <a href="/#active-passive">active-passive</a> or <a href="/#active-active">active-active</a> mode.</p>
+
+<p>Load balancers can route traffic based on various metrics, including:</p>
+
+<ul>
+  <li>Random</li>
+  <li>Least loaded</li>
+  <li>Session/cookies</li>
+  <li><a href="https://www.g33kinfo.com/info/round-robin-vs-weighted-round-robin-lb">Round robin or weighted round robin</a></li>
+  <li><a href="#layer-4-load-balancing">Layer 4</a></li>
+  <li><a href="#layer-7-load-balancing">Layer 7</a></li>
+</ul>
+
+<h2 id="layer-4-load-balancing">Layer 4 load balancing</h2>
+
+<p>Layer 4 load balancers look at info at the <a href="#communication">transport layer</a> to decide how to distribute requests. Generally, this involves the source, destination IP addresses, and ports in the header, but not the contents of the packet. Layer 4 load balancers forward network packets to and from the upstream server, performing <a href="https://www.nginx.com/resources/glossary/layer-4-load-balancing/">Network Address Translation (NAT)</a>.</p>
+
+<h2 id="layer-7-load-balancing">Layer 7 load balancing</h2>
+
+<p>Layer 7 load balancers look at the <a href="#communication">application layer</a> to decide how to distribute requests. This can involve contents of the header, message, and cookies. Layer 7 load balancers terminate network traffic, reads the message, makes a load-balancing decision, then opens a connection to the selected server. For example, a layer 7 load balancer can direct video traffic to servers that host videos while directing more sensitive user billing traffic to security-hardened servers.</p>
+
+<p>At the cost of flexibility, layer 4 load balancing requires less time and computing resources than Layer 7, although the performance impact can be minimal on modern commodity hardware.</p>
+
+<h2 id="horizontal-scaling">Horizontal scaling</h2>
+
+<p>Load balancers can also help with horizontal scaling, improving performance and availability. Scaling out using commodity machines is more cost efficient and results in higher availability than scaling up a single server on more expensive hardware, called <strong>Vertical Scaling</strong>. It is also easier to hire for talent working on commodity hardware than it is for specialized enterprise systems.</p>
+
+<h3 id="disadvantages-horizontal-scaling">Disadvantage(s): horizontal scaling</h3>
+
+<ul>
+  <li>Scaling horizontally introduces complexity and involves cloning servers
+    <ul>
+      <li>Servers should be stateless: they should not contain any user-related data like sessions or profile pictures</li>
+      <li>Sessions can be stored in a centralized data store such as a <a href="/#database">database</a> (SQL, NoSQL) or a persistent <a href="/#cache">cache</a> (Redis, Memcached)</li>
+    </ul>
+  </li>
+  <li>Downstream servers such as caches and databases need to handle more simultaneous connections as upstream servers scale out</li>
+</ul>
+
+<h2 id="disadvantages-load-balancer">Disadvantage(s): load balancer</h2>
+
+<ul>
+  <li>The load balancer can become a performance bottleneck if it does not have enough resources or if it is not configured properly.</li>
+  <li>Introducing a load balancer to help eliminate a single point of failure results in increased complexity.</li>
+  <li>A single load balancer is a single point of failure, configuring multiple load balancers further increases complexity.</li>
+</ul>
+
+<h2 id="sources-and-further-reading">Source(s) and further reading</h2>
+
+<ul>
+  <li><a href="https://www.nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/">NGINX architecture</a></li>
+  <li><a href="http://www.haproxy.org/download/1.2/doc/architecture.txt">HAProxy architecture guide</a></li>
+  <li><a href="http://www.lecloud.net/post/7295452622/scalability-for-dummies-part-1-clones">Scalability</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Load_balancing_(computing)">Wikipedia</a></li>
+  <li><a href="https://www.nginx.com/resources/glossary/layer-4-load-balancing/">Layer 4 load balancing</a></li>
+  <li><a href="https://www.nginx.com/resources/glossary/layer-7-load-balancing/">Layer 7 load balancing</a></li>
+  <li><a href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-listener-config.html">ELB listener config</a></li>
+</ul>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/system-design-primer/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The System Design Primer</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The System Design Primer</li>
+<li><a class="u-email" href="mailto:phucknguyen@gmail.com">phucknguyen@gmail.com</a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+<ul class="social-media-list">
+<li><a href="https://github.com/phucnguyen81"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#github"></use></svg> <span class="username">phucnguyen81</span></a></li>
+<li><a href="https://www.twitter.com/phucknguyen"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">phucknguyen</span></a></li>
+</ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Learn how to design large-scale systems. Prep for the system design interview.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

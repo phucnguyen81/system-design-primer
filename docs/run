@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-# Run other scripts in the ./scripts directory
-target_script="$1" # first argument is the target script's name
-shift # already used the first argument, so shift it off
-"./scripts/$target_script" "$@" # run with the remaining arguments

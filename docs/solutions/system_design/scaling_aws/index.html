@@ -23,6 +23,7 @@
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/system-design-primer/assets/main.css">
 <link type="application/atom+xml" rel="alternate" href="https://phucnguyen81.github.io/system-design-primer/feed.xml" title="The System Design Primer">
+<link rel="shortcut icon" type="image/x-icon" href="/system-design-primer/images/favicon.ico">
 </head>
 <body>
 <header class="site-header" role="banner">
@@ -39,7 +40,7 @@
         </label>
 
         <div class="trigger">
-<a class="page-link" href="/system-design-primer/about/">About</a><a class="page-link" href="/system-design-primer/">The System Design Primer</a><a class="page-link" href="/system-design-primer/pages/key-value-store.html">Key value store</a><a class="page-link" href="/system-design-primer/pages/reverse-proxy-web-server.html">Reverse Proxy (web server)</a><a class="page-link" href="/system-design-primer/pages/sql-or-nosql.html">SQL or NoSQL</a><a class="page-link" href="/system-design-primer/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/pastebin/">Design Pastebin.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/system-design-primer/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/system-design-primer/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/system-design-primer/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/system-design-primer/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/system-design-primer/solutions/system_design/web_crawler/">Design a web crawler</a>
+<a class="page-link" href="/system-design-primer/about/">About</a><a class="page-link" href="/system-design-primer/domain-name-system/">Domain name system</a><a class="page-link" href="/system-design-primer/">The System Design Primer</a><a class="page-link" href="/system-design-primer/images/">Original Images</a><a class="page-link" href="/system-design-primer/pages/key-value-store.html">Key value store</a><a class="page-link" href="/system-design-primer/pages/load-balancer.html">Load balancer</a><a class="page-link" href="/system-design-primer/pages/reverse-proxy-web-server.html">Reverse Proxy (web server)</a><a class="page-link" href="/system-design-primer/pages/sql-or-nosql.html">SQL or NoSQL</a><a class="page-link" href="/system-design-primer/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/pastebin/">Design Pastebin.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/system-design-primer/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/system-design-primer/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/system-design-primer/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/system-design-primer/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/system-design-primer/solutions/system_design/web_crawler/">Design a web crawler</a>
 </div>
       </nav>
 </div>
@@ -55,7 +56,7 @@
   <div class="post-content">
     <h1 id="design-a-system-that-scales-to-millions-of-users-on-aws">Design a system that scales to millions of users on AWS</h1>
 
-<p><em>Note: This document links directly to relevant areas found in the <a href="https://github.com/donnemartin/system-design-primer#index-of-system-design-topics">system design topics</a> to avoid duplication.  Refer to the linked content for general talking points, tradeoffs, and alternatives.</em></p>
+<p><em>Note: This document links directly to relevant areas found in the <a href="/#index-of-system-design-topics">system design topics</a> to avoid duplication. Refer to the linked content for general talking points, tradeoffs, and alternatives.</em></p>
 
 <h2 id="step-1-outline-use-cases-and-constraints">Step 1: Outline use cases and constraints</h2>
 
@@ -71,7 +72,7 @@ Discuss assumptions.</p>
 
 <p>Solving this problem takes an iterative approach of: 1) <strong>Benchmark/Load Test</strong>, 2) <strong>Profile</strong> for bottlenecks 3) address bottlenecks while evaluating alternatives and trade-offs, and 4) repeat, which is good pattern for evolving basic designs to scalable designs.</p>
 
-<p>Unless you have a background in AWS or are applying for a position that requires AWS knowledge, AWS-specific details are not a requirement.  However, <strong>much of the principles discussed in this exercise can apply more generally outside of the AWS ecosystem.</strong></p>
+<p>Unless you have a background in AWS or are applying for a position that requires AWS knowledge, AWS-specific details are not a requirement. However, <strong>much of the principles discussed in this exercise can apply more generally outside of the AWS ecosystem.</strong></p>
 
 <h4 id="well-scope-the-problem-to-handle-only-the-following-use-cases">We’ll scope the problem to handle only the following use cases</h4>
 
@@ -150,7 +151,11 @@ Discuss assumptions.</p>
   <p>Outline a high level design with all important components.</p>
 </blockquote>
 
-<p><img src="http://i.imgur.com/B8LDKD7.png" alt="Imgur"></p>
+<p>See <a href="http://i.imgur.com/B8LDKD7.png">the original image</a>.</p>
+
+<div style="max-width: 400px;">
+<img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGhcbkNsaWVudC0tPkROU1xuQ2xpZW50LS0-V2ViU2VydmVyW1dlYiBTZXJ2ZXJdXG5zdHlsZSBDbGllbnQgZmlsbDpMaWdodEdyZWVuXG5zdHlsZSBETlMgZmlsbDpNYWdlbnRhXG5zdHlsZSBXZWJTZXJ2ZXIgZmlsbDpMaWdodEJsdWUiLCJtZXJtYWlkIjpudWxsfQ">
+</div>
 
 <h2 id="step-3-design-core-components">Step 3: Design core components</h2>
 
@@ -179,7 +184,7 @@ Discuss assumptions.</p>
 <strong>Web server</strong> on EC2
     <ul>
       <li>Storage for user data</li>
-      <li><a href="https://github.com/donnemartin/system-design-primer#relational-database-management-system-rdbms"><strong>MySQL Database</strong></a></li>
+      <li><a href="/#relational-database-management-system-rdbms"><strong>MySQL Database</strong></a></li>
     </ul>
   </li>
 </ul>
@@ -201,18 +206,18 @@ Discuss assumptions.</p>
 <p><em>Trade-offs, alternatives, and additional details:</em></p>
 
 <ul>
-  <li>The alternative to <strong>Vertical Scaling</strong> is <a href="https://github.com/donnemartin/system-design-primer#horizontal-scaling"><strong>Horizontal scaling</strong></a>
+  <li>The alternative to <strong>Vertical Scaling</strong> is <a href="/pages/load-balancer#horizontal-scaling"><strong>Horizontal scaling</strong></a>
 </li>
 </ul>
 
 <h4 id="start-with-sql-consider-nosql">Start with SQL, consider NoSQL</h4>
 
-<p>The constraints assume there is a need for relational data.  We can start off using a <strong>MySQL Database</strong> on the single box.</p>
+<p>The constraints assume there is a need for relational data. We can start off using a <strong>MySQL Database</strong> on the single box.</p>
 
 <p><em>Trade-offs, alternatives, and additional details:</em></p>
 
 <ul>
-  <li>See the <a href="https://github.com/donnemartin/system-design-primer#relational-database-management-system-rdbms">Relational database management system (RDBMS)</a> section</li>
+  <li>See the <a href="/#relational-database-management-system-rdbms">Relational database management system (RDBMS)</a> section</li>
   <li>Discuss reasons to use <a href="/pages/sql-or-nosql">SQL or NoSQL</a>
 </li>
 </ul>
@@ -231,7 +236,7 @@ Discuss assumptions.</p>
 <p><em>Trade-offs, alternatives, and additional details:</em></p>
 
 <ul>
-  <li>See the <a href="https://github.com/donnemartin/system-design-primer#domain-name-system">Domain name system</a> section</li>
+  <li>See the <a href="/domain-name-system">Domain name system</a> section</li>
 </ul>
 
 <h4 id="secure-the-web-server">Secure the web server</h4>
@@ -254,7 +259,7 @@ Discuss assumptions.</p>
 <p><em>Trade-offs, alternatives, and additional details:</em></p>
 
 <ul>
-  <li>See the <a href="https://github.com/donnemartin/system-design-primer#security">Security</a> section</li>
+  <li>See the <a href="/#security">Security</a> section</li>
 </ul>
 
 <h2 id="step-4-scale-the-design">Step 4: Scale the design</h2>
@@ -269,9 +274,9 @@ Discuss assumptions.</p>
 
 <h4 id="assumptions">Assumptions</h4>
 
-<p>Our user count is starting to pick up and the load is increasing on our single box.  Our <strong>Benchmarks/Load Tests</strong> and <strong>Profiling</strong> are pointing to the <strong>MySQL Database</strong> taking up more and more memory and CPU resources, while the user content is filling up disk space.</p>
+<p>Our user count is starting to pick up and the load is increasing on our single box. Our <strong>Benchmarks/Load Tests</strong> and <strong>Profiling</strong> are pointing to the <strong>MySQL Database</strong> taking up more and more memory and CPU resources, while the user content is filling up disk space.</p>
 
-<p>We’ve been able to address these issues with <strong>Vertical Scaling</strong> so far.  Unfortunately, this has become quite expensive and it doesn’t allow for independent scaling of the <strong>MySQL Database</strong> and <strong>Web Server</strong>.</p>
+<p>We’ve been able to address these issues with <strong>Vertical Scaling</strong> so far. Unfortunately, this has become quite expensive and it doesn’t allow for independent scaling of the <strong>MySQL Database</strong> and <strong>Web Server</strong>.</p>
 
 <h4 id="goals-1">Goals</h4>
 
@@ -342,7 +347,7 @@ Discuss assumptions.</p>
 <p><em>Trade-offs, alternatives, and additional details:</em></p>
 
 <ul>
-  <li>See the <a href="https://github.com/donnemartin/system-design-primer#security">Security</a> section</li>
+  <li>See the <a href="/#security">Security</a> section</li>
 </ul>
 
 <h3 id="users-1">Users++</h3>
@@ -351,7 +356,7 @@ Discuss assumptions.</p>
 
 <h4 id="assumptions-1">Assumptions</h4>
 
-<p>Our <strong>Benchmarks/Load Tests</strong> and <strong>Profiling</strong> show that our single <strong>Web Server</strong> bottlenecks during peak hours, resulting in slow responses and in some cases, downtime.  As the service matures, we’d also like to move towards higher availability and redundancy.</p>
+<p>Our <strong>Benchmarks/Load Tests</strong> and <strong>Profiling</strong> show that our single <strong>Web Server</strong> bottlenecks during peak hours, resulting in slow responses and in some cases, downtime. As the service matures, we’d also like to move towards higher availability and redundancy.</p>
 
 <h4 id="goals-2">Goals</h4>
 
@@ -361,20 +366,20 @@ Discuss assumptions.</p>
       <li>Based on the <strong>Benchmarks/Load Tests</strong> and <strong>Profiling</strong>, you might only need to implement one or two of these techniques</li>
     </ul>
   </li>
-  <li>Use <a href="https://github.com/donnemartin/system-design-primer#horizontal-scaling"><strong>Horizontal Scaling</strong></a> to handle increasing loads and to address single points of failure
+  <li>Use <a href="/pages/load-balancer#horizontal-scaling"><strong>Horizontal Scaling</strong></a> to handle increasing loads and to address single points of failure
     <ul>
-      <li>Add a <a href="https://github.com/donnemartin/system-design-primer#load-balancer"><strong>Load Balancer</strong></a> such as Amazon’s ELB or HAProxy
+      <li>Add a <a href="/#load-balancer"><strong>Load Balancer</strong></a> such as Amazon’s ELB or HAProxy
         <ul>
           <li>ELB is highly available</li>
-          <li>If you are configuring your own <strong>Load Balancer</strong>, setting up multiple servers in <a href="https://github.com/donnemartin/system-design-primer#active-active">active-active</a> or <a href="https://github.com/donnemartin/system-design-primer#active-passive">active-passive</a> in multiple availability zones will improve availability</li>
+          <li>If you are configuring your own <strong>Load Balancer</strong>, setting up multiple servers in <a href="/#active-active">active-active</a> or <a href="/#active-passive">active-passive</a> in multiple availability zones will improve availability</li>
           <li>Terminate SSL on the <strong>Load Balancer</strong> to reduce computational load on backend servers and to simplify certificate administration</li>
         </ul>
       </li>
       <li>Use multiple <strong>Web Servers</strong> spread out over multiple availability zones</li>
-      <li>Use multiple <strong>MySQL</strong> instances in <a href="https://github.com/donnemartin/system-design-primer#master-slave-replication"><strong>Master-Slave Failover</strong></a> mode across multiple availability zones to improve redundancy</li>
+      <li>Use multiple <strong>MySQL</strong> instances in <a href="/#master-slave-replication"><strong>Master-Slave Failover</strong></a> mode across multiple availability zones to improve redundancy</li>
     </ul>
   </li>
-  <li>Separate out the <strong>Web Servers</strong> from the <a href="https://github.com/donnemartin/system-design-primer#application-layer"><strong>Application Servers</strong></a>
+  <li>Separate out the <strong>Web Servers</strong> from the <a href="/#application-layer"><strong>Application Servers</strong></a>
     <ul>
       <li>Scale and configure both layers independently</li>
       <li>
@@ -384,7 +389,7 @@ Discuss assumptions.</p>
 </li>
     </ul>
   </li>
-  <li>Move static (and some dynamic) content to a <a href="https://github.com/donnemartin/system-design-primer#content-delivery-network"><strong>Content Delivery Network (CDN)</strong></a> such as CloudFront to reduce load and latency</li>
+  <li>Move static (and some dynamic) content to a <a href="/#content-delivery-network"><strong>Content Delivery Network (CDN)</strong></a> such as CloudFront to reduce load and latency</li>
 </ul>
 
 <p><em>Trade-offs, alternatives, and additional details:</em></p>
@@ -411,7 +416,7 @@ Discuss assumptions.</p>
       <li>Based on the <strong>Benchmarks/Load Tests</strong> and <strong>Profiling</strong>, you might only need to implement one or two of these techniques</li>
     </ul>
   </li>
-  <li>Move the following data to a <a href="https://github.com/donnemartin/system-design-primer#cache"><strong>Memory Cache</strong></a> such as Elasticache to reduce load and latency:
+  <li>Move the following data to a <a href="/#cache"><strong>Memory Cache</strong></a> such as Elasticache to reduce load and latency:
     <ul>
       <li>Frequently accessed content from <strong>MySQL</strong>
         <ul>
@@ -425,11 +430,11 @@ Discuss assumptions.</p>
 </li>
         </ul>
       </li>
-      <li>Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup><a href="https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know">1</a></sup>
+      <li>Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup><a href="/#latency-numbers-every-programmer-should-know">1</a></sup>
 </li>
     </ul>
   </li>
-  <li>Add <a href="https://github.com/donnemartin/system-design-primer#master-slave-replication"><strong>MySQL Read Replicas</strong></a> to reduce load on the write master</li>
+  <li>Add <a href="/#master-slave-replication"><strong>MySQL Read Replicas</strong></a> to reduce load on the write master</li>
   <li>Add more <strong>Web Servers</strong> and <strong>Application Servers</strong> to improve responsiveness</li>
 </ul>
 
@@ -452,7 +457,7 @@ Discuss assumptions.</p>
 <p><em>Trade-offs, alternatives, and additional details:</em></p>
 
 <ul>
-  <li>See the <a href="https://github.com/donnemartin/system-design-primer#relational-database-management-system-rdbms">Relational database management system (RDBMS)</a> section</li>
+  <li>See the <a href="/#relational-database-management-system-rdbms">Relational database management system (RDBMS)</a> section</li>
 </ul>
 
 <h3 id="users-3">Users++++</h3>
@@ -461,7 +466,7 @@ Discuss assumptions.</p>
 
 <h4 id="assumptions-3">Assumptions</h4>
 
-<p>Our <strong>Benchmarks/Load Tests</strong> and <strong>Profiling</strong> show that our traffic spikes during regular business hours in the U.S. and drop significantly when users leave the office.  We think we can cut costs by automatically spinning up and down servers based on actual load.  We’re a small shop so we’d like to automate as much of the DevOps as possible for <strong>Autoscaling</strong> and for the general operations.</p>
+<p>Our <strong>Benchmarks/Load Tests</strong> and <strong>Profiling</strong> show that our traffic spikes during regular business hours in the U.S. and drop significantly when users leave the office. We think we can cut costs by automatically spinning up and down servers based on actual load. We’re a small shop so we’d like to automate as much of the DevOps as possible for <strong>Autoscaling</strong> and for the general operations.</p>
 
 <h4 id="goals-4">Goals</h4>
 
@@ -556,15 +561,15 @@ Discuss assumptions.</p>
 <p>SQL scaling patterns include:</p>
 
 <ul>
-  <li><a href="https://github.com/donnemartin/system-design-primer#federation">Federation</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#sharding">Sharding</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#denormalization">Denormalization</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#sql-tuning">SQL Tuning</a></li>
+  <li><a href="/#federation">Federation</a></li>
+  <li><a href="/#sharding">Sharding</a></li>
+  <li><a href="/#denormalization">Denormalization</a></li>
+  <li><a href="/#sql-tuning">SQL Tuning</a></li>
 </ul>
 
-<p>To further address the high read and write requests, we should also consider moving appropriate data to a <a href="https://github.com/donnemartin/system-design-primer#nosql"><strong>NoSQL Database</strong></a> such as DynamoDB.</p>
+<p>To further address the high read and write requests, we should also consider moving appropriate data to a <a href="/#nosql"><strong>NoSQL Database</strong></a> such as DynamoDB.</p>
 
-<p>We can further separate out our <a href="https://github.com/donnemartin/system-design-primer#application-layer"><strong>Application Servers</strong></a> to allow for independent scaling.  Batch processes or computations that do not need to be done in real-time can be done <a href="https://github.com/donnemartin/system-design-primer#asynchronism"><strong>Asynchronously</strong></a> with <strong>Queues</strong> and <strong>Workers</strong>:</p>
+<p>We can further separate out our <a href="/#application-layer"><strong>Application Servers</strong></a> to allow for independent scaling. Batch processes or computations that do not need to be done in real-time can be done <a href="/#asynchronism"><strong>Asynchronously</strong></a> with <strong>Queues</strong> and <strong>Workers</strong>:</p>
 
 <ul>
   <li>For example, in a photo service, the photo upload and the thumbnail creation can be separated:
@@ -601,20 +606,20 @@ Discuss assumptions.</p>
 <h3 id="sql-scaling-patterns">SQL scaling patterns</h3>
 
 <ul>
-  <li><a href="https://github.com/donnemartin/system-design-primer#master-slave-replication">Read replicas</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#federation">Federation</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#sharding">Sharding</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#denormalization">Denormalization</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#sql-tuning">SQL Tuning</a></li>
+  <li><a href="/#master-slave-replication">Read replicas</a></li>
+  <li><a href="/#federation">Federation</a></li>
+  <li><a href="/#sharding">Sharding</a></li>
+  <li><a href="/#denormalization">Denormalization</a></li>
+  <li><a href="/#sql-tuning">SQL Tuning</a></li>
 </ul>
 
 <h4 id="nosql">NoSQL</h4>
 
 <ul>
   <li><a href="/pages/key-value-store">Key-value store</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#document-store">Document store</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#wide-column-store">Wide column store</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#graph-database">Graph database</a></li>
+  <li><a href="/#document-store">Document store</a></li>
+  <li><a href="/#wide-column-store">Wide column store</a></li>
+  <li><a href="/#graph-database">Graph database</a></li>
   <li><a href="/pages/sql-or-nosql">SQL vs NoSQL</a></li>
 </ul>
 
@@ -623,25 +628,25 @@ Discuss assumptions.</p>
 <ul>
   <li>Where to cache
     <ul>
-      <li><a href="https://github.com/donnemartin/system-design-primer#client-caching">Client caching</a></li>
-      <li><a href="https://github.com/donnemartin/system-design-primer#cdn-caching">CDN caching</a></li>
-      <li><a href="https://github.com/donnemartin/system-design-primer#web-server-caching">Web server caching</a></li>
-      <li><a href="https://github.com/donnemartin/system-design-primer#database-caching">Database caching</a></li>
-      <li><a href="https://github.com/donnemartin/system-design-primer#application-caching">Application caching</a></li>
+      <li><a href="/#client-caching">Client caching</a></li>
+      <li><a href="/#cdn-caching">CDN caching</a></li>
+      <li><a href="/#web-server-caching">Web server caching</a></li>
+      <li><a href="/#database-caching">Database caching</a></li>
+      <li><a href="/#application-caching">Application caching</a></li>
     </ul>
   </li>
   <li>What to cache
     <ul>
-      <li><a href="https://github.com/donnemartin/system-design-primer#caching-at-the-database-query-level">Caching at the database query level</a></li>
-      <li><a href="https://github.com/donnemartin/system-design-primer#caching-at-the-object-level">Caching at the object level</a></li>
+      <li><a href="/#caching-at-the-database-query-level">Caching at the database query level</a></li>
+      <li><a href="/#caching-at-the-object-level">Caching at the object level</a></li>
     </ul>
   </li>
   <li>When to update the cache
     <ul>
-      <li><a href="https://github.com/donnemartin/system-design-primer#cache-aside">Cache-aside</a></li>
-      <li><a href="https://github.com/donnemartin/system-design-primer#write-through">Write-through</a></li>
-      <li><a href="https://github.com/donnemartin/system-design-primer#write-behind-write-back">Write-behind (write-back)</a></li>
-      <li><a href="https://github.com/donnemartin/system-design-primer#refresh-ahead">Refresh ahead</a></li>
+      <li><a href="/#cache-aside">Cache-aside</a></li>
+      <li><a href="/#write-through">Write-through</a></li>
+      <li><a href="/#write-behind-write-back">Write-behind (write-back)</a></li>
+      <li><a href="/#refresh-ahead">Refresh ahead</a></li>
     </ul>
   </li>
 </ul>
@@ -649,10 +654,10 @@ Discuss assumptions.</p>
 <h3 id="asynchronism-and-microservices">Asynchronism and microservices</h3>
 
 <ul>
-  <li><a href="https://github.com/donnemartin/system-design-primer#message-queues">Message queues</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#task-queues">Task queues</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#back-pressure">Back pressure</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#microservices">Microservices</a></li>
+  <li><a href="/#message-queues">Message queues</a></li>
+  <li><a href="/#task-queues">Task queues</a></li>
+  <li><a href="/#back-pressure">Back pressure</a></li>
+  <li><a href="/#microservices">Microservices</a></li>
 </ul>
 
 <h3 id="communications">Communications</h3>
@@ -660,22 +665,22 @@ Discuss assumptions.</p>
 <ul>
   <li>Discuss tradeoffs:
     <ul>
-      <li>External communication with clients - <a href="https://github.com/donnemartin/system-design-primer#representational-state-transfer-rest">HTTP APIs following REST</a>
+      <li>External communication with clients - <a href="/#representational-state-transfer-rest">HTTP APIs following REST</a>
 </li>
-      <li>Internal communications - <a href="https://github.com/donnemartin/system-design-primer#remote-procedure-call-rpc">RPC</a>
+      <li>Internal communications - <a href="/#remote-procedure-call-rpc">RPC</a>
 </li>
     </ul>
   </li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#service-discovery">Service discovery</a></li>
+  <li><a href="/#service-discovery">Service discovery</a></li>
 </ul>
 
 <h3 id="security">Security</h3>
 
-<p>Refer to the <a href="https://github.com/donnemartin/system-design-primer#security">security section</a>.</p>
+<p>Refer to the <a href="/#security">security section</a>.</p>
 
 <h3 id="latency-numbers">Latency numbers</h3>
 
-<p>See <a href="https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know">Latency numbers every programmer should know</a>.</p>
+<p>See <a href="/#latency-numbers-every-programmer-should-know">Latency numbers every programmer should know</a>.</p>
 
 <h3 id="ongoing">Ongoing</h3>
 

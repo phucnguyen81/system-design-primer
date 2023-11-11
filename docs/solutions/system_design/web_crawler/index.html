@@ -23,6 +23,7 @@
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/system-design-primer/assets/main.css">
 <link type="application/atom+xml" rel="alternate" href="https://phucnguyen81.github.io/system-design-primer/feed.xml" title="The System Design Primer">
+<link rel="shortcut icon" type="image/x-icon" href="/system-design-primer/images/favicon.ico">
 </head>
 <body>
 <header class="site-header" role="banner">
@@ -39,7 +40,7 @@
         </label>
 
         <div class="trigger">
-<a class="page-link" href="/system-design-primer/about/">About</a><a class="page-link" href="/system-design-primer/">The System Design Primer</a><a class="page-link" href="/system-design-primer/pages/key-value-store.html">Key value store</a><a class="page-link" href="/system-design-primer/pages/reverse-proxy-web-server.html">Reverse Proxy (web server)</a><a class="page-link" href="/system-design-primer/pages/sql-or-nosql.html">SQL or NoSQL</a><a class="page-link" href="/system-design-primer/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/pastebin/">Design Pastebin.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/system-design-primer/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/system-design-primer/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/system-design-primer/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/system-design-primer/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/system-design-primer/solutions/system_design/web_crawler/">Design a web crawler</a>
+<a class="page-link" href="/system-design-primer/about/">About</a><a class="page-link" href="/system-design-primer/domain-name-system/">Domain name system</a><a class="page-link" href="/system-design-primer/">The System Design Primer</a><a class="page-link" href="/system-design-primer/images/">Original Images</a><a class="page-link" href="/system-design-primer/pages/key-value-store.html">Key value store</a><a class="page-link" href="/system-design-primer/pages/load-balancer.html">Load balancer</a><a class="page-link" href="/system-design-primer/pages/reverse-proxy-web-server.html">Reverse Proxy (web server)</a><a class="page-link" href="/system-design-primer/pages/sql-or-nosql.html">SQL or NoSQL</a><a class="page-link" href="/system-design-primer/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/pastebin/">Design Pastebin.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/system-design-primer/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/system-design-primer/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/system-design-primer/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/system-design-primer/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/system-design-primer/solutions/system_design/web_crawler/">Design a web crawler</a>
 </div>
       </nav>
 </div>
@@ -55,7 +56,7 @@
   <div class="post-content">
     <h1 id="design-a-web-crawler">Design a web crawler</h1>
 
-<p><em>Note: This document links directly to relevant areas found in the <a href="https://github.com/donnemartin/system-design-primer#index-of-system-design-topics">system design topics</a> to avoid duplication.  Refer to the linked content for general talking points, tradeoffs, and alternatives.</em></p>
+<p><em>Note: This document links directly to relevant areas found in the <a href="/#index-of-system-design-topics">system design topics</a> to avoid duplication.  Refer to the linked content for general talking points, tradeoffs, and alternatives.</em></p>
 
 <h2 id="step-1-outline-use-cases-and-constraints">Step 1: Outline use cases and constraints</h2>
 
@@ -356,7 +357,7 @@ Discuss assumptions.</p>
   </li>
 </ul>
 
-<p>We’ll use a public <a href="https://github.com/donnemartin/system-design-primer#representational-state-transfer-rest"><strong>REST API</strong></a>:</p>
+<p>We’ll use a public <a href="/#representational-state-transfer-rest"><strong>REST API</strong></a>:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl https://search.com/api/v1/search?query=hello+world
 </code></pre></div></div>
@@ -380,7 +381,7 @@ Discuss assumptions.</p>
 },
 </code></pre></div></div>
 
-<p>For internal communications, we could use <a href="https://github.com/donnemartin/system-design-primer#remote-procedure-call-rpc">Remote Procedure Calls</a>.</p>
+<p>For internal communications, we could use <a href="/#remote-procedure-call-rpc">Remote Procedure Calls</a>.</p>
 
 <h2 id="step-4-scale-the-design">Step 4: Scale the design</h2>
 
@@ -398,21 +399,21 @@ Discuss assumptions.</p>
 
 <p>We’ll introduce some components to complete the design and to address scalability issues.  Internal load balancers are not shown to reduce clutter.</p>
 
-<p><em>To avoid repeating discussions</em>, refer to the following <a href="https://github.com/donnemartin/system-design-primer#index-of-system-design-topics">system design topics</a> for main talking points, tradeoffs, and alternatives:</p>
+<p><em>To avoid repeating discussions</em>, refer to the following <a href="/#index-of-system-design-topics">system design topics</a> for main talking points, tradeoffs, and alternatives:</p>
 
 <ul>
-  <li><a href="https://github.com/donnemartin/system-design-primer#domain-name-system">DNS</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#load-balancer">Load balancer</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#horizontal-scaling">Horizontal scaling</a></li>
+  <li><a href="/domain-name-system">DNS</a></li>
+  <li><a href="/#load-balancer">Load balancer</a></li>
+  <li><a href="/pages/load-balancer#horizontal-scaling">Horizontal scaling</a></li>
   <li><a href="/pages/reverse-proxy-web-server">Web server (reverse proxy)</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#application-layer">API server (application layer)</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#cache">Cache</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#nosql">NoSQL</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#consistency-patterns">Consistency patterns</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#availability-patterns">Availability patterns</a></li>
+  <li><a href="/#application-layer">API server (application layer)</a></li>
+  <li><a href="/#cache">Cache</a></li>
+  <li><a href="/#nosql">NoSQL</a></li>
+  <li><a href="/#consistency-patterns">Consistency patterns</a></li>
+  <li><a href="/#availability-patterns">Availability patterns</a></li>
 </ul>
 
-<p>Some searches are very popular, while others are only executed once.  Popular queries can be served from a <strong>Memory Cache</strong> such as Redis or Memcached to reduce response times and to avoid overloading the <strong>Reverse Index Service</strong> and <strong>Document Service</strong>.  The <strong>Memory Cache</strong> is also useful for handling the unevenly distributed traffic and traffic spikes.  Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup><a href="https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know">1</a></sup></p>
+<p>Some searches are very popular, while others are only executed once.  Popular queries can be served from a <strong>Memory Cache</strong> such as Redis or Memcached to reduce response times and to avoid overloading the <strong>Reverse Index Service</strong> and <strong>Document Service</strong>.  The <strong>Memory Cache</strong> is also useful for handling the unevenly distributed traffic and traffic spikes.  Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup><a href="/#latency-numbers-every-programmer-should-know">1</a></sup></p>
 
 <p>Below are a few other optimizations to the <strong>Crawling Service</strong>:</p>
 
@@ -421,7 +422,7 @@ Discuss assumptions.</p>
   <li>DNS lookup can be a bottleneck, the <strong>Crawler Service</strong> can keep its own DNS lookup that is refreshed periodically</li>
   <li>The <strong>Crawler Service</strong> can improve performance and reduce memory usage by keeping many open connections at a time, referred to as <a href="https://en.wikipedia.org/wiki/Connection_pool">connection pooling</a>
     <ul>
-      <li>Switching to <a href="https://github.com/donnemartin/system-design-primer#user-datagram-protocol-udp">UDP</a> could also boost performance</li>
+      <li>Switching to <a href="/#user-datagram-protocol-udp">UDP</a> could also boost performance</li>
     </ul>
   </li>
   <li>Web crawling is bandwidth intensive, ensure there is enough bandwidth to sustain high throughput</li>
@@ -436,20 +437,20 @@ Discuss assumptions.</p>
 <h3 id="sql-scaling-patterns">SQL scaling patterns</h3>
 
 <ul>
-  <li><a href="https://github.com/donnemartin/system-design-primer#master-slave-replication">Read replicas</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#federation">Federation</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#sharding">Sharding</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#denormalization">Denormalization</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#sql-tuning">SQL Tuning</a></li>
+  <li><a href="/#master-slave-replication">Read replicas</a></li>
+  <li><a href="/#federation">Federation</a></li>
+  <li><a href="/#sharding">Sharding</a></li>
+  <li><a href="/#denormalization">Denormalization</a></li>
+  <li><a href="/#sql-tuning">SQL Tuning</a></li>
 </ul>
 
 <h4 id="nosql">NoSQL</h4>
 
 <ul>
   <li><a href="/pages/key-value-store">Key-value store</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#document-store">Document store</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#wide-column-store">Wide column store</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#graph-database">Graph database</a></li>
+  <li><a href="/#document-store">Document store</a></li>
+  <li><a href="/#wide-column-store">Wide column store</a></li>
+  <li><a href="/#graph-database">Graph database</a></li>
   <li><a href="/pages/sql-or-nosql">SQL vs NoSQL</a></li>
 </ul>
 
@@ -458,25 +459,25 @@ Discuss assumptions.</p>
 <ul>
   <li>Where to cache
     <ul>
-      <li><a href="https://github.com/donnemartin/system-design-primer#client-caching">Client caching</a></li>
-      <li><a href="https://github.com/donnemartin/system-design-primer#cdn-caching">CDN caching</a></li>
-      <li><a href="https://github.com/donnemartin/system-design-primer#web-server-caching">Web server caching</a></li>
-      <li><a href="https://github.com/donnemartin/system-design-primer#database-caching">Database caching</a></li>
-      <li><a href="https://github.com/donnemartin/system-design-primer#application-caching">Application caching</a></li>
+      <li><a href="/#client-caching">Client caching</a></li>
+      <li><a href="/#cdn-caching">CDN caching</a></li>
+      <li><a href="/#web-server-caching">Web server caching</a></li>
+      <li><a href="/#database-caching">Database caching</a></li>
+      <li><a href="/#application-caching">Application caching</a></li>
     </ul>
   </li>
   <li>What to cache
     <ul>
-      <li><a href="https://github.com/donnemartin/system-design-primer#caching-at-the-database-query-level">Caching at the database query level</a></li>
-      <li><a href="https://github.com/donnemartin/system-design-primer#caching-at-the-object-level">Caching at the object level</a></li>
+      <li><a href="/#caching-at-the-database-query-level">Caching at the database query level</a></li>
+      <li><a href="/#caching-at-the-object-level">Caching at the object level</a></li>
     </ul>
   </li>
   <li>When to update the cache
     <ul>
-      <li><a href="https://github.com/donnemartin/system-design-primer#cache-aside">Cache-aside</a></li>
-      <li><a href="https://github.com/donnemartin/system-design-primer#write-through">Write-through</a></li>
-      <li><a href="https://github.com/donnemartin/system-design-primer#write-behind-write-back">Write-behind (write-back)</a></li>
-      <li><a href="https://github.com/donnemartin/system-design-primer#refresh-ahead">Refresh ahead</a></li>
+      <li><a href="/#cache-aside">Cache-aside</a></li>
+      <li><a href="/#write-through">Write-through</a></li>
+      <li><a href="/#write-behind-write-back">Write-behind (write-back)</a></li>
+      <li><a href="/#refresh-ahead">Refresh ahead</a></li>
     </ul>
   </li>
 </ul>
@@ -484,10 +485,10 @@ Discuss assumptions.</p>
 <h3 id="asynchronism-and-microservices">Asynchronism and microservices</h3>
 
 <ul>
-  <li><a href="https://github.com/donnemartin/system-design-primer#message-queues">Message queues</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#task-queues">Task queues</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#back-pressure">Back pressure</a></li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#microservices">Microservices</a></li>
+  <li><a href="/#message-queues">Message queues</a></li>
+  <li><a href="/#task-queues">Task queues</a></li>
+  <li><a href="/#back-pressure">Back pressure</a></li>
+  <li><a href="/#microservices">Microservices</a></li>
 </ul>
 
 <h3 id="communications">Communications</h3>
@@ -495,22 +496,22 @@ Discuss assumptions.</p>
 <ul>
   <li>Discuss tradeoffs:
     <ul>
-      <li>External communication with clients - <a href="https://github.com/donnemartin/system-design-primer#representational-state-transfer-rest">HTTP APIs following REST</a>
+      <li>External communication with clients - <a href="/#representational-state-transfer-rest">HTTP APIs following REST</a>
 </li>
-      <li>Internal communications - <a href="https://github.com/donnemartin/system-design-primer#remote-procedure-call-rpc">RPC</a>
+      <li>Internal communications - <a href="/#remote-procedure-call-rpc">RPC</a>
 </li>
     </ul>
   </li>
-  <li><a href="https://github.com/donnemartin/system-design-primer#service-discovery">Service discovery</a></li>
+  <li><a href="/#service-discovery">Service discovery</a></li>
 </ul>
 
 <h3 id="security">Security</h3>
 
-<p>Refer to the <a href="https://github.com/donnemartin/system-design-primer#security">security section</a>.</p>
+<p>Refer to the <a href="/#security">security section</a>.</p>
 
 <h3 id="latency-numbers">Latency numbers</h3>
 
-<p>See <a href="https://github.com/donnemartin/system-design-primer#latency-numbers-every-programmer-should-know">Latency numbers every programmer should know</a>.</p>
+<p>See <a href="/#latency-numbers-every-programmer-should-know">Latency numbers every programmer should know</a>.</p>
 
 <h3 id="ongoing">Ongoing</h3>
 
