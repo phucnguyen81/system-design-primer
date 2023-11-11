@@ -1,5 +1,6 @@
 ---
 title: Key value store
+layout: page
 ---
 
 > Abstraction: hash table
@@ -10,7 +11,7 @@ Key-value stores provide high performance and are often used for simple data mod
 
 A key-value store is the basis for more complex systems such as a document store, and in some cases, a graph database.
 
-## Source(s) and further reading: key-value store
+## Source(s) and further reading
 
 * [Key-value database](https://en.wikipedia.org/wiki/Key-value_database)
 * [Disadvantages of key-value stores](http://stackoverflow.com/questions/4056093/what-are-the-disadvantages-of-using-a-key-value-table-over-nullable-columns-or)

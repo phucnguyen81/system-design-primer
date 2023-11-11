@@ -1,5 +1,6 @@
 ---
 title: Load balancer
+layout: page
 ---
 
 See [the original load balancer diagram](/images/h81n9iK.png)
@@ -14,9 +15,9 @@ graph LR
   Dispatcher <--> Server3[Server 3]
   style Client fill:LawnGreen
   style Dispatcher fill:Khaki
-  style Worker1 fill:LightBlue
-  style Worker2 fill:LightBlue
-  style Worker3 fill:LightBlue
+  style Server1 fill:LightBlue
+  style Server2 fill:LightBlue
+  style Server3 fill:LightBlue
 ```
 
 ```mermaid!

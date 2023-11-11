@@ -1,5 +1,6 @@
 ---
 title: Reverse Proxy (web server)
+layout: page
 ---
 
 <p align="center">

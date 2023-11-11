@@ -1,5 +1,6 @@
 ---
 title: SQL or NoSQL
+layout: page
 ---
 
 <p align="center">
