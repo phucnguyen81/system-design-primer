@@ -1,5 +1,6 @@
 ---
 title: Domain name system
+layout: page
 permalink: /domain-name-system/
 ---
 
