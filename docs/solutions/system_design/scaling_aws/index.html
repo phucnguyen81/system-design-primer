@@ -23,7 +23,8 @@
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/system-design-primer/assets/main.css">
 <link type="application/atom+xml" rel="alternate" href="https://phucnguyen81.github.io/system-design-primer/feed.xml" title="The System Design Primer">
-<link rel="shortcut icon" type="image/x-icon" href="/system-design-primer/images/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="/system-design-primer/assets/favicon.ico">
+<link rel="stylesheet" type="text/css" href="/system-design-primer/assets/css/custom-styles.css">
 </head>
 <body>
 <header class="site-header" role="banner">
@@ -70,7 +71,19 @@ Discuss assumptions.</p>
 
 <h3 id="use-cases">Use cases</h3>
 
-<p>Solving this problem takes an iterative approach of: 1) <strong>Benchmark/Load Test</strong>, 2) <strong>Profile</strong> for bottlenecks 3) address bottlenecks while evaluating alternatives and trade-offs, and 4) repeat, which is good pattern for evolving basic designs to scalable designs.</p>
+<p>Solving this problem takes an iterative approach of:</p>
+
+<ol>
+  <li><strong>Benchmark/Load Test</strong></li>
+  <li>
+<strong>Profile</strong> for bottlenecks</li>
+  <li>address bottlenecks while evaluating alternatives and trade-offs</li>
+  <li>repeat, which is good pattern for evolving basic designs to scalable designs</li>
+</ol>
+
+<div class="container medium center">
+<img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5BW0N1cnJlbnQgRGVzaWduXSAtLT58cnVuIGJlbmNobWFya3MvbG9hZCB0ZXN0c3wgQntGaW5kIGJvdHRsZW5lY2tzfVxuQiAtLT58YWRkcmVzcyBib3R0bGVuZWNrc3wgRltOZXcgRGVzaWduXVxuQiAtLT58aWRlbnRpZnkgdHJhZGUtb2Zmc3wgRlxuQiAtLT58ZXZhbHVhdGUgYWx0ZXJuYXRpdmVzfCBGXG5GIC0tPnxyZXBlYXR8IEEiLCJtZXJtYWlkIjpudWxsfQ">
+</div>
 
 <p>Unless you have a background in AWS or are applying for a position that requires AWS knowledge, AWS-specific details are not a requirement. However, <strong>much of the principles discussed in this exercise can apply more generally outside of the AWS ecosystem.</strong></p>
 
@@ -153,7 +166,7 @@ Discuss assumptions.</p>
 
 <p>See <a href="http://i.imgur.com/B8LDKD7.png">the original image</a>.</p>
 
-<div style="max-width: 400px;">
+<div class="container center small">
 <img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGhcbkNsaWVudC0tPkROU1xuQ2xpZW50LS0-V2ViU2VydmVyW1dlYiBTZXJ2ZXJdXG5zdHlsZSBDbGllbnQgZmlsbDpMaWdodEdyZWVuXG5zdHlsZSBETlMgZmlsbDpNYWdlbnRhXG5zdHlsZSBXZWJTZXJ2ZXIgZmlsbDpMaWdodEJsdWUiLCJtZXJtYWlkIjpudWxsfQ">
 </div>
 
@@ -270,7 +283,11 @@ Discuss assumptions.</p>
 
 <h3 id="users">Users+</h3>
 
-<p><img src="http://i.imgur.com/rrfjMXB.png" alt="Imgur"></p>
+<p>The original image is <a href="http://i.imgur.com/rrfjMXB.png">here</a>.</p>
+
+<div class="container center small">
+<img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggVERcbkNsaWVudFtDbGllbnRdIC0tPiBETlNbRE5TXVxuRE5TIC0tPiBXZWJTZXJ2ZXJbV2ViIFNlcnZlcl1cbldlYlNlcnZlciAtLT4gU1FMWyhTUUwpXVxuV2ViU2VydmVyIC0tPiBPYmplY3RTdG9yZVsoT2JqZWN0IFN0b3JlKV1cbnN0eWxlIENsaWVudCBmaWxsOkxpZ2h0R3JlZW5cbnN0eWxlIEROUyBmaWxsOlNreUJsdWVcbnN0eWxlIFdlYlNlcnZlciBmaWxsOk1hZ2VudGFcbnN0eWxlIFNRTCBmaWxsOkdvbGRcbnN0eWxlIE9iamVjdFN0b3JlIGZpbGw6R29sZCIsIm1lcm1haWQiOm51bGx9">
+</div>
 
 <h4 id="assumptions">Assumptions</h4>
 

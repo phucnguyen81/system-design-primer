@@ -27,6 +27,7 @@ Take a look at the source code to know which files to override.
 
 ## TODO
 
+- Add an index page for all pages
 - [Learn Jekyll](https://jekyllrb.com/docs/)
 - [Learn from mademistakes.com](https://mademistakes.com/mastering-jekyll/)
 - [Learn Jekyll themes from minimal-mistakes repo](https://github.com/mmistakes/minimal-mistakes)

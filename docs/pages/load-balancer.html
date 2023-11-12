@@ -23,7 +23,8 @@
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/system-design-primer/assets/main.css">
 <link type="application/atom+xml" rel="alternate" href="https://phucnguyen81.github.io/system-design-primer/feed.xml" title="The System Design Primer">
-<link rel="shortcut icon" type="image/x-icon" href="/system-design-primer/images/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="/system-design-primer/assets/favicon.ico">
+<link rel="stylesheet" type="text/css" href="/system-design-primer/assets/css/custom-styles.css">
 </head>
 <body>
 <header class="site-header" role="banner">
@@ -58,11 +59,14 @@
 and the original blog on
 <a href="http://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html">Scalable system design patterns</a>.</p>
 
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggTFJcbkNsaWVudCA8LS0-IERpc3BhdGNoZXJcbkRpc3BhdGNoZXIgPC0tPiBTZXJ2ZXIxW1NlcnZlciAxXVxuRGlzcGF0Y2hlciA8LS0-IFNlcnZlcjJbU2VydmVyIDJdXG5EaXNwYXRjaGVyIDwtLT4gU2VydmVyM1tTZXJ2ZXIgM11cbnN0eWxlIENsaWVudCBmaWxsOkxhd25HcmVlblxuc3R5bGUgRGlzcGF0Y2hlciBmaWxsOktoYWtpXG5zdHlsZSBXb3JrZXIxIGZpbGw6TGlnaHRCbHVlXG5zdHlsZSBXb3JrZXIyIGZpbGw6TGlnaHRCbHVlXG5zdHlsZSBXb3JrZXIzIGZpbGw6TGlnaHRCbHVlIiwibWVybWFpZCI6bnVsbH0"></p>
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggVERcbiUlLVxuQ2xpZW50IDwtLT4gRGlzcGF0Y2hlclxuRGlzcGF0Y2hlciA8LS0-IFNlcnZlcjFbU2VydmVyIDFdXG5EaXNwYXRjaGVyIDwtLT4gU2VydmVyMltTZXJ2ZXIgMl1cbkRpc3BhdGNoZXIgPC0tPiBTZXJ2ZXIzW1NlcnZlciAzXVxuc3R5bGUgQ2xpZW50IGZpbGw6TGF3bkdyZWVuXG5zdHlsZSBEaXNwYXRjaGVyIGZpbGw6S2hha2lcbnN0eWxlIFNlcnZlcjEgZmlsbDpMaWdodEJsdWVcbnN0eWxlIFNlcnZlcjIgZmlsbDpMaWdodEJsdWVcbnN0eWxlIFNlcnZlcjMgZmlsbDpMaWdodEJsdWUiLCJtZXJtYWlkIjpudWxsfQ"></p>
 
-<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IExSXG4xW0Rpc3BhdGNoZXIgcGlja3MgYSBXb3JrZXJdXG4xIC0tPnxSYW5kb218IDJbRGlzcGF0Y2hlciB3YWl0cyBmb3IgdGhlIHJlc3BvbnNlXVxuMSAtLT58Um91bmQgcm9iaW58IDJcbjEgLS0-fExlYXN0IGJ1c3l8IDJcbjEgLS0-fFN0aWNreSBzZXNzaW9uIC8gY29va2llc3wgMlxuMSAtLT58QnkgcmVxdWVzdCBwYXJhbWV0ZXJzfCAyXG4yIC0tPiAzW0Rpc3BhdGNoZXIgZm9yd2FyZHMgdGhlIHJlc3BvbnNlIHRvIENsaWVudF0iLCJtZXJtYWlkIjpudWxsfQ"></p>
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG4lJS1cbjFbRGlzcGF0Y2hlciBwaWNrcyBhIFNvcmtlcl1cbjEgLS0-fFJhbmRvbXwgMltEaXNwYXRjaGVyIHdhaXRzIGZvciB0aGUgcmVzcG9uc2VdXG4xIC0tPnxSb3VuZCByb2JpbnwgMlxuMSAtLT58TGVhc3QgYnVzeXwgMlxuMSAtLT58U3RpY2t5IHNlc3Npb24vY29va2llc3wgMlxuMSAtLT58QnkgcmVxdWVzdCBwYXJhbWV0ZXJzfCAyXG4yIC0tPiAzW0Rpc3BhdGNoZXIgZm9yd2FyZHMgdGhlIHJlc3BvbnNlIHRvIENsaWVudF0iLCJtZXJtYWlkIjpudWxsfQ"></p>
 
-<p>Load balancers distribute incoming client requests to computing resources such as application servers and databases. In each case, the load balancer returns the response from the computing resource to the appropriate client. Load balancers are effective at:</p>
+<p>Load balancers distribute incoming client requests to computing resources such
+as application servers and databases. In each case, the load balancer returns
+the response from the computing resource to the appropriate client. Load
+balancers are effective at:</p>
 
 <ul>
   <li>Preventing requests from going to unhealthy servers</li>
@@ -70,22 +74,29 @@ and the original blog on
   <li>Helping to eliminate a single point of failure</li>
 </ul>
 
-<p>Load balancers can be implemented with hardware (expensive) or with software such as HAProxy.</p>
+<p>Load balancers can be implemented with hardware (expensive) or with software
+such as HAProxy.</p>
 
 <p>Additional benefits include:</p>
 
 <ul>
   <li>
-<strong>SSL termination</strong> - Decrypt incoming requests and encrypt server responses so backend servers do not have to perform these potentially expensive operations
+<strong>SSL termination</strong> - Decrypt incoming requests and encrypt server responses
+so backend servers do not have to perform these potentially expensive
+operations
     <ul>
-      <li>Removes the need to install <a href="https://en.wikipedia.org/wiki/X.509">X.509 certificates</a> on each server</li>
+      <li>Removes the need to install
+<a href="https://en.wikipedia.org/wiki/X.509">X.509 certificates</a> on each server</li>
     </ul>
   </li>
   <li>
-<strong>Session persistence</strong> - Issue cookies and route a specific client’s requests to same instance if the web apps do not keep track of sessions</li>
+<strong>Session persistence</strong> - Issue cookies and route a specific client’s
+requests to same instance if the web apps do not keep track of sessions</li>
 </ul>
 
-<p>To protect against failures, it’s common to set up multiple load balancers, either in <a href="/#active-passive">active-passive</a> or <a href="/#active-active">active-active</a> mode.</p>
+<p>To protect against failures, it’s common to set up multiple load balancers,
+either in <a href="/#active-passive">active-passive</a> or
+<a href="/#active-active">active-active</a> mode.</p>
 
 <p>Load balancers can route traffic based on various metrics, including:</p>
 
@@ -100,17 +111,35 @@ and the original blog on
 
 <h2 id="layer-4-load-balancing">Layer 4 load balancing</h2>
 
-<p>Layer 4 load balancers look at info at the <a href="#communication">transport layer</a> to decide how to distribute requests. Generally, this involves the source, destination IP addresses, and ports in the header, but not the contents of the packet. Layer 4 load balancers forward network packets to and from the upstream server, performing <a href="https://www.nginx.com/resources/glossary/layer-4-load-balancing/">Network Address Translation (NAT)</a>.</p>
+<p>Layer 4 load balancers look at info at the <a href="#communication">transport layer</a> to
+decide how to distribute requests. Generally, this involves the source,
+destination IP addresses, and ports in the header, but not the contents of the
+packet. Layer 4 load balancers forward network packets to and from the upstream
+server, performing
+<a href="https://www.nginx.com/resources/glossary/layer-4-load-balancing/">Network Address Translation (NAT)</a>.</p>
 
 <h2 id="layer-7-load-balancing">Layer 7 load balancing</h2>
 
-<p>Layer 7 load balancers look at the <a href="#communication">application layer</a> to decide how to distribute requests. This can involve contents of the header, message, and cookies. Layer 7 load balancers terminate network traffic, reads the message, makes a load-balancing decision, then opens a connection to the selected server. For example, a layer 7 load balancer can direct video traffic to servers that host videos while directing more sensitive user billing traffic to security-hardened servers.</p>
+<p>Layer 7 load balancers look at the <a href="#communication">application layer</a> to
+decide how to distribute requests. This can involve contents of the header,
+message, and cookies. Layer 7 load balancers terminate network traffic, reads
+the message, makes a load-balancing decision, then opens a connection to the
+selected server. For example, a layer 7 load balancer can direct video traffic
+to servers that host videos while directing more sensitive user billing traffic
+to security-hardened servers.</p>
 
-<p>At the cost of flexibility, layer 4 load balancing requires less time and computing resources than Layer 7, although the performance impact can be minimal on modern commodity hardware.</p>
+<p>At the cost of flexibility, layer 4 load balancing requires less time and
+computing resources than Layer 7, although the performance impact can be
+minimal on modern commodity hardware.</p>
 
 <h2 id="horizontal-scaling">Horizontal scaling</h2>
 
-<p>Load balancers can also help with horizontal scaling, improving performance and availability. Scaling out using commodity machines is more cost efficient and results in higher availability than scaling up a single server on more expensive hardware, called <strong>Vertical Scaling</strong>. It is also easier to hire for talent working on commodity hardware than it is for specialized enterprise systems.</p>
+<p>Load balancers can also help with horizontal scaling, improving performance and
+availability. Scaling out using commodity machines is more cost efficient and
+results in higher availability than scaling up a single server on more
+expensive hardware, called <strong>Vertical Scaling</strong>. It is also easier to hire for
+talent working on commodity hardware than it is for specialized enterprise
+systems.</p>
 
 <h3 id="disadvantages-horizontal-scaling">Disadvantage(s): horizontal scaling</h3>
 
