@@ -1,6 +1,11 @@
 ---
 ---
 
+/*
+This file is used to add custom styles to all pages. Jekyll will generate a
+corresponding CSS file with the same basename to be included in html head.
+*/
+
 .center {
   display: block;
   margin-left: auto;
@@ -8,9 +13,9 @@
 }
 
 .medium {
-  width: 500px;
+  max-width: 500px;
 }
 
 .small {
-  width: 300px;
+  max-width: 300px;
 }

@@ -64,3 +64,16 @@ exclude:
   - Dockerfile
   - generate-epub.sh
   - LICENSE.txt
+
+# Configs for jekyll-spaceship
+# See full list here: https://github.com/jeffreytse/jekyll-spaceship#configuration
+jekyll-spaceship:
+  # enabled processors
+  processors:
+    - mermaid-processor
+  mermaid-processor:
+    # mode value 'default' for fetching image at rendering stage
+    # mode value 'pre-fetch' for fetching image at building stage
+    mode: pre-fetch
+    css:
+      class: mermaid
