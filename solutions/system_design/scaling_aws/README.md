@@ -80,7 +80,7 @@ Handy conversion guide:
 
 > Outline a high level design with all important components.
 
-See [the original image](http://i.imgur.com/B8LDKD7.png).
+See [the original image](https://i.imgur.com/B8LDKD7.png).
 
 <div class="container center small">
 ```mermaid!
@@ -166,7 +166,7 @@ _Trade-offs, alternatives, and additional details:_
 
 ### Users+
 
-The original image is [here](http://i.imgur.com/rrfjMXB.png).
+The original image is [here](https://i.imgur.com/rrfjMXB.png).
 
 <div class="container center small">
 ```mermaid!
@@ -233,7 +233,7 @@ _Trade-offs, alternatives, and additional details:_
 
 ### Users++
 
-See the original image [here](http://i.imgur.com/raoFTXM.png).
+See the original image [here](https://i.imgur.com/raoFTXM.png).
 
 <div class="container center medium">
 
@@ -293,7 +293,7 @@ _Trade-offs, alternatives, and additional details:_
 
 ### Users+++
 
-![Imgur](http://i.imgur.com/OZCxJr0.png)
+![Imgur](https://i.imgur.com/OZCxJr0.png)
 
 **Note:** **Internal Load Balancers** not shown to reduce clutter
 
@@ -331,7 +331,7 @@ _Trade-offs, alternatives, and additional details:_
 
 ### Users++++
 
-![Imgur](http://i.imgur.com/3X8nmdL.png)
+![Imgur](https://i.imgur.com/3X8nmdL.png)
 
 #### Assumptions
 
@@ -370,7 +370,7 @@ Our **Benchmarks/Load Tests** and **Profiling** show that our traffic spikes dur
 
 ### Users+++++
 
-![Imgur](http://i.imgur.com/jj3A5N8.png)
+![Imgur](https://i.imgur.com/jj3A5N8.png)
 
 **Note:** **Autoscaling** groups not shown to reduce clutter
 
