@@ -327,9 +327,9 @@ Below are a few other optimizations to the **Crawling Service**:
 
 ### Asynchronism and microservices
 
-* [Message queues](/#message-queues)
-* [Task queues](/#task-queues)
-* [Back pressure](/#back-pressure)
+* [Message queues](/pages/asynchronism/#message-queues)
+* [Task queues](/pages/asynchronism/#task-queues)
+* [Back pressure](/pages/asynchronism/#back-pressure)
 * [Microservices](/#microservices)
 
 ### Communications

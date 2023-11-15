@@ -137,7 +137,7 @@ Data flow:
 * The **Client** sends a request to the **Web Server**
 * The **Web Server** forwards the request to the **Accounts API** server
 * The **Accounts API** server places a job on a **Queue** such as [Amazon SQS](https://aws.amazon.com/sqs/) or [RabbitMQ](https://www.rabbitmq.com/)
-    * Extracting transactions could take awhile, we'd probably want to do this [asynchronously with a queue](/#asynchronism), although this introduces additional complexity
+    * Extracting transactions could take awhile, we'd probably want to do this [asynchronously with a queue](/pages/asynchronism), although this introduces additional complexity
 * The **Transaction Extraction Service** does the following:
     * Pulls from the **Queue** and extracts transactions for the given account from the financial institution, storing the results as raw log files in the **Object Store**
     * Uses the **Category Service** to categorize each transaction
@@ -349,7 +349,7 @@ We'll introduce some components to complete the design and to address scalabilit
 * [Relational database management system (RDBMS)](/#relational-database-management-system-rdbms)
 * [SQL write master-slave failover](/#fail-over)
 * [Master-slave replication](/#master-slave-replication)
-* [Asynchronism](/#asynchronism)
+* [Asynchronism](/pages/asynchronism)
 * [Consistency patterns](/#consistency-patterns)
 * [Availability patterns](/#availability-patterns)
 
@@ -415,9 +415,9 @@ We should also consider moving some data to a **NoSQL Database**.
 
 ### Asynchronism and microservices
 
-* [Message queues](/#message-queues)
-* [Task queues](/#task-queues)
-* [Back pressure](/#back-pressure)
+* [Message queues](/pages/asynchronism/#message-queues)
+* [Task queues](/pages/asynchronism/#task-queues)
+* [Back pressure](/pages/asynchronism/#back-pressure)
 * [Microservices](/#microservices)
 
 ### Communications

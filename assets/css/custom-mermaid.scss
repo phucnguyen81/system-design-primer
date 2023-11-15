@@ -8,6 +8,7 @@ same basename to be included in html head.
 */
 
 .mermaid {
+  max-width: 800px !important;
   .client {
     rect {
       fill: lightgreen !important;
@@ -40,7 +41,22 @@ same basename to be included in html head.
   }
   .db {
     rect, path {
-      fill: lightyellow !important;
+      fill: khaki !important;
+    }
+  }
+  .cache {
+    rect {
+      fill: plum !important;
+    }
+  }
+  .queue {
+    rect {
+      fill: cyan !important;
+    }
+  }
+  .worker {
+    rect {
+      fill: yellow !important;
     }
   }
   .multi {
