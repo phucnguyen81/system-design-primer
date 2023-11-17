@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 echo Available commands:
 echo ========================
-echo help:    Show this help message
-echo build:   Build the site to deploy to GitHub Pages
-echo up:      Start the development containers
-echo serve:   Serve the site locally
-echo attach:  Attach to the development container
+echo attach   : Attach to the development container
+echo build    : Build the site to deploy to GitHub Pages
+echo down     : Stop and remove what was created by up
+echo help     : Show this help message
+echo serve    : Serve the site locally
+echo up       : Start the development containers

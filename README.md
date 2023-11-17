@@ -28,5 +28,5 @@ Take a look at the source code to know which files to override.
 ## TODO
 
 - [x] Apply custom style to mermaid diagrams
-- [ ] Summarize scaling aws
+- [ ] Summarize scaling aws in a post
 - [Learn Jekyll](https://jekyllrb.com/docs/)
