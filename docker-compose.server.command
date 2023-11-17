@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-ln -sf /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime
+chown -R $USER_UID:$USER_GID /app
 sleep infinity

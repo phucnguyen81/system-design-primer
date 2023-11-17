@@ -3,14 +3,17 @@ volumes:
   vscode_server:
 services:
   server:
-    build: .
+    build:
+      context: .
+      args:
+        - TIMEZONE=${TIMEZONE}
     container_name: system-design-primer
     env_file:
       - .env
       - .env.local
     ports:
-      - "${SERVER_PORT:-4000}:4000"
-      - "${LIVERELOAD_PORT:-35729}:35729"
+      - "${SERVER_PORT}:4000"
+      - "${LIVERELOAD_PORT}:35729"
     volumes:
       - .:/app
       - ${SSH_DIR:-~/.ssh}:/root/.ssh
