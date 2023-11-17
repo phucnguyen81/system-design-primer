@@ -244,7 +244,7 @@ We'll introduce some components to complete the design and to address scalabilit
 * [Cache](/#cache)
 * [Relational database management system (RDBMS)](/#relational-database-management-system-rdbms)
 * [SQL write master-slave failover](/#fail-over)
-* [Master-slave replication](/#master-slave-replication)
+* [Master-slave replication](/pages/master-slave-replication)
 * [Consistency patterns](/#consistency-patterns)
 * [Availability patterns](/#availability-patterns)
 
@@ -270,7 +270,7 @@ Although the **Memory Cache** should reduce the load on the database, it is unli
 The high volume of writes would overwhelm a single **SQL Write Master-Slave**, also pointing to a need for additional scaling techniques.
 
 * [Federation](/pages/federation)
-* [Sharding](/#sharding)
+* [Sharding](/pages/sharding)
 * [Denormalization](/#denormalization)
 * [SQL Tuning](/#sql-tuning)
 

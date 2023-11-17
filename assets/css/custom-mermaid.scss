@@ -9,6 +9,11 @@ same basename to be included in html head.
 
 .mermaid {
   max-width: 800px !important;
+  .app {
+    rect {
+      fill: lightgreen !important;
+    }
+  }
   .client {
     rect {
       fill: lightgreen !important;

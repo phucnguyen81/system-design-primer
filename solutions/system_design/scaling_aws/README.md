@@ -280,7 +280,7 @@ Our **Benchmarks/Load Tests** and **Profiling** show that our single **Web Serve
     - If you are configuring your own **Load Balancer**, setting up multiple servers in [active-active](/#active-active) or [active-passive](/#active-passive) in multiple availability zones will improve availability
     - Terminate SSL on the **Load Balancer** to reduce computational load on backend servers and to simplify certificate administration
   - Use multiple **Web Servers** spread out over multiple availability zones
-  - Use multiple **MySQL** instances in [**Master-Slave Failover**](/#master-slave-replication) mode across multiple availability zones to improve redundancy
+  - Use multiple **MySQL** instances in [**Master-Slave Failover**](/pages/master-slave-replication) mode across multiple availability zones to improve redundancy
 - Separate out the **Web Servers** from the [**Application Servers**](/#application-layer)
   - Scale and configure both layers independently
   - **Web Servers** can run as a [**Reverse Proxy**](/pages/reverse-proxy-web-server)
@@ -347,7 +347,7 @@ Our **Benchmarks/Load Tests** and **Profiling** show that we are read-heavy (100
   - Session data from the **Web Servers**
     - The **Web Servers** become stateless, allowing for **Autoscaling**
   - Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup><a href="/#latency-numbers-every-programmer-should-know">1</a></sup>
-- Add [**MySQL Read Replicas**](/#master-slave-replication) to reduce load on the write master
+- Add [**MySQL Read Replicas**](/pages/master-slave-replication) to reduce load on the write master
 - Add more **Web Servers** and **Application Servers** to improve responsiveness
 
 _Trade-offs, alternatives, and additional details:_
@@ -552,7 +552,7 @@ We'll continue to address scaling issues due to the problem's constraints:
 SQL scaling patterns include:
 
 - [Federation](/pages/federation)
-- [Sharding](/#sharding)
+- [Sharding](/pages/sharding)
 - [Denormalization](/#denormalization)
 - [SQL Tuning](/#sql-tuning)
 
@@ -578,9 +578,9 @@ _Trade-offs, alternatives, and additional details:_
 
 ### SQL scaling patterns
 
-- [Read replicas](/#master-slave-replication)
+- [Read replicas](/pages/master-slave-replication)
 - [Federation](/pages/federation)
-- [Sharding](/#sharding)
+- [Sharding](/pages/sharding)
 - [Denormalization](/#denormalization)
 - [SQL Tuning](/#sql-tuning)
 

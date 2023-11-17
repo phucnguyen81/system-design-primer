@@ -294,9 +294,9 @@ Below are a few other optimizations to the **Crawling Service**:
 
 ### SQL scaling patterns
 
-* [Read replicas](/#master-slave-replication)
+* [Read replicas](/pages/master-slave-replication)
 * [Federation](/pages/federation)
-* [Sharding](/#sharding)
+* [Sharding](/pages/sharding)
 * [Denormalization](/#denormalization)
 * [SQL Tuning](/#sql-tuning)
 

@@ -99,7 +99,7 @@ class Graph(Graph):
         return None
 ```
 
-We won't be able to fit all users on the same machine, we'll need to [shard](/#sharding) users across **Person Servers** and access them with a **Lookup Service**.
+We won't be able to fit all users on the same machine, we'll need to [shard](/pages/sharding) users across **Person Servers** and access them with a **Lookup Service**.
 
 * The **Client** sends a request to the **Web Server**, running as a [reverse proxy](/pages/reverse-proxy-web-server)
 * The **Web Server** forwards the request to the **Search API** server
@@ -278,7 +278,7 @@ Below are further optimizations:
 * Store complete or partial BFS traversals to speed up subsequent lookups in the **Memory Cache**
 * Batch compute offline then store complete or partial BFS traversals to speed up subsequent lookups in a **NoSQL Database**
 * Reduce machine jumps by batching together friend lookups hosted on the same **Person Server**
-    * [Shard](/#sharding) **Person Servers** by location to further improve this, as friends generally live closer to each other
+    * [Shard](/pages/sharding) **Person Servers** by location to further improve this, as friends generally live closer to each other
 * Do two BFS searches at the same time, one starting from the source, and one from the destination, then merge the two paths
 * Start the BFS search from people with large numbers of friends, as they are more likely to reduce the number of [degrees of separation](https://en.wikipedia.org/wiki/Six_degrees_of_separation) between the current user and the search target
 * Set a limit based on time or number of hops before asking the user if they want to continue searching, as searching could take a considerable amount of time in some cases
@@ -290,9 +290,9 @@ Below are further optimizations:
 
 ### SQL scaling patterns
 
-* [Read replicas](/#master-slave-replication)
+* [Read replicas](/pages/master-slave-replication)
 * [Federation](/pages/federation)
-* [Sharding](/#sharding)
+* [Sharding](/pages/sharding)
 * [Denormalization](/#denormalization)
 * [SQL Tuning](/#sql-tuning)
 

@@ -348,7 +348,7 @@ We'll introduce some components to complete the design and to address scalabilit
 * [Cache](/#cache)
 * [Relational database management system (RDBMS)](/#relational-database-management-system-rdbms)
 * [SQL write master-slave failover](/#fail-over)
-* [Master-slave replication](/#master-slave-replication)
+* [Master-slave replication](/pages/master-slave-replication)
 * [Asynchronism](/pages/asynchronism)
 * [Consistency patterns](/#consistency-patterns)
 * [Availability patterns](/#availability-patterns)
@@ -378,7 +378,7 @@ To address the 200 *average* read requests per second (higher at peak), traffic 
 2,000 *average* transaction writes per second (higher at peak) might be tough for a single **SQL Write Master-Slave**.  We might need to employ additional SQL scaling patterns:
 
 * [Federation](/pages/federation)
-* [Sharding](/#sharding)
+* [Sharding](/pages/sharding)
 * [Denormalization](/#denormalization)
 * [SQL Tuning](/#sql-tuning)
 

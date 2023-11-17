@@ -95,15 +95,12 @@ title: "The System Design Primer"
 - [Database](#database)
   - [Relational database management system (RDBMS)](#relational-database-management-system-rdbms)
     - [Master-slave replication](#master-slave-replication)
-      - [Disadvantage(s): master-slave replication](#disadvantages-master-slave-replication)
     - [Master-master replication](#master-master-replication)
       - [Disadvantage(s): master-master replication](#disadvantages-master-master-replication)
       - [Disadvantage(s): replication](#disadvantages-replication)
       - [Source(s) and further reading: replication](#sources-and-further-reading-replication)
     - [Federation](#federation)
     - [Sharding](#sharding)
-      - [Disadvantage(s): sharding](#disadvantages-sharding)
-      - [Source(s) and further reading: sharding](#sources-and-further-reading-sharding)
     - [Denormalization](#denormalization)
       - [Disadvantage(s): denormalization](#disadvantages-denormalization)
         - [Source(s) and further reading: denormalization](#sources-and-further-reading-denormalization)
@@ -601,7 +598,7 @@ Active-active failover can also be referred to as master-master failover.
 
 This topic is further discussed in the [Database](#database) section:
 
-* [Master-slave replication](#master-slave-replication)
+* [Master-slave replication](/pages/master-slave-replication)
 * [Master-master replication](#master-master-replication)
 
 ### Availability in numbers
@@ -753,20 +750,7 @@ A relational database like SQL is a collection of data items organized in tables
 
 There are many techniques to scale a relational database: **master-slave replication**, **master-master replication**, **federation**, **sharding**, **denormalization**, and **SQL tuning**.
 
-#### Master-slave replication
-
-The master serves reads and writes, replicating writes to one or more slaves, which serve only reads. Slaves can also replicate to additional slaves in a tree-like fashion. If the master goes offline, the system can continue to operate in read-only mode until a slave is promoted to a master or a new master is provisioned.
-
-<p align="center">
-  <img src="{{ "/images/C9ioGtn.png" | relative_url }}">
-  <br/>
-  <a href="http://www.slideshare.net/jboner/scalability-availability-stability-patterns">Source: Scalability, availability, stability, patterns</a>
-</p>
-
-##### Disadvantage(s): master-slave replication
-
-* Additional logic is needed to promote a slave to a master.
-* See [Disadvantage(s): replication](#disadvantages-replication) for points related to **both** master-slave and master-master.
+#### [Master-slave replication](/pages/master-slave-replication)
 
 #### Master-master replication
 
@@ -800,39 +784,13 @@ Both masters serve reads and writes and coordinate with each other on writes.  I
 
 #### [Federation](/pages/federation)
 
-#### Sharding
-
-<p align="center">
-  <img src="{{ "/images/wU8x5Id.png" | relative_url }}">
-  <br/>
-  <i><a href="http://www.slideshare.net/jboner/scalability-availability-stability-patterns/">Source: Scalability, availability, stability, patterns</a></i>
-</p>
-
-Sharding distributes data across different databases such that each database can only manage a subset of the data.  Taking a users database as an example, as the number of users increases, more shards are added to the cluster.
-
-Similar to the advantages of [federation](/pages/federation.md), sharding results in less read and write traffic, less replication, and more cache hits.  Index size is also reduced, which generally improves performance with faster queries.  If one shard goes down, the other shards are still operational, although you'll want to add some form of replication to avoid data loss.  Like federation, there is no single central master serializing writes, allowing you to write in parallel with increased throughput.
-
-Common ways to shard a table of users is either through the user's last name initial or the user's geographic location.
-
-##### Disadvantage(s): sharding
-
-* You'll need to update your application logic to work with shards, which could result in complex SQL queries.
-* Data distribution can become lopsided in a shard.  For example, a set of power users on a shard could result in increased load to that shard compared to others.
-    * Rebalancing adds additional complexity.  A sharding function based on [consistent hashing](http://www.paperplanes.de/2011/12/9/the-magic-of-consistent-hashing.html) can reduce the amount of transferred data.
-* Joining data from multiple shards is more complex.
-* Sharding adds more hardware and additional complexity.
-
-##### Source(s) and further reading: sharding
-
-* [The coming of the shard](http://highscalability.com/blog/2009/8/6/an-unorthodox-approach-to-database-design-the-coming-of-the.html)
-* [Shard database architecture](https://en.wikipedia.org/wiki/Shard_(database_architecture))
-* [Consistent hashing](http://www.paperplanes.de/2011/12/9/the-magic-of-consistent-hashing.html)
+#### [Sharding](/pages/sharding)
 
 #### Denormalization
 
 Denormalization attempts to improve read performance at the expense of some write performance.  Redundant copies of the data are written in multiple tables to avoid expensive joins.  Some RDBMS such as [PostgreSQL](https://en.wikipedia.org/wiki/PostgreSQL) and Oracle support [materialized views](https://en.wikipedia.org/wiki/Materialized_view) which handle the work of storing redundant information and keeping redundant copies consistent.
 
-Once data becomes distributed with techniques such as [federation](/pages/federation) and [sharding](#sharding), managing joins across data centers further increases complexity.  Denormalization might circumvent the need for such complex joins.
+Once data becomes distributed with techniques such as [federation](/pages/federation) and [sharding](/pages/sharding), managing joins across data centers further increases complexity.  Denormalization might circumvent the need for such complex joins.
 
 In most systems, reads can heavily outnumber writes 100:1 or even 1000:1.  A read resulting in a complex database join can be very expensive, spending a significant amount of time on disk operations.
 
