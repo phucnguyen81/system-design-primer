@@ -14,7 +14,7 @@ is provisioned.
   <a href="http://www.slideshare.net/jboner/scalability-availability-stability-patterns">Source: Scalability, availability, stability, patterns</a>
 </p>
 
-### Disadvantage(s): master-slave replication
+### Disadvantage(s): master-slave replication {#disadvantages-master-slave-replication}
 
 * Additional logic is needed to promote a slave to a master.
 * See [Disadvantage(s): replication](/#disadvantages-replication) for points

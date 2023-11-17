@@ -73,6 +73,8 @@ title: "The System Design Primer"
   - [Disadvantage(s): failover](#disadvantages-failover)
   - [Replication](#replication)
     - [Master-slave and master-master](#master-slave-and-master-master)
+    - [Disadvantage(s): replication](#disadvantages-replication)
+    - [Source(s) and further reading: replication](#sources-and-further-reading-replication)
   - [Availability in numbers](#availability-in-numbers)
     - [99.9% availability - three 9s](#999-availability---three-9s)
     - [99.99% availability - four 9s](#9999-availability---four-9s)
@@ -96,9 +98,6 @@ title: "The System Design Primer"
   - [Relational database management system (RDBMS)](#relational-database-management-system-rdbms)
     - [Master-slave replication](#master-slave-replication)
     - [Master-master replication](#master-master-replication)
-      - [Disadvantage(s): master-master replication](#disadvantages-master-master-replication)
-      - [Disadvantage(s): replication](#disadvantages-replication)
-      - [Source(s) and further reading: replication](#sources-and-further-reading-replication)
     - [Federation](#federation)
     - [Sharding](#sharding)
     - [Denormalization](#denormalization)
@@ -599,7 +598,26 @@ Active-active failover can also be referred to as master-master failover.
 This topic is further discussed in the [Database](#database) section:
 
 * [Master-slave replication](/pages/master-slave-replication)
-* [Master-master replication](#master-master-replication)
+* [Master-master replication](/pages/master-master-replication)
+
+#### Disadvantage(s): replication
+
+* There is a potential for loss of data if the master fails before any newly
+  written data can be replicated to other nodes.
+* Writes are replayed to the read replicas.  If there are a lot of writes, the
+  read replicas can get bogged down with replaying writes and can't do as many
+  reads.
+* The more read slaves, the more you have to replicate, which leads to greater
+  replication lag.
+* On some systems, writing to the master can spawn multiple threads to write in
+  parallel, whereas read replicas only support writing sequentially with a
+  single thread.
+* Replication adds more hardware and additional complexity.
+
+#### Source(s) and further reading: replication
+
+* [Scalability, availability, stability, patterns](http://www.slideshare.net/jboner/scalability-availability-stability-patterns/)
+* [Multi-master replication](https://en.wikipedia.org/wiki/Multi-master_replication)
 
 ### Availability in numbers
 
@@ -752,35 +770,7 @@ There are many techniques to scale a relational database: **master-slave replica
 
 #### [Master-slave replication](/pages/master-slave-replication)
 
-#### Master-master replication
-
-Both masters serve reads and writes and coordinate with each other on writes.  If either master goes down, the system can continue to operate with both reads and writes.
-
-<p align="center">
-  <img src="{{ "/images/krAHLGg.png" | relative_url }}">
-  <br/>
-  <i><a href="http://www.slideshare.net/jboner/scalability-availability-stability-patterns">Source: Scalability, availability, stability, patterns</a></i>
-</p>
-
-##### Disadvantage(s): master-master replication
-
-* You'll need a load balancer or you'll need to make changes to your application logic to determine where to write.
-* Most master-master systems are either loosely consistent (violating ACID) or have increased write latency due to synchronization.
-* Conflict resolution comes more into play as more write nodes are added and as latency increases.
-* See [Disadvantage(s): replication](#disadvantages-replication) for points related to **both** master-slave and master-master.
-
-##### Disadvantage(s): replication
-
-* There is a potential for loss of data if the master fails before any newly written data can be replicated to other nodes.
-* Writes are replayed to the read replicas.  If there are a lot of writes, the read replicas can get bogged down with replaying writes and can't do as many reads.
-* The more read slaves, the more you have to replicate, which leads to greater replication lag.
-* On some systems, writing to the master can spawn multiple threads to write in parallel, whereas read replicas only support writing sequentially with a single thread.
-* Replication adds more hardware and additional complexity.
-
-##### Source(s) and further reading: replication
-
-* [Scalability, availability, stability, patterns](http://www.slideshare.net/jboner/scalability-availability-stability-patterns/)
-* [Multi-master replication](https://en.wikipedia.org/wiki/Multi-master_replication)
+#### [Master-master replication](/pages/master-master-replication)
 
 #### [Federation](/pages/federation)
 
