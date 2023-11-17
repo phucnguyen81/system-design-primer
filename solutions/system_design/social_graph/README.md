@@ -291,7 +291,7 @@ Below are further optimizations:
 ### SQL scaling patterns
 
 * [Read replicas](/#master-slave-replication)
-* [Federation](/#federation)
+* [Federation](/pages/federation)
 * [Sharding](/#sharding)
 * [Denormalization](/#denormalization)
 * [SQL Tuning](/#sql-tuning)

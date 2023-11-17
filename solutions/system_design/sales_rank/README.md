@@ -274,7 +274,7 @@ To address the 40,000 *average* read requests per second (higher at peak), traff
 
 SQL scaling patterns include:
 
-* [Federation](/#federation)
+* [Federation](/pages/federation)
 * [Sharding](/#sharding)
 * [Denormalization](/#denormalization)
 * [SQL Tuning](/#sql-tuning)

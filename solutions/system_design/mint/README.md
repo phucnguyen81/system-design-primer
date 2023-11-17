@@ -377,7 +377,7 @@ To address the 200 *average* read requests per second (higher at peak), traffic 
 
 2,000 *average* transaction writes per second (higher at peak) might be tough for a single **SQL Write Master-Slave**.  We might need to employ additional SQL scaling patterns:
 
-* [Federation](/#federation)
+* [Federation](/pages/federation)
 * [Sharding](/#sharding)
 * [Denormalization](/#denormalization)
 * [SQL Tuning](/#sql-tuning)

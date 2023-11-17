@@ -269,7 +269,7 @@ Although the **Memory Cache** should reduce the load on the database, it is unli
 
 The high volume of writes would overwhelm a single **SQL Write Master-Slave**, also pointing to a need for additional scaling techniques.
 
-* [Federation](/#federation)
+* [Federation](/pages/federation)
 * [Sharding](/#sharding)
 * [Denormalization](/#denormalization)
 * [SQL Tuning](/#sql-tuning)

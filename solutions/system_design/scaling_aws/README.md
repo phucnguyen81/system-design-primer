@@ -551,7 +551,7 @@ We'll continue to address scaling issues due to the problem's constraints:
 
 SQL scaling patterns include:
 
-- [Federation](/#federation)
+- [Federation](/pages/federation)
 - [Sharding](/#sharding)
 - [Denormalization](/#denormalization)
 - [SQL Tuning](/#sql-tuning)
@@ -579,7 +579,7 @@ _Trade-offs, alternatives, and additional details:_
 ### SQL scaling patterns
 
 - [Read replicas](/#master-slave-replication)
-- [Federation](/#federation)
+- [Federation](/pages/federation)
 - [Sharding](/#sharding)
 - [Denormalization](/#denormalization)
 - [SQL Tuning](/#sql-tuning)

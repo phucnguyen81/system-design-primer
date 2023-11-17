@@ -248,7 +248,7 @@ To handle the heavy request load and the large amount of memory needed, we'll sc
 ### SQL scaling patterns
 
 * [Read replicas](/#master-slave-replication)
-* [Federation](/#federation)
+* [Federation](/pages/federation)
 * [Sharding](/#sharding)
 * [Denormalization](/#denormalization)
 * [SQL Tuning](/#sql-tuning)

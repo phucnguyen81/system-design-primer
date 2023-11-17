@@ -101,8 +101,6 @@ title: "The System Design Primer"
       - [Disadvantage(s): replication](#disadvantages-replication)
       - [Source(s) and further reading: replication](#sources-and-further-reading-replication)
     - [Federation](#federation)
-      - [Disadvantage(s): federation](#disadvantages-federation)
-      - [Source(s) and further reading: federation](#sources-and-further-reading-federation)
     - [Sharding](#sharding)
       - [Disadvantage(s): sharding](#disadvantages-sharding)
       - [Source(s) and further reading: sharding](#sources-and-further-reading-sharding)
@@ -800,26 +798,7 @@ Both masters serve reads and writes and coordinate with each other on writes.  I
 * [Scalability, availability, stability, patterns](http://www.slideshare.net/jboner/scalability-availability-stability-patterns/)
 * [Multi-master replication](https://en.wikipedia.org/wiki/Multi-master_replication)
 
-#### Federation
-
-<p align="center">
-  <img src="{{ "/images/U3qV33e.png" | relative_url }}">
-  <br/>
-  <i><a href="https://www.youtube.com/watch?v=kKjm4ehYiMs">Source: Scaling up to your first 10 million users</a></i>
-</p>
-
-Federation (or functional partitioning) splits up databases by function.  For example, instead of a single, monolithic database, you could have three databases: **forums**, **users**, and **products**, resulting in less read and write traffic to each database and therefore less replication lag.  Smaller databases result in more data that can fit in memory, which in turn results in more cache hits due to improved cache locality.  With no single central master serializing writes you can write in parallel, increasing throughput.
-
-##### Disadvantage(s): federation
-
-* Federation is not effective if your schema requires huge functions or tables.
-* You'll need to update your application logic to determine which database to read and write.
-* Joining data from two databases is more complex with a [server link](http://stackoverflow.com/questions/5145637/querying-data-by-joining-two-tables-in-two-database-on-different-servers).
-* Federation adds more hardware and additional complexity.
-
-##### Source(s) and further reading: federation
-
-* [Scaling up to your first 10 million users](https://www.youtube.com/watch?v=kKjm4ehYiMs)
+#### [Federation](/pages/federation)
 
 #### Sharding
 
@@ -831,7 +810,7 @@ Federation (or functional partitioning) splits up databases by function.  For ex
 
 Sharding distributes data across different databases such that each database can only manage a subset of the data.  Taking a users database as an example, as the number of users increases, more shards are added to the cluster.
 
-Similar to the advantages of [federation](#federation), sharding results in less read and write traffic, less replication, and more cache hits.  Index size is also reduced, which generally improves performance with faster queries.  If one shard goes down, the other shards are still operational, although you'll want to add some form of replication to avoid data loss.  Like federation, there is no single central master serializing writes, allowing you to write in parallel with increased throughput.
+Similar to the advantages of [federation](/pages/federation.md), sharding results in less read and write traffic, less replication, and more cache hits.  Index size is also reduced, which generally improves performance with faster queries.  If one shard goes down, the other shards are still operational, although you'll want to add some form of replication to avoid data loss.  Like federation, there is no single central master serializing writes, allowing you to write in parallel with increased throughput.
 
 Common ways to shard a table of users is either through the user's last name initial or the user's geographic location.
 
@@ -853,7 +832,7 @@ Common ways to shard a table of users is either through the user's last name ini
 
 Denormalization attempts to improve read performance at the expense of some write performance.  Redundant copies of the data are written in multiple tables to avoid expensive joins.  Some RDBMS such as [PostgreSQL](https://en.wikipedia.org/wiki/PostgreSQL) and Oracle support [materialized views](https://en.wikipedia.org/wiki/Materialized_view) which handle the work of storing redundant information and keeping redundant copies consistent.
 
-Once data becomes distributed with techniques such as [federation](#federation) and [sharding](#sharding), managing joins across data centers further increases complexity.  Denormalization might circumvent the need for such complex joins.
+Once data becomes distributed with techniques such as [federation](/pages/federation) and [sharding](#sharding), managing joins across data centers further increases complexity.  Denormalization might circumvent the need for such complex joins.
 
 In most systems, reads can heavily outnumber writes 100:1 or even 1000:1.  A read resulting in a complex database join can be very expensive, spending a significant amount of time on disk operations.
 
