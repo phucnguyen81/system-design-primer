@@ -20,5 +20,5 @@ and writes.
   have increased write latency due to synchronization.
 * Conflict resolution comes more into play as more write nodes are added and as
   latency increases.
-* See [Disadvantage(s): replication](/#disadvantages-replication) for points
+* See [Disadvantage(s): replication](/pages/replication#disadvantages-replication) for points
   related to **both** master-slave and master-master.

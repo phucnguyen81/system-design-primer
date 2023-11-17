@@ -17,6 +17,6 @@ is provisioned.
 ### Disadvantage(s): master-slave replication {#disadvantages-master-slave-replication}
 
 * Additional logic is needed to promote a slave to a master.
-* See [Disadvantage(s): replication](/#disadvantages-replication) for points
+* See [Disadvantage(s): replication](/pages/replication#disadvantages-replication) for points
   related to **both** master-slave and master-master.
 
