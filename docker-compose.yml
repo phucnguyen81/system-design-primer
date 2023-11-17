@@ -13,6 +13,7 @@ services:
       - "${LIVERELOAD_PORT:-35729}:35729"
     volumes:
       - .:/app
-      # - vscode_server:/root/.vscode-server
+      - ${SSH_DIR:-~/.ssh}:/root/.ssh
+      - vscode_server:/root/.vscode-server
     working_dir: /app
     command: ./docker-compose.server.command
