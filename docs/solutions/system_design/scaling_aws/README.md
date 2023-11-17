@@ -280,7 +280,7 @@ Our **Benchmarks/Load Tests** and **Profiling** show that our single **Web Serve
     - If you are configuring your own **Load Balancer**, setting up multiple servers in [active-active](/#active-active) or [active-passive](/#active-passive) in multiple availability zones will improve availability
     - Terminate SSL on the **Load Balancer** to reduce computational load on backend servers and to simplify certificate administration
   - Use multiple **Web Servers** spread out over multiple availability zones
-  - Use multiple **MySQL** instances in [**Master-Slave Failover**](/#master-slave-replication) mode across multiple availability zones to improve redundancy
+  - Use multiple **MySQL** instances in [**Master-Slave Failover**](/pages/master-slave-replication) mode across multiple availability zones to improve redundancy
 - Separate out the **Web Servers** from the [**Application Servers**](/#application-layer)
   - Scale and configure both layers independently
   - **Web Servers** can run as a [**Reverse Proxy**](/pages/reverse-proxy-web-server)
@@ -293,9 +293,45 @@ _Trade-offs, alternatives, and additional details:_
 
 ### Users+++
 
-![Imgur](https://i.imgur.com/OZCxJr0.png)
+See the original image [here](https://i.imgur.com/OZCxJr0.png).
 
 **Note:** **Internal Load Balancers** not shown to reduce clutter
+
+<div class="container center large">
+
+```mermaid!
+graph TD
+
+Client --> DNS
+DNS --> CDN -----> ObjectStore
+DNS --> LoadBalancer
+LoadBalancer --> WebServer
+WebServer --> WriteAPI
+WebServer --> ReadAPI
+WriteAPI ---> ObjectStore
+WriteAPI ---> SQLWrite
+ReadAPI ---> ObjectStore
+ReadAPI --> MemoryCache
+ReadAPI ---> SQLRead
+
+Client:::client
+DNS:::dns
+CDN:::cdn
+LoadBalancer[Load Balancer]:::balancer
+WebServer[Web Server]:::webserver
+WebServer:::multi
+WriteAPI[Write API]:::api
+ReadAPI[Read API]:::api
+ObjectStore[(Object Store)]:::db
+SQLWrite[(SQL Write Master-Slave)]:::db
+SQLWrite:::multi
+SQLRead[(SQL Read Replicas)]:::db
+SQLRead:::multi
+MemoryCache[Memory Cache]:::cache
+MemoryCache:::multi
+```
+
+</div>
 
 #### Assumptions
 
@@ -311,7 +347,7 @@ Our **Benchmarks/Load Tests** and **Profiling** show that we are read-heavy (100
   - Session data from the **Web Servers**
     - The **Web Servers** become stateless, allowing for **Autoscaling**
   - Reading 1 MB sequentially from memory takes about 250 microseconds, while reading from SSD takes 4x and from disk takes 80x longer.<sup><a href="/#latency-numbers-every-programmer-should-know">1</a></sup>
-- Add [**MySQL Read Replicas**](/#master-slave-replication) to reduce load on the write master
+- Add [**MySQL Read Replicas**](/pages/master-slave-replication) to reduce load on the write master
 - Add more **Web Servers** and **Application Servers** to improve responsiveness
 
 _Trade-offs, alternatives, and additional details:_
@@ -331,7 +367,53 @@ _Trade-offs, alternatives, and additional details:_
 
 ### Users++++
 
-![Imgur](https://i.imgur.com/3X8nmdL.png)
+The original image is [here](https://i.imgur.com/3X8nmdL.png).
+
+<div class="container center large">
+
+```mermaid!
+graph TD
+
+Client --> DNS
+DNS --> CDN -----> ObjectStore
+DNS --> LoadBalancer
+LoadBalancer --> WebServer
+WebServer --> WriteAPI
+WebServer --> ReadAPI
+WriteAPI ---> ObjectStore
+WriteAPI ---> SQLWrite
+ReadAPI ---> ObjectStore
+ReadAPI --> MemoryCache
+ReadAPI ---> SQLRead
+
+subgraph autoscale[Autoscale]
+  WebServer
+end
+subgraph autoscale2[Autoscale]
+  WriteAPI
+end
+subgraph autoscale3[Autoscale]
+  ReadAPI
+end
+
+Client:::client
+DNS:::dns
+CDN:::cdn
+LoadBalancer[Load Balancer]:::balancer
+WebServer[Web Server]:::webserver
+WebServer:::multi
+WriteAPI[Write API]:::api
+ReadAPI[Read API]:::api
+ObjectStore[(Object Store)]:::db
+SQLWrite[(SQL Write Master-Slave)]:::db
+SQLWrite:::multi
+SQLRead[(SQL Read Replicas)]:::db
+SQLRead:::multi
+MemoryCache[Memory Cache]:::cache
+MemoryCache:::multi
+```
+
+</div>
 
 #### Assumptions
 
@@ -370,9 +452,88 @@ Our **Benchmarks/Load Tests** and **Profiling** show that our traffic spikes dur
 
 ### Users+++++
 
-![Imgur](https://i.imgur.com/jj3A5N8.png)
+The original image is [here](https://i.imgur.com/jj3A5N8.png).
 
 **Note:** **Autoscaling** groups not shown to reduce clutter
+
+<div class="container center large">
+
+```mermaid!
+graph TD
+
+Client --> DNS
+DNS --> CDN ------> ObjectStore
+DNS --> LoadBalancer
+LoadBalancer --> WebServer
+WebServer --> WriteAPIAsync
+WebServer ---> WriteAPI
+WebServer ---> ReadAPI
+WriteAPIAsync --> Queue --> WorkerService
+WorkerService --> NoSQL
+WorkerService --> ObjectStore
+WriteAPI ---> ObjectStore
+WriteAPI ---> SQLWrite
+SQLWrite -.- SQLRead
+ReadAPI ---> ObjectStore
+ReadAPI --> MemoryCache
+ReadAPI ---> SQLRead
+
+subgraph db[Database]
+  subgraph sql[SQL]
+    SQLWrite
+    SQLRead
+  end
+  subgraph sqlscale[SQL Scaling]
+    subgraph sharding[Sharding]
+      Sharding1[(Customers A-M SQL)]
+      Sharding2[(Customers N-Z SQL)]
+    end
+    subgraph federation[Federation]
+      Federation1[(Customers SQL)]
+      Federation2[(Products SQL)]
+    end
+  end
+  sql -.- sqlscale
+  ObjectStore
+  NoSQL
+end
+subgraph jobs[Long running]
+  WriteAPIAsync
+  Queue
+  WorkerService
+end
+subgraph autoscale[Autoscale]
+  WebServer
+  WriteAPI
+  ReadAPI
+end
+
+Client:::client
+DNS:::dns
+CDN:::cdn
+LoadBalancer[Load Balancer]:::balancer
+WebServer[Web Server]:::webserver
+WebServer:::multi
+WriteAPIAsync[Write API Async]:::api
+WriteAPI[Write API]:::api
+ReadAPI[Read API]:::api
+ObjectStore[(Object Store)]:::db
+SQLWrite[(SQL Write Master-Slave)]:::db
+SQLWrite:::multi
+SQLRead[(SQL Read Replicas)]:::db
+SQLRead:::multi
+MemoryCache[Memory Cache]:::cache
+MemoryCache:::multi
+NoSQL[(NoSQL Database)]:::db
+Queue:::queue
+Queue:::multi
+WorkerService[Worker Service]:::worker
+WorkerService:::multi
+sharding:::db
+federation:::db
+```
+
+</div>
 
 #### Assumptions
 
@@ -390,14 +551,14 @@ We'll continue to address scaling issues due to the problem's constraints:
 
 SQL scaling patterns include:
 
-- [Federation](/#federation)
-- [Sharding](/#sharding)
+- [Federation](/pages/federation)
+- [Sharding](/pages/sharding)
 - [Denormalization](/#denormalization)
 - [SQL Tuning](/#sql-tuning)
 
 To further address the high read and write requests, we should also consider moving appropriate data to a [**NoSQL Database**](/#nosql) such as DynamoDB.
 
-We can further separate out our [**Application Servers**](/#application-layer) to allow for independent scaling. Batch processes or computations that do not need to be done in real-time can be done [**Asynchronously**](/#asynchronism) with **Queues** and **Workers**:
+We can further separate out our [**Application Servers**](/#application-layer) to allow for independent scaling. Batch processes or computations that do not need to be done in real-time can be done [**Asynchronously**](/pages/asynchronism) with **Queues** and **Workers**:
 
 - For example, in a photo service, the photo upload and the thumbnail creation can be separated:
   - **Client** uploads photo
@@ -417,9 +578,9 @@ _Trade-offs, alternatives, and additional details:_
 
 ### SQL scaling patterns
 
-- [Read replicas](/#master-slave-replication)
-- [Federation](/#federation)
-- [Sharding](/#sharding)
+- [Read replicas](/pages/master-slave-replication)
+- [Federation](/pages/federation)
+- [Sharding](/pages/sharding)
 - [Denormalization](/#denormalization)
 - [SQL Tuning](/#sql-tuning)
 
@@ -450,9 +611,9 @@ _Trade-offs, alternatives, and additional details:_
 
 ### Asynchronism and microservices
 
-- [Message queues](/#message-queues)
-- [Task queues](/#task-queues)
-- [Back pressure](/#back-pressure)
+- [Message queues](/pages/asynchronism/#message-queues)
+- [Task queues](/pages/asynchronism/#task-queues)
+- [Back pressure](/pages/asynchronism/#back-pressure)
 - [Microservices](/#microservices)
 
 ### Communications

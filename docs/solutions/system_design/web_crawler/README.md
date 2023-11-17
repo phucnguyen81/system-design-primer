@@ -294,9 +294,9 @@ Below are a few other optimizations to the **Crawling Service**:
 
 ### SQL scaling patterns
 
-* [Read replicas](/#master-slave-replication)
-* [Federation](/#federation)
-* [Sharding](/#sharding)
+* [Read replicas](/pages/master-slave-replication)
+* [Federation](/pages/federation)
+* [Sharding](/pages/sharding)
 * [Denormalization](/#denormalization)
 * [SQL Tuning](/#sql-tuning)
 
@@ -327,9 +327,9 @@ Below are a few other optimizations to the **Crawling Service**:
 
 ### Asynchronism and microservices
 
-* [Message queues](/#message-queues)
-* [Task queues](/#task-queues)
-* [Back pressure](/#back-pressure)
+* [Message queues](/pages/asynchronism/#message-queues)
+* [Task queues](/pages/asynchronism/#task-queues)
+* [Back pressure](/pages/asynchronism/#back-pressure)
 * [Microservices](/#microservices)
 
 ### Communications

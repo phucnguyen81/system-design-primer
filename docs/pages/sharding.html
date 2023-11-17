@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Sharding | The System Design Primer</title>
+<meta name="generator" content="Jekyll v3.9.3">
+<meta property="og:title" content="Sharding">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Learn how to design large-scale systems. Prep for the system design interview.">
+<meta property="og:description" content="Learn how to design large-scale systems. Prep for the system design interview.">
+<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/pages/sharding.html">
+<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/pages/sharding.html">
+<meta property="og:site_name" content="The System Design Primer">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Sharding">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Learn how to design large-scale systems. Prep for the system design interview.","headline":"Sharding","url":"https://phucnguyen81.github.io/system-design-primer/pages/sharding.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/system-design-primer/assets/main.css">
+<link type="application/atom+xml" rel="alternate" href="https://phucnguyen81.github.io/system-design-primer/feed.xml" title="The System Design Primer">
+<link rel="shortcut icon" type="image/x-icon" href="/system-design-primer/assets/favicon.ico">
+<link rel="stylesheet" type="text/css" href="/system-design-primer/assets/css/custom-styles.css">
+<link rel="stylesheet" type="text/css" href="/system-design-primer/assets/css/custom-mermaid.css">
+</head>
+<body>
+<header class="site-header" role="banner">
+
+  <div class="wrapper">
+<a class="site-title" rel="author" href="/system-design-primer/">The System Design Primer</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+<a class="page-link" href="/system-design-primer/about/">About</a><a class="page-link" href="/system-design-primer/pages/asynchronism.html">Asynchronism</a><a class="page-link" href="/system-design-primer/pages/domain-name-system.html">Domain name system</a><a class="page-link" href="/system-design-primer/pages/federation.html">Federation</a><a class="page-link" href="/system-design-primer/">The System Design Primer</a><a class="page-link" href="/system-design-primer/images/">Original Images</a><a class="page-link" href="/system-design-primer/pages/key-value-store.html">Key value store</a><a class="page-link" href="/system-design-primer/pages/load-balancer.html">Load balancer</a><a class="page-link" href="/system-design-primer/pages/master-master-replication.html">Master-master replication</a><a class="page-link" href="/system-design-primer/pages/master-slave-replication.html">Master-slave replication</a><a class="page-link" href="/system-design-primer/pages/replication.html">Replication</a><a class="page-link" href="/system-design-primer/pages/reverse-proxy-web-server.html">Reverse Proxy (web server)</a><a class="page-link" href="/system-design-primer/pages/sharding.html">Sharding</a><a class="page-link" href="/system-design-primer/pages/sql-or-nosql.html">SQL or NoSQL</a><a class="page-link" href="/system-design-primer/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/pastebin/">Design Pastebin.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/system-design-primer/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/system-design-primer/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/system-design-primer/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/system-design-primer/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/system-design-primer/solutions/system_design/web_crawler/">Design a web crawler</a>
+</div>
+      </nav>
+</div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Sharding</h1>
+  </header>
+
+  <div class="post-content">
+    <p align="center">
+  <i><a href="/system-design-primer/images/wU8x5Id.png">Original image</a></i>
+  <br>
+
+<svg class="mermaid" id="mermaid-svg" width="100%" xmlns="http://www.w3.org/2000/svg" style="max-width: 465.625px;" viewbox="-8 -8 465.625 265.2892150878906" role="graphics-document document" aria-roledescription="flowchart-v2" xmlns:xlink="http://www.w3.org/1999/xlink"><style>#mermaid-svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#mermaid-svg .error-icon{fill:#552222;}#mermaid-svg .error-text{fill:#552222;stroke:#552222;}#mermaid-svg .edge-thickness-normal{stroke-width:2px;}#mermaid-svg .edge-thickness-thick{stroke-width:3.5px;}#mermaid-svg .edge-pattern-solid{stroke-dasharray:0;}#mermaid-svg .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-svg .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-svg .marker{fill:#333333;stroke:#333333;}#mermaid-svg .marker.cross{stroke:#333333;}#mermaid-svg svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-svg .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#333;}#mermaid-svg .cluster-label text{fill:#333;}#mermaid-svg .cluster-label span,#mermaid-svg p{color:#333;}#mermaid-svg .label text,#mermaid-svg span,#mermaid-svg p{fill:#333;color:#333;}#mermaid-svg .node rect,#mermaid-svg .node circle,#mermaid-svg .node ellipse,#mermaid-svg .node polygon,#mermaid-svg .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaid-svg .flowchart-label text{text-anchor:middle;}#mermaid-svg .node .label{text-align:center;}#mermaid-svg .node.clickable{cursor:pointer;}#mermaid-svg .arrowheadPath{fill:#333333;}#mermaid-svg .edgePath .path{stroke:#333333;stroke-width:2.0px;}#mermaid-svg .flowchart-link{stroke:#333333;fill:none;}#mermaid-svg .edgeLabel{background-color:#e8e8e8;text-align:center;}#mermaid-svg .edgeLabel rect{opacity:0.5;background-color:#e8e8e8;fill:#e8e8e8;}#mermaid-svg .labelBkg{background-color:rgba(232, 232, 232, 0.5);}#mermaid-svg .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#mermaid-svg .cluster text{fill:#333;}#mermaid-svg .cluster span,#mermaid-svg p{color:#333;}#mermaid-svg div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-svg .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#mermaid-svg :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+<g><marker id="flowchart-pointEnd" class="marker flowchart" viewbox="0 0 10 10" refx="10" refy="5" markerunits="userSpaceOnUse" markerwidth="12" markerheight="12" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="flowchart-pointStart" class="marker flowchart" viewbox="0 0 10 10" refx="0" refy="5" markerunits="userSpaceOnUse" markerwidth="12" markerheight="12" orient="auto"><path d="M 0 5 L 10 10 L 10 0 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="flowchart-circleEnd" class="marker flowchart" viewbox="0 0 10 10" refx="11" refy="5" markerunits="userSpaceOnUse" markerwidth="11" markerheight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="flowchart-circleStart" class="marker flowchart" viewbox="0 0 10 10" refx="-1" refy="5" markerunits="userSpaceOnUse" markerwidth="11" markerheight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="flowchart-crossEnd" class="marker cross flowchart" viewbox="0 0 11 11" refx="12" refy="5.2" markerunits="userSpaceOnUse" markerwidth="11" markerheight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><marker id="flowchart-crossStart" class="marker cross flowchart" viewbox="0 0 11 11" refx="-1" refy="5.2" markerunits="userSpaceOnUse" markerwidth="11" markerheight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path d="M225.59375,34L225.59375,39.75C225.59375,45.5,225.59375,57,225.59375,68.5C225.59375,80,225.59375,91.5,225.59375,97.25L225.59375,103" id="L-App-LB-0" class=" edge-thickness-normal edge-pattern-solid flowchart-link LS-App LE-LB" style="fill:none;" marker-end="url(#flowchart-pointEnd)"></path><path d="M167.578125,132.97603594608088L145.95052083333334,137.81336328840072C124.32291666666667,142.6506906307206,81.06770833333333,152.3253453153603,59.440104166666664,161.3308556665099C37.8125,170.33636601765951,37.8125,178.672732035319,37.8125,182.84091504414877L37.8125,187.00909805297852" id="L-LB-A-0" class=" edge-thickness-normal edge-pattern-solid flowchart-link LS-LB LE-A" style="fill:none;" marker-end="url(#flowchart-pointEnd)"></path><path d="M200.45107886904762,137L194.28865947420636,141.16666666666666C188.12624007936506,145.33333333333334,175.80140128968253,153.66666666666666,169.63898189484127,162C163.4765625,170.33333333333334,163.4765625,178.66666666666666,163.4765625,182.83333333333334L163.4765625,187" id="L-LB-B-0" class=" edge-thickness-normal edge-pattern-dotted flowchart-link LS-LB LE-B" style="fill:none;stroke-width:2px;stroke-dasharray:3;"></path><path d="M250.73642113095238,137L256.8988405257937,141.16666666666666C263.06125992063494,145.33333333333334,275.38609871031747,153.66666666666666,281.54851810515873,162.0578187306722C287.7109375,170.44897079467773,287.7109375,178.89794158935547,287.7109375,183.12242698669434L287.7109375,187.3469123840332" id="L-LB-C-0" class=" edge-thickness-normal edge-pattern-dotted flowchart-link LS-LB LE-C" style="fill:none;stroke-width:2px;stroke-dasharray:3;"></path><path d="M283.609375,133.08162066940693L304.984375,137.9013505578391C326.359375,142.7210804462713,369.109375,152.36054022313564,390.484375,161.3502736846676C411.859375,170.34000714619955,411.859375,178.68001429239908,411.859375,182.85001786549887L411.859375,187.02002143859863" id="L-LB-D-0" class=" edge-thickness-normal edge-pattern-dotted flowchart-link LS-LB LE-D" style="fill:none;stroke-width:2px;stroke-dasharray:3;"></path></g><g class="edgeLabels"><g class="edgeLabel" transform="translate(225.59375, 68.5)"><g class="label" transform="translate(-40.828125, -9.5)"><foreignobject width="81.65625" height="19"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">User: Adam</span></div></foreignobject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignobject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignobject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignobject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignobject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignobject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignobject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignobject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignobject></g></g></g><g class="nodes"><g class="node default app flowchart-label" id="flowchart-App-0" transform="translate(225.59375, 17)"><rect class="basic label-container" style="" rx="0" ry="0" x="-21.1328125" y="-17" width="42.265625" height="34"></rect><g class="label" style="" transform="translate(-13.6328125, -9.5)"><rect></rect><foreignobject width="27.265625" height="19"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="nodeLabel">App</span></div></foreignobject></g></g><g class="node default balancer flowchart-label" id="flowchart-LB-1" transform="translate(225.59375, 120)"><rect class="basic label-container" style="" rx="0" ry="0" x="-58.015625" y="-17" width="116.03125" height="34"></rect><g class="label" style="" transform="translate(-50.515625, -9.5)"><rect></rect><foreignobject width="101.03125" height="19"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="nodeLabel">Load Balancer</span></div></foreignobject></g></g><g class="node default db flowchart-label" id="flowchart-A-3" label-offset-y="9.423676012461058" transform="translate(37.8125, 218.14461135864258)"><path style="" d="M 0,9.423676012461058 a 37.8125,9.423676012461058 0,0,0 75.625 0 a 37.8125,9.423676012461058 0,0,0 -75.625 0 l 0,43.42367601246106 a 37.8125,9.423676012461058 0,0,0 75.625 0 l 0,-43.42367601246106" transform="translate(-37.8125,-31.135514018691588)"></path><g class="label" style="" transform="translate(-30.3125, -9.5)"><rect></rect><foreignobject width="60.625" height="19"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="nodeLabel">User A-C</span></div></foreignobject></g></g><g class="node default db flowchart-label" id="flowchart-B-5" label-offset-y="9.42973919813157" transform="translate(163.4765625, 218.14461135864258)"><path style="" d="M 0,9.42973919813157 a 37.8515625,9.42973919813157 0,0,0 75.703125 0 a 37.8515625,9.42973919813157 0,0,0 -75.703125 0 l 0,43.42973919813157 a 37.8515625,9.42973919813157 0,0,0 75.703125 0 l 0,-43.42973919813157" transform="translate(-37.8515625,-31.144608797197357)"></path><g class="label" style="" transform="translate(-30.3515625, -9.5)"><rect></rect><foreignobject width="60.703125" height="19"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="nodeLabel">User D-F</span></div></foreignobject></g></g><g class="node default db flowchart-label" id="flowchart-C-7" label-offset-y="9.198467251323379" transform="translate(287.7109375, 218.14461135864258)"><path style="" d="M 0,9.198467251323379 a 36.3828125,9.198467251323379 0,0,0 72.765625 0 a 36.3828125,9.198467251323379 0,0,0 -72.765625 0 l 0,43.19846725132338 a 36.3828125,9.198467251323379 0,0,0 72.765625 0 l 0,-43.19846725132338" transform="translate(-36.3828125,-30.79770087698507)"></path><g class="label" style="" transform="translate(-28.8828125, -9.5)"><rect></rect><foreignobject width="57.765625" height="19"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="nodeLabel">User G-I</span></div></foreignobject></g></g><g class="node default db flowchart-label" id="flowchart-D-9" label-offset-y="9.416393953560855" transform="translate(411.859375, 218.14461135864258)"><path style="" d="M 0,9.416393953560855 a 37.765625,9.416393953560855 0,0,0 75.53125 0 a 37.765625,9.416393953560855 0,0,0 -75.53125 0 l 0,43.416393953560856 a 37.765625,9.416393953560855 0,0,0 75.53125 0 l 0,-43.416393953560856" transform="translate(-37.765625,-31.124590930341284)"></path><g class="label" style="" transform="translate(-30.265625, -9.5)"><rect></rect><foreignobject width="60.53125" height="19"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="nodeLabel">User X-Y</span></div></foreignobject></g></g></g></g></g><style>@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");</style></svg>
+
+  <br>
+  <i><a href="http://www.slideshare.net/jboner/scalability-availability-stability-patterns/">Source: Scalability, availability, stability, patterns</a></i>
+</p>
+
+<p>Sharding distributes data across different databases such that each database
+can only manage a subset of the data. Taking a users database as an example,
+as the number of users increases, more shards are added to the cluster.</p>
+
+<p>Similar to the advantages of <a href="/pages/federation.md">federation</a>, sharding
+results in less read and write traffic, less replication, and more cache hits.
+Index size is also reduced, which generally improves performance with faster
+queries. If one shard goes down, the other shards are still operational,
+although you’ll want to add some form of replication to avoid data loss. Like
+federation, there is no single central master serializing writes, allowing you
+to write in parallel with increased throughput.</p>
+
+<p>Common ways to shard a table of users is either through the user’s last name
+initial or the user’s geographic location.</p>
+
+<h3 id="disadvantages-sharding">Disadvantage(s): sharding</h3>
+
+<ul>
+  <li>You’ll need to update your application logic to work with shards, which could
+result in complex SQL queries.</li>
+  <li>Data distribution can become lopsided in a shard.  For example, a set of
+power users on a shard could result in increased load to that shard compared
+to others.
+    <ul>
+      <li>Rebalancing adds additional complexity.  A sharding function based on
+<a href="http://www.paperplanes.de/2011/12/9/the-magic-of-consistent-hashing.html">consistent hashing</a>
+can reduce the amount of transferred data.</li>
+    </ul>
+  </li>
+  <li>Joining data from multiple shards is more complex.</li>
+  <li>Sharding adds more hardware and additional complexity.</li>
+</ul>
+
+<h3 id="sources-and-further-reading-sharding">Source(s) and further reading: sharding</h3>
+
+<ul>
+  <li><a href="http://highscalability.com/blog/2009/8/6/an-unorthodox-approach-to-database-design-the-coming-of-the.html">The coming of the shard</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Shard_(database_architecture)">Shard database architecture</a></li>
+  <li><a href="http://www.paperplanes.de/2011/12/9/the-magic-of-consistent-hashing.html">Consistent hashing</a></li>
+</ul>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/system-design-primer/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">The System Design Primer</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">The System Design Primer</li>
+<li><a class="u-email" href="mailto:phucknguyen@gmail.com">phucknguyen@gmail.com</a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+<ul class="social-media-list">
+<li><a href="https://github.com/phucnguyen81"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#github"></use></svg> <span class="username">phucnguyen81</span></a></li>
+<li><a href="https://www.twitter.com/phucknguyen"><svg class="svg-icon"><use xlink:href="/system-design-primer/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">phucknguyen</span></a></li>
+</ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Learn how to design large-scale systems. Prep for the system design interview.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

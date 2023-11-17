@@ -6,20 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>About | The System Design Primer</title>
+<title>Asynchronism | The System Design Primer</title>
 <meta name="generator" content="Jekyll v3.9.3">
-<meta property="og:title" content="About">
+<meta property="og:title" content="Asynchronism">
 <meta property="og:locale" content="en_US">
 <meta name="description" content="Learn how to design large-scale systems. Prep for the system design interview.">
 <meta property="og:description" content="Learn how to design large-scale systems. Prep for the system design interview.">
-<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/about/">
-<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/about/">
+<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/pages/asynchronism.html">
+<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/pages/asynchronism.html">
 <meta property="og:site_name" content="The System Design Primer">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="About">
+<meta property="twitter:title" content="Asynchronism">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"Learn how to design large-scale systems. Prep for the system design interview.","headline":"About","name":"The System Design Primer","url":"https://phucnguyen81.github.io/system-design-primer/about/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Learn how to design large-scale systems. Prep for the system design interview.","headline":"Asynchronism","url":"https://phucnguyen81.github.io/system-design-primer/pages/asynchronism.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/system-design-primer/assets/main.css">
 <link type="application/atom+xml" rel="alternate" href="https://phucnguyen81.github.io/system-design-primer/feed.xml" title="The System Design Primer">
@@ -52,20 +52,81 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <h1 class="post-title">Asynchronism</h1>
   </header>
 
   <div class="post-content">
-    <p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="https://jekyllrb.com/">jekyllrb.com</a></p>
+    <p align="center">
+  <img src="/system-design-primer/images/54GYsSx.png">
+  <br>
+  <i><a href="http://lethain.com/introduction-to-architecting-systems-for-scale/#platform_layer">Source: Intro to architecting systems for scale</a></i>
+</p>
 
-<p>You can find the source code for Minima at GitHub:
-<a href="https://github.com/jekyll">jekyll</a> /
-<a href="https://github.com/jekyll/minima">minima</a></p>
+<p>Asynchronous workflows help reduce request times for expensive operations that
+would otherwise be performed in-line. They can also help by doing
+time-consuming work in advance, such as periodic aggregation of data.</p>
 
-<p>You can find the source code for Jekyll at GitHub:
-<a href="https://github.com/jekyll">jekyll</a> /
-<a href="https://github.com/jekyll/jekyll">jekyll</a></p>
+<h2 id="message-queues">Message queues</h2>
 
+<p>Message queues receive, hold, and deliver messages. If an operation is too slow
+to perform inline, you can use a message queue with the following workflow:</p>
+
+<ul>
+  <li>An application publishes a job to the queue, then notifies the user of job
+status</li>
+  <li>A worker picks up the job from the queue, processes it, then signals the job
+is complete</li>
+</ul>
+
+<p>The user is not blocked and the job is processed in the background. During this
+time, the client might optionally do a small amount of processing to make it
+seem like the task has completed. For example, if posting a tweet, the tweet
+could be instantly posted to your timeline, but it could take some time before
+your tweet is actually delivered to all of your followers.</p>
+
+<p><strong><a href="https://redis.io/">Redis</a></strong> is useful as a simple message broker but
+messages can be lost.</p>
+
+<p><strong><a href="https://www.rabbitmq.com/">RabbitMQ</a></strong> is popular but requires you to adapt
+to the ‘AMQP’ protocol and manage your own nodes.</p>
+
+<p><strong><a href="https://aws.amazon.com/sqs/">Amazon SQS</a></strong> is hosted but can have high
+latency and has the possibility of messages being delivered twice.</p>
+
+<h2 id="task-queues">Task queues</h2>
+
+<p>Tasks queues receive tasks and their related data, runs them, then delivers
+their results. They can support scheduling and can be used to run
+computationally-intensive jobs in the background.</p>
+
+<p><strong><a href="https://docs.celeryproject.org/en/stable/">Celery</a></strong> has support for
+scheduling and primarily has python support.</p>
+
+<h2 id="back-pressure">Back pressure</h2>
+
+<p>If queues start to grow significantly, the queue size can become larger than
+memory, resulting in cache misses, disk reads, and even slower performance.
+<a href="http://mechanical-sympathy.blogspot.com/2012/05/apply-back-pressure-when-overloaded.html">Back pressure</a>
+can help by limiting the queue size, thereby maintaining a high throughput rate
+and good response times for jobs already in the queue. Once the queue fills up,
+clients get a server busy or HTTP 503 status code to try again later. Clients
+can retry the request at a later time, perhaps with
+<a href="https://en.wikipedia.org/wiki/Exponential_backoff">exponential backoff</a>.</p>
+
+<h2 id="disadvantages-asynchronism">Disadvantage(s): asynchronism</h2>
+
+<p>Use cases such as inexpensive calculations and realtime workflows might be
+better suited for synchronous operations, as introducing queues can add delays
+and complexity.</p>
+
+<h2 id="sources-and-further-reading-asynchronism">Source(s) and further reading</h2>
+
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=1KRYH75wgy4">It’s all a numbers game</a></li>
+  <li><a href="http://mechanical-sympathy.blogspot.com/2012/05/apply-back-pressure-when-overloaded.html">Applying back pressure when overloaded</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Little%27s_law">Little’s law</a></li>
+  <li><a href="https://www.quora.com/What-is-the-difference-between-a-message-queue-and-a-task-queue-Why-would-a-task-queue-require-a-message-broker-like-RabbitMQ-Redis-Celery-or-IronMQ-to-function">What is the difference between a message queue and a task queue?</a></li>
+</ul>
 
   </div>
 

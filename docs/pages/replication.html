@@ -6,20 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>About | The System Design Primer</title>
+<title>Replication | The System Design Primer</title>
 <meta name="generator" content="Jekyll v3.9.3">
-<meta property="og:title" content="About">
+<meta property="og:title" content="Replication">
 <meta property="og:locale" content="en_US">
 <meta name="description" content="Learn how to design large-scale systems. Prep for the system design interview.">
 <meta property="og:description" content="Learn how to design large-scale systems. Prep for the system design interview.">
-<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/about/">
-<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/about/">
+<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/pages/replication.html">
+<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/pages/replication.html">
 <meta property="og:site_name" content="The System Design Primer">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="About">
+<meta property="twitter:title" content="Replication">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"Learn how to design large-scale systems. Prep for the system design interview.","headline":"About","name":"The System Design Primer","url":"https://phucnguyen81.github.io/system-design-primer/about/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Learn how to design large-scale systems. Prep for the system design interview.","headline":"Replication","url":"https://phucnguyen81.github.io/system-design-primer/pages/replication.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/system-design-primer/assets/main.css">
 <link type="application/atom+xml" rel="alternate" href="https://phucnguyen81.github.io/system-design-primer/feed.xml" title="The System Design Primer">
@@ -52,20 +52,41 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <h1 class="post-title">Replication</h1>
   </header>
 
   <div class="post-content">
-    <p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="https://jekyllrb.com/">jekyllrb.com</a></p>
+    <h2 id="master-slave-and-master-master">Master-slave and master-master</h2>
 
-<p>You can find the source code for Minima at GitHub:
-<a href="https://github.com/jekyll">jekyll</a> /
-<a href="https://github.com/jekyll/minima">minima</a></p>
+<p>This topic is further discussed in the <a href="/#database">Database</a> section:</p>
 
-<p>You can find the source code for Jekyll at GitHub:
-<a href="https://github.com/jekyll">jekyll</a> /
-<a href="https://github.com/jekyll/jekyll">jekyll</a></p>
+<ul>
+  <li><a href="/pages/master-slave-replication">Master-slave replication</a></li>
+  <li><a href="/pages/master-master-replication">Master-master replication</a></li>
+</ul>
 
+<h2 id="disadvantages-replication">Disadvantage(s): replication</h2>
+
+<ul>
+  <li>There is a potential for loss of data if the master fails before any newly
+written data can be replicated to other nodes.</li>
+  <li>Writes are replayed to the read replicas. If there are a lot of writes, the
+read replicas can get bogged down with replaying writes and can’t do as many
+reads.</li>
+  <li>The more read slaves, the more you have to replicate, which leads to greater
+replication lag.</li>
+  <li>On some systems, writing to the master can spawn multiple threads to write in
+parallel, whereas read replicas only support writing sequentially with a
+single thread.</li>
+  <li>Replication adds more hardware and additional complexity.</li>
+</ul>
+
+<h2 id="sources-and-further-reading-replication">Source(s) and further reading: replication</h2>
+
+<ul>
+  <li><a href="http://www.slideshare.net/jboner/scalability-availability-stability-patterns/">Scalability, availability, stability, patterns</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Multi-master_replication">Multi-master replication</a></li>
+</ul>
 
   </div>
 

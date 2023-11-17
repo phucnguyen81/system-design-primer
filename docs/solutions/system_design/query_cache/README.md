@@ -239,7 +239,7 @@ To handle the heavy request load and the large amount of memory needed, we'll sc
 
 * **Each machine in the cache cluster has its own cache** - Simple, although it will likely result in a low cache hit rate.
 * **Each machine in the cache cluster has a copy of the cache** - Simple, although it is an inefficient use of memory.
-* **The cache is [sharded](/#sharding) across all machines in the cache cluster** - More complex, although it is likely the best option.  We could use hashing to determine which machine could have the cached results of a query using `machine = hash(query)`.  We'll likely want to use [consistent hashing](/#under-development).
+* **The cache is [sharded](/pages/sharding) across all machines in the cache cluster** - More complex, although it is likely the best option.  We could use hashing to determine which machine could have the cached results of a query using `machine = hash(query)`.  We'll likely want to use [consistent hashing](/#under-development).
 
 ## Additional talking points
 
@@ -247,9 +247,9 @@ To handle the heavy request load and the large amount of memory needed, we'll sc
 
 ### SQL scaling patterns
 
-* [Read replicas](/#master-slave-replication)
-* [Federation](/#federation)
-* [Sharding](/#sharding)
+* [Read replicas](/pages/master-slave-replication)
+* [Federation](/pages/federation)
+* [Sharding](/pages/sharding)
 * [Denormalization](/#denormalization)
 * [SQL Tuning](/#sql-tuning)
 
@@ -280,9 +280,9 @@ To handle the heavy request load and the large amount of memory needed, we'll sc
 
 ### Asynchronism and microservices
 
-* [Message queues](/#message-queues)
-* [Task queues](/#task-queues)
-* [Back pressure](/#back-pressure)
+* [Message queues](/pages/asynchronism/#message-queues)
+* [Task queues](/pages/asynchronism/#task-queues)
+* [Back pressure](/pages/asynchronism/#back-pressure)
 * [Microservices](/#microservices)
 
 ### Communications

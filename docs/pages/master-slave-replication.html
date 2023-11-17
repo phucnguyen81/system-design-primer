@@ -6,20 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>About | The System Design Primer</title>
+<title>Master-slave replication | The System Design Primer</title>
 <meta name="generator" content="Jekyll v3.9.3">
-<meta property="og:title" content="About">
+<meta property="og:title" content="Master-slave replication">
 <meta property="og:locale" content="en_US">
 <meta name="description" content="Learn how to design large-scale systems. Prep for the system design interview.">
 <meta property="og:description" content="Learn how to design large-scale systems. Prep for the system design interview.">
-<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/about/">
-<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/about/">
+<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/pages/master-slave-replication.html">
+<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/pages/master-slave-replication.html">
 <meta property="og:site_name" content="The System Design Primer">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="About">
+<meta property="twitter:title" content="Master-slave replication">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"Learn how to design large-scale systems. Prep for the system design interview.","headline":"About","name":"The System Design Primer","url":"https://phucnguyen81.github.io/system-design-primer/about/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Learn how to design large-scale systems. Prep for the system design interview.","headline":"Master-slave replication","url":"https://phucnguyen81.github.io/system-design-primer/pages/master-slave-replication.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/system-design-primer/assets/main.css">
 <link type="application/atom+xml" rel="alternate" href="https://phucnguyen81.github.io/system-design-primer/feed.xml" title="The System Design Primer">
@@ -52,19 +52,29 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <h1 class="post-title">Master-slave replication</h1>
   </header>
 
   <div class="post-content">
-    <p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="https://jekyllrb.com/">jekyllrb.com</a></p>
+    <p>The master serves reads and writes, replicating writes to one or more slaves,
+which serve only reads. Slaves can also replicate to additional slaves in a
+tree-like fashion. If the master goes offline, the system can continue to
+operate in read-only mode until a slave is promoted to a master or a new master
+is provisioned.</p>
 
-<p>You can find the source code for Minima at GitHub:
-<a href="https://github.com/jekyll">jekyll</a> /
-<a href="https://github.com/jekyll/minima">minima</a></p>
+<p align="center">
+  <img src="/system-design-primer/images/C9ioGtn.png">
+  <br>
+  <a href="http://www.slideshare.net/jboner/scalability-availability-stability-patterns">Source: Scalability, availability, stability, patterns</a>
+</p>
 
-<p>You can find the source code for Jekyll at GitHub:
-<a href="https://github.com/jekyll">jekyll</a> /
-<a href="https://github.com/jekyll/jekyll">jekyll</a></p>
+<h3 id="disadvantages-master-slave-replication">Disadvantage(s): master-slave replication</h3>
+
+<ul>
+  <li>Additional logic is needed to promote a slave to a master.</li>
+  <li>See <a href="/pages/replication#disadvantages-replication">Disadvantage(s): replication</a> for points
+related to <strong>both</strong> master-slave and master-master.</li>
+</ul>
 
 
   </div>

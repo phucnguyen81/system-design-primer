@@ -10,8 +10,8 @@ built with Jekyll and
 - Install docker and docker-compose
 - Run `./dev up` to run the service
 - Run `./dev serve` to start the jekyll server
-- Run `./dev attach` to attach to the service container (or use VS Code's Remote Container)
 - Go to `localhost:4000` to see the generated site
+- Run `./dev attach` to attach to the service container (or use VS Code's Remote Container)
 
 ## Deploy to GitHub Pages
 
@@ -27,7 +27,6 @@ Take a look at the source code to know which files to override.
 
 ## TODO
 
-- Add an index page for all pages
+- [x] Apply custom style to mermaid diagrams
+- [ ] Summarize scaling aws
 - [Learn Jekyll](https://jekyllrb.com/docs/)
-- [Learn from mademistakes.com](https://mademistakes.com/mastering-jekyll/)
-- [Learn Jekyll themes from minimal-mistakes repo](https://github.com/mmistakes/minimal-mistakes)

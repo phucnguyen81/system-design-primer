@@ -42,7 +42,7 @@
         </label>
 
         <div class="trigger">
-<a class="page-link" href="/system-design-primer/about/">About</a><a class="page-link" href="/system-design-primer/pages/domain-name-system.html">Domain name system</a><a class="page-link" href="/system-design-primer/">The System Design Primer</a><a class="page-link" href="/system-design-primer/images/">Original Images</a><a class="page-link" href="/system-design-primer/pages/key-value-store.html">Key value store</a><a class="page-link" href="/system-design-primer/pages/load-balancer.html">Load balancer</a><a class="page-link" href="/system-design-primer/pages/reverse-proxy-web-server.html">Reverse Proxy (web server)</a><a class="page-link" href="/system-design-primer/pages/sql-or-nosql.html">SQL or NoSQL</a><a class="page-link" href="/system-design-primer/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/pastebin/">Design Pastebin.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/system-design-primer/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/system-design-primer/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/system-design-primer/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/system-design-primer/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/system-design-primer/solutions/system_design/web_crawler/">Design a web crawler</a>
+<a class="page-link" href="/system-design-primer/about/">About</a><a class="page-link" href="/system-design-primer/pages/asynchronism.html">Asynchronism</a><a class="page-link" href="/system-design-primer/pages/domain-name-system.html">Domain name system</a><a class="page-link" href="/system-design-primer/pages/federation.html">Federation</a><a class="page-link" href="/system-design-primer/">The System Design Primer</a><a class="page-link" href="/system-design-primer/images/">Original Images</a><a class="page-link" href="/system-design-primer/pages/key-value-store.html">Key value store</a><a class="page-link" href="/system-design-primer/pages/load-balancer.html">Load balancer</a><a class="page-link" href="/system-design-primer/pages/master-master-replication.html">Master-master replication</a><a class="page-link" href="/system-design-primer/pages/master-slave-replication.html">Master-slave replication</a><a class="page-link" href="/system-design-primer/pages/replication.html">Replication</a><a class="page-link" href="/system-design-primer/pages/reverse-proxy-web-server.html">Reverse Proxy (web server)</a><a class="page-link" href="/system-design-primer/pages/sharding.html">Sharding</a><a class="page-link" href="/system-design-primer/pages/sql-or-nosql.html">SQL or NoSQL</a><a class="page-link" href="/system-design-primer/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/pastebin/">Design Pastebin.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/system-design-primer/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/system-design-primer/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/system-design-primer/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/system-design-primer/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/system-design-primer/solutions/system_design/web_crawler/">Design a web crawler</a>
 </div>
       </nav>
 </div>
@@ -165,12 +165,7 @@
         </ul>
       </li>
       <li><a href="#disadvantages-failover">Disadvantage(s): failover</a></li>
-      <li>
-<a href="#replication">Replication</a>
-        <ul>
-          <li><a href="#master-slave-and-master-master">Master-slave and master-master</a></li>
-        </ul>
-      </li>
+      <li><a href="#replication">Replication</a></li>
       <li>
 <a href="#availability-in-numbers">Availability in numbers</a>
         <ul>
@@ -214,34 +209,10 @@
       <li>
 <a href="#relational-database-management-system-rdbms">Relational database management system (RDBMS)</a>
         <ul>
-          <li>
-<a href="#master-slave-replication">Master-slave replication</a>
-            <ul>
-              <li><a href="#disadvantages-master-slave-replication">Disadvantage(s): master-slave replication</a></li>
-            </ul>
-          </li>
-          <li>
-<a href="#master-master-replication">Master-master replication</a>
-            <ul>
-              <li><a href="#disadvantages-master-master-replication">Disadvantage(s): master-master replication</a></li>
-              <li><a href="#disadvantages-replication">Disadvantage(s): replication</a></li>
-              <li><a href="#sources-and-further-reading-replication">Source(s) and further reading: replication</a></li>
-            </ul>
-          </li>
-          <li>
-<a href="#federation">Federation</a>
-            <ul>
-              <li><a href="#disadvantages-federation">Disadvantage(s): federation</a></li>
-              <li><a href="#sources-and-further-reading-federation">Source(s) and further reading: federation</a></li>
-            </ul>
-          </li>
-          <li>
-<a href="#sharding">Sharding</a>
-            <ul>
-              <li><a href="#disadvantages-sharding">Disadvantage(s): sharding</a></li>
-              <li><a href="#sources-and-further-reading-sharding">Source(s) and further reading: sharding</a></li>
-            </ul>
-          </li>
+          <li><a href="#master-slave-replication">Master-slave replication</a></li>
+          <li><a href="#master-master-replication">Master-master replication</a></li>
+          <li><a href="#federation">Federation</a></li>
+          <li><a href="#sharding">Sharding</a></li>
           <li>
 <a href="#denormalization">Denormalization</a>
             <ul>
@@ -337,16 +308,7 @@
       <li><a href="#sources-and-further-reading-7">Source(s) and further reading</a></li>
     </ul>
   </li>
-  <li>
-<a href="#asynchronism">Asynchronism</a>
-    <ul>
-      <li><a href="#message-queues">Message queues</a></li>
-      <li><a href="#task-queues">Task queues</a></li>
-      <li><a href="#back-pressure">Back pressure</a></li>
-      <li><a href="#disadvantages-asynchronism">Disadvantage(s): asynchronism</a></li>
-      <li><a href="#sources-and-further-reading-8">Source(s) and further reading</a></li>
-    </ul>
-  </li>
+  <li><a href="#asynchronism">Asynchronism</a></li>
   <li>
 <a href="#communication">Communication</a>
     <ul>
@@ -386,7 +348,7 @@
   <li>
 <a href="#security">Security</a>
     <ul>
-      <li><a href="#sources-and-further-reading-9">Source(s) and further reading</a></li>
+      <li><a href="#sources-and-further-reading-8">Source(s) and further reading</a></li>
     </ul>
   </li>
   <li>
@@ -395,14 +357,14 @@
       <li>
 <a href="#powers-of-two-table">Powers of two table</a>
         <ul>
-          <li><a href="#sources-and-further-reading-10">Source(s) and further reading</a></li>
+          <li><a href="#sources-and-further-reading-9">Source(s) and further reading</a></li>
         </ul>
       </li>
       <li>
 <a href="#latency-numbers-every-programmer-should-know">Latency numbers every programmer should know</a>
         <ul>
           <li><a href="#latency-numbers-visualized">Latency numbers visualized</a></li>
-          <li><a href="#sources-and-further-reading-11">Source(s) and further reading</a></li>
+          <li><a href="#sources-and-further-reading-10">Source(s) and further reading</a></li>
         </ul>
       </li>
       <li><a href="#additional-system-design-interview-questions">Additional system design interview questions</a></li>
@@ -411,7 +373,7 @@
       <li>
 <a href="#company-engineering-blogs">Company engineering blogs</a>
         <ul>
-          <li><a href="#sources-and-further-reading-12">Source(s) and further reading</a></li>
+          <li><a href="#sources-and-further-reading-11">Source(s) and further reading</a></li>
         </ul>
       </li>
     </ul>
@@ -1044,16 +1006,7 @@
   <li>There is a potential for loss of data if the active system fails before any newly written data can be replicated to the passive.</li>
 </ul>
 
-<h3 id="replication">Replication</h3>
-
-<h4 id="master-slave-and-master-master">Master-slave and master-master</h4>
-
-<p>This topic is further discussed in the <a href="#database">Database</a> section:</p>
-
-<ul>
-  <li><a href="#master-slave-replication">Master-slave replication</a></li>
-  <li><a href="#master-master-replication">Master-master replication</a></li>
-</ul>
+<h3 id="replication"><a href="/pages/replication">Replication</a></h3>
 
 <h3 id="availability-in-numbers">Availability in numbers</h3>
 
@@ -1202,7 +1155,7 @@
 
 <p>Separating out the web layer from the application layer (also known as platform layer) allows you to scale and configure both layers independently.  Adding a new API results in adding application servers without necessarily adding additional web servers.  The <strong>single responsibility principle</strong> advocates for small and autonomous services that work together.  Small teams with small services can plan more aggressively for rapid growth.</p>
 
-<p>Workers in the application layer also help enable <a href="#asynchronism">asynchronism</a>.</p>
+<p>Workers in the application layer also help enable <a href="/pages/asynchronism">asynchronism</a>.</p>
 
 <h3 id="microservices">Microservices</h3>
 
@@ -1258,124 +1211,19 @@
 
 <p>There are many techniques to scale a relational database: <strong>master-slave replication</strong>, <strong>master-master replication</strong>, <strong>federation</strong>, <strong>sharding</strong>, <strong>denormalization</strong>, and <strong>SQL tuning</strong>.</p>
 
-<h4 id="master-slave-replication">Master-slave replication</h4>
+<h4 id="master-slave-replication"><a href="/pages/master-slave-replication">Master-slave replication</a></h4>
 
-<p>The master serves reads and writes, replicating writes to one or more slaves, which serve only reads. Slaves can also replicate to additional slaves in a tree-like fashion. If the master goes offline, the system can continue to operate in read-only mode until a slave is promoted to a master or a new master is provisioned.</p>
+<h4 id="master-master-replication"><a href="/pages/master-master-replication">Master-master replication</a></h4>
 
-<p align="center">
-  <img src="/system-design-primer/images/C9ioGtn.png">
-  <br>
-  <a href="http://www.slideshare.net/jboner/scalability-availability-stability-patterns">Source: Scalability, availability, stability, patterns</a>
-</p>
+<h4 id="federation"><a href="/pages/federation">Federation</a></h4>
 
-<h5 id="disadvantages-master-slave-replication">Disadvantage(s): master-slave replication</h5>
-
-<ul>
-  <li>Additional logic is needed to promote a slave to a master.</li>
-  <li>See <a href="#disadvantages-replication">Disadvantage(s): replication</a> for points related to <strong>both</strong> master-slave and master-master.</li>
-</ul>
-
-<h4 id="master-master-replication">Master-master replication</h4>
-
-<p>Both masters serve reads and writes and coordinate with each other on writes.  If either master goes down, the system can continue to operate with both reads and writes.</p>
-
-<p align="center">
-  <img src="/system-design-primer/images/krAHLGg.png">
-  <br>
-  <i><a href="http://www.slideshare.net/jboner/scalability-availability-stability-patterns">Source: Scalability, availability, stability, patterns</a></i>
-</p>
-
-<h5 id="disadvantages-master-master-replication">Disadvantage(s): master-master replication</h5>
-
-<ul>
-  <li>You’ll need a load balancer or you’ll need to make changes to your application logic to determine where to write.</li>
-  <li>Most master-master systems are either loosely consistent (violating ACID) or have increased write latency due to synchronization.</li>
-  <li>Conflict resolution comes more into play as more write nodes are added and as latency increases.</li>
-  <li>See <a href="#disadvantages-replication">Disadvantage(s): replication</a> for points related to <strong>both</strong> master-slave and master-master.</li>
-</ul>
-
-<h5 id="disadvantages-replication">Disadvantage(s): replication</h5>
-
-<ul>
-  <li>There is a potential for loss of data if the master fails before any newly written data can be replicated to other nodes.</li>
-  <li>Writes are replayed to the read replicas.  If there are a lot of writes, the read replicas can get bogged down with replaying writes and can’t do as many reads.</li>
-  <li>The more read slaves, the more you have to replicate, which leads to greater replication lag.</li>
-  <li>On some systems, writing to the master can spawn multiple threads to write in parallel, whereas read replicas only support writing sequentially with a single thread.</li>
-  <li>Replication adds more hardware and additional complexity.</li>
-</ul>
-
-<h5 id="sources-and-further-reading-replication">Source(s) and further reading: replication</h5>
-
-<ul>
-  <li><a href="http://www.slideshare.net/jboner/scalability-availability-stability-patterns/">Scalability, availability, stability, patterns</a></li>
-  <li><a href="https://en.wikipedia.org/wiki/Multi-master_replication">Multi-master replication</a></li>
-</ul>
-
-<h4 id="federation">Federation</h4>
-
-<p align="center">
-  <img src="/system-design-primer/images/U3qV33e.png">
-  <br>
-  <i><a href="https://www.youtube.com/watch?v=kKjm4ehYiMs">Source: Scaling up to your first 10 million users</a></i>
-</p>
-
-<p>Federation (or functional partitioning) splits up databases by function.  For example, instead of a single, monolithic database, you could have three databases: <strong>forums</strong>, <strong>users</strong>, and <strong>products</strong>, resulting in less read and write traffic to each database and therefore less replication lag.  Smaller databases result in more data that can fit in memory, which in turn results in more cache hits due to improved cache locality.  With no single central master serializing writes you can write in parallel, increasing throughput.</p>
-
-<h5 id="disadvantages-federation">Disadvantage(s): federation</h5>
-
-<ul>
-  <li>Federation is not effective if your schema requires huge functions or tables.</li>
-  <li>You’ll need to update your application logic to determine which database to read and write.</li>
-  <li>Joining data from two databases is more complex with a <a href="http://stackoverflow.com/questions/5145637/querying-data-by-joining-two-tables-in-two-database-on-different-servers">server link</a>.</li>
-  <li>Federation adds more hardware and additional complexity.</li>
-</ul>
-
-<h5 id="sources-and-further-reading-federation">Source(s) and further reading: federation</h5>
-
-<ul>
-  <li><a href="https://www.youtube.com/watch?v=kKjm4ehYiMs">Scaling up to your first 10 million users</a></li>
-</ul>
-
-<h4 id="sharding">Sharding</h4>
-
-<p align="center">
-  <img src="/system-design-primer/images/wU8x5Id.png">
-  <br>
-  <i><a href="http://www.slideshare.net/jboner/scalability-availability-stability-patterns/">Source: Scalability, availability, stability, patterns</a></i>
-</p>
-
-<p>Sharding distributes data across different databases such that each database can only manage a subset of the data.  Taking a users database as an example, as the number of users increases, more shards are added to the cluster.</p>
-
-<p>Similar to the advantages of <a href="#federation">federation</a>, sharding results in less read and write traffic, less replication, and more cache hits.  Index size is also reduced, which generally improves performance with faster queries.  If one shard goes down, the other shards are still operational, although you’ll want to add some form of replication to avoid data loss.  Like federation, there is no single central master serializing writes, allowing you to write in parallel with increased throughput.</p>
-
-<p>Common ways to shard a table of users is either through the user’s last name initial or the user’s geographic location.</p>
-
-<h5 id="disadvantages-sharding">Disadvantage(s): sharding</h5>
-
-<ul>
-  <li>You’ll need to update your application logic to work with shards, which could result in complex SQL queries.</li>
-  <li>Data distribution can become lopsided in a shard.  For example, a set of power users on a shard could result in increased load to that shard compared to others.
-    <ul>
-      <li>Rebalancing adds additional complexity.  A sharding function based on <a href="http://www.paperplanes.de/2011/12/9/the-magic-of-consistent-hashing.html">consistent hashing</a> can reduce the amount of transferred data.</li>
-    </ul>
-  </li>
-  <li>Joining data from multiple shards is more complex.</li>
-  <li>Sharding adds more hardware and additional complexity.</li>
-</ul>
-
-<h5 id="sources-and-further-reading-sharding">Source(s) and further reading: sharding</h5>
-
-<ul>
-  <li><a href="http://highscalability.com/blog/2009/8/6/an-unorthodox-approach-to-database-design-the-coming-of-the.html">The coming of the shard</a></li>
-  <li><a href="https://en.wikipedia.org/wiki/Shard_(database_architecture)">Shard database architecture</a></li>
-  <li><a href="http://www.paperplanes.de/2011/12/9/the-magic-of-consistent-hashing.html">Consistent hashing</a></li>
-</ul>
+<h4 id="sharding"><a href="/pages/sharding">Sharding</a></h4>
 
 <h4 id="denormalization">Denormalization</h4>
 
 <p>Denormalization attempts to improve read performance at the expense of some write performance.  Redundant copies of the data are written in multiple tables to avoid expensive joins.  Some RDBMS such as <a href="https://en.wikipedia.org/wiki/PostgreSQL">PostgreSQL</a> and Oracle support <a href="https://en.wikipedia.org/wiki/Materialized_view">materialized views</a> which handle the work of storing redundant information and keeping redundant copies consistent.</p>
 
-<p>Once data becomes distributed with techniques such as <a href="#federation">federation</a> and <a href="#sharding">sharding</a>, managing joins across data centers further increases complexity.  Denormalization might circumvent the need for such complex joins.</p>
+<p>Once data becomes distributed with techniques such as <a href="/pages/federation">federation</a> and <a href="/pages/sharding">sharding</a>, managing joins across data centers further increases complexity.  Denormalization might circumvent the need for such complex joins.</p>
 
 <p>In most systems, reads can heavily outnumber writes 100:1 or even 1000:1.  A read resulting in a complex database join can be very expensive, spending a significant amount of time on disk operations.</p>
 
@@ -1787,57 +1635,7 @@
   <li><a href="https://en.wikipedia.org/wiki/Cache_(computing)">Wikipedia</a></li>
 </ul>
 
-<h2 id="asynchronism">Asynchronism</h2>
-
-<p align="center">
-  <img src="/system-design-primer/images/54GYsSx.png">
-  <br>
-  <i><a href="http://lethain.com/introduction-to-architecting-systems-for-scale/#platform_layer">Source: Intro to architecting systems for scale</a></i>
-</p>
-
-<p>Asynchronous workflows help reduce request times for expensive operations that would otherwise be performed in-line.  They can also help by doing time-consuming work in advance, such as periodic aggregation of data.</p>
-
-<h3 id="message-queues">Message queues</h3>
-
-<p>Message queues receive, hold, and deliver messages.  If an operation is too slow to perform inline, you can use a message queue with the following workflow:</p>
-
-<ul>
-  <li>An application publishes a job to the queue, then notifies the user of job status</li>
-  <li>A worker picks up the job from the queue, processes it, then signals the job is complete</li>
-</ul>
-
-<p>The user is not blocked and the job is processed in the background.  During this time, the client might optionally do a small amount of processing to make it seem like the task has completed.  For example, if posting a tweet, the tweet could be instantly posted to your timeline, but it could take some time before your tweet is actually delivered to all of your followers.</p>
-
-<p><strong><a href="https://redis.io/">Redis</a></strong> is useful as a simple message broker but messages can be lost.</p>
-
-<p><strong><a href="https://www.rabbitmq.com/">RabbitMQ</a></strong> is popular but requires you to adapt to the ‘AMQP’ protocol and manage your own nodes.</p>
-
-<p><strong><a href="https://aws.amazon.com/sqs/">Amazon SQS</a></strong> is hosted but can have high latency and has the possibility of messages being delivered twice.</p>
-
-<h3 id="task-queues">Task queues</h3>
-
-<p>Tasks queues receive tasks and their related data, runs them, then delivers their results.  They can support scheduling and can be used to run computationally-intensive jobs in the background.</p>
-
-<p><strong><a href="https://docs.celeryproject.org/en/stable/">Celery</a></strong> has support for scheduling and primarily has python support.</p>
-
-<h3 id="back-pressure">Back pressure</h3>
-
-<p>If queues start to grow significantly, the queue size can become larger than memory, resulting in cache misses, disk reads, and even slower performance.  <a href="http://mechanical-sympathy.blogspot.com/2012/05/apply-back-pressure-when-overloaded.html">Back pressure</a> can help by limiting the queue size, thereby maintaining a high throughput rate and good response times for jobs already in the queue.  Once the queue fills up, clients get a server busy or HTTP 503 status code to try again later.  Clients can retry the request at a later time, perhaps with <a href="https://en.wikipedia.org/wiki/Exponential_backoff">exponential backoff</a>.</p>
-
-<h3 id="disadvantages-asynchronism">Disadvantage(s): asynchronism</h3>
-
-<ul>
-  <li>Use cases such as inexpensive calculations and realtime workflows might be better suited for synchronous operations, as introducing queues can add delays and complexity.</li>
-</ul>
-
-<h3 id="sources-and-further-reading-8">Source(s) and further reading</h3>
-
-<ul>
-  <li><a href="https://www.youtube.com/watch?v=1KRYH75wgy4">It’s all a numbers game</a></li>
-  <li><a href="http://mechanical-sympathy.blogspot.com/2012/05/apply-back-pressure-when-overloaded.html">Applying back pressure when overloaded</a></li>
-  <li><a href="https://en.wikipedia.org/wiki/Little%27s_law">Little’s law</a></li>
-  <li><a href="https://www.quora.com/What-is-the-difference-between-a-message-queue-and-a-task-queue-Why-would-a-task-queue-require-a-message-broker-like-RabbitMQ-Redis-Celery-or-IronMQ-to-function">What is the difference between a message queue and a task queue?</a></li>
-</ul>
+<h2 id="asynchronism"><a href="/pages/asynchronism">Asynchronism</a></h2>
 
 <h2 id="communication">Communication</h2>
 
@@ -2164,7 +1962,7 @@ PUT /someresources/anId
   <li>Use the principle of <a href="https://en.wikipedia.org/wiki/Principle_of_least_privilege">least privilege</a>.</li>
 </ul>
 
-<h3 id="sources-and-further-reading-9">Source(s) and further reading</h3>
+<h3 id="sources-and-further-reading-8">Source(s) and further reading</h3>
 
 <ul>
   <li><a href="https://github.com/shieldfy/API-Security-Checklist">API security checklist</a></li>
@@ -2190,7 +1988,7 @@ PUT /someresources/anId
 40              1,099,511,627,776   1 trillion           1 TB
 </code></pre></div></div>
 
-<h4 id="sources-and-further-reading-10">Source(s) and further reading</h4>
+<h4 id="sources-and-further-reading-9">Source(s) and further reading</h4>
 
 <ul>
   <li><a href="https://en.wikipedia.org/wiki/Power_of_two">Powers of two</a></li>
@@ -2238,7 +2036,7 @@ Notes
 
 <p><img src="https://camo.githubusercontent.com/77f72259e1eb58596b564d1ad823af1853bc60a3/687474703a2f2f692e696d6775722e636f6d2f6b307431652e706e67" alt=""></p>
 
-<h4 id="sources-and-further-reading-11">Source(s) and further reading</h4>
+<h4 id="sources-and-further-reading-10">Source(s) and further reading</h4>
 
 <ul>
   <li><a href="https://gist.github.com/jboner/2841832">Latency numbers every programmer should know - 1</a></li>
@@ -2711,7 +2509,7 @@ Notes
   <li><a href="https://www.zynga.com/blogs/engineering">Zynga Engineering Blog</a></li>
 </ul>
 
-<h4 id="sources-and-further-reading-12">Source(s) and further reading</h4>
+<h4 id="sources-and-further-reading-11">Source(s) and further reading</h4>
 
 <p>Looking to add a blog?  To avoid duplicating work, consider adding your company blog to the following repo:</p>
 

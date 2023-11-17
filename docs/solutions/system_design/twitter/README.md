@@ -244,7 +244,7 @@ We'll introduce some components to complete the design and to address scalabilit
 * [Cache](/#cache)
 * [Relational database management system (RDBMS)](/#relational-database-management-system-rdbms)
 * [SQL write master-slave failover](/#fail-over)
-* [Master-slave replication](/#master-slave-replication)
+* [Master-slave replication](/pages/master-slave-replication)
 * [Consistency patterns](/#consistency-patterns)
 * [Availability patterns](/#availability-patterns)
 
@@ -269,8 +269,8 @@ Although the **Memory Cache** should reduce the load on the database, it is unli
 
 The high volume of writes would overwhelm a single **SQL Write Master-Slave**, also pointing to a need for additional scaling techniques.
 
-* [Federation](/#federation)
-* [Sharding](/#sharding)
+* [Federation](/pages/federation)
+* [Sharding](/pages/sharding)
 * [Denormalization](/#denormalization)
 * [SQL Tuning](/#sql-tuning)
 
@@ -307,9 +307,9 @@ We should also consider moving some data to a **NoSQL Database**.
 
 ### Asynchronism and microservices
 
-* [Message queues](/#message-queues)
-* [Task queues](/#task-queues)
-* [Back pressure](/#back-pressure)
+* [Message queues](/pages/asynchronism/#message-queues)
+* [Task queues](/pages/asynchronism/#task-queues)
+* [Back pressure](/pages/asynchronism/#back-pressure)
 * [Microservices](/#microservices)
 
 ### Communications
