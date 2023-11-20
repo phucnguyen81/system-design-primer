@@ -8,16 +8,17 @@ built with Jekyll and
 ## Development
 
 - Install docker and docker-compose
-- Run `./dev up` to run the service
-- Run `./dev serve` to start the jekyll server
+- Run `./run up` to run the service
+- Run `./run serve` to start the Jekyll server
 - Go to `localhost:4000` to see the generated site
-- Run `./dev attach` to attach to the service container (or use VS Code's Remote Container)
+- Run `./dev attach` to attach to the service container (or attach with VS
+  Code's Dev Container)
 
 ## Deploy to GitHub Pages
 
-- Run `./dev up` to run the service
-- Run `./dev build` to build the site into `docs/` folder
-- Commit the `docs/` folder and push to GitHub
+- Run `./run up` to run the service
+- Run `./run build-site` to build the site into `docs/` folder
+- Push the `docs/` folder to GitHub
 
 ## Customize the site's theme
 
@@ -28,5 +29,7 @@ Take a look at the source code to know which files to override.
 ## TODO
 
 - [x] Apply custom style to mermaid diagrams
+- [x] Run the service as a non-root user matching host user
+- [x] Can attach to the container with VS Code Dev Container
 - [ ] Summarize scaling aws in a post
 - [Learn Jekyll](https://jekyllrb.com/docs/)

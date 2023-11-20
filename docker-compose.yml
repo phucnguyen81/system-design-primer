@@ -6,16 +6,20 @@ services:
     build:
       context: .
       args:
-        - TIMEZONE=${TIMEZONE}
+        - TIMEZONE=${TIMEZONE:?missing}
+        - USERNAME=${USERNAME:?missing}
+        - USER_UID=${USER_UID:?missing}
+        - USER_GID=${USER_GID:?missing}
     container_name: system-design-primer
     env_file:
       - .env
       - .env.local
     ports:
-      - "${SERVER_PORT}:4000"
-      - "${LIVERELOAD_PORT}:35729"
+      - "${SERVER_PORT:?missing}:4000"
+      - "${LIVERELOAD_PORT:?missing}:35729"
+    user: ${USERNAME}
     volumes:
       - .:/app
-      - vscode_server:/root/.vscode-server
+      - vscode_server:/home/${USERNAME}/.vscode-server
     working_dir: /app
     command: ./docker-compose.server.command

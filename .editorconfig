@@ -12,3 +12,7 @@ insert_final_newline = true
 # Python files
 [*.py]
 indent_size = 4
+
+# Dockerfiles
+[Dockerfile*]
+indent_size = 4

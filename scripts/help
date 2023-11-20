@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
-echo Available commands:
-echo ========================
-echo attach   : Attach to the development container
-echo build    : Build the site to deploy to GitHub Pages
-echo down     : Stop and remove what was created by up
-echo help     : Show this help message
-echo serve    : Serve the site locally
-echo up       : Start the development containers
+cat <<EOF
+Available commands:
+========================
+attach      : Attach to the development container
+build       : Build the app image
+build-site  : Build the site to deploy to GitHub Pages
+down        : Stop and remove what was created by up
+help        : Show this help message
+serve       : Serve the site locally
+up          : Start the development containers
+EOF
+

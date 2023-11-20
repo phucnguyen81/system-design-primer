@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
-chown -R $USER_UID:$USER_GID /app
+
+# VS Code creates .vscode-server as root, have to reset the owner
+[[ -d ~/.vscode-server ]] && sudo chown -R $(whoami) ~/.vscode-server
+
 sleep infinity

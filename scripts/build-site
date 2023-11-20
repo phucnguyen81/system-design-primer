@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Build the site for deployment to GitHub Pages
+docker exec -it --workdir /app -e JEKYLL_ENV=production \
+    system-design-primer \
+        bundle exec jekyll build -d ./docs
