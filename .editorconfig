@@ -4,15 +4,10 @@ root = true
 # Common settings
 [*]
 charset = utf-8
-indent_size = 2
+indent_size = 4
 max_line_length = 80
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-# Python files
-[*.py]
-indent_size = 4
-
-# Dockerfiles
-[Dockerfile*]
-indent_size = 4
+[Gemfile*]
+indent_size = 2
