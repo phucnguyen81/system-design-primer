@@ -40,3 +40,6 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 # webrick provides custom headers
 gem "webrick", "~> 1.8"
+
+# html-proofer checks for broken links
+gem "html-proofer", "~> 5.0.8"

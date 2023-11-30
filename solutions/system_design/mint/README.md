@@ -345,7 +345,7 @@ We'll introduce some components to complete the design and to address scalabilit
 * [Horizontal scaling](/pages/load-balancer#horizontal-scaling)
 * [Web server (reverse proxy)](/pages/reverse-proxy-web-server)
 * [API server (application layer)](/#application-layer)
-* [Cache](/#cache)
+* [Cache](/pages/cache)
 * [Relational database management system (RDBMS)](/#relational-database-management-system-rdbms)
 * [SQL write master-slave failover](/#fail-over)
 * [Master-slave replication](/pages/master-slave-replication)
@@ -367,7 +367,7 @@ User sessions, aggregate stats by category, and recent transactions could be pla
             * If the url is in the **SQL Database**, fetches the contents
                 * Updates the **Memory Cache** with the contents
 
-Refer to [When to update the cache](/#when-to-update-the-cache) for tradeoffs and alternatives.  The approach above describes [cache-aside](/#cache-aside).
+Refer to [When to update the cache](/#when-to-update-the-cache) for tradeoffs and alternatives.  The approach above describes [cache-aside](/pages/cache-aside).
 
 Instead of keeping the `monthly_spending` aggregate table in the **SQL Database**, we could create a separate **Analytics Database** using a data warehousing solution such as Amazon Redshift or Google BigQuery.
 
@@ -408,7 +408,7 @@ We should also consider moving some data to a **NoSQL Database**.
     * [Caching at the database query level](/#caching-at-the-database-query-level)
     * [Caching at the object level](/#caching-at-the-object-level)
 * When to update the cache
-    * [Cache-aside](/#cache-aside)
+    * [Cache-aside](/pages/cache-aside)
     * [Write-through](/#write-through)
     * [Write-behind (write-back)](/#write-behind-write-back)
     * [Refresh ahead](/#refresh-ahead)

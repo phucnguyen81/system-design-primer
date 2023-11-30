@@ -34,7 +34,7 @@ RUN groupadd --gid $USER_GID $USERNAME \
 # Install dependencies for the new user
 USER $USERNAME
 WORKDIR /app
-COPY Gemfile Gemfile.lock ./
+COPY --chown=${USERNAME} Gemfile Gemfile.lock ./
 RUN bundle config set --local path ~/.local/share/gem \
     && bundle install
 

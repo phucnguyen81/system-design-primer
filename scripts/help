@@ -1,13 +1,18 @@
 #!/usr/bin/env bash
+# Print a list of available commands
+set -euo pipefail
+
 cat <<EOF
 Available commands:
 ========================
-attach      : Attach to the development container
-build       : Build the app image
-build-site  : Build the site to deploy to GitHub Pages
-down        : Stop and remove what was created by up
-help        : Show this help message
-serve       : Serve the site locally
-up          : Start the development containers
 EOF
 
+dirpath=$(dirname "$0") # directory path of the current file
+for file in "$dirpath"/*; do
+    if [[ -f "$file" ]]; then
+        filename=$(basename "$file")
+        comment=$(grep -m 1 '^# ' "$file")
+        description="${comment#\# }"
+        printf "%-12s : %s\n" "$filename" "$description"
+    fi
+done

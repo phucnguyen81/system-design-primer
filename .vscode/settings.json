@@ -4,6 +4,7 @@
         "docs": true
     },
     "[python]": {
-        "editor.defaultFormatter": null
+        "editor.defaultFormatter": "ms-python.pylint"
     },
+    "markdown.validate.enabled": true,
 }

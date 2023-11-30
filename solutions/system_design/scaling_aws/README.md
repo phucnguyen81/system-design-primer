@@ -341,7 +341,7 @@ Our **Benchmarks/Load Tests** and **Profiling** show that we are read-heavy (100
 
 - The following goals attempt to address the scaling issues with the **MySQL Database**
   - Based on the **Benchmarks/Load Tests** and **Profiling**, you might only need to implement one or two of these techniques
-- Move the following data to a [**Memory Cache**](/#cache) such as Elasticache to reduce load and latency:
+- Move the following data to a [**Memory Cache**](/pages/cache) such as Elasticache to reduce load and latency:
   - Frequently accessed content from **MySQL**
     - First, try to configure the **MySQL Database** cache to see if that is sufficient to relieve the bottleneck before implementing a **Memory Cache**
   - Session data from the **Web Servers**
@@ -604,7 +604,7 @@ _Trade-offs, alternatives, and additional details:_
   - [Caching at the database query level](/#caching-at-the-database-query-level)
   - [Caching at the object level](/#caching-at-the-object-level)
 - When to update the cache
-  - [Cache-aside](/#cache-aside)
+  - [Cache-aside](/pages/cache-aside)
   - [Write-through](/#write-through)
   - [Write-behind (write-back)](/#write-behind-write-back)
   - [Refresh ahead](/#refresh-ahead)

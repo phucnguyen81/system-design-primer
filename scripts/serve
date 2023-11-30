@@ -1,13 +1,10 @@
 #!/usr/bin/env bash
-# Serve the site locally
-
-# NOTE: We are not using --incremental flag for incremental build since
-# it does not automatically add new posts under `_posts` to the home page.
-docker exec -it system-design-primer \
+# Start the Jekyll server in the container to serve the site locally
+docker compose exec -it server \
     bundle exec jekyll serve \
         --baseurl="" \
         --force_polling \
         --host 0.0.0.0 \
-        --port 4000 \
+        --port ${SERVER_PORT:?missing} \
         --incremental \
         --livereload

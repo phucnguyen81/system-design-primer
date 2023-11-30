@@ -206,7 +206,7 @@ The cache should be updated when:
 
 The most straightforward way to handle these cases is to simply set a max time that a cached entry can stay in the cache before it is updated, usually referred to as time to live (TTL).
 
-Refer to [When to update the cache](/#when-to-update-the-cache) for tradeoffs and alternatives.  The approach above describes [cache-aside](/#cache-aside).
+Refer to [When to update the cache](/#when-to-update-the-cache) for tradeoffs and alternatives.  The approach above describes [cache-aside](/pages/cache-aside).
 
 ## Step 4: Scale the design
 
@@ -229,7 +229,7 @@ We'll introduce some components to complete the design and to address scalabilit
 * [Horizontal scaling](/pages/load-balancer#horizontal-scaling)
 * [Web server (reverse proxy)](/pages/reverse-proxy-web-server)
 * [API server (application layer)](/#application-layer)
-* [Cache](/#cache)
+* [Cache](/pages/cache)
 * [Consistency patterns](/#consistency-patterns)
 * [Availability patterns](/#availability-patterns)
 
@@ -273,7 +273,7 @@ To handle the heavy request load and the large amount of memory needed, we'll sc
     * [Caching at the database query level](/#caching-at-the-database-query-level)
     * [Caching at the object level](/#caching-at-the-object-level)
 * When to update the cache
-    * [Cache-aside](/#cache-aside)
+    * [Cache-aside](/pages/cache-aside)
     * [Write-through](/#write-through)
     * [Write-behind (write-back)](/#write-behind-write-back)
     * [Refresh ahead](/#refresh-ahead)

@@ -1,6 +1,9 @@
 version: '3'
+
 volumes:
   vscode_server:
+    driver: local
+
 services:
   server:
     build:
@@ -10,7 +13,7 @@ services:
         - USERNAME=${USERNAME:?missing}
         - USER_UID=${USER_UID:?missing}
         - USER_GID=${USER_GID:?missing}
-    container_name: system-design-primer
+    container_name: systemdesignprimer
     env_file:
       - .env
       - .env.local
