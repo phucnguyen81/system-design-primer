@@ -1,0 +1,4773 @@
+/home/vagrant/.local/share/gem/ruby/3.2.0/gems/io-event-1.3.3/lib/io/event/support.rb:24: warning: IO::Buffer is experimental and both the Ruby and C interface may change in the future!
+For the Images check, the following failures were found:
+
+* At ./docs/images/index.html:64:
+
+  image ./h81n9iK.png does not have an alt attribute
+
+* At ./docs/index.html:55:
+
+  internal image /system-design-primer/images/jj3A5N8.png does not exist
+
+* At ./docs/index.html:55:
+
+  image /system-design-primer/images/jj3A5N8.png does not have an alt attribute
+
+* At ./docs/index.html:68:
+
+  internal image /system-design-primer/images/jrUBAF7.png does not exist
+
+* At ./docs/index.html:68:
+
+  image /system-design-primer/images/jrUBAF7.png does not have an alt attribute
+
+* At ./docs/index.html:386:
+
+  internal image /system-design-primer/images/zdCAkB3.png does not exist
+
+* At ./docs/index.html:386:
+
+  image /system-design-primer/images/zdCAkB3.png does not have an alt attribute
+
+* At ./docs/index.html:405:
+
+  internal image /system-design-primer/images/b4YtAEN.png does not exist
+
+* At ./docs/index.html:405:
+
+  image /system-design-primer/images/b4YtAEN.png does not have an alt attribute
+
+* At ./docs/index.html:440:
+
+  internal image /system-design-primer/images/OfVllex.png does not exist
+
+* At ./docs/index.html:679:
+
+  internal image /system-design-primer/images/4edXG0T.png does not exist
+
+* At ./docs/index.html:685:
+
+  internal image /system-design-primer/images/jrUBAF7.png does not exist
+
+* At ./docs/index.html:691:
+
+  internal image /system-design-primer/images/bWxPtQA.png does not exist
+
+* At ./docs/index.html:697:
+
+  internal image /system-design-primer/images/V5q57vU.png does not exist
+
+* At ./docs/index.html:703:
+
+  internal image /system-design-primer/images/cdCv5g7.png does not exist
+
+* At ./docs/index.html:709:
+
+  internal image /system-design-primer/images/4j99mhe.png does not exist
+
+* At ./docs/index.html:715:
+
+  internal image /system-design-primer/images/MzExP06.png does not exist
+
+* At ./docs/index.html:721:
+
+  internal image /system-design-primer/images/jj3A5N8.png does not exist
+
+* At ./docs/index.html:873:
+
+  internal image /system-design-primer/images/bgLMI2u.png does not exist
+
+* At ./docs/index.html:873:
+
+  image /system-design-primer/images/bgLMI2u.png does not have an alt attribute
+
+* At ./docs/index.html:1058:
+
+  internal image /system-design-primer/images/h9TAuGI.jpg does not exist
+
+* At ./docs/index.html:1058:
+
+  image /system-design-primer/images/h9TAuGI.jpg does not have an alt attribute
+
+* At ./docs/index.html:1109:
+
+  internal image /system-design-primer/images/yB5SYwm.png does not exist
+
+* At ./docs/index.html:1109:
+
+  image /system-design-primer/images/yB5SYwm.png does not have an alt attribute
+
+* At ./docs/index.html:1148:
+
+  internal image /system-design-primer/images/Xkm5CXz.png does not exist
+
+* At ./docs/index.html:1148:
+
+  image /system-design-primer/images/Xkm5CXz.png does not have an alt attribute
+
+* At ./docs/index.html:1319:
+
+  internal image /system-design-primer/images/n16iOGk.png does not exist
+
+* At ./docs/index.html:1319:
+
+  image /system-design-primer/images/n16iOGk.png does not have an alt attribute
+
+* At ./docs/index.html:1346:
+
+  internal image /system-design-primer/images/fNcl65g.png does not exist
+
+* At ./docs/index.html:1346:
+
+  image /system-design-primer/images/fNcl65g.png does not have an alt attribute
+
+* At ./docs/index.html:1386:
+
+  internal image /system-design-primer/images/5KeocQs.jpg does not exist
+
+* At ./docs/index.html:1386:
+
+  image /system-design-primer/images/5KeocQs.jpg does not have an alt attribute
+
+* At ./docs/index.html:1461:
+
+  internal image /system-design-primer/images/JdAsdvG.jpg does not exist
+
+* At ./docs/index.html:1461:
+
+  image /system-design-primer/images/JdAsdvG.jpg does not have an alt attribute
+
+* At ./docs/index.html:1490:
+
+  internal image /system-design-primer/images/yzDrJtA.jpg does not exist
+
+* At ./docs/index.html:1490:
+
+  image /system-design-primer/images/yzDrJtA.jpg does not have an alt attribute
+
+* At ./docs/index.html:1523:
+
+  internal image /system-design-primer/images/iF4Mkb5.png does not exist
+
+* At ./docs/index.html:1523:
+
+  image /system-design-primer/images/iF4Mkb5.png does not have an alt attribute
+
+* At ./docs/index.html:1939:
+
+  internal image /system-design-primer/images/TcUo2fw.png does not exist
+
+* At ./docs/index.html:1939:
+
+  image /system-design-primer/images/TcUo2fw.png does not have an alt attribute
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:83:
+
+  image https://mermaid.ink/svg/eyJjb2RlIjoicGllIHRpdGxlIFBldHMgYWRvcHRlZCBieSB2b2x1bnRlZXJzXG5cIkRvZ3NcIiA6IDM4NlxuXCJDYXRzXCIgOiA4NVxuXCJSYXRzXCIgOiAzNSIsIm1lcm1haWQiOm51bGx9 does not have an alt attribute
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:87:
+
+  image https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggVEQ7XG5BLS0-QjtcbkEtLT5DO1xuQi0tPkQ7XG5DLS0-RDsiLCJtZXJtYWlkIjpudWxsfQ does not have an alt attribute
+
+* At ./docs/pages/asynchronism.html:60:
+
+  internal image /system-design-primer/images/54GYsSx.png does not exist
+
+* At ./docs/pages/asynchronism.html:60:
+
+  image /system-design-primer/images/54GYsSx.png does not have an alt attribute
+
+* At ./docs/pages/cache.html:60:
+
+  internal image /system-design-primer/images/Q6z24La.png does not exist
+
+* At ./docs/pages/cache.html:60:
+
+  image /system-design-primer/images/Q6z24La.png does not have an alt attribute
+
+* At ./docs/pages/cache.html:141:
+
+  internal image /system-design-primer/images/ONjORqk.png does not exist
+
+* At ./docs/pages/cache.html:141:
+
+  image /system-design-primer/images/ONjORqk.png does not have an alt attribute
+
+* At ./docs/pages/cache.html:180:
+
+  internal image /system-design-primer/images/0vBc0hN.png does not exist
+
+* At ./docs/pages/cache.html:180:
+
+  image /system-design-primer/images/0vBc0hN.png does not have an alt attribute
+
+* At ./docs/pages/cache.html:217:
+
+  internal image /system-design-primer/images/rgSrvjG.png does not exist
+
+* At ./docs/pages/cache.html:217:
+
+  image /system-design-primer/images/rgSrvjG.png does not have an alt attribute
+
+* At ./docs/pages/cache.html:239:
+
+  internal image /system-design-primer/images/kxtjqgE.png does not exist
+
+* At ./docs/pages/cache.html:239:
+
+  image /system-design-primer/images/kxtjqgE.png does not have an alt attribute
+
+* At ./docs/pages/domain-name-system.html:68:
+
+  image https://mermaid.ink/svg/eyJjb2RlIjoiLS0tXG50aXRsZTogSG93IGRvZXMgRE5TIHdvcms_XG4tLS1cbmdyYXBoIFREXG4lJS1cbkNsaWVudFtDbGllbnQgRGV2aWNlXVxuRE5TQ2FjaGVbTG9jYWwgRE5TIENhY2hlXVxuRE5TUmVzb2x2ZXJbSVNQIEROUyBSZXNvbHZlcl1cblJvb3RTZXJ2ZXJbLiBETlMgUm9vdCBTZXJ2ZXJdXG5UTERTZXJ2ZXJbLmNvbSBUTEQgTmFtZSBTZXJ2ZXJdXG5BdXRob3JpdGF0aXZlRE5TU2VydmVyW2dvb2dsZS5jb20gQXV0aG9yaXRhdGl2ZSBOYW1lIFNlcnZlcl1cbiUlLVxuQ2xpZW50IC0tPnxhc2sgZm9yIHd3dy5nb29nbGUuY29tfCBETlNSZXNvbHZlclxuRE5TUmVzb2x2ZXIgLS0-fGlzIGl0IGluIGNhY2hlP3wgRE5TQ2FjaGVcbkROU0NhY2hlIC0tPnxub3QgaW4gY2FjaGUsIGFzayByb290IHNlcnZlcnwgRE5TUmVzb2x2ZXJcbiUlLVxuRE5TUmVzb2x2ZXIgLS0-IHx3d3cuZ29vZ2xlLmNvbS4gaXMgYXQgMTQyLjI1MS4yMjAuNDZ8Q2xpZW50XG5ETlNSZXNvbHZlciAtLT58YXNrIGZvciAuY29tfCBSb290U2VydmVyXG5Sb290U2VydmVyIC0tPnxhc2sgZm9yIGdvb2dsZS5jb20_fCBUTERTZXJ2ZXJcblRMRFNlcnZlciAtLT58YXNrIGZvciB3d3c_fCBBdXRob3JpdGF0aXZlRE5TU2VydmVyXG5BdXRob3JpdGF0aXZlRE5TU2VydmVyIC0tPnwxNDIuMjUxLjIyMC40NnwgVExEU2VydmVyXG5UTERTZXJ2ZXIgLS0-fDE0Mi4yNTEuMjIwLjQ2fCBSb290U2VydmVyXG5Sb290U2VydmVyIC0tPnwxNDIuMjUxLjIyMC40NnwgRE5TUmVzb2x2ZXIiLCJtZXJtYWlkIjpudWxsfQ does not have an alt attribute
+
+* At ./docs/pages/domain-name-system.html:84:
+
+  image https://mermaid.ink/svg/eyJjb2RlIjoiLS0tXG50aXRsZTogRE5TIEhpZXJhcmNoeVxuLS0tXG4lJS1cbmdyYXBoIFREXG5zdWJncmFwaCBSb290XG5yb290W1Jvb3Qgc2VydmVyc11cbmVuZFxuJSUtXG5zdWJncmFwaCBUb3BMZXZlbFtUb3AgTGV2ZWwgRG9tYWlucyBUTERdXG5kb3Rjb21bLmNvbV1cbmRvdG9yZ1sub3JnXVxuZG90bmV0Wy5uZXRdXG5lbmRcbiUlLVxuc3ViZ3JhcGggU2Vjb25kTGV2ZWxbU2Vjb25kIExldmVsIERvbWFpbnNdXG5nb29nbGVbZ29vZ2xlIG1hbmFnZWQgYnkgR29vZ2xlXVxuYXBwbGVbYXBwbGUgbWFuYWdlZCBieSBBcHBsZV1cbmVuZFxuJSUtXG5zdWJncmFwaCBUaGlyZExldmVsW1RoaXJkIExldmVsIERvbWFpbnNdXG53d3dbd3d3XVxubWFpbFttYWlsXVxuZW5kXG4lJS1cbnJvb3QgLS0-IGRvdGNvbVxucm9vdCAtLT4gZG90b3JnXG5yb290IC0tPiBkb3RuZXRcbmRvdGNvbSAtLT4gZ29vZ2xlXG5kb3Rjb20gLS0-IGFwcGxlXG5nb29nbGUgLS0-IHd3d1xuZ29vZ2xlIC0tPiBtYWlsIiwibWVybWFpZCI6bnVsbH0 does not have an alt attribute
+
+* At ./docs/pages/federation.html:63:
+
+  image https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggTFJcbnN1YmdyYXBoIEZlZGVyYXRpb25cbmRpcmVjdGlvbiBMUlxuc3ViZ3JhcGggZm9ydW1bRm9ydW1zIERCXVxuTTFbTV0gLS0-IFMxW1NdXG5NMSAtLi0-IFIxW1JdXG5lbmRcbnN1YmdyYXBoIHVzZXJbVXNlcnMgREJdXG5NMltNXSAtLT4gUzJbU11cbk0yIC0uLT4gUjJbUl1cbmVuZFxuc3ViZ3JhcGggcHJvZHVjdHNbUHJvZHVjdHMgREJdXG5NM1tNXSAtLT4gUzNbU11cbk0zIC0uLT4gUjNbUl1cbmVuZFxuZm9ydW0gLS4tIHVzZXIgLS4tIHByb2R1Y3RzXG5lbmQiLCJtZXJtYWlkIjpudWxsfQ does not have an alt attribute
+
+* At ./docs/pages/load-balancer.html:63:
+
+  image https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggVERcbiUlLVxuQ2xpZW50IDwtLT4gRGlzcGF0Y2hlclxuRGlzcGF0Y2hlciA8LS0-IFNlcnZlcjFbU2VydmVyIDFdXG5EaXNwYXRjaGVyIDwtLT4gU2VydmVyMltTZXJ2ZXIgMl1cbkRpc3BhdGNoZXIgPC0tPiBTZXJ2ZXIzW1NlcnZlciAzXVxuc3R5bGUgQ2xpZW50IGZpbGw6TGF3bkdyZWVuXG5zdHlsZSBEaXNwYXRjaGVyIGZpbGw6S2hha2lcbnN0eWxlIFNlcnZlcjEgZmlsbDpMaWdodEJsdWVcbnN0eWxlIFNlcnZlcjIgZmlsbDpMaWdodEJsdWVcbnN0eWxlIFNlcnZlcjMgZmlsbDpMaWdodEJsdWUiLCJtZXJtYWlkIjpudWxsfQ does not have an alt attribute
+
+* At ./docs/pages/load-balancer.html:65:
+
+  image https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG4lJS1cbjFbRGlzcGF0Y2hlciBwaWNrcyBhIFNvcmtlcl1cbjEgLS0-fFJhbmRvbXwgMltEaXNwYXRjaGVyIHdhaXRzIGZvciB0aGUgcmVzcG9uc2VdXG4xIC0tPnxSb3VuZCByb2JpbnwgMlxuMSAtLT58TGVhc3QgYnVzeXwgMlxuMSAtLT58U3RpY2t5IHNlc3Npb24vY29va2llc3wgMlxuMSAtLT58QnkgcmVxdWVzdCBwYXJhbWV0ZXJzfCAyXG4yIC0tPiAzW0Rpc3BhdGNoZXIgZm9yd2FyZHMgdGhlIHJlc3BvbnNlIHRvIENsaWVudF0iLCJtZXJtYWlkIjpudWxsfQ does not have an alt attribute
+
+* At ./docs/pages/master-master-replication.html:64:
+
+  internal image /system-design-primer/images/krAHLGg.png does not exist
+
+* At ./docs/pages/master-master-replication.html:64:
+
+  image /system-design-primer/images/krAHLGg.png does not have an alt attribute
+
+* At ./docs/pages/master-slave-replication.html:66:
+
+  internal image /system-design-primer/images/C9ioGtn.png does not exist
+
+* At ./docs/pages/master-slave-replication.html:66:
+
+  image /system-design-primer/images/C9ioGtn.png does not have an alt attribute
+
+* At ./docs/pages/reverse-proxy-web-server.html:60:
+
+  internal image /system-design-primer/images/n41Azff.png does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:60:
+
+  image /system-design-primer/images/n41Azff.png does not have an alt attribute
+
+* At ./docs/pages/sharding.html:63:
+
+  image https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggVERcbkFwcDo6OmFwcCAtLT58VXNlcjogQWRhbXwgTEJbTG9hZCBCYWxhbmNlcl06OjpiYWxhbmNlclxuTEIgLS0-IEFbKFVzZXIgQS1DKV06OjpkYlxuTEIgLS4tIEJbKFVzZXIgRC1GKV06OjpkYlxuTEIgLS4tIENbKFVzZXIgRy1JKV06OjpkYlxuTEIgLS4tIERbKFVzZXIgWC1ZKV06OjpkYiIsIm1lcm1haWQiOm51bGx9 does not have an alt attribute
+
+* At ./docs/pages/sql-or-nosql.html:60:
+
+  internal image /system-design-primer/images/wXGqG5f.png does not exist
+
+* At ./docs/pages/sql-or-nosql.html:60:
+
+  image /system-design-primer/images/wXGqG5f.png does not have an alt attribute
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:63:
+
+  image https://mermaid.ink/svg/eyJjb2RlIjoiLS0tXG50aXRsZTogU2NhbGluZyBXZWIgQXBwc1xuLS0tXG5ncmFwaCBURFxuUmVxdWVzdCAtLT4gV2ViIC0tPiBBcHBsaWNhdGlvbiAtLT4gRGF0YWJhc2UgLS0-IFJlc3BvbnNlXG5zdWJncmFwaCBXZWJcbkNhY2hlMVtDYWNoZV1cbkNETlxuTG9hZEJsYW5jaW5nXG5lbmRcbnN1YmdyYXBoIEFwcGxpY2F0aW9uXG5DYWNoZTJbQ2FjaGVdXG5Bc3luY1Rhc2tzXG5lbmRcbnN1YmdyYXBoIERhdGFiYXNlXG5DYWNoZTNbQ2FjaGVdXG5TaGFyZGluZ1xuRmVkZXJhdGlvblxuV3JpdGVNYXN0ZXJcbk9iamVjdFN0b3JlXG5Ob1NRTFxuZW5kIiwibWVybWFpZCI6bnVsbH0 does not have an alt attribute
+
+* At ./docs/solutions/system_design/pastebin/index.html:197:
+
+  image https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggVERcbldlYlNlcnZlcltXZWIgU2VydmVyXVxuV3JpdGVBUElbV3JpdGUgQVBJXVxuUmVhZEFQSVtSZWFkIEFQSV1cbk9iamVjdFN0b3JlW09iamVjdCBTdG9yZV1cbiUlLVxuQ2xpZW50IC0tPiBXZWJTZXJ2ZXJcbldlYlNlcnZlciAtLT4gV3JpdGVBUElcbldlYlNlcnZlciAtLT4gUmVhZEFQSVxuUmVhZEFQSSAtLT4gU1FMXG5SZWFkQVBJIC0tPiBPYmplY3RTdG9yZVxuV3JpdGVBUEkgLS0-IFNRTFxuV3JpdGVBUEkgLS0-IE9iamVjdFN0b3JlXG5BbmFseXRpY3MgLS0-IE9iamVjdFN0b3JlXG5BbmFseXRpY3MgLS0-IFNRTFxuJSUtXG5zdHlsZSBDbGllbnQgZmlsbDpMYXduR3JlZW5cbnN0eWxlIFdlYlNlcnZlciBmaWxsOktoYWtpXG5zdHlsZSBSZWFkQVBJIGZpbGw6S2hha2lcbnN0eWxlIFdyaXRlQVBJIGZpbGw6S2hha2lcbnN0eWxlIEFuYWx5dGljcyBmaWxsOktoYWtpXG5zdHlsZSBTUUwgZmlsbDpZZWxsb3dcbnN0eWxlIE9iamVjdFN0b3JlIGZpbGw6WWVsbG93IiwibWVybWFpZCI6bnVsbH0 does not have an alt attribute
+
+* At ./docs/solutions/system_design/pastebin/index.html:388:
+
+  image https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggVERcbkNsaWVudC0tPkROU1xuQ2xpZW50LS0-Q0ROLS0-T2JqZWN0U3RvcmVbT2JqZWN0IFN0b3JlXVxuQ2xpZW50LS0-TG9hZEJhbGFuY2VyW0xvYWQgQmFsYW5jZXJdXG5Mb2FkQmFsYW5jZXItLT5XZWJTZXJ2ZXJbV2ViIFNlcnZlcl1cbldlYlNlcnZlci0tPldyaXRlQVBJW1dyaXRlIEFQSV1cbldlYlNlcnZlci0tPlJlYWRBUElbUmVhZCBBUEldXG5Xcml0ZUFQSS0tPlNRTFdyaXRlTWFzdGVyU2xhdmVbU1FMIFdyaXRlIE1hc3Rlci1TbGF2ZV1cbldyaXRlQVBJLS0-T2JqZWN0U3RvcmVcblJlYWRBUEktLT5TUUxSZWFkUmVwbGljYXNbU1FMIFJlYWQgUmVwbGljYXNdXG5SZWFkQVBJLS0-TWVtb3J5Q2FjaGVbTWVtb3J5IENhY2hlXVxuUmVhZEFQSS0tPk9iamVjdFN0b3JlXG5BbmFseXRpY3MtLT5PYmplY3RTdG9yZVxuQW5hbHl0aWNzLS0-U1FMQW5hbHl0aWNzW1NRTCBBbmFseXRpY3NdXG5TUUxXcml0ZU1hc3RlclNsYXZlLS4tU1FMUmVhZFJlcGxpY2FzXG5zdHlsZSBMb2FkQmFsYW5jZXIgZmlsbDpMaWdodEdyZWVuXG5zdHlsZSBXZWJTZXJ2ZXIgZmlsbDpPcmFuZ2VcbnN0eWxlIFdyaXRlQVBJIGZpbGw6T3JhbmdlXG5zdHlsZSBSZWFkQVBJIGZpbGw6T3JhbmdlXG5zdHlsZSBBbmFseXRpY3MgZmlsbDpPcmFuZ2VcbnN0eWxlIE9iamVjdFN0b3JlIGZpbGw6WWVsbG93XG5zdHlsZSBTUUxXcml0ZU1hc3RlclNsYXZlIGZpbGw6WWVsbG93XG5zdHlsZSBTUUxSZWFkUmVwbGljYXMgZmlsbDpZZWxsb3dcbnN0eWxlIFNRTEFuYWx5dGljcyBmaWxsOlllbGxvd1xuc3R5bGUgTWVtb3J5Q2FjaGUgZmlsbDpHb2xkZW5Sb2QiLCJtZXJtYWlkIjpudWxsfQ does not have an alt attribute
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:86:
+
+  image https://mermaid.ink/svg/eyJjb2RlIjoiZmxvd2NoYXJ0IFREXG5BW0N1cnJlbnQgRGVzaWduXSAtLT58cnVuIGJlbmNobWFya3MvbG9hZCB0ZXN0c3wgQntGaW5kIGJvdHRsZW5lY2tzfVxuQiAtLT58YWRkcmVzcyBib3R0bGVuZWNrc3wgRltOZXcgRGVzaWduXVxuQiAtLT58aWRlbnRpZnkgdHJhZGUtb2Zmc3wgRlxuQiAtLT58ZXZhbHVhdGUgYWx0ZXJuYXRpdmVzfCBGXG5GIC0tPnxyZXBlYXR8IEEiLCJtZXJtYWlkIjpudWxsfQ does not have an alt attribute
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:171:
+
+  image https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggVERcbkNsaWVudC0tPkROU1xuQ2xpZW50LS0-V2ViU2VydmVyW1dlYiBTZXJ2ZXJdXG5zdHlsZSBDbGllbnQgZmlsbDpMaWdodEdyZWVuXG5zdHlsZSBETlMgZmlsbDpNYWdlbnRhXG5zdHlsZSBXZWJTZXJ2ZXIgZmlsbDpMaWdodEJsdWUiLCJtZXJtYWlkIjpudWxsfQ does not have an alt attribute
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:290:
+
+  image https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggVERcbkNsaWVudFtDbGllbnRdIC0tPiBETlNbRE5TXVxuRE5TIC0tPiBXZWJTZXJ2ZXJbV2ViIFNlcnZlcl1cbldlYlNlcnZlciAtLT4gU1FMWyhTUUwpXVxuV2ViU2VydmVyIC0tPiBPYmplY3RTdG9yZVsoT2JqZWN0IFN0b3JlKV1cbnN0eWxlIENsaWVudCBmaWxsOkxpZ2h0R3JlZW5cbnN0eWxlIEROUyBmaWxsOlNreUJsdWVcbnN0eWxlIFdlYlNlcnZlciBmaWxsOk1hZ2VudGFcbnN0eWxlIFNRTCBmaWxsOkdvbGRcbnN0eWxlIE9iamVjdFN0b3JlIGZpbGw6R29sZCIsIm1lcm1haWQiOm51bGx9 does not have an alt attribute
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:377:
+
+  image https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggVERcbiUlLVxuQ2xpZW50IC0tPiBETlNcbkROUyAtLT4gQ0ROIC0tLS0-IE9iamVjdFN0b3JlXG5ETlMgLS0-IExvYWRCYWxhbmNlclxuTG9hZEJhbGFuY2VyIC0tPiBXZWJTZXJ2ZXJcbldlYlNlcnZlciAtLT4gV3JpdGVBUElcbldlYlNlcnZlciAtLT4gUmVhZEFQSVxuV3JpdGVBUEkgLS0-IE9iamVjdFN0b3JlXG5Xcml0ZUFQSSAtLT4gU1FMXG5SZWFkQVBJIC0tPiBPYmplY3RTdG9yZVxuUmVhZEFQSSAtLT4gU1FMXG4lJS1cbkNsaWVudDo6OmNsaWVudFxuRE5TOjo6ZG5zXG5DRE46OjpjZG5cbkxvYWRCYWxhbmNlcltMb2FkIEJhbGFuY2VyXTo6OmJhbGFuY2VyXG5XZWJTZXJ2ZXJbV2ViIFNlcnZlcl06Ojp3ZWJzZXJ2ZXJcbldlYlNlcnZlcjo6Om11bHRpXG5Xcml0ZUFQSVtXcml0ZSBBUEldOjo6YXBpXG5SZWFkQVBJW1JlYWQgQVBJXTo6OmFwaVxuT2JqZWN0U3RvcmVbKE9iamVjdCBTdG9yZSldOjo6ZGJcblNRTFsoU1FMIFdyaXRlIE1hc3Rlci1TbGF2ZSldOjo6ZGJcblNRTDo6Om11bHRpIiwibWVybWFpZCI6bnVsbH0 does not have an alt attribute
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:433:
+
+  image https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggVERcbiUlLVxuQ2xpZW50IC0tPiBETlNcbkROUyAtLT4gQ0ROIC0tLS0tPiBPYmplY3RTdG9yZVxuRE5TIC0tPiBMb2FkQmFsYW5jZXJcbkxvYWRCYWxhbmNlciAtLT4gV2ViU2VydmVyXG5XZWJTZXJ2ZXIgLS0-IFdyaXRlQVBJXG5XZWJTZXJ2ZXIgLS0-IFJlYWRBUElcbldyaXRlQVBJIC0tLT4gT2JqZWN0U3RvcmVcbldyaXRlQVBJIC0tLT4gU1FMV3JpdGVcblJlYWRBUEkgLS0tPiBPYmplY3RTdG9yZVxuUmVhZEFQSSAtLT4gTWVtb3J5Q2FjaGVcblJlYWRBUEkgLS0tPiBTUUxSZWFkXG4lJS1cbkNsaWVudDo6OmNsaWVudFxuRE5TOjo6ZG5zXG5DRE46OjpjZG5cbkxvYWRCYWxhbmNlcltMb2FkIEJhbGFuY2VyXTo6OmJhbGFuY2VyXG5XZWJTZXJ2ZXJbV2ViIFNlcnZlcl06Ojp3ZWJzZXJ2ZXJcbldlYlNlcnZlcjo6Om11bHRpXG5Xcml0ZUFQSVtXcml0ZSBBUEldOjo6YXBpXG5SZWFkQVBJW1JlYWQgQVBJXTo6OmFwaVxuT2JqZWN0U3RvcmVbKE9iamVjdCBTdG9yZSldOjo6ZGJcblNRTFdyaXRlWyhTUUwgV3JpdGUgTWFzdGVyLVNsYXZlKV06OjpkYlxuU1FMV3JpdGU6OjptdWx0aVxuU1FMUmVhZFsoU1FMIFJlYWQgUmVwbGljYXMpXTo6OmRiXG5TUUxSZWFkOjo6bXVsdGlcbk1lbW9yeUNhY2hlW01lbW9yeSBDYWNoZV06OjpjYWNoZVxuTWVtb3J5Q2FjaGU6OjptdWx0aSIsIm1lcm1haWQiOm51bGx9 does not have an alt attribute
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:499:
+
+  image https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggVERcbiUlLVxuQ2xpZW50IC0tPiBETlNcbkROUyAtLT4gQ0ROIC0tLS0tPiBPYmplY3RTdG9yZVxuRE5TIC0tPiBMb2FkQmFsYW5jZXJcbkxvYWRCYWxhbmNlciAtLT4gV2ViU2VydmVyXG5XZWJTZXJ2ZXIgLS0-IFdyaXRlQVBJXG5XZWJTZXJ2ZXIgLS0-IFJlYWRBUElcbldyaXRlQVBJIC0tLT4gT2JqZWN0U3RvcmVcbldyaXRlQVBJIC0tLT4gU1FMV3JpdGVcblJlYWRBUEkgLS0tPiBPYmplY3RTdG9yZVxuUmVhZEFQSSAtLT4gTWVtb3J5Q2FjaGVcblJlYWRBUEkgLS0tPiBTUUxSZWFkXG4lJS1cbnN1YmdyYXBoIGF1dG9zY2FsZVtBdXRvc2NhbGVdXG5XZWJTZXJ2ZXJcbmVuZFxuc3ViZ3JhcGggYXV0b3NjYWxlMltBdXRvc2NhbGVdXG5Xcml0ZUFQSVxuZW5kXG5zdWJncmFwaCBhdXRvc2NhbGUzW0F1dG9zY2FsZV1cblJlYWRBUElcbmVuZFxuJSUtXG5DbGllbnQ6OjpjbGllbnRcbkROUzo6OmRuc1xuQ0ROOjo6Y2RuXG5Mb2FkQmFsYW5jZXJbTG9hZCBCYWxhbmNlcl06OjpiYWxhbmNlclxuV2ViU2VydmVyW1dlYiBTZXJ2ZXJdOjo6d2Vic2VydmVyXG5XZWJTZXJ2ZXI6OjptdWx0aVxuV3JpdGVBUElbV3JpdGUgQVBJXTo6OmFwaVxuUmVhZEFQSVtSZWFkIEFQSV06OjphcGlcbk9iamVjdFN0b3JlWyhPYmplY3QgU3RvcmUpXTo6OmRiXG5TUUxXcml0ZVsoU1FMIFdyaXRlIE1hc3Rlci1TbGF2ZSldOjo6ZGJcblNRTFdyaXRlOjo6bXVsdGlcblNRTFJlYWRbKFNRTCBSZWFkIFJlcGxpY2FzKV06OjpkYlxuU1FMUmVhZDo6Om11bHRpXG5NZW1vcnlDYWNoZVtNZW1vcnkgQ2FjaGVdOjo6Y2FjaGVcbk1lbW9yeUNhY2hlOjo6bXVsdGkiLCJtZXJtYWlkIjpudWxsfQ does not have an alt attribute
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:577:
+
+  image https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggVERcbiUlLVxuQ2xpZW50IC0tPiBETlNcbkROUyAtLT4gQ0ROIC0tLS0tLT4gT2JqZWN0U3RvcmVcbkROUyAtLT4gTG9hZEJhbGFuY2VyXG5Mb2FkQmFsYW5jZXIgLS0-IFdlYlNlcnZlclxuV2ViU2VydmVyIC0tPiBXcml0ZUFQSUFzeW5jXG5XZWJTZXJ2ZXIgLS0tPiBXcml0ZUFQSVxuV2ViU2VydmVyIC0tLT4gUmVhZEFQSVxuV3JpdGVBUElBc3luYyAtLT4gUXVldWUgLS0-IFdvcmtlclNlcnZpY2VcbldvcmtlclNlcnZpY2UgLS0-IE5vU1FMXG5Xb3JrZXJTZXJ2aWNlIC0tPiBPYmplY3RTdG9yZVxuV3JpdGVBUEkgLS0tPiBPYmplY3RTdG9yZVxuV3JpdGVBUEkgLS0tPiBTUUxXcml0ZVxuU1FMV3JpdGUgLS4tIFNRTFJlYWRcblJlYWRBUEkgLS0tPiBPYmplY3RTdG9yZVxuUmVhZEFQSSAtLT4gTWVtb3J5Q2FjaGVcblJlYWRBUEkgLS0tPiBTUUxSZWFkXG4lJS1cbnN1YmdyYXBoIGRiW0RhdGFiYXNlXVxuc3ViZ3JhcGggc3FsW1NRTF1cblNRTFdyaXRlXG5TUUxSZWFkXG5lbmRcbnN1YmdyYXBoIHNxbHNjYWxlW1NRTCBTY2FsaW5nXVxuc3ViZ3JhcGggc2hhcmRpbmdbU2hhcmRpbmddXG5TaGFyZGluZzFbKEN1c3RvbWVycyBBLU0gU1FMKV1cblNoYXJkaW5nMlsoQ3VzdG9tZXJzIE4tWiBTUUwpXVxuZW5kXG5zdWJncmFwaCBmZWRlcmF0aW9uW0ZlZGVyYXRpb25dXG5GZWRlcmF0aW9uMVsoQ3VzdG9tZXJzIFNRTCldXG5GZWRlcmF0aW9uMlsoUHJvZHVjdHMgU1FMKV1cbmVuZFxuZW5kXG5zcWwgLS4tIHNxbHNjYWxlXG5PYmplY3RTdG9yZVxuTm9TUUxcbmVuZFxuc3ViZ3JhcGggam9ic1tMb25nIHJ1bm5pbmddXG5Xcml0ZUFQSUFzeW5jXG5RdWV1ZVxuV29ya2VyU2VydmljZVxuZW5kXG5zdWJncmFwaCBhdXRvc2NhbGVbQXV0b3NjYWxlXVxuV2ViU2VydmVyXG5Xcml0ZUFQSVxuUmVhZEFQSVxuZW5kXG4lJS1cbkNsaWVudDo6OmNsaWVudFxuRE5TOjo6ZG5zXG5DRE46OjpjZG5cbkxvYWRCYWxhbmNlcltMb2FkIEJhbGFuY2VyXTo6OmJhbGFuY2VyXG5XZWJTZXJ2ZXJbV2ViIFNlcnZlcl06Ojp3ZWJzZXJ2ZXJcbldlYlNlcnZlcjo6Om11bHRpXG5Xcml0ZUFQSUFzeW5jW1dyaXRlIEFQSSBBc3luY106OjphcGlcbldyaXRlQVBJW1dyaXRlIEFQSV06OjphcGlcblJlYWRBUElbUmVhZCBBUEldOjo6YXBpXG5PYmplY3RTdG9yZVsoT2JqZWN0IFN0b3JlKV06OjpkYlxuU1FMV3JpdGVbKFNRTCBXcml0ZSBNYXN0ZXItU2xhdmUpXTo6OmRiXG5TUUxXcml0ZTo6Om11bHRpXG5TUUxSZWFkWyhTUUwgUmVhZCBSZXBsaWNhcyldOjo6ZGJcblNRTFJlYWQ6OjptdWx0aVxuTWVtb3J5Q2FjaGVbTWVtb3J5IENhY2hlXTo6OmNhY2hlXG5NZW1vcnlDYWNoZTo6Om11bHRpXG5Ob1NRTFsoTm9TUUwgRGF0YWJhc2UpXTo6OmRiXG5RdWV1ZTo6OnF1ZXVlXG5RdWV1ZTo6Om11bHRpXG5Xb3JrZXJTZXJ2aWNlW1dvcmtlciBTZXJ2aWNlXTo6OndvcmtlclxuV29ya2VyU2VydmljZTo6Om11bHRpXG5zaGFyZGluZzo6OmRiXG5mZWRlcmF0aW9uOjo6ZGIiLCJtZXJtYWlkIjpudWxsfQ does not have an alt attribute
+
+For the Links check, the following failures were found:
+
+* At ./docs/images/index.html:66:
+
+  http://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html is not an HTTPS link
+
+* At ./docs/index.html:604:
+
+  http://highscalability.com/blog/2011/1/26/google-pro-tip-use-back-of-the-envelope-calculations-to-choo.html is not an HTTPS link
+
+* At ./docs/index.html:615:
+
+  http://www.hiredintech.com/system-design is not an HTTPS link
+
+* At ./docs/index.html:838:
+
+  http://www.allthingsdistributed.com/2006/03/a_word_on_scalability.html is not an HTTPS link
+
+* At ./docs/index.html:850:
+
+  http://www.allthingsdistributed.com/2006/03/a_word_on_scalability.html is not an HTTPS link
+
+* At ./docs/index.html:851:
+
+  http://www.slideshare.net/jboner/scalability-availability-stability-patterns/ is not an HTTPS link
+
+* At ./docs/index.html:875:
+
+  http://robertgreiner.com/2014/08/cap-theorem-revisited is not an HTTPS link
+
+* At ./docs/index.html:904:
+
+  http://robertgreiner.com/2014/08/cap-theorem-revisited/ is not an HTTPS link
+
+* At ./docs/index.html:905:
+
+  http://ksat.me/a-plain-english-introduction-to-cap-theorem is not an HTTPS link
+
+* At ./docs/index.html:935:
+
+  http://snarfed.org/transactions_across_datacenters_io.html is not an HTTPS link
+
+* At ./docs/index.html:1098:
+
+  http://www.travelblogadvice.com/technical/the-differences-between-push-and-pull-cdns/ is not an HTTPS link
+
+* At ./docs/index.html:1111:
+
+  http://lethain.com/introduction-to-architecting-systems-for-scale/#platform_layer is not an HTTPS link
+
+* At ./docs/index.html:1126:
+
+  http://www.slideshare.net/sauravhaloi/introduction-to-apache-zookeeper is not an HTTPS link
+
+* At ./docs/index.html:1138:
+
+  http://lethain.com/introduction-to-architecting-systems-for-scale is not an HTTPS link
+
+* At ./docs/index.html:1139:
+
+  http://www.puncsky.com/blog/2016-02-13-crack-the-system-design-interview is not an HTTPS link
+
+* At ./docs/index.html:1141:
+
+  http://www.slideshare.net/sauravhaloi/introduction-to-apache-zookeeper is not an HTTPS link
+
+* At ./docs/index.html:1210:
+
+  http://httpd.apache.org/docs/2.2/programs/ab.html is not an HTTPS link
+
+* At ./docs/index.html:1212:
+
+  http://dev.mysql.com/doc/refman/5.7/en/slow-query-log.html is not an HTTPS link
+
+* At ./docs/index.html:1233:
+
+  http://stackoverflow.com/questions/1017239/how-do-null-values-affect-performance-in-a-database-search is not an HTTPS link
+
+* At ./docs/index.html:1268:
+
+  http://aiddroid.com/10-tips-optimizing-mysql-queries-dont-suck/ is not an HTTPS link
+
+* At ./docs/index.html:1269:
+
+  http://stackoverflow.com/questions/1217466/is-there-a-good-reason-i-see-varchar255-used-so-often-as-opposed-to-another-l is not an HTTPS link
+
+* At ./docs/index.html:1270:
+
+  http://stackoverflow.com/questions/1017239/how-do-null-values-affect-performance-in-a-database-search is not an HTTPS link
+
+* At ./docs/index.html:1271:
+
+  http://dev.mysql.com/doc/refman/5.7/en/slow-query-log.html is not an HTTPS link
+
+* At ./docs/index.html:1303:
+
+  http://www.read.seas.harvard.edu/~kohler/class/cs239-w08/decandia07dynamo.pdf is not an HTTPS link
+
+* At ./docs/index.html:1321:
+
+  http://blog.grio.com/2015/11/sql-nosql-a-brief-history.html is not an HTTPS link
+
+* At ./docs/index.html:1330:
+
+  http://www.read.seas.harvard.edu/~kohler/class/cs239-w08/chang06bigtable.pdf is not an HTTPS link
+
+* At ./docs/index.html:1330:
+
+  http://docs.datastax.com/en/cassandra/3.0/cassandra/architecture/archIntro.html is not an HTTPS link
+
+* At ./docs/index.html:1337:
+
+  http://blog.grio.com/2015/11/sql-nosql-a-brief-history.html is not an HTTPS link
+
+* At ./docs/index.html:1338:
+
+  http://www.read.seas.harvard.edu/~kohler/class/cs239-w08/chang06bigtable.pdf is not an HTTPS link
+
+* At ./docs/index.html:1340:
+
+  http://docs.datastax.com/en/cassandra/3.0/cassandra/architecture/archIntro.html is not an HTTPS link
+
+* At ./docs/index.html:1370:
+
+  http://stackoverflow.com/questions/3342497/explanation-of-base-terminology is not an HTTPS link
+
+* At ./docs/index.html:1372:
+
+  http://www.lecloud.net/post/7994751381/scalability-for-dummies-part-2-database is not an HTTPS link
+
+* At ./docs/index.html:1374:
+
+  http://horicky.blogspot.com/2009/11/nosql-patterns.html is not an HTTPS link
+
+* At ./docs/index.html:1388:
+
+  http://www.escotal.com/osilayer.html is not an HTTPS link
+
+* At ./docs/index.html:1463:
+
+  http://www.wildbunny.co.uk/blog/2012/10/09/how-to-make-a-multi-player-game-part-1/ is not an HTTPS link
+
+* At ./docs/index.html:1492:
+
+  http://www.wildbunny.co.uk/blog/2012/10/09/how-to-make-a-multi-player-game-part-1/ is not an HTTPS link
+
+* At ./docs/index.html:1512:
+
+  http://gafferongames.com/networking-for-game-programmers/udp-vs-tcp/ is not an HTTPS link
+
+* At ./docs/index.html:1513:
+
+  http://www.cyberciti.biz/faq/key-differences-between-tcp-and-udp-protocols/ is not an HTTPS link
+
+* At ./docs/index.html:1514:
+
+  http://stackoverflow.com/questions/5970383/difference-between-tcp-and-udp is not an HTTPS link
+
+* At ./docs/index.html:1517:
+
+  http://www.cs.bu.edu/~jappavoo/jappavoo.github.com/451/papers/memcache-fb.pdf is not an HTTPS link
+
+* At ./docs/index.html:1525:
+
+  http://www.puncsky.com/blog/2016-02-13-crack-the-system-design-interview is not an HTTPS link
+
+* At ./docs/index.html:1576:
+
+  http://etherealbits.com/2012/12/debunking-the-myths-of-rpc-rest/ is not an HTTPS link
+
+* At ./docs/index.html:1576:
+
+  http://www.squid-cache.org/ is not an HTTPS link
+
+* At ./docs/index.html:1593:
+
+  http://restcookbook.com/Basics/hateoas/ is not an HTTPS link
+
+* At ./docs/index.html:1686:
+
+  http://programmers.stackexchange.com/a/181186 is not an HTTPS link
+
+* At ./docs/index.html:1687:
+
+  http://stackoverflow.com/questions/15056878/rest-vs-json-rpc is not an HTTPS link
+
+* At ./docs/index.html:1688:
+
+  http://etherealbits.com/2012/12/debunking-the-myths-of-rpc-rest/ is not an HTTPS link
+
+* At ./docs/index.html:1690:
+
+  http://www.puncsky.com/blog/2016-02-13-crack-the-system-design-interview is not an HTTPS link
+
+* At ./docs/index.html:1692:
+
+  http://arstechnica.com/civis/viewtopic.php?t=1190508 is not an HTTPS link
+
+* At ./docs/index.html:1787:
+
+  http://www.cs.cornell.edu/projects/ladis2009/talks/dean-keynote-ladis2009.pdf is not an HTTPS link
+
+* At ./docs/index.html:1812:
+
+  http://queue.acm.org/detail.cfm?id=988407 is not an HTTPS link
+
+* At ./docs/index.html:1812:
+
+  http://programmers.stackexchange.com/questions/38324/interview-question-how-would-you-implement-google-search is not an HTTPS link
+
+* At ./docs/index.html:1812:
+
+  http://www.ardendertat.com/2012/01/11/implementing-search-engines/ is not an HTTPS link
+
+* At ./docs/index.html:1812:
+
+  http://infolab.stanford.edu/~backrub/google.html is not an HTTPS link
+
+* At ./docs/index.html:1827:
+
+  http://www.slideshare.net/dvirsky/introduction-to-redis is not an HTTPS link
+
+* At ./docs/index.html:1831:
+
+  http://www.slideshare.net/oemebamo/introduction-to-memcached is not an HTTPS link
+
+* At ./docs/index.html:1836:
+
+  http://ijcai13.org/files/tutorial_slides/td3.pdf is not an HTTPS link
+
+* At ./docs/index.html:1841:
+
+  http://n00tc0d3r.blogspot.com/ is not an HTTPS link
+
+* At ./docs/index.html:1845:
+
+  http://highscalability.com/blog/2014/2/26/the-whatsapp-architecture-facebook-bought-for-19-billion.html is not an HTTPS link
+
+* At ./docs/index.html:1850:
+
+  http://highscalability.com/flickr-architecture is not an HTTPS link
+
+* At ./docs/index.html:1850:
+
+  http://highscalability.com/blog/2011/12/6/instagram-architecture-14-million-users-terabytes-of-photos.html is not an HTTPS link
+
+* At ./docs/index.html:1856:
+
+  http://www.quora.com/What-are-best-practices-for-building-something-like-a-News-Feed is not an HTTPS link
+
+* At ./docs/index.html:1856:
+
+  http://www.quora.com/Activity-Streams/What-are-the-scaling-issues-to-keep-in-mind-while-developing-a-social-network-feed is not an HTTPS link
+
+* At ./docs/index.html:1856:
+
+  http://www.slideshare.net/danmckinley/etsy-activity-feeds-architecture is not an HTTPS link
+
+* At ./docs/index.html:1862:
+
+  http://highscalability.com/blog/2012/1/23/facebook-timeline-brought-to-you-by-the-power-of-denormaliza.html is not an HTTPS link
+
+* At ./docs/index.html:1868:
+
+  http://www.erlang-factory.com/upload/presentations/31/EugeneLetuchy-ErlangatFacebook.pdf is not an HTTPS link
+
+* At ./docs/index.html:1884:
+
+  http://www.michael-noll.com/blog/2013/01/18/implementing-real-time-trending-topics-in-storm/ is not an HTTPS link
+
+* At ./docs/index.html:1884:
+
+  http://snikolov.wordpress.com/2012/11/14/early-detection-of-twitter-trends/ is not an HTTPS link
+
+* At ./docs/index.html:1896:
+
+  http://davis.wpi.edu/xmdv/docs/EDBT11-diyang.pdf is not an HTTPS link
+
+* At ./docs/index.html:1901:
+
+  http://highscalability.com/blog/2009/8/24/how-google-serves-data-from-multiple-datacenters.html is not an HTTPS link
+
+* At ./docs/index.html:1906:
+
+  http://buildnewgames.com/real-time-multiplayer/ is not an HTTPS link
+
+* At ./docs/index.html:1912:
+
+  http://journal.stuffwithstuff.com/2013/12/08/babys-first-garbage-collector/ is not an HTTPS link
+
+* At ./docs/index.html:1912:
+
+  http://courses.cs.washington.edu/courses/csep521/07wi/prj/rick.pdf is not an HTTPS link
+
+* At ./docs/index.html:1922:
+
+  http://bhomnick.net/building-a-simple-limit-order-in-go/ is not an HTTPS link
+
+* At ./docs/index.html:1965:
+
+  http://static.googleusercontent.com/media/research.google.com/zh-CN/us/archive/mapreduce-osdi04.pdf is not an HTTPS link
+
+* At ./docs/index.html:1971:
+
+  http://www.slideshare.net/AGrishchenko/apache-spark-architecture is not an HTTPS link
+
+* At ./docs/index.html:1977:
+
+  http://www.slideshare.net/previa/storm-16094009 is not an HTTPS link
+
+* At ./docs/index.html:1988:
+
+  http://www.read.seas.harvard.edu/~kohler/class/cs239-w08/chang06bigtable.pdf is not an HTTPS link
+
+* At ./docs/index.html:1994:
+
+  http://www.slideshare.net/alexbaranau/intro-to-hbase is not an HTTPS link
+
+* At ./docs/index.html:2000:
+
+  http://www.slideshare.net/planetcassandra/cassandra-introduction-features-30103666 is not an HTTPS link
+
+* At ./docs/index.html:2006:
+
+  http://www.read.seas.harvard.edu/~kohler/class/cs239-w08/decandia07dynamo.pdf is not an HTTPS link
+
+* At ./docs/index.html:2012:
+
+  http://www.slideshare.net/mdirolf/introduction-to-mongodb is not an HTTPS link
+
+* At ./docs/index.html:2018:
+
+  http://research.google.com/archive/spanner-osdi2012.pdf is not an HTTPS link
+
+* At ./docs/index.html:2024:
+
+  http://www.slideshare.net/oemebamo/introduction-to-memcached is not an HTTPS link
+
+* At ./docs/index.html:2030:
+
+  http://www.slideshare.net/dvirsky/introduction-to-redis is not an HTTPS link
+
+* At ./docs/index.html:2041:
+
+  http://static.googleusercontent.com/media/research.google.com/zh-CN/us/archive/gfs-sosp2003.pdf is not an HTTPS link
+
+* At ./docs/index.html:2047:
+
+  http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html is not an HTTPS link
+
+* At ./docs/index.html:2058:
+
+  http://static.googleusercontent.com/external_content/untrusted_dlcp/research.google.com/en/us/archive/chubby-osdi06.pdf is not an HTTPS link
+
+* At ./docs/index.html:2064:
+
+  http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36356.pdf is not an HTTPS link
+
+* At ./docs/index.html:2070:
+
+  http://www.slideshare.net/mumrah/kafka-talk-tri-hug is not an HTTPS link
+
+* At ./docs/index.html:2076:
+
+  http://www.slideshare.net/sauravhaloi/introduction-to-apache-zookeeper is not an HTTPS link
+
+* At ./docs/index.html:2098:
+
+  http://highscalability.com/amazon-architecture is not an HTTPS link
+
+* At ./docs/index.html:2102:
+
+  http://highscalability.com/blog/2012/7/16/cinchcast-architecture-producing-1500-hours-of-audio-every-d.html is not an HTTPS link
+
+* At ./docs/index.html:2106:
+
+  http://highscalability.com/blog/2011/11/29/datasift-architecture-realtime-datamining-at-120000-tweets-p.html is not an HTTPS link
+
+* At ./docs/index.html:2114:
+
+  http://highscalability.com/blog/2013/11/4/espns-architecture-at-scale-operating-at-100000-duh-nuh-nuhs.html is not an HTTPS link
+
+* At ./docs/index.html:2118:
+
+  http://highscalability.com/google-architecture is not an HTTPS link
+
+* At ./docs/index.html:2123:
+
+  http://highscalability.com/blog/2011/12/6/instagram-architecture-14-million-users-terabytes-of-photos.html is not an HTTPS link
+
+* At ./docs/index.html:2123:
+
+  http://instagram-engineering.tumblr.com/post/13649370142/what-powers-instagram-hundreds-of-instances is not an HTTPS link
+
+* At ./docs/index.html:2128:
+
+  http://highscalability.com/blog/2010/3/16/justintvs-live-video-broadcasting-architecture.html is not an HTTPS link
+
+* At ./docs/index.html:2133:
+
+  http://highscalability.com/blog/2016/6/27/how-facebook-live-streams-to-800000-simultaneous-viewers.html is not an HTTPS link
+
+* At ./docs/index.html:2138:
+
+  http://highscalability.com/flickr-architecture is not an HTTPS link
+
+* At ./docs/index.html:2142:
+
+  http://highscalability.com/blog/2013/6/18/scaling-mailbox-from-0-to-one-million-users-in-6-weeks-and-1.html is not an HTTPS link
+
+* At ./docs/index.html:2147:
+
+  http://highscalability.com/blog/2015/11/9/a-360-degree-view-of-the-entire-netflix-stack.html is not an HTTPS link
+
+* At ./docs/index.html:2147:
+
+  http://highscalability.com/blog/2017/12/11/netflix-what-happens-when-you-press-play.html is not an HTTPS link
+
+* At ./docs/index.html:2153:
+
+  http://highscalability.com/blog/2013/4/15/scaling-pinterest-from-0-to-10s-of-billions-of-page-views-a.html is not an HTTPS link
+
+* At ./docs/index.html:2153:
+
+  http://highscalability.com/blog/2012/5/21/pinterest-architecture-update-18-million-visitors-10x-growth.html is not an HTTPS link
+
+* At ./docs/index.html:2158:
+
+  http://highscalability.com/blog/2010/9/21/playfishs-social-gaming-architecture-50-million-monthly-user.html is not an HTTPS link
+
+* At ./docs/index.html:2162:
+
+  http://highscalability.com/plentyoffish-architecture is not an HTTPS link
+
+* At ./docs/index.html:2166:
+
+  http://highscalability.com/blog/2013/9/23/salesforce-architecture-how-they-handle-13-billion-transacti.html is not an HTTPS link
+
+* At ./docs/index.html:2170:
+
+  http://highscalability.com/blog/2009/8/5/stack-overflow-architecture.html is not an HTTPS link
+
+* At ./docs/index.html:2174:
+
+  http://highscalability.com/blog/2011/6/27/tripadvisor-architecture-40m-visitors-200m-dynamic-page-view.html is not an HTTPS link
+
+* At ./docs/index.html:2178:
+
+  http://highscalability.com/blog/2012/2/13/tumblr-architecture-15-billion-page-views-a-month-and-harder.html is not an HTTPS link
+
+* At ./docs/index.html:2183:
+
+  http://highscalability.com/scaling-twitter-making-twitter-10000-percent-faster is not an HTTPS link
+
+* At ./docs/index.html:2183:
+
+  http://highscalability.com/blog/2011/12/19/how-twitter-stores-250-million-tweets-a-day-using-mysql.html is not an HTTPS link
+
+* At ./docs/index.html:2183:
+
+  http://highscalability.com/blog/2013/7/8/the-architecture-twitter-uses-to-deal-with-150m-active-users.html is not an HTTPS link
+
+* At ./docs/index.html:2183:
+
+  http://highscalability.com/blog/2016/4/20/how-twitter-handles-3000-images-per-second.html is not an HTTPS link
+
+* At ./docs/index.html:2189:
+
+  http://highscalability.com/blog/2015/9/14/how-uber-scales-their-real-time-market-platform.html is not an HTTPS link
+
+* At ./docs/index.html:2189:
+
+  http://highscalability.com/blog/2016/10/12/lessons-learned-from-scaling-uber-to-2000-engineers-1000-ser.html is not an HTTPS link
+
+* At ./docs/index.html:2194:
+
+  http://highscalability.com/blog/2014/2/26/the-whatsapp-architecture-facebook-bought-for-19-billion.html is not an HTTPS link
+
+* At ./docs/index.html:2199:
+
+  http://highscalability.com/youtube-architecture is not an HTTPS link
+
+* At ./docs/index.html:2214:
+
+  http://nerds.airbnb.com/ is not an HTTPS link
+
+* At ./docs/index.html:2217:
+
+  http://word.bitly.com/ is not an HTTPS link
+
+* At ./docs/index.html:2219:
+
+  http://blog.cloudera.com/ is not an HTTPS link
+
+* At ./docs/index.html:2222:
+
+  http://www.ebaytechblog.com/ is not an HTTPS link
+
+* At ./docs/index.html:2224:
+
+  http://codeascraft.com/ is not an HTTPS link
+
+* At ./docs/index.html:2226:
+
+  http://code.flickr.net/ is not an HTTPS link
+
+* At ./docs/index.html:2227:
+
+  http://engineering.foursquare.com/ is not an HTTPS link
+
+* At ./docs/index.html:2229:
+
+  http://googleresearch.blogspot.com/ is not an HTTPS link
+
+* At ./docs/index.html:2232:
+
+  http://product.hubspot.com/blog/topic/engineering is not an HTTPS link
+
+* At ./docs/index.html:2233:
+
+  http://highscalability.com/ is not an HTTPS link
+
+* At ./docs/index.html:2234:
+
+  http://instagram-engineering.tumblr.com/ is not an HTTPS link
+
+* At ./docs/index.html:2237:
+
+  http://engineering.linkedin.com/blog is not an HTTPS link
+
+* At ./docs/index.html:2240:
+
+  http://techblog.netflix.com/ is not an HTTPS link
+
+* At ./docs/index.html:2243:
+
+  http://www.redditblog.com/ is not an HTTPS link
+
+* At ./docs/index.html:2247:
+
+  http://www.twilio.com/engineering is not an HTTPS link
+
+* At ./docs/index.html:2249:
+
+  http://eng.uber.com/ is not an HTTPS link
+
+* At ./docs/index.html:2250:
+
+  http://yahooeng.tumblr.com/ is not an HTTPS link
+
+* At ./docs/index.html:2251:
+
+  http://engineeringblog.yelp.com/ is not an HTTPS link
+
+* At ./docs/index.html:2281:
+
+  http://www.hiredintech.com/system-design/the-system-design-process/ is not an HTTPS link
+
+* At ./docs/index.html:2283:
+
+  http://highscalability.com/ is not an HTTPS link
+
+* At ./docs/index.html:2288:
+
+  http://dancres.github.io/Pages/ is not an HTTPS link
+
+* At ./docs/index.html:2289:
+
+  http://www.puncsky.com/blog/2016-02-13-crack-the-system-design-interview is not an HTTPS link
+
+* At ./docs/pages/asynchronism.html:62:
+
+  http://lethain.com/introduction-to-architecting-systems-for-scale/#platform_layer is not an HTTPS link
+
+* At ./docs/pages/asynchronism.html:109:
+
+  http://mechanical-sympathy.blogspot.com/2012/05/apply-back-pressure-when-overloaded.html is not an HTTPS link
+
+* At ./docs/pages/asynchronism.html:126:
+
+  http://mechanical-sympathy.blogspot.com/2012/05/apply-back-pressure-when-overloaded.html is not an HTTPS link
+
+* At ./docs/pages/cache.html:62:
+
+  http://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html is not an HTTPS link
+
+* At ./docs/pages/cache.html:143:
+
+  http://www.slideshare.net/tmatyashovsky/from-cache-to-in-memory-data-grid-introduction-to-hazelcast is not an HTTPS link
+
+* At ./docs/pages/cache.html:182:
+
+  http://www.slideshare.net/jboner/scalability-availability-stability-patterns/ is not an HTTPS link
+
+* At ./docs/pages/cache.html:219:
+
+  http://www.slideshare.net/jboner/scalability-availability-stability-patterns/ is not an HTTPS link
+
+* At ./docs/pages/cache.html:241:
+
+  http://www.slideshare.net/tmatyashovsky/from-cache-to-in-memory-data-grid-introduction-to-hazelcast is not an HTTPS link
+
+* At ./docs/pages/cache.html:268:
+
+  http://www.slideshare.net/tmatyashovsky/from-cache-to-in-memory-data-grid-introduction-to-hazelcast is not an HTTPS link
+
+* At ./docs/pages/cache.html:269:
+
+  http://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html is not an HTTPS link
+
+* At ./docs/pages/cache.html:270:
+
+  http://lethain.com/introduction-to-architecting-systems-for-scale/ is not an HTTPS link
+
+* At ./docs/pages/cache.html:271:
+
+  http://www.slideshare.net/jboner/scalability-availability-stability-patterns/ is not an HTTPS link
+
+* At ./docs/pages/cache.html:272:
+
+  http://www.lecloud.net/post/9246290032/scalability-for-dummies-part-3-cache is not an HTTPS link
+
+* At ./docs/pages/cache.html:273:
+
+  http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Strategies.html is not an HTTPS link
+
+* At ./docs/pages/domain-name-system.html:61:
+
+  http://www.slideshare.net/srikrupa5/dns-security-presentation-issa is not an HTTPS link
+
+* At ./docs/pages/domain-name-system.html:123:
+
+  http://superuser.com/questions/472695/who-controls-the-dns-servers/472729 is not an HTTPS link
+
+* At ./docs/pages/domain-name-system.html:125:
+
+  http://dyn.com/blog/dyn-analysis-summary-of-friday-october-21-attack/ is not an HTTPS link
+
+* At ./docs/pages/federation.html:82:
+
+  http://stackoverflow.com/questions/5145637/querying-data-by-joining-two-tables-in-two-database-on-different-servers is not an HTTPS link
+
+* At ./docs/pages/key-value-store.html:73:
+
+  http://stackoverflow.com/questions/4056093/what-are-the-disadvantages-of-using-a-key-value-table-over-nullable-columns-or is not an HTTPS link
+
+* At ./docs/pages/load-balancer.html:61:
+
+  http://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html is not an HTTPS link
+
+* At ./docs/pages/load-balancer.html:169:
+
+  http://www.haproxy.org/download/1.2/doc/architecture.txt is not an HTTPS link
+
+* At ./docs/pages/load-balancer.html:170:
+
+  http://www.lecloud.net/post/7295452622/scalability-for-dummies-part-1-clones is not an HTTPS link
+
+* At ./docs/pages/load-balancer.html:174:
+
+  http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-listener-config.html is not an HTTPS link
+
+* At ./docs/pages/master-master-replication.html:66:
+
+  http://www.slideshare.net/jboner/scalability-availability-stability-patterns is not an HTTPS link
+
+* At ./docs/pages/master-slave-replication.html:68:
+
+  http://www.slideshare.net/jboner/scalability-availability-stability-patterns is not an HTTPS link
+
+* At ./docs/pages/replication.html:87:
+
+  http://www.slideshare.net/jboner/scalability-availability-stability-patterns/ is not an HTTPS link
+
+* At ./docs/pages/reverse-proxy-web-server.html:116:
+
+  http://www.haproxy.org/download/1.2/doc/architecture.txt is not an HTTPS link
+
+* At ./docs/pages/sharding.html:66:
+
+  http://www.slideshare.net/jboner/scalability-availability-stability-patterns/ is not an HTTPS link
+
+* At ./docs/pages/sharding.html:94:
+
+  http://www.paperplanes.de/2011/12/9/the-magic-of-consistent-hashing.html is not an HTTPS link
+
+* At ./docs/pages/sharding.html:105:
+
+  http://highscalability.com/blog/2009/8/6/an-unorthodox-approach-to-database-design-the-coming-of-the.html is not an HTTPS link
+
+* At ./docs/pages/sharding.html:107:
+
+  http://www.paperplanes.de/2011/12/9/the-magic-of-consistent-hashing.html is not an HTTPS link
+
+* At ./docs/solutions/system_design/pastebin/index.html:269:
+
+  http://stackoverflow.com/questions/742013/how-to-code-a-url-shortener is not an HTTPS link
+
+* At ./docs/solutions/system_design/social_graph/index.html:101:
+
+  http://graphql.org/ is not an HTTPS link
+
+* At ./docs/solutions/system_design/social_graph/index.html:381:
+
+  http://graphql.org/ is not an HTTPS link
+
+* At ./docs/solutions/system_design/twitter/index.html:300:
+
+  http://redis.io/commands/mget is not an HTTPS link
+
+* At ./docs/solutions/system_design/web_crawler/index.html:142:
+
+  http://lucene.apache.org/solr/ is not an HTTPS link
+
+* At ./docs/solutions/system_design/web_crawler/index.html:142:
+
+  http://nutch.apache.org/ is not an HTTPS link
+
+* At ./docs/solutions/system_design/web_crawler/index.html:184:
+
+  http://www.dmoz.org/ is not an HTTPS link
+
+For the Links > External check, the following failures were found:
+
+* At ./docs/index.html:1111:
+
+  External link http://lethain.com/introduction-to-architecting-systems-for-scale/#platform_layer failed: http://lethain.com/introduction-to-architecting-systems-for-scale/ exists, but the hash 'platform_layer' does not (status code 200)
+
+* At ./docs/index.html:1204:
+
+  External link https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=sql+tuning failed (status code 503)
+
+* At ./docs/index.html:1268:
+
+  External link http://aiddroid.com/10-tips-optimizing-mysql-queries-dont-suck/ failed: got a time out (response code 0) (status code 0)
+
+* At ./docs/index.html:1371:
+
+  External link https://medium.com/baqend-blog/nosql-databases-a-survey-and-decision-guidance-ea7823a822d#.wskogqenq failed with something very wrong.
+It's possible libcurl couldn't connect to the server, or perhaps the request timed out.
+Sometimes, making too many requests at once also breaks things. (status code 0)
+
+* At ./docs/index.html:1453:
+
+  External link https://www.nginx.com/resources/glossary/http/ failed with something very wrong.
+It's possible libcurl couldn't connect to the server, or perhaps the request timed out.
+Sometimes, making too many requests at once also breaks things. (status code 0)
+
+* At ./docs/index.html:1463:
+
+  External link http://www.wildbunny.co.uk/blog/2012/10/09/how-to-make-a-multi-player-game-part-1/ failed: Not Found (status code 404)
+
+* At ./docs/index.html:1492:
+
+  External link http://www.wildbunny.co.uk/blog/2012/10/09/how-to-make-a-multi-player-game-part-1/ failed: Not Found (status code 404)
+
+* At ./docs/index.html:1576:
+
+  External link http://etherealbits.com/2012/12/debunking-the-myths-of-rpc-rest/ failed: Not Found (status code 404)
+
+* At ./docs/index.html:1688:
+
+  External link http://etherealbits.com/2012/12/debunking-the-myths-of-rpc-rest/ failed: Not Found (status code 404)
+
+* At ./docs/index.html:2214:
+
+  External link http://nerds.airbnb.com/ failed: Moved Permanently (status code 301)
+
+* At ./docs/index.html:2218:
+
+  External link https://blog.box.com/blog/category/engineering failed (status code 403)
+
+* At ./docs/index.html:2227:
+
+  External link http://engineering.foursquare.com/ failed (status code 404)
+
+* At ./docs/index.html:2230:
+
+  External link https://engineering.groupon.com/ failed (status code 301)
+
+* At ./docs/index.html:2236:
+
+  External link https://blogs.janestreet.com/category/ocaml/ failed with something very wrong.
+It's possible libcurl couldn't connect to the server, or perhaps the request timed out.
+Sometimes, making too many requests at once also breaks things. (status code 0)
+
+* At ./docs/index.html:2241:
+
+  External link https://medium.com/paypal-engineering failed with something very wrong.
+It's possible libcurl couldn't connect to the server, or perhaps the request timed out.
+Sometimes, making too many requests at once also breaks things. (status code 0)
+
+* At ./docs/index.html:2242:
+
+  External link https://medium.com/@Pinterest_Engineering failed with something very wrong.
+It's possible libcurl couldn't connect to the server, or perhaps the request timed out.
+Sometimes, making too many requests at once also breaks things. (status code 0)
+
+* At ./docs/index.html:2244:
+
+  External link https://developer.salesforce.com/blogs/engineering/ failed (status code 404)
+
+* At ./docs/pages/asynchronism.html:62:
+
+  External link http://lethain.com/introduction-to-architecting-systems-for-scale/#platform_layer failed: http://lethain.com/introduction-to-architecting-systems-for-scale/ exists, but the hash 'platform_layer' does not (status code 200)
+
+* At ./docs/pages/cache.html:15:
+
+  External link https://phucnguyen81.github.io/system-design-primer/pages/cache.html failed (status code 404)
+
+* At ./docs/pages/domain-name-system.html:113:
+
+  External link https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency failed: https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html exists, but the hash 'routing-policy-latency' does not (status code 200)
+
+* At ./docs/pages/domain-name-system.html:114:
+
+  External link https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-geo failed: https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html exists, but the hash 'routing-policy-geo' does not (status code 200)
+
+* At ./docs/pages/load-balancer.html:108:
+
+  External link https://www.g33kinfo.com/info/round-robin-vs-weighted-round-robin-lb failed (status code 500)
+
+* At ./docs/pages/load-balancer.html:120:
+
+  External link https://www.nginx.com/resources/glossary/layer-4-load-balancing/ failed with something very wrong.
+It's possible libcurl couldn't connect to the server, or perhaps the request timed out.
+Sometimes, making too many requests at once also breaks things. (status code 0)
+
+* At ./docs/pages/load-balancer.html:168:
+
+  External link https://www.nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/ failed with something very wrong.
+It's possible libcurl couldn't connect to the server, or perhaps the request timed out.
+Sometimes, making too many requests at once also breaks things. (status code 0)
+
+* At ./docs/pages/load-balancer.html:172:
+
+  External link https://www.nginx.com/resources/glossary/layer-4-load-balancing/ failed with something very wrong.
+It's possible libcurl couldn't connect to the server, or perhaps the request timed out.
+Sometimes, making too many requests at once also breaks things. (status code 0)
+
+* At ./docs/pages/load-balancer.html:173:
+
+  External link https://www.nginx.com/resources/glossary/layer-7-load-balancing/ failed with something very wrong.
+It's possible libcurl couldn't connect to the server, or perhaps the request timed out.
+Sometimes, making too many requests at once also breaks things. (status code 0)
+
+* At ./docs/pages/reverse-proxy-web-server.html:114:
+
+  External link https://www.nginx.com/resources/glossary/reverse-proxy-vs-load-balancer/ failed with something very wrong.
+It's possible libcurl couldn't connect to the server, or perhaps the request timed out.
+Sometimes, making too many requests at once also breaks things. (status code 0)
+
+* At ./docs/pages/reverse-proxy-web-server.html:115:
+
+  External link https://www.nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/ failed with something very wrong.
+It's possible libcurl couldn't connect to the server, or perhaps the request timed out.
+Sometimes, making too many requests at once also breaks things. (status code 0)
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:15:
+
+  External link https://phucnguyen81.github.io/system-design-primer/scaling/2023/11/30/scaling-methods.html failed (status code 404)
+
+* At ./docs/solutions/system_design/web_crawler/index.html:184:
+
+  External link http://www.dmoz.org/ failed: Bad Request (status code 400)
+
+For the Links > Internal check, the following failures were found:
+
+* At ./docs/404.html:24:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/404.html:26:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/404.html:27:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/404.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/404.html:34:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/404.html:45:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/404.html:45:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/404.html:45:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/404.html:45:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/404.html:45:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/404.html:45:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/404.html:45:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/404.html:45:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/404.html:45:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/404.html:45:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/404.html:45:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/404.html:45:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/404.html:45:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/404.html:45:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/404.html:45:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/404.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/404.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/404.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/404.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/404.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/404.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/404.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/404.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/about/index.html:24:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/about/index.html:26:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/about/index.html:27:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/about/index.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/about/index.html:34:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/about/index.html:45:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/about/index.html:45:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/about/index.html:45:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/about/index.html:45:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/about/index.html:45:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/about/index.html:45:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/about/index.html:45:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/about/index.html:45:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/about/index.html:45:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/about/index.html:45:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/about/index.html:45:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/about/index.html:45:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/about/index.html:45:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/about/index.html:45:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/about/index.html:45:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/about/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/about/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/about/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/about/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/about/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/about/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/about/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/about/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/images/index.html:24:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/images/index.html:26:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/images/index.html:27:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/images/index.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/images/index.html:34:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/images/index.html:45:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/images/index.html:45:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/images/index.html:45:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/images/index.html:45:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/images/index.html:45:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/images/index.html:45:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/images/index.html:45:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/images/index.html:45:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/images/index.html:45:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/images/index.html:45:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/images/index.html:45:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/images/index.html:45:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/images/index.html:45:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/images/index.html:45:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/images/index.html:45:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/images/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/images/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/images/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/images/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/images/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/images/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/images/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/images/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/index.html:24:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/index.html:26:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/index.html:27:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/index.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/index.html:34:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/index.html:45:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/index.html:45:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/index.html:45:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/index.html:45:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/index.html:45:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/index.html:45:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/index.html:45:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/index.html:45:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/index.html:45:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/index.html:45:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/index.html:45:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/index.html:45:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/index.html:45:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/index.html:45:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/index.html:45:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/index.html:393:
+
+  internally linking to /tree/master/resources/flash_cards/System%20Design.apkg, which does not exist
+
+* At ./docs/index.html:394:
+
+  internally linking to /tree/master/resources/flash_cards/System%20Design%20Exercises.apkg, which does not exist
+
+* At ./docs/index.html:395:
+
+  internally linking to /tree/master/resources/flash_cards/OO%20Design.apkg, which does not exist
+
+* At ./docs/index.html:427:
+
+  internally linking to /issues/28, which does not exist
+
+* At ./docs/index.html:432:
+
+  internally linking to CONTRIBUTING.md, which does not exist
+
+* At ./docs/index.html:565:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/index.html:571:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/index.html:571:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/index.html:638:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/index.html:642:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/index.html:646:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/index.html:650:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/index.html:654:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/index.html:658:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/index.html:662:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/index.html:666:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/index.html:677:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/index.html:683:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/index.html:689:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/index.html:695:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/index.html:701:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/index.html:707:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/index.html:713:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/index.html:719:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/index.html:745:
+
+  internally linking to /system-design-primer/solutions/object_oriented_design/hash_table/hash_map.ipynb, which does not exist
+
+* At ./docs/index.html:749:
+
+  internally linking to /system-design-primer/solutions/object_oriented_design/lru_cache/lru_cache.ipynb, which does not exist
+
+* At ./docs/index.html:753:
+
+  internally linking to /system-design-primer/solutions/object_oriented_design/call_center/call_center.ipynb, which does not exist
+
+* At ./docs/index.html:757:
+
+  internally linking to /system-design-primer/solutions/object_oriented_design/deck_of_cards/deck_of_cards.ipynb, which does not exist
+
+* At ./docs/index.html:761:
+
+  internally linking to /system-design-primer/solutions/object_oriented_design/parking_lot/parking_lot.ipynb, which does not exist
+
+* At ./docs/index.html:765:
+
+  internally linking to /system-design-primer/solutions/object_oriented_design/online_chat/online_chat.ipynb, which does not exist
+
+* At ./docs/index.html:2313:
+
+  internally linking to /system-design-primer/scaling/2023/11/30/scaling-methods.html, which does not exist
+
+* At ./docs/index.html:2321:
+
+  internally linking to /system-design-primer/jekyll/mermaid/2023/11/09/jekyll-mermaid.html, which does not exist
+
+* At ./docs/index.html:2329:
+
+  internally linking to /system-design-primer/jekyll/update/2023/11/06/welcome-to-jekyll.html, which does not exist
+
+* At ./docs/index.html:2336:
+
+  internally linking to /system-design-primer/feed.xml, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:25:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:27:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:29:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:35:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:46:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:46:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:46:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:46:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:46:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:46:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:46:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:46:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:46:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:46:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:46:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:46:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:46:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:46:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:46:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:46:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:46:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:46:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:46:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:46:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:46:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:46:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:46:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/jekyll/mermaid/2023/11/09/jekyll-mermaid.html:91:
+
+  internally linking to /system-design-primer/jekyll/mermaid/2023/11/09/jekyll-mermaid.html, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:25:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:27:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:29:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:35:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:46:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:46:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:46:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:46:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:46:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:46:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:46:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:46:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:46:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:46:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:46:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:46:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:46:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:46:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:46:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:46:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:46:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:46:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:46:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:46:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:46:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:46:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:46:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/jekyll/update/2023/11/06/welcome-to-jekyll.html:83:
+
+  internally linking to /system-design-primer/jekyll/update/2023/11/06/welcome-to-jekyll.html, which does not exist
+
+* At ./docs/pages/asynchronism.html:24:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/pages/asynchronism.html:26:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/pages/asynchronism.html:27:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/pages/asynchronism.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/pages/asynchronism.html:34:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/pages/asynchronism.html:45:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/pages/asynchronism.html:45:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/pages/asynchronism.html:45:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/pages/asynchronism.html:45:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/pages/asynchronism.html:45:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/pages/asynchronism.html:45:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/pages/asynchronism.html:45:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/pages/asynchronism.html:45:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/pages/asynchronism.html:45:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/pages/asynchronism.html:45:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/pages/asynchronism.html:45:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/pages/asynchronism.html:45:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/pages/asynchronism.html:45:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/pages/asynchronism.html:45:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/pages/asynchronism.html:45:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/pages/asynchronism.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/pages/asynchronism.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/pages/asynchronism.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/pages/asynchronism.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/pages/asynchronism.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/pages/asynchronism.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/pages/asynchronism.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/pages/asynchronism.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/pages/cache.html:24:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/pages/cache.html:26:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/pages/cache.html:27:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/pages/cache.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/pages/cache.html:34:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/pages/cache.html:45:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/pages/cache.html:45:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/pages/cache.html:45:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/pages/cache.html:45:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/pages/cache.html:45:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/pages/cache.html:45:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/pages/cache.html:45:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/pages/cache.html:45:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/pages/cache.html:45:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/pages/cache.html:45:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/pages/cache.html:45:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/pages/cache.html:45:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/pages/cache.html:45:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/pages/cache.html:45:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/pages/cache.html:45:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/pages/cache.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/pages/cache.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/pages/cache.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/pages/cache.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/pages/cache.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/pages/cache.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/pages/cache.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/pages/cache.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/pages/domain-name-system.html:24:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/pages/domain-name-system.html:26:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/pages/domain-name-system.html:27:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/pages/domain-name-system.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/pages/domain-name-system.html:34:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/pages/domain-name-system.html:45:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/pages/domain-name-system.html:45:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/pages/domain-name-system.html:45:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/pages/domain-name-system.html:45:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/pages/domain-name-system.html:45:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/pages/domain-name-system.html:45:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/pages/domain-name-system.html:45:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/pages/domain-name-system.html:45:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/pages/domain-name-system.html:45:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/pages/domain-name-system.html:45:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/pages/domain-name-system.html:45:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/pages/domain-name-system.html:45:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/pages/domain-name-system.html:45:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/pages/domain-name-system.html:45:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/pages/domain-name-system.html:45:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/pages/domain-name-system.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/pages/domain-name-system.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/pages/domain-name-system.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/pages/domain-name-system.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/pages/domain-name-system.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/pages/domain-name-system.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/pages/domain-name-system.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/pages/domain-name-system.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/pages/federation.html:24:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/pages/federation.html:26:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/pages/federation.html:27:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/pages/federation.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/pages/federation.html:34:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/pages/federation.html:45:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/pages/federation.html:45:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/pages/federation.html:45:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/pages/federation.html:45:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/pages/federation.html:45:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/pages/federation.html:45:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/pages/federation.html:45:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/pages/federation.html:45:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/pages/federation.html:45:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/pages/federation.html:45:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/pages/federation.html:45:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/pages/federation.html:45:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/pages/federation.html:45:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/pages/federation.html:45:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/pages/federation.html:45:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/pages/federation.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/pages/federation.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/pages/federation.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/pages/federation.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/pages/federation.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/pages/federation.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/pages/federation.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/pages/federation.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/pages/federation.html:61:
+
+  internally linking to /system-design-primer/images/U3qV33e.png, which does not exist
+
+* At ./docs/pages/key-value-store.html:24:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/pages/key-value-store.html:26:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/pages/key-value-store.html:27:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/pages/key-value-store.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/pages/key-value-store.html:34:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/pages/key-value-store.html:45:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/pages/key-value-store.html:45:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/pages/key-value-store.html:45:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/pages/key-value-store.html:45:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/pages/key-value-store.html:45:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/pages/key-value-store.html:45:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/pages/key-value-store.html:45:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/pages/key-value-store.html:45:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/pages/key-value-store.html:45:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/pages/key-value-store.html:45:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/pages/key-value-store.html:45:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/pages/key-value-store.html:45:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/pages/key-value-store.html:45:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/pages/key-value-store.html:45:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/pages/key-value-store.html:45:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/pages/key-value-store.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/pages/key-value-store.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/pages/key-value-store.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/pages/key-value-store.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/pages/key-value-store.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/pages/key-value-store.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/pages/key-value-store.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/pages/key-value-store.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/pages/load-balancer.html:24:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/pages/load-balancer.html:26:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/pages/load-balancer.html:27:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/pages/load-balancer.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/pages/load-balancer.html:34:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/pages/load-balancer.html:45:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/pages/load-balancer.html:45:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/pages/load-balancer.html:45:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/pages/load-balancer.html:45:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/pages/load-balancer.html:45:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/pages/load-balancer.html:45:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/pages/load-balancer.html:45:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/pages/load-balancer.html:45:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/pages/load-balancer.html:45:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/pages/load-balancer.html:45:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/pages/load-balancer.html:45:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/pages/load-balancer.html:45:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/pages/load-balancer.html:45:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/pages/load-balancer.html:45:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/pages/load-balancer.html:45:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/pages/load-balancer.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/pages/load-balancer.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/pages/load-balancer.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/pages/load-balancer.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/pages/load-balancer.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/pages/load-balancer.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/pages/load-balancer.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/pages/load-balancer.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/pages/load-balancer.html:115:
+
+  internally linking to #communication; the file exists, but the hash 'communication' does not
+
+* At ./docs/pages/load-balancer.html:124:
+
+  internally linking to #communication; the file exists, but the hash 'communication' does not
+
+* At ./docs/pages/master-master-replication.html:24:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/pages/master-master-replication.html:26:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/pages/master-master-replication.html:27:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/pages/master-master-replication.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/pages/master-master-replication.html:34:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/pages/master-master-replication.html:45:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/pages/master-master-replication.html:45:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/pages/master-master-replication.html:45:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/pages/master-master-replication.html:45:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/pages/master-master-replication.html:45:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/pages/master-master-replication.html:45:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/pages/master-master-replication.html:45:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/pages/master-master-replication.html:45:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/pages/master-master-replication.html:45:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/pages/master-master-replication.html:45:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/pages/master-master-replication.html:45:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/pages/master-master-replication.html:45:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/pages/master-master-replication.html:45:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/pages/master-master-replication.html:45:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/pages/master-master-replication.html:45:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/pages/master-master-replication.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/pages/master-master-replication.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/pages/master-master-replication.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/pages/master-master-replication.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/pages/master-master-replication.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/pages/master-master-replication.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/pages/master-master-replication.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/pages/master-master-replication.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:24:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:26:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:27:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:34:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:45:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:45:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:45:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:45:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:45:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:45:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:45:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:45:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:45:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:45:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:45:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:45:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:45:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:45:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:45:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/pages/master-slave-replication.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/pages/replication.html:24:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/pages/replication.html:26:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/pages/replication.html:27:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/pages/replication.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/pages/replication.html:34:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/pages/replication.html:45:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/pages/replication.html:45:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/pages/replication.html:45:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/pages/replication.html:45:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/pages/replication.html:45:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/pages/replication.html:45:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/pages/replication.html:45:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/pages/replication.html:45:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/pages/replication.html:45:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/pages/replication.html:45:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/pages/replication.html:45:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/pages/replication.html:45:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/pages/replication.html:45:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/pages/replication.html:45:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/pages/replication.html:45:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/pages/replication.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/pages/replication.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/pages/replication.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/pages/replication.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/pages/replication.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/pages/replication.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/pages/replication.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/pages/replication.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:24:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:26:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:27:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:34:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:45:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:45:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:45:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:45:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:45:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:45:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:45:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:45:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:45:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:45:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:45:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:45:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:45:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:45:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:45:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/pages/reverse-proxy-web-server.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/pages/sharding.html:24:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/pages/sharding.html:26:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/pages/sharding.html:27:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/pages/sharding.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/pages/sharding.html:34:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/pages/sharding.html:45:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/pages/sharding.html:45:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/pages/sharding.html:45:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/pages/sharding.html:45:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/pages/sharding.html:45:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/pages/sharding.html:45:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/pages/sharding.html:45:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/pages/sharding.html:45:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/pages/sharding.html:45:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/pages/sharding.html:45:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/pages/sharding.html:45:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/pages/sharding.html:45:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/pages/sharding.html:45:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/pages/sharding.html:45:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/pages/sharding.html:45:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/pages/sharding.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/pages/sharding.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/pages/sharding.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/pages/sharding.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/pages/sharding.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/pages/sharding.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/pages/sharding.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/pages/sharding.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/pages/sharding.html:60:
+
+  internally linking to /system-design-primer/images/wU8x5Id.png, which does not exist
+
+* At ./docs/pages/sharding.html:73:
+
+  internally linking to /pages/federation.md, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:24:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:26:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:27:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:34:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:45:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:45:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:45:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:45:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:45:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:45:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:45:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:45:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:45:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:45:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:45:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:45:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:45:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:45:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:45:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/pages/sql-or-nosql.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:25:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:27:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:29:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:35:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:46:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:46:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:46:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:46:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:46:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:46:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:46:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:46:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:46:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:46:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:46:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:46:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:46:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:46:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:46:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:46:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:46:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:46:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:46:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:46:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:46:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:46:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:46:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/scaling/2023/11/30/scaling-methods.html:66:
+
+  internally linking to /system-design-primer/scaling/2023/11/30/scaling-methods.html, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:24:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:26:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:27:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:34:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:45:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:45:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:45:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:45:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:45:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:45:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:45:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:45:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:45:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:45:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:45:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:45:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:45:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:45:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:45:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:459:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:516:
+
+  internally linking to /pages/cache-aside, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:516:
+
+  internally linking to /#when-to-update-the-cache; the file exists, but the hash 'when-to-update-the-cache' does not
+
+* At ./docs/solutions/system_design/mint/index.html:556:
+
+  internally linking to /#client-caching; the file exists, but the hash 'client-caching' does not
+
+* At ./docs/solutions/system_design/mint/index.html:557:
+
+  internally linking to /#cdn-caching; the file exists, but the hash 'cdn-caching' does not
+
+* At ./docs/solutions/system_design/mint/index.html:558:
+
+  internally linking to /#web-server-caching; the file exists, but the hash 'web-server-caching' does not
+
+* At ./docs/solutions/system_design/mint/index.html:559:
+
+  internally linking to /#database-caching; the file exists, but the hash 'database-caching' does not
+
+* At ./docs/solutions/system_design/mint/index.html:560:
+
+  internally linking to /#application-caching; the file exists, but the hash 'application-caching' does not
+
+* At ./docs/solutions/system_design/mint/index.html:565:
+
+  internally linking to /#caching-at-the-database-query-level; the file exists, but the hash 'caching-at-the-database-query-level' does not
+
+* At ./docs/solutions/system_design/mint/index.html:566:
+
+  internally linking to /#caching-at-the-object-level; the file exists, but the hash 'caching-at-the-object-level' does not
+
+* At ./docs/solutions/system_design/mint/index.html:571:
+
+  internally linking to /pages/cache-aside, which does not exist
+
+* At ./docs/solutions/system_design/mint/index.html:572:
+
+  internally linking to /#write-through; the file exists, but the hash 'write-through' does not
+
+* At ./docs/solutions/system_design/mint/index.html:573:
+
+  internally linking to /#write-behind-write-back; the file exists, but the hash 'write-behind-write-back' does not
+
+* At ./docs/solutions/system_design/mint/index.html:574:
+
+  internally linking to /#refresh-ahead; the file exists, but the hash 'refresh-ahead' does not
+
+* At ./docs/solutions/system_design/pastebin/index.html:24:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:26:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:27:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:34:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:45:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:45:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:45:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:45:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:45:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:45:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:45:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:45:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:45:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:45:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:45:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:45:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:45:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:45:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:45:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:398:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:477:
+
+  internally linking to /#client-caching; the file exists, but the hash 'client-caching' does not
+
+* At ./docs/solutions/system_design/pastebin/index.html:478:
+
+  internally linking to /#cdn-caching; the file exists, but the hash 'cdn-caching' does not
+
+* At ./docs/solutions/system_design/pastebin/index.html:479:
+
+  internally linking to /#web-server-caching; the file exists, but the hash 'web-server-caching' does not
+
+* At ./docs/solutions/system_design/pastebin/index.html:480:
+
+  internally linking to /#database-caching; the file exists, but the hash 'database-caching' does not
+
+* At ./docs/solutions/system_design/pastebin/index.html:481:
+
+  internally linking to /#application-caching; the file exists, but the hash 'application-caching' does not
+
+* At ./docs/solutions/system_design/pastebin/index.html:486:
+
+  internally linking to /#caching-at-the-database-query-level; the file exists, but the hash 'caching-at-the-database-query-level' does not
+
+* At ./docs/solutions/system_design/pastebin/index.html:487:
+
+  internally linking to /#caching-at-the-object-level; the file exists, but the hash 'caching-at-the-object-level' does not
+
+* At ./docs/solutions/system_design/pastebin/index.html:492:
+
+  internally linking to /pages/cache-aside, which does not exist
+
+* At ./docs/solutions/system_design/pastebin/index.html:493:
+
+  internally linking to /#write-through; the file exists, but the hash 'write-through' does not
+
+* At ./docs/solutions/system_design/pastebin/index.html:494:
+
+  internally linking to /#write-behind-write-back; the file exists, but the hash 'write-behind-write-back' does not
+
+* At ./docs/solutions/system_design/pastebin/index.html:495:
+
+  internally linking to /#refresh-ahead; the file exists, but the hash 'refresh-ahead' does not
+
+* At ./docs/solutions/system_design/query_cache/index.html:24:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:26:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:27:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:34:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:45:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:45:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:45:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:45:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:45:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:45:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:45:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:45:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:45:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:45:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:45:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:45:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:45:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:45:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:45:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:318:
+
+  internally linking to /pages/cache-aside, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:318:
+
+  internally linking to /#when-to-update-the-cache; the file exists, but the hash 'when-to-update-the-cache' does not
+
+* At ./docs/solutions/system_design/query_cache/index.html:330:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:393:
+
+  internally linking to /#client-caching; the file exists, but the hash 'client-caching' does not
+
+* At ./docs/solutions/system_design/query_cache/index.html:394:
+
+  internally linking to /#cdn-caching; the file exists, but the hash 'cdn-caching' does not
+
+* At ./docs/solutions/system_design/query_cache/index.html:395:
+
+  internally linking to /#web-server-caching; the file exists, but the hash 'web-server-caching' does not
+
+* At ./docs/solutions/system_design/query_cache/index.html:396:
+
+  internally linking to /#database-caching; the file exists, but the hash 'database-caching' does not
+
+* At ./docs/solutions/system_design/query_cache/index.html:397:
+
+  internally linking to /#application-caching; the file exists, but the hash 'application-caching' does not
+
+* At ./docs/solutions/system_design/query_cache/index.html:402:
+
+  internally linking to /#caching-at-the-database-query-level; the file exists, but the hash 'caching-at-the-database-query-level' does not
+
+* At ./docs/solutions/system_design/query_cache/index.html:403:
+
+  internally linking to /#caching-at-the-object-level; the file exists, but the hash 'caching-at-the-object-level' does not
+
+* At ./docs/solutions/system_design/query_cache/index.html:408:
+
+  internally linking to /pages/cache-aside, which does not exist
+
+* At ./docs/solutions/system_design/query_cache/index.html:409:
+
+  internally linking to /#write-through; the file exists, but the hash 'write-through' does not
+
+* At ./docs/solutions/system_design/query_cache/index.html:410:
+
+  internally linking to /#write-behind-write-back; the file exists, but the hash 'write-behind-write-back' does not
+
+* At ./docs/solutions/system_design/query_cache/index.html:411:
+
+  internally linking to /#refresh-ahead; the file exists, but the hash 'refresh-ahead' does not
+
+* At ./docs/solutions/system_design/sales_rank/index.html:24:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:26:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:27:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:34:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:45:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:45:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:45:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:45:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:45:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:45:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:45:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:45:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:45:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:45:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:45:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:45:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:45:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:45:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:45:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:347:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:410:
+
+  internally linking to /#client-caching; the file exists, but the hash 'client-caching' does not
+
+* At ./docs/solutions/system_design/sales_rank/index.html:411:
+
+  internally linking to /#cdn-caching; the file exists, but the hash 'cdn-caching' does not
+
+* At ./docs/solutions/system_design/sales_rank/index.html:412:
+
+  internally linking to /#web-server-caching; the file exists, but the hash 'web-server-caching' does not
+
+* At ./docs/solutions/system_design/sales_rank/index.html:413:
+
+  internally linking to /#database-caching; the file exists, but the hash 'database-caching' does not
+
+* At ./docs/solutions/system_design/sales_rank/index.html:414:
+
+  internally linking to /#application-caching; the file exists, but the hash 'application-caching' does not
+
+* At ./docs/solutions/system_design/sales_rank/index.html:419:
+
+  internally linking to /#caching-at-the-database-query-level; the file exists, but the hash 'caching-at-the-database-query-level' does not
+
+* At ./docs/solutions/system_design/sales_rank/index.html:420:
+
+  internally linking to /#caching-at-the-object-level; the file exists, but the hash 'caching-at-the-object-level' does not
+
+* At ./docs/solutions/system_design/sales_rank/index.html:425:
+
+  internally linking to /pages/cache-aside, which does not exist
+
+* At ./docs/solutions/system_design/sales_rank/index.html:426:
+
+  internally linking to /#write-through; the file exists, but the hash 'write-through' does not
+
+* At ./docs/solutions/system_design/sales_rank/index.html:427:
+
+  internally linking to /#write-behind-write-back; the file exists, but the hash 'write-behind-write-back' does not
+
+* At ./docs/solutions/system_design/sales_rank/index.html:428:
+
+  internally linking to /#refresh-ahead; the file exists, but the hash 'refresh-ahead' does not
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:24:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:26:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:27:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:34:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:45:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:45:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:45:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:45:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:45:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:45:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:45:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:45:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:45:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:45:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:45:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:45:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:45:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:45:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:45:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:673:
+
+  internally linking to /#client-caching; the file exists, but the hash 'client-caching' does not
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:674:
+
+  internally linking to /#cdn-caching; the file exists, but the hash 'cdn-caching' does not
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:675:
+
+  internally linking to /#web-server-caching; the file exists, but the hash 'web-server-caching' does not
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:676:
+
+  internally linking to /#database-caching; the file exists, but the hash 'database-caching' does not
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:677:
+
+  internally linking to /#application-caching; the file exists, but the hash 'application-caching' does not
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:682:
+
+  internally linking to /#caching-at-the-database-query-level; the file exists, but the hash 'caching-at-the-database-query-level' does not
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:683:
+
+  internally linking to /#caching-at-the-object-level; the file exists, but the hash 'caching-at-the-object-level' does not
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:688:
+
+  internally linking to /pages/cache-aside, which does not exist
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:689:
+
+  internally linking to /#write-through; the file exists, but the hash 'write-through' does not
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:690:
+
+  internally linking to /#write-behind-write-back; the file exists, but the hash 'write-behind-write-back' does not
+
+* At ./docs/solutions/system_design/scaling_aws/index.html:691:
+
+  internally linking to /#refresh-ahead; the file exists, but the hash 'refresh-ahead' does not
+
+* At ./docs/solutions/system_design/social_graph/index.html:24:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:26:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:27:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:34:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:45:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:45:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:45:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:45:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:45:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:45:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:45:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:45:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:45:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:45:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:45:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:45:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:45:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:45:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:45:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:344:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:415:
+
+  internally linking to /#client-caching; the file exists, but the hash 'client-caching' does not
+
+* At ./docs/solutions/system_design/social_graph/index.html:416:
+
+  internally linking to /#cdn-caching; the file exists, but the hash 'cdn-caching' does not
+
+* At ./docs/solutions/system_design/social_graph/index.html:417:
+
+  internally linking to /#web-server-caching; the file exists, but the hash 'web-server-caching' does not
+
+* At ./docs/solutions/system_design/social_graph/index.html:418:
+
+  internally linking to /#database-caching; the file exists, but the hash 'database-caching' does not
+
+* At ./docs/solutions/system_design/social_graph/index.html:419:
+
+  internally linking to /#application-caching; the file exists, but the hash 'application-caching' does not
+
+* At ./docs/solutions/system_design/social_graph/index.html:424:
+
+  internally linking to /#caching-at-the-database-query-level; the file exists, but the hash 'caching-at-the-database-query-level' does not
+
+* At ./docs/solutions/system_design/social_graph/index.html:425:
+
+  internally linking to /#caching-at-the-object-level; the file exists, but the hash 'caching-at-the-object-level' does not
+
+* At ./docs/solutions/system_design/social_graph/index.html:430:
+
+  internally linking to /pages/cache-aside, which does not exist
+
+* At ./docs/solutions/system_design/social_graph/index.html:431:
+
+  internally linking to /#write-through; the file exists, but the hash 'write-through' does not
+
+* At ./docs/solutions/system_design/social_graph/index.html:432:
+
+  internally linking to /#write-behind-write-back; the file exists, but the hash 'write-behind-write-back' does not
+
+* At ./docs/solutions/system_design/social_graph/index.html:433:
+
+  internally linking to /#refresh-ahead; the file exists, but the hash 'refresh-ahead' does not
+
+* At ./docs/solutions/system_design/twitter/index.html:24:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:26:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:27:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:34:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:45:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:45:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:45:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:45:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:45:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:45:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:45:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:45:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:45:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:45:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:45:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:45:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:45:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:45:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:45:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:387:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:473:
+
+  internally linking to /#client-caching; the file exists, but the hash 'client-caching' does not
+
+* At ./docs/solutions/system_design/twitter/index.html:474:
+
+  internally linking to /#cdn-caching; the file exists, but the hash 'cdn-caching' does not
+
+* At ./docs/solutions/system_design/twitter/index.html:475:
+
+  internally linking to /#web-server-caching; the file exists, but the hash 'web-server-caching' does not
+
+* At ./docs/solutions/system_design/twitter/index.html:476:
+
+  internally linking to /#database-caching; the file exists, but the hash 'database-caching' does not
+
+* At ./docs/solutions/system_design/twitter/index.html:477:
+
+  internally linking to /#application-caching; the file exists, but the hash 'application-caching' does not
+
+* At ./docs/solutions/system_design/twitter/index.html:482:
+
+  internally linking to /#caching-at-the-database-query-level; the file exists, but the hash 'caching-at-the-database-query-level' does not
+
+* At ./docs/solutions/system_design/twitter/index.html:483:
+
+  internally linking to /#caching-at-the-object-level; the file exists, but the hash 'caching-at-the-object-level' does not
+
+* At ./docs/solutions/system_design/twitter/index.html:488:
+
+  internally linking to /pages/cache-aside, which does not exist
+
+* At ./docs/solutions/system_design/twitter/index.html:489:
+
+  internally linking to /#write-through; the file exists, but the hash 'write-through' does not
+
+* At ./docs/solutions/system_design/twitter/index.html:490:
+
+  internally linking to /#write-behind-write-back; the file exists, but the hash 'write-behind-write-back' does not
+
+* At ./docs/solutions/system_design/twitter/index.html:491:
+
+  internally linking to /#refresh-ahead; the file exists, but the hash 'refresh-ahead' does not
+
+* At ./docs/solutions/system_design/web_crawler/index.html:24:
+
+  internally linking to /system-design-primer/assets/main.css, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:26:
+
+  internally linking to /system-design-primer/assets/favicon.ico, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:27:
+
+  internally linking to /system-design-primer/assets/css/custom-styles.css, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:28:
+
+  internally linking to /system-design-primer/assets/css/custom-mermaid.css, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:34:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:45:
+
+  internally linking to /system-design-primer/, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:45:
+
+  internally linking to /system-design-primer/about/, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:45:
+
+  internally linking to /system-design-primer/pages/asynchronism.html, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:45:
+
+  internally linking to /system-design-primer/pages/cache.html, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:45:
+
+  internally linking to /system-design-primer/pages/domain-name-system.html, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:45:
+
+  internally linking to /system-design-primer/pages/federation.html, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:45:
+
+  internally linking to /system-design-primer/images/, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:45:
+
+  internally linking to /system-design-primer/pages/key-value-store.html, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:45:
+
+  internally linking to /system-design-primer/pages/load-balancer.html, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:45:
+
+  internally linking to /system-design-primer/pages/master-master-replication.html, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:45:
+
+  internally linking to /system-design-primer/pages/master-slave-replication.html, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:45:
+
+  internally linking to /system-design-primer/pages/replication.html, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:45:
+
+  internally linking to /system-design-primer/pages/reverse-proxy-web-server.html, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:45:
+
+  internally linking to /system-design-primer/pages/sharding.html, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:45:
+
+  internally linking to /system-design-primer/pages/sql-or-nosql.html, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/mint/, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/pastebin/, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/query_cache/, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/sales_rank/, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/social_graph/, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/twitter/, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:45:
+
+  internally linking to /system-design-primer/solutions/system_design/web_crawler/, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:398:
+
+  internally linking to /system-design-primer/solutions/system_design/scaling_aws/, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:464:
+
+  internally linking to /#client-caching; the file exists, but the hash 'client-caching' does not
+
+* At ./docs/solutions/system_design/web_crawler/index.html:465:
+
+  internally linking to /#cdn-caching; the file exists, but the hash 'cdn-caching' does not
+
+* At ./docs/solutions/system_design/web_crawler/index.html:466:
+
+  internally linking to /#web-server-caching; the file exists, but the hash 'web-server-caching' does not
+
+* At ./docs/solutions/system_design/web_crawler/index.html:467:
+
+  internally linking to /#database-caching; the file exists, but the hash 'database-caching' does not
+
+* At ./docs/solutions/system_design/web_crawler/index.html:468:
+
+  internally linking to /#application-caching; the file exists, but the hash 'application-caching' does not
+
+* At ./docs/solutions/system_design/web_crawler/index.html:473:
+
+  internally linking to /#caching-at-the-database-query-level; the file exists, but the hash 'caching-at-the-database-query-level' does not
+
+* At ./docs/solutions/system_design/web_crawler/index.html:474:
+
+  internally linking to /#caching-at-the-object-level; the file exists, but the hash 'caching-at-the-object-level' does not
+
+* At ./docs/solutions/system_design/web_crawler/index.html:479:
+
+  internally linking to /pages/cache-aside, which does not exist
+
+* At ./docs/solutions/system_design/web_crawler/index.html:480:
+
+  internally linking to /#write-through; the file exists, but the hash 'write-through' does not
+
+* At ./docs/solutions/system_design/web_crawler/index.html:481:
+
+  internally linking to /#write-behind-write-back; the file exists, but the hash 'write-behind-write-back' does not
+
+* At ./docs/solutions/system_design/web_crawler/index.html:482:
+
+  internally linking to /#refresh-ahead; the file exists, but the hash 'refresh-ahead' does not
+
+
+HTML-Proofer found 1185 failures!

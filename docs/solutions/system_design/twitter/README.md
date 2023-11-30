@@ -241,7 +241,7 @@ We'll introduce some components to complete the design and to address scalabilit
 * [Horizontal scaling](/pages/load-balancer#horizontal-scaling)
 * [Web server (reverse proxy)](/pages/reverse-proxy-web-server)
 * [API server (application layer)](/#application-layer)
-* [Cache](/#cache)
+* [Cache](/pages/cache)
 * [Relational database management system (RDBMS)](/#relational-database-management-system-rdbms)
 * [SQL write master-slave failover](/#fail-over)
 * [Master-slave replication](/pages/master-slave-replication)
@@ -300,7 +300,7 @@ We should also consider moving some data to a **NoSQL Database**.
     * [Caching at the database query level](/#caching-at-the-database-query-level)
     * [Caching at the object level](/#caching-at-the-object-level)
 * When to update the cache
-    * [Cache-aside](/#cache-aside)
+    * [Cache-aside](/pages/cache-aside)
     * [Write-through](/#write-through)
     * [Write-behind (write-back)](/#write-behind-write-back)
     * [Refresh ahead](/#refresh-ahead)

@@ -7,26 +7,23 @@ built with Jekyll and
 
 ## Development
 
-- Install docker and docker-compose
-- Run `./dev up` to run the service
-- Run `./dev serve` to start the jekyll server
+- Install docker, docker-compose and [direnv](https://direnv.net) tool
+- cd into this folder to trigger direnv to load environment variables
+- Run `dev help` to see available commands
+- Run `dev up` to run the service, use flag `-d` to run in background
+- Run `dev serve` to start the Jekyll server
 - Go to `localhost:4000` to see the generated site
-- Run `./dev attach` to attach to the service container (or use VS Code's Remote Container)
+- Run `dev attach` to attach to the service container (or attach with VS
+  Code's Dev Container)
 
 ## Deploy to GitHub Pages
 
-- Run `./dev up` to run the service
-- Run `./dev build` to build the site into `docs/` folder
-- Commit the `docs/` folder and push to GitHub
+- Run `dev up` to run the service
+- Run `dev build-site` to build the site into `docs/` folder
+- Push the `docs/` folder to GitHub
 
 ## Customize the site's theme
 
 The site uses
 [minima theme 2.5.1](https://github.com/jekyll/minima/tree/v2.5.1).
 Take a look at the source code to know which files to override.
-
-## TODO
-
-- [x] Apply custom style to mermaid diagrams
-- [ ] Summarize scaling aws
-- [Learn Jekyll](https://jekyllrb.com/docs/)

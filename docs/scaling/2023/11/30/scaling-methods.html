@@ -6,20 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>SQL or NoSQL | The System Design Primer</title>
+<title>Scaling Methods | The System Design Primer</title>
 <meta name="generator" content="Jekyll v3.9.3">
-<meta property="og:title" content="SQL or NoSQL">
+<meta property="og:title" content="Scaling Methods">
 <meta property="og:locale" content="en_US">
 <meta name="description" content="Learn how to design large-scale systems. Prep for the system design interview.">
 <meta property="og:description" content="Learn how to design large-scale systems. Prep for the system design interview.">
-<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/pages/sql-or-nosql.html">
-<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/pages/sql-or-nosql.html">
+<link rel="canonical" href="https://phucnguyen81.github.io/system-design-primer/scaling/2023/11/30/scaling-methods.html">
+<meta property="og:url" content="https://phucnguyen81.github.io/system-design-primer/scaling/2023/11/30/scaling-methods.html">
 <meta property="og:site_name" content="The System Design Primer">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2023-11-30T12:01:00+07:00">
 <meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="SQL or NoSQL">
+<meta property="twitter:title" content="Scaling Methods">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Learn how to design large-scale systems. Prep for the system design interview.","headline":"SQL or NoSQL","url":"https://phucnguyen81.github.io/system-design-primer/pages/sql-or-nosql.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-11-30T12:01:00+07:00","datePublished":"2023-11-30T12:01:00+07:00","description":"Learn how to design large-scale systems. Prep for the system design interview.","headline":"Scaling Methods","mainEntityOfPage":{"@type":"WebPage","@id":"https://phucnguyen81.github.io/system-design-primer/scaling/2023/11/30/scaling-methods.html"},"url":"https://phucnguyen81.github.io/system-design-primer/scaling/2023/11/30/scaling-methods.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/system-design-primer/assets/main.css">
 <link type="application/atom+xml" rel="alternate" href="https://phucnguyen81.github.io/system-design-primer/feed.xml" title="The System Design Primer">
@@ -49,63 +50,20 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <article class="post">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title">SQL or NoSQL</h1>
+    <h1 class="post-title p-name" itemprop="name headline">Scaling Methods</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-11-30T12:01:00+07:00" itemprop="datePublished">Nov 30, 2023
+      </time></p>
   </header>
 
-  <div class="post-content">
-    <p align="center">
-  <img src="/system-design-primer/images/wXGqG5f.png">
-  <br>
-  <i><a href="https://www.infoq.com/articles/Transition-RDBMS-NoSQL/">Source: Transitioning from RDBMS to NoSQL</a></i>
-</p>
-
-<p>Reasons for <strong>SQL</strong>:</p>
-
-<ul>
-  <li>Structured data</li>
-  <li>Strict schema</li>
-  <li>Relational data</li>
-  <li>Need for complex joins</li>
-  <li>Transactions</li>
-  <li>Clear patterns for scaling</li>
-  <li>More established: developers, community, code, tools, etc</li>
-  <li>Lookups by index are very fast</li>
-</ul>
-
-<p>Reasons for <strong>NoSQL</strong>:</p>
-
-<ul>
-  <li>Semi-structured data</li>
-  <li>Dynamic or flexible schema</li>
-  <li>Non-relational data</li>
-  <li>No need for complex joins</li>
-  <li>Store many TB (or PB) of data</li>
-  <li>Very data intensive workload</li>
-  <li>Very high throughput for IOPS</li>
-</ul>
-
-<p>Sample data well-suited for NoSQL:</p>
-
-<ul>
-  <li>Rapid ingest of clickstream and log data</li>
-  <li>Leaderboard or scoring data</li>
-  <li>Temporary data, such as a shopping cart</li>
-  <li>Frequently accessed (‘hot’) tables</li>
-  <li>Metadata/lookup tables</li>
-</ul>
-
-<h2 id="sources-and-further-reading-sql-or-nosql">Source(s) and further reading: SQL or NoSQL</h2>
-
-<ul>
-  <li><a href="https://www.youtube.com/watch?v=kKjm4ehYiMs">Scaling up to your first 10 million users</a></li>
-  <li><a href="https://www.sitepoint.com/sql-vs-nosql-differences/">SQL vs NoSQL differences</a></li>
-</ul>
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiLS0tXG50aXRsZTogU2NhbGluZyBXZWIgQXBwc1xuLS0tXG5ncmFwaCBURFxuUmVxdWVzdCAtLT4gV2ViIC0tPiBBcHBsaWNhdGlvbiAtLT4gRGF0YWJhc2UgLS0-IFJlc3BvbnNlXG5zdWJncmFwaCBXZWJcbkNhY2hlMVtDYWNoZV1cbkNETlxuTG9hZEJsYW5jaW5nXG5lbmRcbnN1YmdyYXBoIEFwcGxpY2F0aW9uXG5DYWNoZTJbQ2FjaGVdXG5Bc3luY1Rhc2tzXG5lbmRcbnN1YmdyYXBoIERhdGFiYXNlXG5DYWNoZTNbQ2FjaGVdXG5TaGFyZGluZ1xuRmVkZXJhdGlvblxuV3JpdGVNYXN0ZXJcbk9iamVjdFN0b3JlXG5Ob1NRTFxuZW5kIiwibWVybWFpZCI6bnVsbH0"></p>
 
   </div>
-
+<a class="u-url" href="/system-design-primer/scaling/2023/11/30/scaling-methods.html" hidden></a>
 </article>
 
       </div>

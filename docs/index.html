@@ -42,7 +42,7 @@
         </label>
 
         <div class="trigger">
-<a class="page-link" href="/system-design-primer/about/">About</a><a class="page-link" href="/system-design-primer/pages/asynchronism.html">Asynchronism</a><a class="page-link" href="/system-design-primer/pages/domain-name-system.html">Domain name system</a><a class="page-link" href="/system-design-primer/pages/federation.html">Federation</a><a class="page-link" href="/system-design-primer/">The System Design Primer</a><a class="page-link" href="/system-design-primer/images/">Original Images</a><a class="page-link" href="/system-design-primer/pages/key-value-store.html">Key value store</a><a class="page-link" href="/system-design-primer/pages/load-balancer.html">Load balancer</a><a class="page-link" href="/system-design-primer/pages/master-master-replication.html">Master-master replication</a><a class="page-link" href="/system-design-primer/pages/master-slave-replication.html">Master-slave replication</a><a class="page-link" href="/system-design-primer/pages/replication.html">Replication</a><a class="page-link" href="/system-design-primer/pages/reverse-proxy-web-server.html">Reverse Proxy (web server)</a><a class="page-link" href="/system-design-primer/pages/sharding.html">Sharding</a><a class="page-link" href="/system-design-primer/pages/sql-or-nosql.html">SQL or NoSQL</a><a class="page-link" href="/system-design-primer/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/pastebin/">Design Pastebin.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/system-design-primer/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/system-design-primer/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/system-design-primer/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/system-design-primer/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/system-design-primer/solutions/system_design/web_crawler/">Design a web crawler</a>
+<a class="page-link" href="/system-design-primer/about/">About</a><a class="page-link" href="/system-design-primer/pages/asynchronism.html">Asynchronism</a><a class="page-link" href="/system-design-primer/pages/cache.html">Cache</a><a class="page-link" href="/system-design-primer/pages/domain-name-system.html">Domain name system</a><a class="page-link" href="/system-design-primer/pages/federation.html">Federation</a><a class="page-link" href="/system-design-primer/">The System Design Primer</a><a class="page-link" href="/system-design-primer/images/">Original Images</a><a class="page-link" href="/system-design-primer/pages/key-value-store.html">Key value store</a><a class="page-link" href="/system-design-primer/pages/load-balancer.html">Load balancer</a><a class="page-link" href="/system-design-primer/pages/master-master-replication.html">Master-master replication</a><a class="page-link" href="/system-design-primer/pages/master-slave-replication.html">Master-slave replication</a><a class="page-link" href="/system-design-primer/pages/replication.html">Replication</a><a class="page-link" href="/system-design-primer/pages/reverse-proxy-web-server.html">Reverse Proxy (web server)</a><a class="page-link" href="/system-design-primer/pages/sharding.html">Sharding</a><a class="page-link" href="/system-design-primer/pages/sql-or-nosql.html">SQL or NoSQL</a><a class="page-link" href="/system-design-primer/solutions/system_design/mint/">Design Mint.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/pastebin/">Design Pastebin.com</a><a class="page-link" href="/system-design-primer/solutions/system_design/query_cache/">Design a key-value cache to save the results of the most recent web server queries</a><a class="page-link" href="/system-design-primer/solutions/system_design/sales_rank/">Design Amazon’s sales rank by category feature</a><a class="page-link" href="/system-design-primer/solutions/system_design/scaling_aws/">Design a system that scales to millions of users on AWS</a><a class="page-link" href="/system-design-primer/solutions/system_design/social_graph/">Design the data structures for a social network</a><a class="page-link" href="/system-design-primer/solutions/system_design/twitter/">Design the Twitter timeline and search</a><a class="page-link" href="/system-design-primer/solutions/system_design/web_crawler/">Design a web crawler</a>
 </div>
       </nav>
 </div>
@@ -265,49 +265,7 @@
       <li><a href="#sql-or-nosql">SQL or NoSQL</a></li>
     </ul>
   </li>
-  <li>
-<a href="#cache">Cache</a>
-    <ul>
-      <li><a href="#client-caching">Client caching</a></li>
-      <li><a href="#cdn-caching">CDN caching</a></li>
-      <li><a href="#web-server-caching">Web server caching</a></li>
-      <li><a href="#database-caching">Database caching</a></li>
-      <li><a href="#application-caching">Application caching</a></li>
-      <li><a href="#caching-at-the-database-query-level">Caching at the database query level</a></li>
-      <li><a href="#caching-at-the-object-level">Caching at the object level</a></li>
-      <li>
-<a href="#when-to-update-the-cache">When to update the cache</a>
-        <ul>
-          <li>
-<a href="#cache-aside">Cache-aside</a>
-            <ul>
-              <li><a href="#disadvantages-cache-aside">Disadvantage(s): cache-aside</a></li>
-            </ul>
-          </li>
-          <li>
-<a href="#write-through">Write-through</a>
-            <ul>
-              <li><a href="#disadvantages-write-through">Disadvantage(s): write through</a></li>
-            </ul>
-          </li>
-          <li>
-<a href="#write-behind-write-back">Write-behind (write-back)</a>
-            <ul>
-              <li><a href="#disadvantages-write-behind">Disadvantage(s): write-behind</a></li>
-            </ul>
-          </li>
-          <li>
-<a href="#refresh-ahead">Refresh-ahead</a>
-            <ul>
-              <li><a href="#disadvantages-refresh-ahead">Disadvantage(s): refresh-ahead</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li><a href="#disadvantages-cache">Disadvantage(s): cache</a></li>
-      <li><a href="#sources-and-further-reading-7">Source(s) and further reading</a></li>
-    </ul>
-  </li>
+  <li><a href="#cache">Cache</a></li>
   <li><a href="#asynchronism">Asynchronism</a></li>
   <li>
 <a href="#communication">Communication</a>
@@ -348,7 +306,7 @@
   <li>
 <a href="#security">Security</a>
     <ul>
-      <li><a href="#sources-and-further-reading-8">Source(s) and further reading</a></li>
+      <li><a href="#sources-and-further-reading-7">Source(s) and further reading</a></li>
     </ul>
   </li>
   <li>
@@ -357,14 +315,14 @@
       <li>
 <a href="#powers-of-two-table">Powers of two table</a>
         <ul>
-          <li><a href="#sources-and-further-reading-9">Source(s) and further reading</a></li>
+          <li><a href="#sources-and-further-reading-8">Source(s) and further reading</a></li>
         </ul>
       </li>
       <li>
 <a href="#latency-numbers-every-programmer-should-know">Latency numbers every programmer should know</a>
         <ul>
           <li><a href="#latency-numbers-visualized">Latency numbers visualized</a></li>
-          <li><a href="#sources-and-further-reading-10">Source(s) and further reading</a></li>
+          <li><a href="#sources-and-further-reading-9">Source(s) and further reading</a></li>
         </ul>
       </li>
       <li><a href="#additional-system-design-interview-questions">Additional system design interview questions</a></li>
@@ -373,7 +331,7 @@
       <li>
 <a href="#company-engineering-blogs">Company engineering blogs</a>
         <ul>
-          <li><a href="#sources-and-further-reading-11">Source(s) and further reading</a></li>
+          <li><a href="#sources-and-further-reading-10">Source(s) and further reading</a></li>
         </ul>
       </li>
     </ul>
@@ -1418,222 +1376,7 @@
 
 <h3 id="sql-or-nosql"><a href="/pages/sql-or-nosql">SQL or NoSQL</a></h3>
 
-<h2 id="cache">Cache</h2>
-
-<p align="center">
-  <img src="/system-design-primer/images/Q6z24La.png">
-  <br>
-  <i><a href="http://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html">Source: Scalable system design patterns</a></i>
-</p>
-
-<p>Caching improves page load times and can reduce the load on your servers and databases.  In this model, the dispatcher will first lookup if the request has been made before and try to find the previous result to return, in order to save the actual execution.</p>
-
-<p>Databases often benefit from a uniform distribution of reads and writes across its partitions.  Popular items can skew the distribution, causing bottlenecks.  Putting a cache in front of a database can help absorb uneven loads and spikes in traffic.</p>
-
-<h3 id="client-caching">Client caching</h3>
-
-<p>Caches can be located on the client side (OS or browser), <a href="/pages/reverse-proxy-web-server">server side</a>, or in a distinct cache layer.</p>
-
-<h3 id="cdn-caching">CDN caching</h3>
-
-<p><a href="#content-delivery-network">CDNs</a> are considered a type of cache.</p>
-
-<h3 id="web-server-caching">Web server caching</h3>
-
-<p><a href="/pages/reverse-proxy-web-server">Reverse proxies</a> and caches such as <a href="https://www.varnish-cache.org/">Varnish</a> can serve static and dynamic content directly.  Web servers can also cache requests, returning responses without having to contact application servers.</p>
-
-<h3 id="database-caching">Database caching</h3>
-
-<p>Your database usually includes some level of caching in a default configuration, optimized for a generic use case.  Tweaking these settings for specific usage patterns can further boost performance.</p>
-
-<h3 id="application-caching">Application caching</h3>
-
-<p>In-memory caches such as Memcached and Redis are key-value stores between your application and your data storage.  Since the data is held in RAM, it is much faster than typical databases where data is stored on disk.  RAM is more limited than disk, so <a href="https://en.wikipedia.org/wiki/Cache_algorithms">cache invalidation</a> algorithms such as <a href="https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LRU)">least recently used (LRU)</a> can help invalidate ‘cold’ entries and keep ‘hot’ data in RAM.</p>
-
-<p>Redis has the following additional features:</p>
-
-<ul>
-  <li>Persistence option</li>
-  <li>Built-in data structures such as sorted sets and lists</li>
-</ul>
-
-<p>There are multiple levels you can cache that fall into two general categories: <strong>database queries</strong> and <strong>objects</strong>:</p>
-
-<ul>
-  <li>Row level</li>
-  <li>Query-level</li>
-  <li>Fully-formed serializable objects</li>
-  <li>Fully-rendered HTML</li>
-</ul>
-
-<p>Generally, you should try to avoid file-based caching, as it makes cloning and auto-scaling more difficult.</p>
-
-<h3 id="caching-at-the-database-query-level">Caching at the database query level</h3>
-
-<p>Whenever you query the database, hash the query as a key and store the result to the cache.  This approach suffers from expiration issues:</p>
-
-<ul>
-  <li>Hard to delete a cached result with complex queries</li>
-  <li>If one piece of data changes such as a table cell, you need to delete all cached queries that might include the changed cell</li>
-</ul>
-
-<h3 id="caching-at-the-object-level">Caching at the object level</h3>
-
-<p>See your data as an object, similar to what you do with your application code.  Have your application assemble the dataset from the database into a class instance or a data structure(s):</p>
-
-<ul>
-  <li>Remove the object from cache if its underlying data has changed</li>
-  <li>Allows for asynchronous processing: workers assemble objects by consuming the latest cached object</li>
-</ul>
-
-<p>Suggestions of what to cache:</p>
-
-<ul>
-  <li>User sessions</li>
-  <li>Fully rendered web pages</li>
-  <li>Activity streams</li>
-  <li>User graph data</li>
-</ul>
-
-<h3 id="when-to-update-the-cache">When to update the cache</h3>
-
-<p>Since you can only store a limited amount of data in cache, you’ll need to determine which cache update strategy works best for your use case.</p>
-
-<h4 id="cache-aside">Cache-aside</h4>
-
-<p align="center">
-  <img src="/system-design-primer/images/ONjORqk.png">
-  <br>
-  <i><a href="http://www.slideshare.net/tmatyashovsky/from-cache-to-in-memory-data-grid-introduction-to-hazelcast">Source: From cache to in-memory data grid</a></i>
-</p>
-
-<p>The application is responsible for reading and writing from storage.  The cache does not interact with storage directly.  The application does the following:</p>
-
-<ul>
-  <li>Look for entry in cache, resulting in a cache miss</li>
-  <li>Load entry from the database</li>
-  <li>Add entry to cache</li>
-  <li>Return entry</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user_id</span><span class="p">):</span>
-    <span class="n">user</span> <span class="o">=</span> <span class="n">cache</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"user.{0}"</span><span class="p">,</span> <span class="n">user_id</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">user</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-        <span class="n">user</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">query</span><span class="p">(</span><span class="s">"SELECT * FROM users WHERE user_id = {0}"</span><span class="p">,</span> <span class="n">user_id</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">user</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
-            <span class="n">key</span> <span class="o">=</span> <span class="s">"user.{0}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span>
-            <span class="n">cache</span><span class="p">.</span><span class="nb">set</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">json</span><span class="p">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">user</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">user</span>
-</code></pre></div></div>
-
-<p><a href="https://memcached.org/">Memcached</a> is generally used in this manner.</p>
-
-<p>Subsequent reads of data added to cache are fast.  Cache-aside is also referred to as lazy loading.  Only requested data is cached, which avoids filling up the cache with data that isn’t requested.</p>
-
-<h5 id="disadvantages-cache-aside">Disadvantage(s): cache-aside</h5>
-
-<ul>
-  <li>Each cache miss results in three trips, which can cause a noticeable delay.</li>
-  <li>Data can become stale if it is updated in the database.  This issue is mitigated by setting a time-to-live (TTL) which forces an update of the cache entry, or by using write-through.</li>
-  <li>When a node fails, it is replaced by a new, empty node, increasing latency.</li>
-</ul>
-
-<h4 id="write-through">Write-through</h4>
-
-<p align="center">
-  <img src="/system-design-primer/images/0vBc0hN.png">
-  <br>
-  <i><a href="http://www.slideshare.net/jboner/scalability-availability-stability-patterns/">Source: Scalability, availability, stability, patterns</a></i>
-</p>
-
-<p>The application uses the cache as the main data store, reading and writing data to it, while the cache is responsible for reading and writing to the database:</p>
-
-<ul>
-  <li>Application adds/updates entry in cache</li>
-  <li>Cache synchronously writes entry to data store</li>
-  <li>Return</li>
-</ul>
-
-<p>Application code:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">set_user</span><span class="p">(</span><span class="mi">12345</span><span class="p">,</span> <span class="p">{</span><span class="s">"foo"</span><span class="p">:</span><span class="s">"bar"</span><span class="p">})</span>
-</code></pre></div></div>
-
-<p>Cache code:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">set_user</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>
-    <span class="n">user</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">query</span><span class="p">(</span><span class="s">"UPDATE Users WHERE id = {0}"</span><span class="p">,</span> <span class="n">user_id</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
-    <span class="n">cache</span><span class="p">.</span><span class="nb">set</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>Write-through is a slow overall operation due to the write operation, but subsequent reads of just written data are fast.  Users are generally more tolerant of latency when updating data than reading data.  Data in the cache is not stale.</p>
-
-<h5 id="disadvantages-write-through">Disadvantage(s): write through</h5>
-
-<ul>
-  <li>When a new node is created due to failure or scaling, the new node will not cache entries until the entry is updated in the database.  Cache-aside in conjunction with write through can mitigate this issue.</li>
-  <li>Most data written might never be read, which can be minimized with a TTL.</li>
-</ul>
-
-<h4 id="write-behind-write-back">Write-behind (write-back)</h4>
-
-<p align="center">
-  <img src="/system-design-primer/images/rgSrvjG.png">
-  <br>
-  <i><a href="http://www.slideshare.net/jboner/scalability-availability-stability-patterns/">Source: Scalability, availability, stability, patterns</a></i>
-</p>
-
-<p>In write-behind, the application does the following:</p>
-
-<ul>
-  <li>Add/update entry in cache</li>
-  <li>Asynchronously write entry to the data store, improving write performance</li>
-</ul>
-
-<h5 id="disadvantages-write-behind">Disadvantage(s): write-behind</h5>
-
-<ul>
-  <li>There could be data loss if the cache goes down prior to its contents hitting the data store.</li>
-  <li>It is more complex to implement write-behind than it is to implement cache-aside or write-through.</li>
-</ul>
-
-<h4 id="refresh-ahead">Refresh-ahead</h4>
-
-<p align="center">
-  <img src="/system-design-primer/images/kxtjqgE.png">
-  <br>
-  <i><a href="http://www.slideshare.net/tmatyashovsky/from-cache-to-in-memory-data-grid-introduction-to-hazelcast">Source: From cache to in-memory data grid</a></i>
-</p>
-
-<p>You can configure the cache to automatically refresh any recently accessed cache entry prior to its expiration.</p>
-
-<p>Refresh-ahead can result in reduced latency vs read-through if the cache can accurately predict which items are likely to be needed in the future.</p>
-
-<h5 id="disadvantages-refresh-ahead">Disadvantage(s): refresh-ahead</h5>
-
-<ul>
-  <li>Not accurately predicting which items are likely to be needed in the future can result in reduced performance than without refresh-ahead.</li>
-</ul>
-
-<h3 id="disadvantages-cache">Disadvantage(s): cache</h3>
-
-<ul>
-  <li>Need to maintain consistency between caches and the source of truth such as the database through <a href="https://en.wikipedia.org/wiki/Cache_algorithms">cache invalidation</a>.</li>
-  <li>Cache invalidation is a difficult problem, there is additional complexity associated with when to update the cache.</li>
-  <li>Need to make application changes such as adding Redis or memcached.</li>
-</ul>
-
-<h3 id="sources-and-further-reading-7">Source(s) and further reading</h3>
-
-<ul>
-  <li><a href="http://www.slideshare.net/tmatyashovsky/from-cache-to-in-memory-data-grid-introduction-to-hazelcast">From cache to in-memory data grid</a></li>
-  <li><a href="http://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html">Scalable system design patterns</a></li>
-  <li><a href="http://lethain.com/introduction-to-architecting-systems-for-scale/">Introduction to architecting systems for scale</a></li>
-  <li><a href="http://www.slideshare.net/jboner/scalability-availability-stability-patterns/">Scalability, availability, stability, patterns</a></li>
-  <li><a href="http://www.lecloud.net/post/9246290032/scalability-for-dummies-part-3-cache">Scalability</a></li>
-  <li><a href="http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Strategies.html">AWS ElastiCache strategies</a></li>
-  <li><a href="https://en.wikipedia.org/wiki/Cache_(computing)">Wikipedia</a></li>
-</ul>
+<h2 id="cache"><a href="/pages/cache">Cache</a></h2>
 
 <h2 id="asynchronism"><a href="/pages/asynchronism">Asynchronism</a></h2>
 
@@ -1962,7 +1705,7 @@ PUT /someresources/anId
   <li>Use the principle of <a href="https://en.wikipedia.org/wiki/Principle_of_least_privilege">least privilege</a>.</li>
 </ul>
 
-<h3 id="sources-and-further-reading-8">Source(s) and further reading</h3>
+<h3 id="sources-and-further-reading-7">Source(s) and further reading</h3>
 
 <ul>
   <li><a href="https://github.com/shieldfy/API-Security-Checklist">API security checklist</a></li>
@@ -1988,7 +1731,7 @@ PUT /someresources/anId
 40              1,099,511,627,776   1 trillion           1 TB
 </code></pre></div></div>
 
-<h4 id="sources-and-further-reading-9">Source(s) and further reading</h4>
+<h4 id="sources-and-further-reading-8">Source(s) and further reading</h4>
 
 <ul>
   <li><a href="https://en.wikipedia.org/wiki/Power_of_two">Powers of two</a></li>
@@ -2036,7 +1779,7 @@ Notes
 
 <p><img src="https://camo.githubusercontent.com/77f72259e1eb58596b564d1ad823af1853bc60a3/687474703a2f2f692e696d6775722e636f6d2f6b307431652e706e67" alt=""></p>
 
-<h4 id="sources-and-further-reading-10">Source(s) and further reading</h4>
+<h4 id="sources-and-further-reading-9">Source(s) and further reading</h4>
 
 <ul>
   <li><a href="https://gist.github.com/jboner/2841832">Latency numbers every programmer should know - 1</a></li>
@@ -2509,7 +2252,7 @@ Notes
   <li><a href="https://www.zynga.com/blogs/engineering">Zynga Engineering Blog</a></li>
 </ul>
 
-<h4 id="sources-and-further-reading-11">Source(s) and further reading</h4>
+<h4 id="sources-and-further-reading-10">Source(s) and further reading</h4>
 
 <p>Looking to add a blog?  To avoid duplicating work, consider adding your company blog to the following repo:</p>
 
@@ -2564,6 +2307,14 @@ http://creativecommons.org/licenses/by/4.0/
 </code></pre></div></div>
 <h2 class="post-list-heading">Posts</h2>
     <ul class="post-list">
+<li>
+<span class="post-meta">Nov 30, 2023</span>
+        <h3>
+          <a class="post-link" href="/system-design-primer/scaling/2023/11/30/scaling-methods.html">
+            Scaling Methods
+          </a>
+        </h3>
+</li>
 <li>
 <span class="post-meta">Nov 9, 2023</span>
         <h3>
