@@ -3,3 +3,6 @@
 docker compose \
     exec -it --workdir /app -e JEKYLL_ENV=production server \
     bundle exec jekyll build -d ./docs
+
+# Also generate broken links report
+./scripts/brokenlinks

@@ -311,19 +311,19 @@ Below are a few other optimizations to the **Crawling Service**:
 ### Caching
 
 * Where to cache
-    * [Client caching](/#client-caching)
-    * [CDN caching](/#cdn-caching)
-    * [Web server caching](/#web-server-caching)
-    * [Database caching](/#database-caching)
-    * [Application caching](/#application-caching)
+    * [Client caching](/pages/cache/#client-caching)
+    * [CDN caching](/pages/cache/#cdn-caching)
+    * [Web server caching](/pages/cache/#web-server-caching)
+    * [Database caching]((/pages/cache/#database-caching))
+    * [Application caching](/pages/cache/#application-caching)
 * What to cache
-    * [Caching at the database query level](/#caching-at-the-database-query-level)
-    * [Caching at the object level](/#caching-at-the-object-level)
+    * [Caching at the database query level](/pages/cache/#caching-at-the-database-query-level)
+    * [Caching at the object level](/pages/cache/#caching-at-the-object-level)
 * When to update the cache
-    * [Cache-aside](/pages/cache-aside)
-    * [Write-through](/#write-through)
-    * [Write-behind (write-back)](/#write-behind-write-back)
-    * [Refresh ahead](/#refresh-ahead)
+    * [Cache-aside](/pages/cache/#cache-aside)
+    * [Write-through](/pages/cache/#write-through)
+    * [Write-behind (write-back)](/pages/cache/#write-behind-write-back)
+    * [Refresh ahead](/pages/cache/#refresh-ahead)
 
 ### Asynchronism and microservices
 

@@ -983,10 +983,6 @@ Sometimes, making too many requests at once also breaks things. (status code 0)
 
   External link http://lethain.com/introduction-to-architecting-systems-for-scale/#platform_layer failed: http://lethain.com/introduction-to-architecting-systems-for-scale/ exists, but the hash 'platform_layer' does not (status code 200)
 
-* At ./docs/pages/cache.html:15:
-
-  External link https://phucnguyen81.github.io/system-design-primer/pages/cache.html failed (status code 404)
-
 * At ./docs/pages/domain-name-system.html:113:
 
   External link https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency failed: https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html exists, but the hash 'routing-policy-latency' does not (status code 200)
@@ -1035,10 +1031,6 @@ Sometimes, making too many requests at once also breaks things. (status code 0)
 It's possible libcurl couldn't connect to the server, or perhaps the request timed out.
 Sometimes, making too many requests at once also breaks things. (status code 0)
 
-* At ./docs/scaling/2023/11/30/scaling-methods.html:15:
-
-  External link https://phucnguyen81.github.io/system-design-primer/scaling/2023/11/30/scaling-methods.html failed (status code 404)
-
 * At ./docs/solutions/system_design/web_crawler/index.html:184:
 
   External link http://www.dmoz.org/ failed: Bad Request (status code 400)
@@ -1085,93 +1077,25 @@ For the Links > Internal check, the following failures were found:
 
   internally linking to /#when-to-update-the-cache; the file exists, but the hash 'when-to-update-the-cache' does not
 
-* At ./docs/solutions/system_design/mint/index.html:556:
-
-  internally linking to /#client-caching; the file exists, but the hash 'client-caching' does not
-
-* At ./docs/solutions/system_design/mint/index.html:557:
-
-  internally linking to /#cdn-caching; the file exists, but the hash 'cdn-caching' does not
-
-* At ./docs/solutions/system_design/mint/index.html:558:
-
-  internally linking to /#web-server-caching; the file exists, but the hash 'web-server-caching' does not
-
 * At ./docs/solutions/system_design/mint/index.html:559:
 
-  internally linking to /#database-caching; the file exists, but the hash 'database-caching' does not
-
-* At ./docs/solutions/system_design/mint/index.html:560:
-
-  internally linking to /#application-caching; the file exists, but the hash 'application-caching' does not
-
-* At ./docs/solutions/system_design/mint/index.html:565:
-
-  internally linking to /#caching-at-the-database-query-level; the file exists, but the hash 'caching-at-the-database-query-level' does not
-
-* At ./docs/solutions/system_design/mint/index.html:566:
-
-  internally linking to /#caching-at-the-object-level; the file exists, but the hash 'caching-at-the-object-level' does not
+  internally linking to (/pages/cache/#database-caching), which does not exist
 
 * At ./docs/solutions/system_design/mint/index.html:571:
 
   internally linking to /pages/cache-aside, which does not exist
 
-* At ./docs/solutions/system_design/mint/index.html:572:
-
-  internally linking to /#write-through; the file exists, but the hash 'write-through' does not
-
-* At ./docs/solutions/system_design/mint/index.html:573:
-
-  internally linking to /#write-behind-write-back; the file exists, but the hash 'write-behind-write-back' does not
-
-* At ./docs/solutions/system_design/mint/index.html:574:
-
-  internally linking to /#refresh-ahead; the file exists, but the hash 'refresh-ahead' does not
-
-* At ./docs/solutions/system_design/pastebin/index.html:477:
-
-  internally linking to /#client-caching; the file exists, but the hash 'client-caching' does not
-
-* At ./docs/solutions/system_design/pastebin/index.html:478:
-
-  internally linking to /#cdn-caching; the file exists, but the hash 'cdn-caching' does not
-
-* At ./docs/solutions/system_design/pastebin/index.html:479:
-
-  internally linking to /#web-server-caching; the file exists, but the hash 'web-server-caching' does not
-
 * At ./docs/solutions/system_design/pastebin/index.html:480:
 
-  internally linking to /#database-caching; the file exists, but the hash 'database-caching' does not
-
-* At ./docs/solutions/system_design/pastebin/index.html:481:
-
-  internally linking to /#application-caching; the file exists, but the hash 'application-caching' does not
-
-* At ./docs/solutions/system_design/pastebin/index.html:486:
-
-  internally linking to /#caching-at-the-database-query-level; the file exists, but the hash 'caching-at-the-database-query-level' does not
-
-* At ./docs/solutions/system_design/pastebin/index.html:487:
-
-  internally linking to /#caching-at-the-object-level; the file exists, but the hash 'caching-at-the-object-level' does not
+  internally linking to (/pages/cache/#database-caching), which does not exist
 
 * At ./docs/solutions/system_design/pastebin/index.html:492:
 
   internally linking to /pages/cache-aside, which does not exist
 
-* At ./docs/solutions/system_design/pastebin/index.html:493:
-
-  internally linking to /#write-through; the file exists, but the hash 'write-through' does not
-
 * At ./docs/solutions/system_design/pastebin/index.html:494:
 
   internally linking to /#write-behind-write-back; the file exists, but the hash 'write-behind-write-back' does not
-
-* At ./docs/solutions/system_design/pastebin/index.html:495:
-
-  internally linking to /#refresh-ahead; the file exists, but the hash 'refresh-ahead' does not
 
 * At ./docs/solutions/system_design/query_cache/index.html:318:
 
@@ -1181,269 +1105,69 @@ For the Links > Internal check, the following failures were found:
 
   internally linking to /#when-to-update-the-cache; the file exists, but the hash 'when-to-update-the-cache' does not
 
-* At ./docs/solutions/system_design/query_cache/index.html:393:
-
-  internally linking to /#client-caching; the file exists, but the hash 'client-caching' does not
-
-* At ./docs/solutions/system_design/query_cache/index.html:394:
-
-  internally linking to /#cdn-caching; the file exists, but the hash 'cdn-caching' does not
-
-* At ./docs/solutions/system_design/query_cache/index.html:395:
-
-  internally linking to /#web-server-caching; the file exists, but the hash 'web-server-caching' does not
-
 * At ./docs/solutions/system_design/query_cache/index.html:396:
 
-  internally linking to /#database-caching; the file exists, but the hash 'database-caching' does not
-
-* At ./docs/solutions/system_design/query_cache/index.html:397:
-
-  internally linking to /#application-caching; the file exists, but the hash 'application-caching' does not
-
-* At ./docs/solutions/system_design/query_cache/index.html:402:
-
-  internally linking to /#caching-at-the-database-query-level; the file exists, but the hash 'caching-at-the-database-query-level' does not
-
-* At ./docs/solutions/system_design/query_cache/index.html:403:
-
-  internally linking to /#caching-at-the-object-level; the file exists, but the hash 'caching-at-the-object-level' does not
+  internally linking to (/pages/cache/#database-caching), which does not exist
 
 * At ./docs/solutions/system_design/query_cache/index.html:408:
 
   internally linking to /pages/cache-aside, which does not exist
 
-* At ./docs/solutions/system_design/query_cache/index.html:409:
-
-  internally linking to /#write-through; the file exists, but the hash 'write-through' does not
-
 * At ./docs/solutions/system_design/query_cache/index.html:410:
 
   internally linking to /#write-behind-write-back; the file exists, but the hash 'write-behind-write-back' does not
 
-* At ./docs/solutions/system_design/query_cache/index.html:411:
-
-  internally linking to /#refresh-ahead; the file exists, but the hash 'refresh-ahead' does not
-
-* At ./docs/solutions/system_design/sales_rank/index.html:410:
-
-  internally linking to /#client-caching; the file exists, but the hash 'client-caching' does not
-
-* At ./docs/solutions/system_design/sales_rank/index.html:411:
-
-  internally linking to /#cdn-caching; the file exists, but the hash 'cdn-caching' does not
-
-* At ./docs/solutions/system_design/sales_rank/index.html:412:
-
-  internally linking to /#web-server-caching; the file exists, but the hash 'web-server-caching' does not
-
 * At ./docs/solutions/system_design/sales_rank/index.html:413:
 
-  internally linking to /#database-caching; the file exists, but the hash 'database-caching' does not
-
-* At ./docs/solutions/system_design/sales_rank/index.html:414:
-
-  internally linking to /#application-caching; the file exists, but the hash 'application-caching' does not
-
-* At ./docs/solutions/system_design/sales_rank/index.html:419:
-
-  internally linking to /#caching-at-the-database-query-level; the file exists, but the hash 'caching-at-the-database-query-level' does not
-
-* At ./docs/solutions/system_design/sales_rank/index.html:420:
-
-  internally linking to /#caching-at-the-object-level; the file exists, but the hash 'caching-at-the-object-level' does not
+  internally linking to (/pages/cache/#database-caching), which does not exist
 
 * At ./docs/solutions/system_design/sales_rank/index.html:425:
 
   internally linking to /pages/cache-aside, which does not exist
 
-* At ./docs/solutions/system_design/sales_rank/index.html:426:
-
-  internally linking to /#write-through; the file exists, but the hash 'write-through' does not
-
 * At ./docs/solutions/system_design/sales_rank/index.html:427:
 
   internally linking to /#write-behind-write-back; the file exists, but the hash 'write-behind-write-back' does not
 
-* At ./docs/solutions/system_design/sales_rank/index.html:428:
-
-  internally linking to /#refresh-ahead; the file exists, but the hash 'refresh-ahead' does not
-
-* At ./docs/solutions/system_design/scaling_aws/index.html:673:
-
-  internally linking to /#client-caching; the file exists, but the hash 'client-caching' does not
-
-* At ./docs/solutions/system_design/scaling_aws/index.html:674:
-
-  internally linking to /#cdn-caching; the file exists, but the hash 'cdn-caching' does not
-
-* At ./docs/solutions/system_design/scaling_aws/index.html:675:
-
-  internally linking to /#web-server-caching; the file exists, but the hash 'web-server-caching' does not
-
 * At ./docs/solutions/system_design/scaling_aws/index.html:676:
 
-  internally linking to /#database-caching; the file exists, but the hash 'database-caching' does not
-
-* At ./docs/solutions/system_design/scaling_aws/index.html:677:
-
-  internally linking to /#application-caching; the file exists, but the hash 'application-caching' does not
-
-* At ./docs/solutions/system_design/scaling_aws/index.html:682:
-
-  internally linking to /#caching-at-the-database-query-level; the file exists, but the hash 'caching-at-the-database-query-level' does not
-
-* At ./docs/solutions/system_design/scaling_aws/index.html:683:
-
-  internally linking to /#caching-at-the-object-level; the file exists, but the hash 'caching-at-the-object-level' does not
+  internally linking to (/pages/cache/#database-caching), which does not exist
 
 * At ./docs/solutions/system_design/scaling_aws/index.html:688:
 
   internally linking to /pages/cache-aside, which does not exist
 
-* At ./docs/solutions/system_design/scaling_aws/index.html:689:
-
-  internally linking to /#write-through; the file exists, but the hash 'write-through' does not
-
 * At ./docs/solutions/system_design/scaling_aws/index.html:690:
 
   internally linking to /#write-behind-write-back; the file exists, but the hash 'write-behind-write-back' does not
 
-* At ./docs/solutions/system_design/scaling_aws/index.html:691:
-
-  internally linking to /#refresh-ahead; the file exists, but the hash 'refresh-ahead' does not
-
-* At ./docs/solutions/system_design/social_graph/index.html:415:
-
-  internally linking to /#client-caching; the file exists, but the hash 'client-caching' does not
-
-* At ./docs/solutions/system_design/social_graph/index.html:416:
-
-  internally linking to /#cdn-caching; the file exists, but the hash 'cdn-caching' does not
-
-* At ./docs/solutions/system_design/social_graph/index.html:417:
-
-  internally linking to /#web-server-caching; the file exists, but the hash 'web-server-caching' does not
-
 * At ./docs/solutions/system_design/social_graph/index.html:418:
 
-  internally linking to /#database-caching; the file exists, but the hash 'database-caching' does not
-
-* At ./docs/solutions/system_design/social_graph/index.html:419:
-
-  internally linking to /#application-caching; the file exists, but the hash 'application-caching' does not
-
-* At ./docs/solutions/system_design/social_graph/index.html:424:
-
-  internally linking to /#caching-at-the-database-query-level; the file exists, but the hash 'caching-at-the-database-query-level' does not
-
-* At ./docs/solutions/system_design/social_graph/index.html:425:
-
-  internally linking to /#caching-at-the-object-level; the file exists, but the hash 'caching-at-the-object-level' does not
+  internally linking to (/pages/cache/#database-caching), which does not exist
 
 * At ./docs/solutions/system_design/social_graph/index.html:430:
 
   internally linking to /pages/cache-aside, which does not exist
 
-* At ./docs/solutions/system_design/social_graph/index.html:431:
-
-  internally linking to /#write-through; the file exists, but the hash 'write-through' does not
-
 * At ./docs/solutions/system_design/social_graph/index.html:432:
 
   internally linking to /#write-behind-write-back; the file exists, but the hash 'write-behind-write-back' does not
 
-* At ./docs/solutions/system_design/social_graph/index.html:433:
-
-  internally linking to /#refresh-ahead; the file exists, but the hash 'refresh-ahead' does not
-
-* At ./docs/solutions/system_design/twitter/index.html:473:
-
-  internally linking to /#client-caching; the file exists, but the hash 'client-caching' does not
-
-* At ./docs/solutions/system_design/twitter/index.html:474:
-
-  internally linking to /#cdn-caching; the file exists, but the hash 'cdn-caching' does not
-
-* At ./docs/solutions/system_design/twitter/index.html:475:
-
-  internally linking to /#web-server-caching; the file exists, but the hash 'web-server-caching' does not
-
 * At ./docs/solutions/system_design/twitter/index.html:476:
 
-  internally linking to /#database-caching; the file exists, but the hash 'database-caching' does not
-
-* At ./docs/solutions/system_design/twitter/index.html:477:
-
-  internally linking to /#application-caching; the file exists, but the hash 'application-caching' does not
-
-* At ./docs/solutions/system_design/twitter/index.html:482:
-
-  internally linking to /#caching-at-the-database-query-level; the file exists, but the hash 'caching-at-the-database-query-level' does not
-
-* At ./docs/solutions/system_design/twitter/index.html:483:
-
-  internally linking to /#caching-at-the-object-level; the file exists, but the hash 'caching-at-the-object-level' does not
+  internally linking to (/pages/cache/#database-caching), which does not exist
 
 * At ./docs/solutions/system_design/twitter/index.html:488:
 
   internally linking to /pages/cache-aside, which does not exist
 
-* At ./docs/solutions/system_design/twitter/index.html:489:
-
-  internally linking to /#write-through; the file exists, but the hash 'write-through' does not
-
 * At ./docs/solutions/system_design/twitter/index.html:490:
 
   internally linking to /#write-behind-write-back; the file exists, but the hash 'write-behind-write-back' does not
 
-* At ./docs/solutions/system_design/twitter/index.html:491:
-
-  internally linking to /#refresh-ahead; the file exists, but the hash 'refresh-ahead' does not
-
-* At ./docs/solutions/system_design/web_crawler/index.html:464:
-
-  internally linking to /#client-caching; the file exists, but the hash 'client-caching' does not
-
-* At ./docs/solutions/system_design/web_crawler/index.html:465:
-
-  internally linking to /#cdn-caching; the file exists, but the hash 'cdn-caching' does not
-
-* At ./docs/solutions/system_design/web_crawler/index.html:466:
-
-  internally linking to /#web-server-caching; the file exists, but the hash 'web-server-caching' does not
-
 * At ./docs/solutions/system_design/web_crawler/index.html:467:
 
-  internally linking to /#database-caching; the file exists, but the hash 'database-caching' does not
-
-* At ./docs/solutions/system_design/web_crawler/index.html:468:
-
-  internally linking to /#application-caching; the file exists, but the hash 'application-caching' does not
-
-* At ./docs/solutions/system_design/web_crawler/index.html:473:
-
-  internally linking to /#caching-at-the-database-query-level; the file exists, but the hash 'caching-at-the-database-query-level' does not
-
-* At ./docs/solutions/system_design/web_crawler/index.html:474:
-
-  internally linking to /#caching-at-the-object-level; the file exists, but the hash 'caching-at-the-object-level' does not
-
-* At ./docs/solutions/system_design/web_crawler/index.html:479:
-
-  internally linking to /pages/cache-aside, which does not exist
-
-* At ./docs/solutions/system_design/web_crawler/index.html:480:
-
-  internally linking to /#write-through; the file exists, but the hash 'write-through' does not
-
-* At ./docs/solutions/system_design/web_crawler/index.html:481:
-
-  internally linking to /#write-behind-write-back; the file exists, but the hash 'write-behind-write-back' does not
-
-* At ./docs/solutions/system_design/web_crawler/index.html:482:
-
-  internally linking to /#refresh-ahead; the file exists, but the hash 'refresh-ahead' does not
+  internally linking to (/pages/cache/#database-caching), which does not exist
 
 
-HTML-Proofer found 354 failures!
+HTML-Proofer found 285 failures!
