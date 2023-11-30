@@ -59,6 +59,8 @@ exclude:
   - docs/
   - docker*
   - run
+  - dev
+  - broken-links*
   - scripts/
   - CONTRIBUTING.md
   - Dockerfile
@@ -74,6 +76,6 @@ jekyll-spaceship:
   mermaid-processor:
     # mode value 'default' for fetching image at rendering stage
     # mode value 'pre-fetch' for fetching image at building stage
-    mode: pre-fetch
+    mode: default
     css:
       class: mermaid
