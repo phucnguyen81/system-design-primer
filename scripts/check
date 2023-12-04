@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Generate broken links report (after building the site into ./docs)
+bundle exec htmlproofer \
+    --swap-urls '^/system-design-primer/:/' \
+    --log-level :error \
+    ./docs \
+|& tee broken-links.txt

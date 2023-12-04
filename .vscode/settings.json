@@ -6,5 +6,5 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.pylint"
     },
-    "markdown.validate.enabled": true,
+    "markdown.validate.enabled": true
 }

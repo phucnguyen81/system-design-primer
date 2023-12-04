@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# Attach to the container
-docker compose exec -it server bash

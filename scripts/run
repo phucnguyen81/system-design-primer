@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# Run a command in the main container
-docker compose exec -it server "$@"

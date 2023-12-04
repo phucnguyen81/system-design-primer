@@ -1,3 +1,9 @@
 #!/usr/bin/env bash
-# Build the container image
-docker compose build "$@"
+# Build the site for deployment to GitHub Pages
+set -euo pipefail
+
+# Build the site into "./docs" (the GitHub Pages directory)
+JEKYLL_ENV=production bundle exec jekyll build -d ./docs
+
+# Generate broken links report
+./scripts/check
