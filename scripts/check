@@ -4,4 +4,4 @@ bundle exec htmlproofer \
     --swap-urls '^/system-design-primer/:/' \
     --log-level :error \
     ./docs \
-|& tee broken-links.txt
+    |& tee broken-links.txt

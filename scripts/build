@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Build the site for deployment to GitHub Pages
+# Build the site into "./docs" for deployment to GitHub Pages
 set -euo pipefail
 
 # Build the site into "./docs" (the GitHub Pages directory)
